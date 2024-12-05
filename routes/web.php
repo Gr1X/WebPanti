@@ -7,8 +7,8 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 });
 
-Route::get('/auth', function () {
-    return view('auth');
+Route::get('/login', function () {
+    return view('login');
 });
 
 Route::get('/register', function () {
@@ -16,5 +16,5 @@ Route::get('/register', function () {
 });
 
 Route::get('/', function () {
-    return view('landing');
+    return view('landing ');
 });
