@@ -18,3 +18,7 @@ Route::get('/register', function () {
 Route::get('/', function () {
     return view('landing ');
 });
+
+Route::get('donation', function () {
+    return view('donation');
+});

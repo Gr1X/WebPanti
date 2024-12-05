@@ -2,7 +2,7 @@
 
 @section('formAuth')
 <div class="min-h-screen flex items-center shadow-lg">
-    <div class="w-[35rem] p-8 rounded-lg shadow-md grid m-10">
+    <div class="w-[45rem] p-10 rounded-lg shadow-md grid m-16">
         <div class="">
             <span class="text-slate-400 text-sm mb-5">Please login to continue to your account.</span>
             <h1 class="text-5xl font-semibold mt-1 text-white">Log In<span>.</span></h1>

@@ -2,10 +2,10 @@
 
 @section('formAuth')
     <div class="min-h-screen flex items-center shadow-lg">
-        <div class="w-[35rem] p-8 rounded-lg shadow-md grid m-10">
+        <div class="w-[45rem] p-8 rounded-lg shadow-md grid m-16">
             <div class="">
                 <span class="text-slate-400 text-sm mb-5">Register to create new account.</span>
-                <h1 class="text-5xl font-semibold mt-1 text-white">Create new account<span>.</span></h1>
+                <h1 class="text-5xl font-semibold mt-1 text-white">Create New Account<span>.</span></h1>
                 <div class="text-white mt-2 text-sm">Already have an account? <a href="" class="text-sky-500">Login</a></div>
 
                 <form action="" class=" mt-6">

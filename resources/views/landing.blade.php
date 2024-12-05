@@ -74,7 +74,7 @@
                 <img
                     src="your-image-path.jpg"
                     alt="Background"
-                    class="w-full h-full object-cover opacity-50"
+                    class="w-full h-64 object-cover opacity-50"
                 />
             </div>
         
@@ -87,7 +87,7 @@
 
         <div id="gallery" class="relative w-full" data-carousel="slide">
             <!-- Carousel wrapper -->
-            <div class="relative h-56 overflow-hidden rounded-lg md:h-96 my-8 mx-20">
+            <div class="relative h-56 overflow-hidden rounded-lg md:h-80 my-8 mx-20 bg-slate-500">
                 <div class="hidden duration-700 ease-in-out bg-black" data-carousel-item>
                     <img src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
                 </div>
@@ -132,18 +132,18 @@
         
         <div class="grid grid-cols-2 gap-6 py-8 px-6">
             <div class="relative flex flex-col md:flex-row w-full bg-white shadow-sm border border-slate-200 rounded-lg w-72">
-                <div class="relative p-2.5 md:w-2/5 shrink-0 overflow-hidden">
+                <div class="relative md:w-2/5 shrink-0 overflow-hidden">
                     <img
                         src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1471&amp;q=80"
                         alt="card-image"
-                        class="h-full w-full rounded-md md:rounded-lg object-cover"
+                        class="h-full w-full md:rounded-lg object-cover"
                     />
                 </div>
                 <div class="p-8">
                     <h4 class="mb-2 text-slate-800 text-xl font-semibold">
                     Lyft launching cross-platform service this week
                     </h4>
-                    <p class="mb-8 text-slate-600 leading-normal font-light">
+                    <p class="mb-8 text-slate-600 font-light">
                         Like so many organizations these days, Autodesk is a company in
                         transition. It was until recently a traditional boxed software company
                         selling licenses. Yet its own business model disruption is only part
@@ -172,7 +172,7 @@
                     <h4 class="mb-2 text-slate-800 text-xl font-semibold">
                     Lyft launching cross-platform service this week
                     </h4>
-                    <p class="mb-8 text-slate-600 leading-normal font-light">
+                    <p class="mb-8 text-slate-600">
                         Like so many organizations these days, Autodesk is a company in
                         transition. It was until recently a traditional boxed software company
                         selling licenses. Yet its own business model disruption is only part
@@ -191,7 +191,7 @@
     </div>
 
     <div class="">
-        <hr/>
+        <hr class="mx-8" />
 
         <div class="flex justify-center">
             <div class="absolute font-semibold">
@@ -199,7 +199,7 @@
             </div>
         </div>
 
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 my-10">
             <div>
                 <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg" alt="">
             </div>
@@ -212,11 +212,24 @@
             <div>
                 <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-10.jpg" alt="">
             </div>
-            <div>
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-11.jpg" alt="">
-            </div>
+            
+        </div>
+
+        <div class="flex justify-center my-4">
+            <button class="bg-slate-700 text-white border rounded-full px-10 py-4">See more</button>
         </div>
     </div>
     
+    <div class="flex justify-between relative h-56 overflow-hidden rounded-lg md:h-64 my-8 mx-40 bg-slate-500">
+        <div class="">
+            <h1>R</h1>
+        </div>
+
+        <div class="flex h-full items-end">
+            <div class="text-[1rem] font-bold bg-sky-600 px-12 py-4 m-10 text-white rounded-lg">
+                Donasi Sekarang
+            </div>
+        </div>
+    </div>
 </main>
 @stop
