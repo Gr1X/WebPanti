@@ -10,12 +10,10 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 
-
 <body class="bg-black">
     <main>
         {{-- Call Register atau Login --}}
         @yield('formAuth')
-
     </main>
 </body>
 </html>
