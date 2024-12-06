@@ -30,3 +30,7 @@ Route::get('/gallery', function(){
 Route::get('/program', function(){
     return view('program');
 });
+
+Route::get('/profile', function(){
+    return view('profile');
+});
