@@ -68,27 +68,41 @@
 
 
         <div class="mx-5">
-            <img id="avatarButton" type="button" data-dropdown-toggle="userDropdown" data-dropdown-placement="bottom-start" class="w-10 h-10 rounded-full cursor-pointer object-cover" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="User dropdown">
-        </div>
+            @if(Auth::check())
+                <img id="avatarButton" type="button" data-dropdown-toggle="userDropdown" data-dropdown-placement="bottom-start" 
+                    class="w-10 h-10 rounded-full cursor-pointer object-cover" 
+                    src="https://ui-avatars.com/api/?name={{ urlencode(Auth::user()->name) }}" 
+                    alt="{{ Auth::user()->name }}">
 
-        <!-- Dropdown menu -->
-    <div id="userDropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-        <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
-            <div>Bonnie Green</div>
-            <div class="font-medium truncate">name@flowbite.com</div>
+                <!-- Dropdown menu -->
+                <div id="userDropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                    <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
+                        <div>{{ Auth::user()->name }}</div>
+                        <div class="font-medium truncate">{{ Auth::user()->email }}</div>
+                    </div>
+                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="avatarButton">
+                        <li>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Profile</a>
+                        </li>
+                        @if(Auth::user()->role === 'admin')
+                            <li>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Admin Panel</a>
+                            </li>
+                        @endif
+                    </ul>
+                    <div class="py-1">
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                            <button type="submit" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
+                                Sign out
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            @else
+                <a href="{{ route('login.form') }}" class="text-white bg-sky-500 px-4 py-2 rounded-md">Login</a>
+            @endif
         </div>
-        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="avatarButton">
-            <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Profile</a>
-            </li>
-            <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
-            </li>
-        </ul>
-    <div class="py-1">
-        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
-    </div>
-</div>
     </div>
 
     <header class="bg-slate-100 drop-shadow-xl w-full">
@@ -96,6 +110,5 @@
             <h1 class="lg:text-2xl md:text-lg font-bold tracking-tight text-gray-900">Yayasan Nurul Jadid</h1>
         </div>
     </header>
-
     
 </nav>
