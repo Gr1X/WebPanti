@@ -22,3 +22,11 @@ Route::get('/', function () {
 Route::get('donation', function () {
     return view('donation');
 });
+
+Route::get('/gallery', function(){
+    return view('gallery');
+});
+
+Route::get('/program', function(){
+    return view('program');
+});

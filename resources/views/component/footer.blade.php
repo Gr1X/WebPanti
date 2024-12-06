@@ -27,6 +27,14 @@
                     </div>
                 </div>
             </div>
+
+            <div class="flex text-white justify-end gap-2">
+                <a href="">
+                    <ion-icon name="logo-whatsapp" class="size-7"></ion-icon>
+                </a>
+                <ion-icon name="logo-instagram" class="size-7"></ion-icon>
+                <ion-icon name="logo-facebook" class="size-7"></ion-icon>
+            </div>
         </div>
         
         <hr class="my-4 mx-2">

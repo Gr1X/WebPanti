@@ -50,7 +50,7 @@
         
 
         <!-- Get Started Button -->
-        <div class="mx-4 relative group"> 
+        {{-- <div class="mx-4 relative group"> 
             <button class="relative inline-block p-px font-semibold leading-6 text-white bg-gray-800 shadow-2xl cursor-pointer rounded-xl shadow-zinc-900 transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95">
                 <span class="absolute inset-0 rounded-xl bg-gradient-to-r from-slate-100 via-slate-500 to-slate-900 p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                 </span>
@@ -64,7 +64,31 @@
                     </div>
                 </span>
             </button>
-        </div>   
+        </div>    --}}
+
+
+        <div class="mx-5">
+            <img id="avatarButton" type="button" data-dropdown-toggle="userDropdown" data-dropdown-placement="bottom-start" class="w-10 h-10 rounded-full cursor-pointer object-cover" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="User dropdown">
+        </div>
+
+        <!-- Dropdown menu -->
+    <div id="userDropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+        <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
+            <div>Bonnie Green</div>
+            <div class="font-medium truncate">name@flowbite.com</div>
+        </div>
+        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="avatarButton">
+            <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Profile</a>
+            </li>
+            <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+            </li>
+        </ul>
+    <div class="py-1">
+        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
+    </div>
+</div>
     </div>
 
     <header class="bg-slate-100 drop-shadow-xl w-full">
@@ -72,4 +96,6 @@
             <h1 class="lg:text-2xl md:text-lg font-bold tracking-tight text-gray-900">Yayasan Nurul Jadid</h1>
         </div>
     </header>
+
+    
 </nav>
