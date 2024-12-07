@@ -1,5 +1,5 @@
 <nav class="fixed top-0 z-50 w-full bg-slate-800 shadow-lg">
-    <div class="flex justify-between items-center bg-slate-800">
+    <div class="flex justify-between items-center bg-custom-50">
         <!-- Navigation Menu -->
         <ul class="flex mx-4">
             <!-- Home -->

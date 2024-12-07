@@ -2,20 +2,20 @@
 
 @section('content')
 <main class="">
-    <div class="bg-slate-500 py-32">
+    <div class="bg-custom-300 py-32">
         <div class="flex justify-between">
             <div class="self-center ms-10 w-full mt-20 z-10">
-                <div class="items-center mb-12 h-full w-full bg-gray-400 rounded-xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 border border-gray-100 p-4 shadow-lg">
-                    <p class="text-slate-100 text-sm">Profil</p>
-                    <h1 class="text-slate-100 text-3xl font-semibold mb-4">Yayasan Nurul Jadid</h1>
-                    <hr class="my-2"/>
+                <div class="items-center mb-12 h-full w-full bg-gray-400 rounded-xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 border border-custom-50 p-4 shadow-lg">
+                    <p class="text-custom-50 text-sm">Profil</p>
+                    <h1 class="text-custom-50 text-3xl font-semibold mb-4">Yayasan Nurul Jadid</h1>
+                    <hr class="my-2 border-custom-50"/>
                     <p>Nama panti Lorem ipsum dolor sit amet, consectetur adipiscing elit. At et posuere est non vitae enim, sed consectetur. Nullam interdum feugiat nibh lectus viverra sollicitudin.</p>
                 </div>
 
-                <div class="items-center mb-12 h-full w-full bg-gray-400 rounded-xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100 p-4 shadow-lg">
-                    <p class="text-slate-100 text-sm">Profil</p>
-                    <h1 class="text-slate-100 text-3xl font-semibold mb-4">Visi & Misi</h1>
-                    <hr class="my-2"/>
+                <div class="items-center mb-12 h-full w-full bg-gray-400 rounded-xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-custom-50 p-4 shadow-lg">
+                    <p class="text-custom-50 text-sm">Profil</p>
+                    <h1 class="text-custom-50 text-3xl font-semibold mb-4">Visi & Misi</h1>
+                    <hr class="my-2 border-custom-50"/>
                     <p>Nama panti Lorem ipsum dolor sit amet, consectetur adipiscing elit. At et posuere est non vitae enim, sed consectetur. Nullam interdum feugiat nibh lectus viverra sollicitudin.</p>
                 </div>
             </div>
@@ -49,17 +49,17 @@
 
         <div class="">
             <div class="grid grid-cols-2 gap-10 px-10">
-                <div class="items-center h-full w-full bg-gray-400 rounded-xl bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 border border-gray-100 p-4 shadow-lg">
-                    <p class="text-slate-100 text-sm">Siapa Kami?</p>
-                    <h1 class="text-slate-100 text-3xl font-semibold mb-4">Yayasan Nurul Jadid</h1>
+                <div class="items-center h-full w-full bg-gray-400 rounded-xl bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 border border-custom-50 p-4 shadow-lg">
+                    <p class="text-custom-50 text-sm">Siapa Kami?</p>
+                    <h1 class="text-custom-50 text-3xl font-semibold mb-4">Yayasan Nurul Jadid</h1>
                     <hr class="my-2" />
                     <p>Nama panti Lorem ipsum dolor sit amet, consectetur adipiscing elit. At et posuere est non vitae enim, sed consectetur. Nullam interdum feugiat nibh lectus viverra sollicitudin.</p>
                 </div>
 
-                <div class="items-center h-full w-full bg-gray-400 rounded-xl bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 border border-gray-100 p-4 shadow-lg">
-                    <p class="text-slate-100 text-sm">Siapa Kami?</p>
-                    <h1 class="text-slate-100 text-3xl font-semibold mb-4">Yayasan Nurul Jadid</h1>
-                    <hr class="my-2"/>
+                <div class="items-center h-full w-full bg-gray-400 rounded-xl bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 border border-custom-50 p-4 shadow-lg">
+                    <p class="text-custom-50 text-sm">Siapa Kami?</p>
+                    <h1 class="text-custom-50 text-3xl font-semibold mb-4">Yayasan Nurul Jadid</h1>
+                    <hr class="my-2 border-custom-50"/>
                     <p>Nama panti Lorem ipsum dolor sit amet, consectetur adipiscing elit. At et posuere est non vitae enim, sed consectetur. Nullam interdum feugiat nibh lectus viverra sollicitudin.</p>
                 </div>
             </div>
@@ -79,9 +79,9 @@
             </div>
         
             <!-- Content -->
-            <div class="h-full w-full bg-gray-900 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-60 text-center z-10 text-slate-100">
+            <div class="h-full w-full bg-custom-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-60 text-center z-10 text-slate-100">
                 <!-- Title Section -->
-                <h2 class="text-5xl font-bold text-white">Berita Panti</h2>
+                <h2 class="text-5xl font-bold text-custom-300">Berita Panti</h2>
             </div>
         </div>
 

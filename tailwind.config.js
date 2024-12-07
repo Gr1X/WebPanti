@@ -17,6 +17,16 @@ export default {
             backgroundImage: {
                 'login-bg': "url('/images/bg.jpg')",
             },
+            colors: {
+                // Define your custom color palette
+                custom: {
+                    50: '#546C8E',  //Biru 
+                    100: '#A95B51', //Merah
+                    200: '#B9877C', //Pink
+                    300: '#FFFFFF', //Putih
+                    400: '#1B2A39'  //Hitam
+                },
+            },
         },
     },
 
