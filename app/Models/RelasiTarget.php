@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class RelasiTunaiTarget extends Model
+class RelasiTarget extends Model
 {
     use HasFactory;
 
@@ -16,11 +16,11 @@ class RelasiTunaiTarget extends Model
 
     public function donasiTunai()
     {
-        return $this->belongsTo(DonasiTunai::class, 'id_donasitunai');
+        return $this->belongsTo(Donasi::class, 'id_donasitunai');
     }
 
     public function targetTunai()
     {
-        return $this->belongsTo(TargetTunai::class, 'id_targettunai');
+        return $this->belongsTo(Target::class, 'id_targettunai');
     }
 }

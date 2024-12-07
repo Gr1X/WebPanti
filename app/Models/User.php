@@ -25,14 +25,8 @@ class User extends Authenticatable
     ];
 
     // Relasi ke donasi tunai
-    public function donasiTunai()
+    public function donasi()
     {
-        return $this->hasMany(DonasiTunai::class, 'user_id');
-    }
-
-    // Relasi ke donasi barang
-    public function donasiBarang()
-    {
-        return $this->hasMany(DonasiBarang::class, 'user_id');
+        return $this->hasMany(Donasi::class, 'user_id');
     }
 }

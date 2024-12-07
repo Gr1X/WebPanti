@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class DonasiTunai extends Model
+class Donasi extends Model
 {
     use HasFactory;
 
@@ -22,9 +22,9 @@ class DonasiTunai extends Model
         return $this->belongsTo(User::class, 'user_id');
     }
 
-    public function relasiTargetTunai()
+    public function relasiTarget()
     {
-        return $this->hasMany(RelasiTunaiTarget::class, 'id_donasitunai');
+        return $this->hasMany(RelasiTarget::class, 'id_donasitunai');
     }
 }
 

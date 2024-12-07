@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class TargetBarang extends Model
+class Target extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'namabarang',
+        'namaprogram',
         'deskripsi',
         'jumlah_target',
         'terkumpul',
@@ -18,8 +18,9 @@ class TargetBarang extends Model
         'tgl_selesai',
     ];
 
-    public function relasiTargetBarang()
+    public function relasiTargetTunai()
     {
-        return $this->hasMany(RelasiBarangTarget::class, 'id_programbarang');
+        return $this->hasMany(RelasiTarget::class, 'id_targettunai');
     }
 }
+

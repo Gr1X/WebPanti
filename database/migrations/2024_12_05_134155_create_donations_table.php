@@ -9,7 +9,7 @@ return new class extends Migration
     public function up(): void
     {
       // donasi tunai
-        Schema::create('donasitunai', function (Blueprint $table) {
+        Schema::create('donasi', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade'); // id user yang berdonasi
             $table->decimal('jumlah', 10, 2); // jumlah donasi tunai

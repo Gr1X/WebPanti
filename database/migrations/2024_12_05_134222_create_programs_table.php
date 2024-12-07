@@ -9,7 +9,7 @@ return new class extends Migration
     public function up(): void
     {
       // target panti tunai
-        Schema::create('targettunai', function (Blueprint $table) {
+        Schema::create('target', function (Blueprint $table) {
             $table->id();
             $table->string('namaprogram');
             $table->text('deskripsi')->nullable();
