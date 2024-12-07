@@ -107,106 +107,51 @@
                         <span class="text-lg">Menampilkan <b>12</b> campaign dari <b>142</b> campaign</span>
                     </div>
                 </div>
-    
-                <div class="self-center"> 
-                    <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-md px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Category<svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-                        </svg>
-                    </button>
-                    
-                    <!-- Dropdown menu -->
-                    <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
-                        <li>
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-                        </li>
-                        <li>
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
-                        </li>
-                        <li>
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
-                        </li>
-                        <li>
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
-                        </li>
-                        </ul>
-                    </div>
-                </div>
             </div>
     
             
             <div class="grid grid-cols-3 gap-8">
-                <a href="{{route('donateDetails')}}" class="bg-white rounded-md shadow-lg overflow-hidden max-w-md ">
-                    <img class="w-full h-48 object-cover" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="Tebar Al-Quran di Palestina">
+            @foreach ($targets as $target)
+                <a href="{{ route('donateDetails', $target->id) }}" class="bg-white rounded-md shadow-lg overflow-hidden max-w-md">
+                    <!-- Gambar Program -->
+                    <img class="w-full h-48 object-cover" 
+                        src="{{ $target->gambar ? asset('storage/' . $target->gambar) : 'https://via.placeholder.com/300' }}" 
+                        alt="{{ $target->namaprogram }}">
+
+                    <!-- Informasi Program -->
                     <div class="p-6">
-                        <h2 class="text-2xl font-bold mb-2">Keberkahan Jariyah, Tebar Al-Quran di Bumi Para Nabi</h2>
-                        <p class="text-sm text-gray-700 mb-2">Ribuan warga terdampak hingga harus kehilangan nyawa. Ayo bantu segera!</p>
-                        <hr class="my-4" />                  
+                        <h2 class="text-2xl font-bold mb-2">{{ $target->namaprogram }}</h2>
+                        <p class="text-sm text-gray-700 mb-2">{{ Str::limit($target->deskripsi, 100) }}</p>
+                        <hr class="my-4" />
+
+                        <!-- Progress Bar -->
+                        @php
+                            $terkumpul = $target->donasi_sum_jumlah ?? 0; // Total donasi yang terkumpul
+                            $persentase = $target->jumlah_target > 0 ? round(($terkumpul / $target->jumlah_target) * 100, 2) : 0; // Hitung progress
+                        @endphp
                         <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700 my-1">
-                            <div class="bg-blue-400 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 45%"> 45%</div>
+                            <div class="bg-blue-400 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: {{ $persentase }}%">
+                                {{ $persentase }}%
+                            </div>
                         </div>
-        
+
+                        <!-- Info Terkumpul dan Tanggal Selesai -->
                         <div class="flex flex-wrap justify-between mt-1">
                             <div class="grid">
                                 <span class="text-sm">Terkumpul</span>
-                                <span class="text-xl font-bold">Rp. 8.000.000</span>
+                                <span class="text-xl font-bold">Rp. {{ number_format($terkumpul, 0, ',', '.') }}</span>
                             </div>
                             <div class="grid items-end">
-                                <span class="text-sm">Sisa hari</span>
-                                <span class="text-center text-xl font-bold">8</span>
+                                @php
+                                    $tglSelesai = $target->tgl_selesai ? \Carbon\Carbon::parse($target->tgl_selesai)->format('d M Y') : 'Tidak Ditentukan';
+                                @endphp
+                                <span class="text-sm">Tanggal Selesai</span>
+                                <span class="text-center text-xl font-bold">{{ $tglSelesai }}</span>
                             </div>
                         </div>
-                        <div class=""></div>
                     </div>
                 </a>
-
-                <div class="bg-white rounded-md shadow-lg overflow-hidden max-w-md">
-                    <img class="w-full h-48 object-cover" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="Tebar Al-Quran di Palestina">
-                    <div class="p-6">
-                        <h2 class="text-2xl font-bold mb-2">Keberkahan Jariyah, Tebar Al-Quran di Bumi Para Nabi</h2>
-                        <p class="text-sm text-gray-700 mb-2">Ribuan warga terdampak hingga harus kehilangan nyawa. Ayo bantu segera!</p>
-                        <hr class="my-4" />                  
-                        <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700 my-1">
-                            <div class="bg-blue-400 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 45%"> 45%</div>
-                        </div>
-        
-                        <div class="flex flex-wrap justify-between mt-1">
-                            <div class="grid">
-                                <span class="text-sm">Terkumpul</span>
-                                <span class="text-xl font-bold">Rp. 8.000.000</span>
-                            </div>
-                            <div class="grid items-end">
-                                <span class="text-sm">Sisa hari</span>
-                                <span class="text-center text-xl font-bold">8</span>
-                            </div>
-                        </div>
-                        <div class=""></div>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-md shadow-lg overflow-hidden max-w-md">
-                    <img class="w-full h-48 object-cover" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="Tebar Al-Quran di Palestina">
-                    <div class="p-6">
-                        <h2 class="text-2xl font-bold mb-2">Keberkahan Jariyah, Tebar Al-Quran di Bumi Para Nabi</h2>
-                        <p class="text-sm text-gray-700 mb-2">Ribuan warga terdampak hingga harus kehilangan nyawa. Ayo bantu segera!</p>
-                        <hr class="my-4" />                  
-                        <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700 my-1">
-                            <div class="bg-blue-400 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 45%"> 45%</div>
-                        </div>
-        
-                        <div class="flex flex-wrap justify-between mt-1">
-                            <div class="grid">
-                                <span class="text-sm">Terkumpul</span>
-                                <span class="text-xl font-bold">Rp. 8.000.000</span>
-                            </div>
-                            <div class="grid items-end">
-                                <span class="text-sm">Sisa hari</span>
-                                <span class="text-center text-xl font-bold">8</span>
-                            </div>
-                        </div>
-                        <div class=""></div>
-                    </div>
-                </div>
+            @endforeach
             </div>
 
             <nav class= "flex justify-center my-8">
