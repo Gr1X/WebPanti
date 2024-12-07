@@ -15,9 +15,8 @@ Route::view('/program', 'program')->name('program');
 Route::view('/profile', 'profile')->name('profile');
 
 Route::prefix('admin')->name('admin.')->group(function () {
-    Route::resource('programs', AdminProgramController::class);
+  Route::resource('programs', AdminProgramController::class)->except(['show']);
 });
-
 
 
 // Dashboard (Hanya dapat diakses jika login)
