@@ -2,40 +2,40 @@
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Auth\ForgotPasswordController;
+use App\Http\Controllers\Auth\ResetPasswordController;
 use Illuminate\Support\Facades\Route;
 
-// Dashboard (hanya dapat diakses jika login)
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard')->middleware('auth');
+// Landing Page and Static Pages (Pastikan route ini pertama)
+Route::view('/', 'landing')->name('landing');  // Halaman utama
+Route::view('/donation', 'donation')->name('donation');
+Route::view('/gallery', 'gallery')->name('gallery');
+Route::view('/program', 'program')->name('program');
+Route::view('/profile', 'profile')->name('profile');
 
-// Login routes
-Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login.form');
-Route::post('/login', [LoginController::class, 'login'])->name('login.submit');
-Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+// Dashboard (Hanya dapat diakses jika login)
+Route::middleware('auth')->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+    Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+});
 
-// Register routes
-Route::get('/register', [RegisterController::class, 'showRegisterForm'])->name('register.form');
-Route::post('/register', [RegisterController::class, 'register'])->name('register.submit');
+// Guest routes (Login, Register, Forgot/Reset Password)
+Route::middleware('guest')->group(function () {
+    // Login
+    Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login.form');
+    Route::post('/login', [LoginController::class, 'login'])->name('login.submit');
 
-// Landing page
-Route::get('/', function () {
-    return view('landing');
-})->name('landing');
+    // Register
+    Route::get('/register', [RegisterController::class, 'showRegisterForm'])->name('register.form');
+    Route::post('/register', [RegisterController::class, 'register'])->name('register.submit');
 
-// Other static pages
-Route::get('/donation', function () {
-    return view('donation');
-})->name('donation');
+    // Forgot Password
+    Route::get('/forgot-password', [ForgotPasswordController::class, 'showLinkRequestForm'])->name('password.request');
+    Route::post('/forgot-password', [ForgotPasswordController::class, 'sendResetLinkEmail'])->name('password.email');
 
-Route::get('/gallery', function(){
-    return view('gallery');
-})->name('gallery');
-
-Route::get('/program', function(){
-    return view('program');
-})->name('program');
-
-Route::get('/profile', function(){
-    return view('profile');
-})->name('profile');
+    // Reset Password
+    Route::get('/reset-password/{token}', [ResetPasswordController::class, 'showResetForm'])->name('password.reset');
+    Route::post('/reset-password', [ResetPasswordController::class, 'reset'])->name('password.update');
+});
