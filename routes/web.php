@@ -13,6 +13,7 @@ Route::view('/donation', 'user.donation')->name('donation');
 Route::view('/gallery', '/user.gallery')->name('gallery');
 Route::view('/program', '/user.program')->name('program');
 Route::view('/profile', '/auth.profile')->name('profile');
+Route::view('/aboutus', 'user.aboutUs')->name('aboutus');
 
 
 Route::view('/donation/details', 'user.donateComponent.detailsDonation')->name('donateDetails');
