@@ -4,6 +4,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\ResetPasswordController;
+use App\Http\Controllers\AdminProgramController;
 use Illuminate\Support\Facades\Route;
 
 // Landing Page and Static Pages (Pastikan route ini pertama)
@@ -12,6 +13,12 @@ Route::view('/donation', 'donation')->name('donation');
 Route::view('/gallery', 'gallery')->name('gallery');
 Route::view('/program', 'program')->name('program');
 Route::view('/profile', 'profile')->name('profile');
+
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::resource('programs', AdminProgramController::class);
+});
+
+
 
 // Dashboard (Hanya dapat diakses jika login)
 Route::middleware('auth')->group(function () {

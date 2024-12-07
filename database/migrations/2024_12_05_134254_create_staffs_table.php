@@ -14,6 +14,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('posisi'); // posisi (contoh: ketua, bendahara)
             $table->string('no_telp')->nullable(); // nomor telepon
+            $table->string('gambar')->nullable();
             $table->timestamps();
         });
     }

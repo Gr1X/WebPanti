@@ -16,5 +16,6 @@ class AnakPanti extends Model
         'status',
         'tingkat_edukasi',
         'notes',
+        'gambar',
     ];
 }

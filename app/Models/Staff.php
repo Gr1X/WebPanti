@@ -13,5 +13,6 @@ class Staff extends Model
         'name',
         'posisi',
         'no_telp',
+        'gambar',
     ];
 }

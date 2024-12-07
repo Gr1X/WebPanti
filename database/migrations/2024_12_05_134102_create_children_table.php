@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('status'); // aktif/non-aktif
             $table->string('tingkat_edukasi')->nullable(); // pendidikan terakhir
             $table->text('notes')->nullable(); // informasi tambahan
+            $table->string('gambar')->nullable();
             $table->timestamps();
         });
     }

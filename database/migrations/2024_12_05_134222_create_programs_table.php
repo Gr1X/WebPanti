@@ -15,6 +15,7 @@ return new class extends Migration
             $table->text('deskripsi')->nullable();
             $table->decimal('jumlah_target', 10, 2)->nullable(); // target dana
             $table->decimal('terkumpul', 10, 2)->default(0); // dana terkumpul
+            $table->string('gambar')->nullable();
             $table->date('tgl_mulai');
             $table->date('tgl_selesai')->nullable();
             $table->timestamps();

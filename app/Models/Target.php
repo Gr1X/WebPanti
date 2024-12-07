@@ -9,18 +9,15 @@ class Target extends Model
 {
     use HasFactory;
 
+    protected $table = 'target';
+
     protected $fillable = [
         'namaprogram',
         'deskripsi',
         'jumlah_target',
         'terkumpul',
+        'gambar',
         'tgl_mulai',
         'tgl_selesai',
     ];
-
-    public function relasiTargetTunai()
-    {
-        return $this->hasMany(RelasiTarget::class, 'id_targettunai');
-    }
 }
-
