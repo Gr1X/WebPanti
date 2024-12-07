@@ -9,15 +9,21 @@ class Target extends Model
 {
     use HasFactory;
 
-    protected $table = 'target'; // Nama tabel di database
+    // Tentukan nama tabel secara eksplisit
+    protected $table = 'target';
 
     protected $fillable = [
         'namaprogram',
         'deskripsi',
         'jumlah_target',
-        'terkumpul',
         'gambar',
         'tgl_mulai',
         'tgl_selesai',
     ];
+
+    // Relasi dengan Donasi
+    public function donasi()
+    {
+        return $this->hasMany(Donasi::class, 'program_id'); // Menyesuaikan dengan kolom program_id di tabel donasi
+    }
 }

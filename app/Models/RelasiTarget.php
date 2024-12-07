@@ -10,17 +10,17 @@ class RelasiTarget extends Model
     use HasFactory;
 
     protected $fillable = [
-        'id_donasitunai',
-        'id_targettunai',
+        'id_donasi',
+        'id_target',
     ];
 
     public function donasiTunai()
     {
-        return $this->belongsTo(Donasi::class, 'id_donasitunai');
+        return $this->belongsTo(Donasi::class, 'id_donasi');
     }
 
     public function targetTunai()
     {
-        return $this->belongsTo(Target::class, 'id_targettunai');
+        return $this->belongsTo(Target::class, 'id_target');
     }
 }
