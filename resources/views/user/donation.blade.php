@@ -139,14 +139,14 @@
                         <div class="flex flex-wrap justify-between mt-1">
                             <div class="grid">
                                 <span class="text-sm">Terkumpul</span>
-                                <span class="text-xl font-bold">Rp. {{ number_format($terkumpul, 0, ',', '.') }}</span>
+                                <span class="text-lg font-bold">Rp. {{ number_format($terkumpul, 0, ',', '.') }}</span>
                             </div>
                             <div class="grid items-end">
                                 @php
                                     $tglSelesai = $target->tgl_selesai ? \Carbon\Carbon::parse($target->tgl_selesai)->format('d M Y') : 'Tidak Ditentukan';
                                 @endphp
                                 <span class="text-sm">Tanggal Selesai</span>
-                                <span class="text-center text-xl font-bold">{{ $tglSelesai }}</span>
+                                <span class="text-center text-lg font-bold">{{ $tglSelesai }}</span>
                             </div>
                         </div>
                     </div>
@@ -189,8 +189,6 @@
                     </li>
                 </ul>
             </nav>
-
-            
         </div>
     </div>
 </div>

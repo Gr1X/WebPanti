@@ -26,6 +26,12 @@ export default {
                     300: '#FFFFFF', //Putih
                     400: '#1B2A39'  //Hitam
                 },
+                
+                cream: '#FCFBF1',
+                lightGreen: '#C7A59D',
+                yellowAccent: '#788D7C',
+                greenPrimary: '#BC705B',
+                greenDark: '#8BA172',
             },
         },
     },

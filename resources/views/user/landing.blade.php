@@ -13,8 +13,8 @@
                 </div>
 
                 <div class="items-center mb-12 h-full w-full bg-gray-400 rounded-xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-custom-50 p-4 shadow-lg">
-                    <p class="text-custom-50 text-sm">Profil</p>
-                    <h1 class="text-custom-50 text-3xl font-semibold mb-4">Visi & Misi</h1>
+                    <p class="text-custom-50 text-sm">Visi & Misi</p>
+                    <h1 class="text-custom-50 text-3xl font-semibold mb-4">Visi</h1>
                     <hr class="my-2 border-custom-50"/>
                     <p>Nama panti Lorem ipsum dolor sit amet, consectetur adipiscing elit. At et posuere est non vitae enim, sed consectetur. Nullam interdum feugiat nibh lectus viverra sollicitudin.</p>
                 </div>
@@ -50,8 +50,8 @@
         <div class="">
             <div class="grid grid-cols-2 gap-10 px-10">
                 <div class="items-center h-full w-full bg-gray-400 rounded-xl bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 border border-custom-50 p-4 shadow-lg">
-                    <p class="text-custom-50 text-sm">Siapa Kami?</p>
-                    <h1 class="text-custom-50 text-3xl font-semibold mb-4">Yayasan Nurul Jadid</h1>
+                    <p class="text-custom-50 text-sm">Visi & Misi</p>
+                    <h1 class="text-custom-50 text-3xl font-semibold mb-4">Misi</h1>
                     <hr class="my-2" />
                     <p>Nama panti Lorem ipsum dolor sit amet, consectetur adipiscing elit. At et posuere est non vitae enim, sed consectetur. Nullam interdum feugiat nibh lectus viverra sollicitudin.</p>
                 </div>

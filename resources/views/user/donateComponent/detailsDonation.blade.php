@@ -80,5 +80,8 @@
             <hr class="my-3 mb-6" />
         </div>
     </div>
+    <div class="px-8 py-4">
+        @include('donatecom.userfeed')
+    </div>
 </div>
 @stop
