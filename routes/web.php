@@ -8,11 +8,11 @@ use App\Http\Controllers\AdminProgramController;
 use Illuminate\Support\Facades\Route;
 
 // Landing Page and Static Pages (Pastikan route ini pertama)
-Route::view('/', 'landing')->name('landing');  // Halaman utama
-Route::view('/donation', 'donation')->name('donation');
-Route::view('/gallery', 'gallery')->name('gallery');
-Route::view('/program', 'program')->name('program');
-Route::view('/profile', 'profile')->name('profile');
+Route::view('/', '/user.landing')->name('landing');  // Halaman utama
+Route::view('/donation', '/user.donation')->name('donation');
+Route::view('/gallery', '/user.gallery')->name('gallery');
+Route::view('/program', '/user.program')->name('program');
+Route::view('/profile', '/user.profile')->name('profile');
 
 Route::prefix('admin')->name('admin.')->group(function () {
   Route::resource('programs', AdminProgramController::class)->except(['show']);
@@ -45,3 +45,7 @@ Route::middleware('guest')->group(function () {
     Route::get('/reset-password/{token}', [ResetPasswordController::class, 'showResetForm'])->name('password.reset');
     Route::post('/reset-password', [ResetPasswordController::class, 'reset'])->name('password.update');
 });
+
+Route::get('/forgot-password', function () {
+    return view('auth.forgot-password');
+})->name('password.request');

@@ -11,7 +11,7 @@ class LoginController extends Controller
     // Menampilkan form login
     public function showLoginForm()
     {
-        return view('login');
+        return view('auth.login');
     }
 
     // Menangani login pengguna
@@ -26,7 +26,7 @@ class LoginController extends Controller
         // Attempt login menggunakan kredensial
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password], $request->remember)) {
             // Jika berhasil login, arahkan ke dashboard
-            return redirect()->intended(route('landing'));
+            return redirect()->intended(route('user.landing'));
         }
 
         // Jika gagal login
