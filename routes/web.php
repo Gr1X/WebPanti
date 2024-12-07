@@ -14,10 +14,10 @@ Route::view('/gallery', '/user.gallery')->name('gallery');
 Route::view('/program', '/user.program')->name('program');
 Route::view('/profile', '/user.profile')->name('profile');
 
-Route::prefix('admin')->name('admin.')->group(function () {
-  Route::resource('programs', AdminProgramController::class)->except(['show']);
+// Admin Routes
+Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
+  Route::resource('programs', AdminProgramController::class);
 });
-
 
 // Dashboard (Hanya dapat diakses jika login)
 Route::middleware('auth')->group(function () {

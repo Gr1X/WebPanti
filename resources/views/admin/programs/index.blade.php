@@ -2,10 +2,10 @@
 
 @section('content')
 <div class="container">
-    <h1 class="mb-4">Daftar Program Panti Asuhan</h1>
-
-    <!-- Button Tambah Program -->
-    <a href="{{ route('admin.programs.create') }}" class="btn btn-primary mb-3">Tambah Program</a>
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h1 class="mb-0">Daftar Program Panti Asuhan</h1>
+        <a href="{{ route('admin.programs.create') }}" class="btn btn-primary">Tambah Program</a>
+    </div>
 
     <!-- Tabel Program -->
     <div class="table-responsive">
