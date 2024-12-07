@@ -26,7 +26,7 @@
                 <tr>
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $program->namaprogram }}</td>
-                    <td>{{ Str::limit($program->deskripsi, 50) }}</td>
+                    <td>{{ $program->deskripsi }}</td>
                     <td>{{ number_format($program->jumlah_target, 2) }}</td>
                     <td>
                         {{ number_format($program->terkumpul, 2) }} / {{ number_format($program->jumlah_target, 2) }}
