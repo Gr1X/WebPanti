@@ -11,18 +11,18 @@
             </div>
 
             <div class="mx-auto">
-                <div class="p-5 pt-0">
+                <div class="pt-0 pb-4">
                     <h2 class="text-2xl font-bold mb-2 uppercase">Keberkahan Jariyah, Tebar Al-Quran</h2>
-                    <p class="text-sm text-gray-700 mb-2">Ribuan warga terdampak hingga harus kehilangan nyawa. Ayo bantu segera!</p>
-                    <hr class="my-4" />                  
+                    <p class="text-sm text-gray-700 mb-2">Ribuan warga terdampak hingga harus kehilangan nyawa. Ayo bantu segera!</p>                 
                 </div>
-                
-                <hr class="mx-4 my-4"/>
+
+                <hr class="my-4" />
 
                 <div class="flex flex-wrap justify-between mt-1 mb-4">
                     <div class="grid w-full">
-                        <div class="flex">
+                        <div class="flex justify-between">
                             <span class="text-2xl font-bold">Rp. 8.000.000</span>
+                            <span class="flex items-center gap-1 text-sm self-end"><ion-icon name="people-outline" class="size-4"></ion-icon>200 Donatur</span>
                         </div>
                         <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700 my-1">
                             <div class="bg-blue-400 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: 45%"> 45%</div>
@@ -32,13 +32,17 @@
                                 <span class="text-xs"> 40% terkumpul dari Rp 100.000.000</span>
                             </div>
                             <div class="grid items-end">
-                                <span class="text-sm">Sisa hari</span>
+                                <span class="text-xs flex items-center gap-1"><ion-icon name="time-outline"></ion-icon>12 hari lagi</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <button class="bg-sky-200 p-1.5 rounded text-center w-full uppercase font-bold">donasi sekarang</button>
+                <button class="bg-gradient-to-r from-cyan-500 to-blue-500 p-1.5 mt-4 rounded text-center w-full uppercase font-bold hover:bg-gradient-to-r from-cyan-500 to-blue-500 text-white">donasi sekarang</button>
+
+                <div class="flex">
+
+                </div>
             </div>
         </div>
     </div>

@@ -22,12 +22,12 @@ Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
 });
 
 // Dashboard (Hanya dapat diakses jika login)
-Route::middleware('auth')->group(function () {
-    Route::get('/', function () {
-        return view('user.landing');
-    })->name('landing');
-    Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
-});
+// Route::middleware('auth')->group(function () {
+//     Route::get('/', function () {
+//         return view('user.landing');
+//     })->name('landing');
+//     Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+// });
 
 // Guest routes (Login, Register, Forgot/Reset Password)
 Route::middleware('guest')->group(function () {
