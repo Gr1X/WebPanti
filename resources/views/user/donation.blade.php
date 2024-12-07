@@ -130,7 +130,7 @@
     
             
             <div class="grid grid-cols-3 gap-8">
-                <div class="bg-white rounded-md shadow-lg overflow-hidden max-w-md">
+                <a href="{{route('donateDetails')}}" class="bg-white rounded-md shadow-lg overflow-hidden max-w-md ">
                     <img class="w-full h-48 object-cover" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="Tebar Al-Quran di Palestina">
                     <div class="p-6">
                         <h2 class="text-2xl font-bold mb-2">Keberkahan Jariyah, Tebar Al-Quran di Bumi Para Nabi</h2>
@@ -152,7 +152,7 @@
                         </div>
                         <div class=""></div>
                     </div>
-                </div>
+                </a>
 
                 <div class="bg-white rounded-md shadow-lg overflow-hidden max-w-md">
                     <img class="w-full h-48 object-cover" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="Tebar Al-Quran di Palestina">

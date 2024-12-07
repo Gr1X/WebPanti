@@ -8,22 +8,24 @@ use App\Http\Controllers\AdminProgramController;
 use Illuminate\Support\Facades\Route;
 
 // Landing Page and Static Pages (Pastikan route ini pertama)
-Route::view('/', '/user.landing')->name('landing');  // Halaman utama
-Route::view('/donation', '/user.donation')->name('donation');
+Route::view('/', 'user.landing')->name('landing');  // Halaman utama
+Route::view('/donation', 'user.donation')->name('donation');
 Route::view('/gallery', '/user.gallery')->name('gallery');
 Route::view('/program', '/user.program')->name('program');
-Route::view('/profile', '/user.profile')->name('profile');
+Route::view('/profile', '/auth.profile')->name('profile');
 
+
+Route::view('/donation/details', 'user.donateComponent.detailsDonation')->name('donateDetails');
 // Admin Routes
 Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
-  Route::resource('programs', AdminProgramController::class);
+    Route::resource('programs', AdminProgramController::class);
 });
 
 // Dashboard (Hanya dapat diakses jika login)
 Route::middleware('auth')->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+    Route::get('/', function () {
+        return view('user.landing');
+    })->name('landing');
     Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 });
 
