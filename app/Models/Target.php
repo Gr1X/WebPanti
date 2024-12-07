@@ -9,7 +9,7 @@ class Target extends Model
 {
     use HasFactory;
 
-    protected $table = 'target';
+    protected $table = 'target'; // Nama tabel di database
 
     protected $fillable = [
         'namaprogram',

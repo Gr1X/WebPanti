@@ -13,7 +13,7 @@ class AdminProgramController extends Controller
      */
     public function index()
     {
-        $programs = Target::all();
+        $programs = Target::all(); // Mengambil semua data dari tabel 'target'
         return view('admin.programs.index', compact('programs'));
     }
 
