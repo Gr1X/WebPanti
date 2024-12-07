@@ -9,11 +9,15 @@ class Donasi extends Model
 {
     use HasFactory;
 
+    // Tentukan nama tabel secara eksplisit
+    protected $table = 'donasi';
+
     protected $fillable = [
         'user_id',
         'jumlah',
         'notes',
         'waktu_donasi',
+        'program_id',
     ];
 
     // Relasi ke user yang memberikan donasi
@@ -24,7 +28,6 @@ class Donasi extends Model
 
     public function relasiTarget()
     {
-        return $this->hasMany(RelasiTarget::class, 'id_donasitunai');
+        return $this->hasMany(RelasiTarget::class, 'id_donasi');
     }
 }
-

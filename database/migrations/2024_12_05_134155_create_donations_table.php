@@ -14,6 +14,7 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade'); // id user yang berdonasi
             $table->decimal('jumlah', 10, 2); // jumlah donasi tunai
             $table->text('notes')->nullable(); // catatan
+            $table->integer('program_id');
             $table->timestamp('waktu_donasi'); // waktu donasi
             $table->timestamps();
         });
