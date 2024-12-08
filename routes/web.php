@@ -33,6 +33,9 @@ Route::get('/gallery/{year?}', [GalleryController::class, 'index'])->name('galle
 Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
 Route::post('/profile/edit', [ProfileController::class, 'update'])->name('profile.update');
 
+Route::get('/program/volunteer/daftar', function(){
+    return view('user.programComponent.registerRelawan');
+})->name('daftarRelawan'); 
 
 Route::get('/program/details', function(){
     return view('user.programComponent.detailBerita');
