@@ -12,6 +12,7 @@ class AdminProgramController extends Controller
     /**
      * Display a listing of the programs.
      */
+    
     public function index()
     {
         // Ambil semua program dengan total donasi terkumpul

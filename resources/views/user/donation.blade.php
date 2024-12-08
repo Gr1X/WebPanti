@@ -10,7 +10,7 @@
             </div>
         </div>
 
-        <div class="mb-8">
+        <!-- <div class="mb-8">
             <div class="mb-8 flex justify-between">
                 <div class="">
                     <div class="">
@@ -24,78 +24,16 @@
             
             <div class="grid grid-cols-3 gap-4">
                 <a href="#" class="flex flex-col items-center bg-white rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                    <!-- Gambar -->
                     <div class="w-full h-full">
                         <img class="object-cover w-full h-full rounded-t-lg md:rounded-none md:rounded-s-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="Image">
                     </div>
-                    <!-- Konten -->
                     <div class="flex flex-col justify-between p-4 leading-normal">
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Peralatan Medis</h5>
                         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
                     </div>
                 </a>
-
-                <a href="#" class="flex flex-col items-center bg-white rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                    <!-- Gambar -->
-                    <div class="w-full h-full">
-                        <img class="object-cover w-full h-full rounded-t-lg md:rounded-none md:rounded-s-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="Image">
-                    </div>
-                    <!-- Konten -->
-                    <div class="flex flex-col justify-between p-4 leading-normal">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Produk Kebersihan</h5>
-                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                    </div>
-                </a>
-
-                <a href="#" class="flex flex-col items-center bg-white rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                    <!-- Gambar -->
-                    <div class="w-full h-full">
-                        <img class="object-cover w-full h-full rounded-t-lg md:rounded-none md:rounded-s-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="Image">
-                    </div>
-                    <!-- Konten -->
-                    <div class="flex flex-col justify-between p-4 leading-normal">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Donasi Pakaian</h5>
-                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                    </div>
-                </a>
-
-                <a href="#" class="flex flex-col items-center bg-white rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                    <!-- Gambar -->
-                    <div class="w-full h-full">
-                        <img class="object-cover w-full h-full rounded-t-lg md:rounded-none md:rounded-s-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="Image">
-                    </div>
-                    <!-- Konten -->
-                    <div class="flex flex-col justify-between p-4 leading-normal">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Makanan & Minuman</h5>
-                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                    </div>
-                </a>
-
-                <a href="#" class="flex flex-col items-center bg-white rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                    <!-- Gambar -->
-                    <div class="w-full h-full">
-                        <img class="object-cover w-full h-full rounded-t-lg md:rounded-none md:rounded-s-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="Image">
-                    </div>
-                    <!-- Konten -->
-                    <div class="flex flex-col justify-between p-4 leading-normal">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Barang Elektronik</h5>
-                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                    </div>
-                </a>
-
-                <a href="#" class="flex flex-col items-center bg-white rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                    <!-- Gambar -->
-                    <div class="w-full h-full">
-                        <img class="object-cover w-full h-full rounded-t-lg md:rounded-none md:rounded-s-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="Image">
-                    </div>
-                    <!-- Konten -->
-                    <div class="flex flex-col justify-between p-4 leading-normal">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Penunjang Pendidikan</h5>
-                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                    </div>
-                </a>
             </div>
-        </div>
+        </div> -->
 
         <div class="mb-8 pb-8">
             <div class="mb-8 flex justify-between">
@@ -154,7 +92,7 @@
             @endforeach
             </div>
 
-            <nav class= "flex justify-center my-8">
+            <!-- <nav class= "flex justify-center my-8">
                 <ul class="flex items-center -space-x-px h-10 text-base">
                     <li>
                         <a href="#" class="flex items-center justify-center px-4 h-10 ms-0 leading-tight text-gray-500 bg-white border border-e-0 border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
@@ -188,7 +126,7 @@
                         </a>
                     </li>
                 </ul>
-            </nav>
+            </nav> -->
         </div>
     </div>
 </div>

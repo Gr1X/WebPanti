@@ -94,6 +94,7 @@
                     </div>
                 </div> --}}
                 
+                <!-- ini adalah desain untuk menampilkan foto-foto dari tabel gallery -->
                 <div class="grid grid-cols-4 py-4 gap-4 overflow-y-auto px-4">
                     <div class="bg-white rounded-md shadow-lg overflow-hidden w-full">
                         <img class="w-full h-52 object-cover" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="Tebar Al-Quran di Palestina">
@@ -126,7 +127,6 @@
                     <div class="bg-white rounded-md shadow-lg overflow-hidden ">
                         <img class="w-full h-52 object-cover" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="Tebar Al-Quran di Palestina">
                     </div>
-
                 </div>
             </div>
         </div>

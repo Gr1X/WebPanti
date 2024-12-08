@@ -9,12 +9,16 @@ use App\Http\Controllers\UserProgramController;
 use App\Http\Controllers\DonasiController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\EditPasswordController;
+use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\EditGalleryController;
+use App\Http\Controllers\UserGalleryController;
 use Illuminate\Support\Facades\Route;
 
 // Landing Page and Static Pages (Pastikan route ini pertama)
 Route::view('/', 'user.landing')->name('landing');  // Halaman utama
 // Route::view('/donation', 'user.donation')->name('donation');
-Route::view('/gallery', '/user.gallery')->name('gallery');
+// Route::view('/gallery', '/user.gallery')->name('gallery');
+Route::get('/gallery', [UserGalleryController::class, 'index'])->name('gallery');
 Route::view('/program', '/user.program')->name('program');
 // Route::view('/profile', '/auth.profile')->name('profile');
 Route::view('/aboutus', 'user.aboutUs')->name('aboutus');
@@ -22,6 +26,8 @@ Route::view('/aboutus', 'user.aboutUs')->name('aboutus');
 Route::middleware(['auth'])->group(function () {
   Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
 });
+
+Route::get('/gallery/{year?}', [GalleryController::class, 'index'])->name('gallery.index');
 
 Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
 Route::post('/profile/edit', [ProfileController::class, 'update'])->name('profile.update');
@@ -32,10 +38,30 @@ Route::get('/program/details', function(){
 })->name('programDetails'); 
 
 Route::view('/donation/details', 'user.donateComponent.daftarRelawan')->name('donateDetails');
-// Admin Routes
 
-Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
-    
+// Admin Routes
+Route::middleware(['auth'])->prefix('admin')->group(function () {
+  // Halaman utama program (index)
+  Route::get('programs', [AdminProgramController::class, 'index'])->name('admin.programs.index');
+
+  // Halaman untuk membuat program baru (create)
+  Route::get('/programs/create', [AdminProgramController::class, 'create'])->name('admin.programs.create');
+  Route::post('/programs', [AdminProgramController::class, 'store'])->name('admin.programs.store');
+
+  // Halaman untuk mengedit program (edit)
+  Route::get('/programs/{id}/edit', [AdminProgramController::class, 'edit'])->name('admin.programs.edit');
+  Route::post('/programs/{id}', [AdminProgramController::class, 'update'])->name('admin.programs.update');
+
+  // Hapus program
+  Route::delete('/programs/{id}', [AdminProgramController::class, 'destroy'])->name('admin.programs.destroy');
+
+  // Edit gallery
+  Route::get('/gallery', [EditGalleryController::class, 'index'])->name('admin.gallery.index');
+  Route::get('/gallery/create', [EditGalleryController::class, 'create'])->name('admin.gallery.create');
+  Route::post('/gallery', [EditGalleryController::class, 'store'])->name('admin.gallery.store');
+  Route::get('/gallery/{id}/edit', [EditGalleryController::class, 'edit'])->name('admin.gallery.edit');
+  Route::put('/gallery/{id}', [EditGalleryController::class, 'update'])->name('admin.gallery.update');
+  Route::delete('/gallery/{id}', [EditGalleryController::class, 'destroy'])->name('admin.gallery.destroy');
 });
 
 Route::get('password/edit', [EditPasswordController::class, 'edit'])->name('password.edit');
