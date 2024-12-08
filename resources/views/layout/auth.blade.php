@@ -13,6 +13,7 @@
 <body class="bg-black">
     <main>
         {{-- Call Register atau Login --}}
+        
         @yield('formAuth')
     </main>
 </body>

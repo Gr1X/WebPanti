@@ -67,7 +67,10 @@
                         </li>
                         @if(Auth::user()->role === 'admin')
                             <li>
-                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Admin Panel</a>
+                                <a href="{{ route('admin.programs.index') }}" 
+                                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                    Admin Panel
+                                </a>
                             </li>
                         @endif
                     </ul>

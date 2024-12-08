@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A</title>
+    <title>Admin View</title>
     @vite('resources/css/app.css')
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -13,13 +13,16 @@
 </head>
 <body class="overflow-x-hidden">
     <!-- Include Navbar -->
+    @include('component.navbaradmin')
 
     <!-- Main Content -->
-    <main>
-        @yield('content') <!-- This is where your page content will go -->
-    </main>
+    <div class="pt-24">
+        @yield('content')
+    </div>
     
     <!-- Include Footer -->
-    @include('component.footer')
+    <div class="pt-44">
+        @include('component.footer')
+    </div>
 </body>
 </html>
