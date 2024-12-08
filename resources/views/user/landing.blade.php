@@ -67,74 +67,126 @@
         
     </div>
 
-    <div class="">
-        <div class="relative bg-slate-800 text-white">
-            <!-- Background Image -->
-            <div class="absolute inset-0">
-                <img
-                    src="your-image-path.jpg"
-                    alt="Background"
-                    class="w-full h-64 object-cover opacity-50"
-                />
-            </div>
-        
-            <!-- Content -->
-            <div class="h-full w-full bg-custom-50 bg-clip-padding backdrop-filter backdrop-blur-sm text-center z-10 text-slate-100 py-4">
-                <!-- Title Section -->
-                <h2 class="text-5xl font-bold text-custom-500">Berita Panti</h2>
-            </div>
+    <div class="relative bg-slate-800 text-white">
+        <!-- Background Image -->
+        <div class="absolute inset-0">
+            <img
+                src="your-image-path.jpg"
+                alt="Background"
+                class="w-full h-64 object-cover opacity-50"
+            />
         </div>
+    
+        <!-- Content -->
+        <div class="relative h-64 bg-cover bg-center">
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-green-900 bg-opacity-60"></div>
+            <!-- Content -->
+            <div class="relative z-10 flex items-center justify-between px-10 h-full">
+                <div class="text-white">
+                    <h1 class="text-4xl font-bold">Berita Panti</h1>
+                </div>
+            </div>
+        </div>        
+    </div>
 
+    <div class="">
         <div id="gallery" class="relative w-full" data-carousel="slide">
             <!-- Carousel wrapper -->
-            <div class="relative h-56 overflow-hidden rounded-lg md:h-80 my-8 mx-20 bg-slate-500">
-                <div class="hidden duration-700 ease-in-out bg-black" data-carousel-item>
-                    <img src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
-                </div>
+            <div class="relative h-56 overflow-hidden rounded-lg md:h-80 my-8 mx-20">
+                <!-- Item 1 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                    <img src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" 
+                        alt="Gambar 1" 
+                        class="absolute w-full h-full object-cover">
                 </div>
                 <!-- Item 2 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-                    <img src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg" class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                    <img src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg" 
+                        alt="Gambar 2" 
+                        class="absolute w-full h-full object-cover">
                 </div>
                 <!-- Item 3 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
-                </div>
-                <!-- Item 4 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg" class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
-                </div>
-                <!-- Item 5 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg" class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                    <img src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" 
+                        alt="Gambar 3" 
+                        class="absolute w-full h-full object-cover">
                 </div>
             </div>
+        
             <!-- Slider controls -->
-            <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+            <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-700/30 group-hover:bg-gray-700/50">
+                    <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
                     </svg>
                     <span class="sr-only">Previous</span>
                 </span>
             </button>
-            <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+            <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-700/30 group-hover:bg-gray-700/50">
+                    <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 9l4-4-4-4"/>
                     </svg>
                     <span class="sr-only">Next</span>
                 </span>
             </button>
-        </div>
+        </div>        
+    </div>
         
-        <div class="grid grid-cols-2 gap-6 py-8 px-6">
-            <div class="relative flex flex-col md:flex-row bg-white shadow-md hover:shadow-lg transition-shadow rounded-lg overflow-hidden border border-gray-200">
-                <div class="md:w-2/5">
-                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt="Card Image" class="object-cover h-full w-full">
-                </div>
+    <div class="grid grid-cols-2 gap-6 py-8 px-6">
+        <div class="relative flex flex-col md:flex-row bg-white shadow-md hover:shadow-lg transition-shadow rounded-lg overflow-hidden border border-gray-200">
+            <div class="md:w-2/5">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt="Card Image" class="object-cover h-full w-full">
+            </div>
+            <div class="p-6 flex flex-col justify-between">
+                <h4 class="text-slate-800 text-xl font-bold">Kegiatan Sosial Desa Binaan</h4>
+                <p class="text-gray-600 text-sm mt-2">Meningkatkan kesejahteraan masyarakat desa melalui pelatihan keterampilan.</p>
+                <a href="#" class="text-greenPrimary text-sm font-semibold hover:underline mt-4 flex items-center">
+                    Baca Selengkapnya
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="relative flex flex-col md:flex-row bg-white shadow-md hover:shadow-lg transition-shadow rounded-lg overflow-hidden border border-gray-200">
+            <div class="md:w-2/5">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt="Card Image" class="object-cover h-full w-full">
+            </div>
+            <div class="p-6 flex flex-col justify-between">
+                <h4 class="text-slate-800 text-xl font-bold">Kegiatan Sosial Desa Binaan</h4>
+                <p class="text-gray-600 text-sm mt-2">Meningkatkan kesejahteraan masyarakat desa melalui pelatihan keterampilan.</p>
+                <a href="#" class="text-greenPrimary text-sm font-semibold hover:underline mt-4 flex items-center">
+                    Baca Selengkapnya
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="relative flex flex-col md:flex-row bg-white shadow-md hover:shadow-lg transition-shadow rounded-lg overflow-hidden border border-gray-200">
+            <div class="md:w-2/5">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt="Card Image" class="object-cover h-full w-full">
+            </div>
+            <div class="p-6 flex flex-col justify-between">
+                <h4 class="text-slate-800 text-xl font-bold">Kegiatan Sosial Desa Binaan</h4>
+                <p class="text-gray-600 text-sm mt-2">Meningkatkan kesejahteraan masyarakat desa melalui pelatihan keterampilan.</p>
+                <a href="#" class="text-greenPrimary text-sm font-semibold hover:underline mt-4 flex items-center">
+                    Baca Selengkapnya
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="relative flex flex-col md:flex-row bg-white shadow-md hover:shadow-lg transition-shadow rounded-lg overflow-hidden border border-gray-200">
+            <div class="md:w-2/5">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt="Card Image" class="object-cover h-full w-full">
+            </div>
                 <div class="p-6 flex flex-col justify-between">
                     <h4 class="text-slate-800 text-xl font-bold">Kegiatan Sosial Desa Binaan</h4>
                     <p class="text-gray-600 text-sm mt-2">Meningkatkan kesejahteraan masyarakat desa melalui pelatihan keterampilan.</p>
@@ -146,51 +198,35 @@
                     </a>
                 </div>
             </div>
-
-            <div class="relative flex flex-col md:flex-row bg-white shadow-md hover:shadow-lg transition-shadow rounded-lg overflow-hidden border border-gray-200">
-                <div class="md:w-2/5">
-                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt="Card Image" class="object-cover h-full w-full">
-                </div>
-                    <div class="p-6 flex flex-col justify-between">
-                        <h4 class="text-slate-800 text-xl font-bold">Kegiatan Sosial Desa Binaan</h4>
-                        <p class="text-gray-600 text-sm mt-2">Meningkatkan kesejahteraan masyarakat desa melalui pelatihan keterampilan.</p>
-                        <a href="#" class="text-greenPrimary text-sm font-semibold hover:underline mt-4 flex items-center">
-                            Baca Selengkapnya
-                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div> 
-        </div>
+        </div> 
+        
+    </div>
 
     <div class="">
-        <div class="bg-greenPrimary py-10">
-            <div class="grid grid-cols-3 items-center text-white px-10 divide-x divide-white">
+        <div class="bg-custom-50 py-10">
+            <div class="grid grid-cols-3 items-center text-white px-10 divide-x divide-custom-400">
                 <!-- Campaign -->
                 <div class="flex flex-col items-center text-center px-4">
-                    <ion-icon name="hand-right-outline" class="text-white w-16 h-16 mb-4"></ion-icon>
-                    <h2 class="text-4xl font-bold">969</h2>
-                    <p class="text-lg font-semibold mt-2">CAMPAIGN</p>
+                    <ion-icon name="hand-right-outline" class="text-custom-200 w-16 h-16 mb-4"></ion-icon>
+                    <h2 class="text-4xl font-bold text-custom-500">969</h2>
+                    <p class="text-lg font-semibold mt-2 text-custom-400">CAMPAIGN</p>
                 </div>
         
                 <!-- Donasi Terkumpul -->
                 <div class="flex flex-col items-center text-center px-4">
-                    <ion-icon name="cash-outline" class="text-white w-16 h-16 mb-4"></ion-icon>
-                    <h2 class="text-4xl font-bold">172.944.347.446</h2>
-                    <p class="text-lg font-semibold mt-2">DONASI TERKUMPUL</p>
+                    <ion-icon name="cash-outline" class="text-custom-200 w-16 h-16 mb-4"></ion-icon>
+                    <h2 class="text-4xl font-bold text-custom-500">172.944.347.446</h2>
+                    <p class="text-lg font-semibold mt-2 text-custom-400">DONASI TERKUMPUL</p>
                 </div>
         
                 <!-- Transaksi Campaign -->
                 <div class="flex flex-col items-center text-center px-4">
-                    <ion-icon name="card-outline" class="text-white w-16 h-16 mb-4"></ion-icon>
-                    <h2 class="text-4xl font-bold">440.746</h2>
-                    <p class="text-lg font-semibold mt-2">TRANSAKSI CAMPAIGN</p>
+                    <ion-icon name="card-outline" class="text-custom-200 w-16 h-16 mb-4"></ion-icon>
+                    <h2 class="text-4xl font-bold text-custom-500">440.746</h2>
+                    <p class="text-lg font-semibold mt-2 text-custom-400">TRANSAKSI CAMPAIGN</p>
                 </div>
             </div>
-        </div>
-        
+        </div>        
 
         <div class="flex justify-center relative">
             <!-- Optional Heading -->
@@ -205,20 +241,33 @@
             <div class="group overflow-hidden rounded-lg shadow-lg">
                 <img class="h-auto max-w-full transition-transform duration-300 ease-in-out group-hover:scale-110" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg" alt="Gallery Image 1">
             </div>
-        
-            <!-- Image 2 -->
+
             <div class="group overflow-hidden rounded-lg shadow-lg">
-                <img class="h-auto max-w-full transition-transform duration-300 ease-in-out group-hover:scale-110" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-8.jpg" alt="Gallery Image 2">
+                <img class="h-auto max-w-full transition-transform duration-300 ease-in-out group-hover:scale-110" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg" alt="Gallery Image 1">
             </div>
-        
-            <!-- Image 3 -->
+
             <div class="group overflow-hidden rounded-lg shadow-lg">
-                <img class="h-auto max-w-full transition-transform duration-300 ease-in-out group-hover:scale-110" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-9.jpg" alt="Gallery Image 3">
+                <img class="h-auto max-w-full transition-transform duration-300 ease-in-out group-hover:scale-110" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg" alt="Gallery Image 1">
             </div>
-        
-            <!-- Image 4 -->
+
             <div class="group overflow-hidden rounded-lg shadow-lg">
-                <img class="h-auto max-w-full transition-transform duration-300 ease-in-out group-hover:scale-110" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-10.jpg" alt="Gallery Image 4">
+                <img class="h-auto max-w-full transition-transform duration-300 ease-in-out group-hover:scale-110" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg" alt="Gallery Image 1">
+            </div> 
+
+            <div class="group overflow-hidden rounded-lg shadow-lg">
+                <img class="h-auto max-w-full transition-transform duration-300 ease-in-out group-hover:scale-110" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg" alt="Gallery Image 1">
+            </div>
+
+            <div class="group overflow-hidden rounded-lg shadow-lg">
+                <img class="h-auto max-w-full transition-transform duration-300 ease-in-out group-hover:scale-110" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg" alt="Gallery Image 1">
+            </div>
+
+            <div class="group overflow-hidden rounded-lg shadow-lg">
+                <img class="h-auto max-w-full transition-transform duration-300 ease-in-out group-hover:scale-110" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg" alt="Gallery Image 1">
+            </div>
+
+            <div class="group overflow-hidden rounded-lg shadow-lg">
+                <img class="h-auto max-w-full transition-transform duration-300 ease-in-out group-hover:scale-110" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg" alt="Gallery Image 1">
             </div>
         </div>
         
@@ -245,10 +294,6 @@
             </a>
         </div>
     
-        <!-- Background Shape (Optional) 
-        <div class="absolute inset-0 opacity-20">
-            <img src="https://via.placeholder.com/800x400" alt="Background" class="w-full h-full object-cover">
-        </div>-->
     </div>
     
 </main>

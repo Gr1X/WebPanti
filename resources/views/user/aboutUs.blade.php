@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="mt-36 gap-4">
-       <img src="./images/banner1.png" alt="banner1" class="w-full h-full object-cover">
+        <img src="./images/banner1.png" alt="banner1" class="w-full h-full object-cover">
     </div>
     <div class="bg-custom-400 min-h-screen px-14 gap-4">
         <div class="pt-16 w-full lg:pt-16 mb-8">

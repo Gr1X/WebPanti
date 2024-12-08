@@ -4,17 +4,17 @@
 <div class="pt-56 pb-20 w-full">
     <div class="flex justify-between px-8">
         <!-- Bagian Kiri -->
-        <div>
+        <div class="h-[35rem] w-[55rem] ">
             <!-- Gambar Program -->
-            <img src="{{ asset('storage/' . $target->gambar) }}" alt="{{ $target->namaprogram }}" class="h-[25rem] w-[48rem] object-cover rounded-lg">
+            <img src="{{ asset('storage/' . $target->gambar) }}" alt="{{ $target->namaprogram }}" class="h-full w-full object-cover rounded-lg">
         </div>
 
         <!-- Bagian Kanan -->
-        <div>
+        <div class="w-1/3 mx-auto">
             <!-- Judul dan Deskripsi -->
             <div>
-                <h2 class="text-2xl font-bold uppercase">{{ $target->namaprogram }}</h2>
-                <p class="text-sm text-gray-700">{{ $target->deskripsi }}</p>
+                <h2 class="text-3xl font-bold uppercase">{{ $target->namaprogram }}</h2>
+                <p class="text-md text-gray-700">{{ $target->deskripsi }}</p>
             </div>
 
             <hr class="my-3 mb-6" />
@@ -23,7 +23,7 @@
             <div class="flex flex-wrap justify-between mt-1 my-6">
                 <div class="grid w-full">
                     <div class="flex justify-between">
-                        <span class="text-2xl font-bold">Rp. {{ number_format($terkumpul, 0, ',', '.') }}</span>
+                        <span class="text-2xl font-bold">Rp {{ number_format($terkumpul, 0, ',', '.') }}</span>
                         <span class="flex items-center gap-1 text-sm self-end">
                             <ion-icon name="people-outline" class="size-4"></ion-icon>{{ $target->donasi->count() }} Donatur
                         </span>
@@ -56,7 +56,7 @@
                 <!-- Tombol Donasi -->
                 @if ($donasiTersedia)
                     <a href="{{ route('donation.payment', $target->id) }}" 
-                        class="bg-gradient-to-r from-cyan-500 to-blue-500 p-1.5 my-4 rounded text-center w-full uppercase font-bold hover:bg-gradient-to-r from-cyan-500 to-blue-500 text-white">
+                        class="bg-gradient-to-r from-cyan-500 to-blue-500 p-2 my-5 rounded text-center w-full uppercase font-bold hover:bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-xl">
                         Donasi Sekarang
                     </a>
                 @else
@@ -80,7 +80,7 @@
             <hr class="my-3 mb-6" />
         </div>
     </div>
-    <div class="px-8 py-4">
+    <div class="px-8 pt-8 pb-4">
         @include('donatecom.userfeed')
     </div>
 </div>
