@@ -27,7 +27,11 @@ Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.e
 Route::post('/profile/edit', [ProfileController::class, 'update'])->name('profile.update');
 
 
-Route::view('/donation/details', 'user.donateComponent.detailsDonation')->name('donateDetails');
+Route::get('/program/details', function(){
+    return view('user.programComponent.detailBerita');
+})->name('programDetails'); 
+
+Route::view('/donation/details', 'user.donateComponent.daftarRelawan')->name('donateDetails');
 // Admin Routes
 
 Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {

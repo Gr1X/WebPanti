@@ -89,7 +89,7 @@
                     Jadilah bagian dari kami untuk membantu masyarakat yang membutuhkan. Bergabunglah sebagai relawan dan buat perubahan nyata bersama kami.
                 </p>
                 <div class="flex justify-center">
-                    <a href="/daftar-relawan" class="bg-blue-500 text-white font-bold py-3 px-6 rounded-lg shadow hover:bg-blue-600 transition">Daftar Sekarang</a>
+                    <a href='{{ route('programDetails')}}' class="bg-blue-500 text-white font-bold py-3 px-6 rounded-lg shadow hover:bg-blue-600 transition">Daftar Sekarang</a>
                 </div>
             </div>
 
