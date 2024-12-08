@@ -15,7 +15,7 @@ class EditPasswordController extends Controller
 
     public function update(Request $request)
     {
-        $user = Auth::user();
+        $user = Auth::user(); 
 
         $validated = $request->validate([
             'current_password' => 'required', // Kata sandi lama harus diisi
