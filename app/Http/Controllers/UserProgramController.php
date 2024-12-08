@@ -16,7 +16,7 @@ class UserProgramController extends Controller
         // Kirim data $targets ke view
         return view('user.donation', compact('targets'));
     }
-  
+
     public function showDonationDetails($id)
     {
         // Ambil data target

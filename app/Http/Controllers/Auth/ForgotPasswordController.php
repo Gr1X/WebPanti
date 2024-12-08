@@ -8,11 +8,6 @@ use Illuminate\Support\Facades\Password;
 
 class ForgotPasswordController extends Controller
 {
-    public function showLinkRequestForm()
-    {
-        return view('forgot-password');
-    }
-
     public function sendResetLinkEmail(Request $request)
     {
         $request->validate(['email' => 'required|email']);
@@ -21,10 +16,8 @@ class ForgotPasswordController extends Controller
             $request->only('email')
         );
 
-        if ($status === Password::RESET_LINK_SENT) {
-            return back()->with('status', 'Reset link sent successfully!');
-        }
-
-        return back()->withErrors(['email' => trans($status)]);
+        return $status === Password::RESET_LINK_SENT 
+            ? back()->with(['status' => __($status)])
+            : back()->withErrors(['email' => __($status)]);
     }
 }

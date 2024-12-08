@@ -11,7 +11,7 @@
                 <a href="{{ route('login.form') }}" class="text-sky-500">Log in</a>
             </div>
 
-            <form action="{{ route('password.email') }}" method="POST" class="mt-6">
+            <form action="{{ route('password.request') }}" method="POST" class="mt-6">
                 @csrf
 
                 @if (session('status'))
