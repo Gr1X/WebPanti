@@ -10,13 +10,18 @@
                 </div>
                 <div class="flex justify-between">
                     <div class="grid p-2 self-center">
-                        <div class="">
-                            <h1 class="text-[3rem] text-white font-bold">{{ $user->name }}</h1>
+                        <div>
+                            <h1 class="text-[3rem] text-white font-bold">
+                                {{ $user->name }} 
+                                @if($isVolunteer)
+                                    <span class="text-green-400 text-xl">(Volunteered)</span>
+                                @endif
+                            </h1>
                         </div>
-                        <div class="">
+                        <div>
                             <h1 class="text-white italic">{{ $user->email }}</h1>
                         </div>
-                        <div class="">
+                        <div>
                             <h1 class="text-white italic">{{ $user->no_telp }}</h1>
                         </div>
                     </div>

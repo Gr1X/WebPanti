@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Volunteer;
 
 class ProfileController extends Controller
 {
@@ -13,11 +14,14 @@ class ProfileController extends Controller
     public function index()
     {
         $user = Auth::user();
-    
+        
         // Ambil data donasi user dan urutkan dari yang terbaru
         $donasi = $user->donasi()->orderBy('waktu_donasi', 'desc')->get();
-    
-        return view('auth.profile', compact('user', 'donasi'));
+        
+        // Periksa apakah pengguna adalah seorang volunteer
+        $isVolunteer = Volunteer::where('email', $user->email)->exists();
+
+        return view('auth.profile', compact('user', 'donasi', 'isVolunteer'));
     }
 
     public function edit()

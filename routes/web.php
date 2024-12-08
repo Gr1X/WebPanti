@@ -97,6 +97,10 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
       Route::get('/gallery/{id}/edit', [EditGalleryController::class, 'edit'])->name('admin.gallery.edit');
       Route::put('/gallery/{id}', [EditGalleryController::class, 'update'])->name('admin.gallery.update');
       Route::delete('/gallery/{id}', [EditGalleryController::class, 'destroy'])->name('admin.gallery.destroy');
+
+      // Tampilkan semua volunteer
+      Route::get('/volunteers', [VolunteerController::class, 'showAllVolunteers'])->name('admin.volunteers.index');
+      Route::delete('/volunteers/{id}', [VolunteerController::class, 'destroy'])->name('admin.volunteers.destroy');
   });
 });
 

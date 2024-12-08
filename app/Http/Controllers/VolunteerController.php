@@ -64,4 +64,25 @@ class VolunteerController extends Controller
         // Redirect dengan pesan sukses
         return redirect()->route('relawan')->with('success', 'Pendaftaran berhasil! Terima kasih telah bergabung.');
     }
+
+    public function showAllVolunteers()
+    {
+        // Ambil semua data volunteer
+        $volunteers = Volunteer::all();
+
+        // Kirim data volunteer ke view
+        return view('admin.showvolunteer', compact('volunteers'));
+    }
+
+    public function destroy($id)
+    {
+        // Temukan volunteer berdasarkan ID
+        $volunteer = Volunteer::findOrFail($id);
+        
+        // Hapus volunteer
+        $volunteer->delete();
+
+        // Redirect dengan pesan sukses
+        return redirect()->route('admin.volunteers.index')->with('success', 'Volunteer berhasil dihapus.');
+    }
 }

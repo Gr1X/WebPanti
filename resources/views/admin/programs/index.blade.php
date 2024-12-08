@@ -10,8 +10,8 @@
 
         <!-- Table Program -->
         <div class="overflow-x-auto">
-            <table class="min-w-full table-auto border-collapse border border-gray-300">
-                <thead class="bg-blue-600 text-white">
+            <table class="table-auto w-full border-collapse border border-gray-300">
+                <thead>
                     <tr>
                         <th class="py-2 px-4 border border-gray-300">#</th>
                         <th class="py-2 px-4 border border-gray-300">Gambar</th>

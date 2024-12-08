@@ -25,16 +25,16 @@
             <!-- Volunteers -->
             <li class="text-center group relative flex-shrink-0 px-2 py-2 my-2 hover:scale-105 duration-300">
                 <span class="absolute inset-x-0 top-0 h-0.5 group-hover:bg-custom-100 w-8 left-1/2 transform -translate-x-1/2"></span>
-                <a href="#" 
-                   class="inline-block flex flex-col items-center group-hover:bg-custom-100 px-6 py-0.5 rounded-xl group-hover:shadow-xl text-slate-100 active:scale-95 duration-300">
+                <a href="{{ route('admin.volunteers.index') }}" 
+                  class="inline-block flex flex-col items-center group-hover:bg-custom-100 px-6 py-0.5 rounded-xl group-hover:shadow-xl text-slate-100 active:scale-95 duration-300">
                     <ion-icon name="people" class="group-hover:scale-105 size-5 my-1 duration-300"></ion-icon>
                     <p class="font-semibold text-sm">Volunteers</p>
                 </a>
             </li>
         </ul>
 
-        <!-- User Dropdown -->
-        <div class="mx-5">
+         <!-- User Dropdown -->
+         <div class="mx-5">
             @if(Auth::check())
                 <img id="avatarButton" type="button" data-dropdown-toggle="userDropdown" data-dropdown-placement="bottom-start" 
                     class="w-10 h-10 rounded-full cursor-pointer object-cover" 
@@ -48,6 +48,12 @@
                         <div class="font-medium truncate">{{ Auth::user()->email }}</div>
                     </div>
                     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="avatarButton">
+                        <li>
+                            <!-- Link to Landing Page -->
+                            <a href="{{ route('landing') }}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                Back to Landing Page
+                            </a>
+                        </li>
                         <li>
                             <a href="{{ route('profile') }}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Profile</a>
                         </li>
