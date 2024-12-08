@@ -39,7 +39,7 @@ Route::get('/program/details', function(){
 })->name('programDetails'); 
 
 Route::get('/program/volunteer', function(){
-    return view('user.programComponent.detailRelawan');
+    return view('user.programComponent.daftarRelawan');
 })->name('relawan');
 
 Route::view('/donation/details', 'user.donateComponent.daftarRelawan')->name('donateDetails');
