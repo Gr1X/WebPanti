@@ -7,15 +7,23 @@ use Illuminate\Http\Request;
 
 class UserGalleryController extends Controller
 {
-    /**
-     * Menampilkan halaman galeri untuk user.
-     */
-    public function index()
-    {
-        // Mendapatkan semua data gambar dari tabel gallery
-        $galleries = Gallery::all();
-
-        // Mengirim data ke view
-        return view('user.gallery', compact('galleries'));
-    }
+  public function index(Request $request)
+  {
+      // Ambil tahun dari query string
+      $year = $request->query('year');
+  
+      // Jika ada filter tahun, gunakan untuk memfilter data
+      $galleries = Gallery::query();
+  
+      if ($year) {
+          $galleries->whereYear('tgl_gallery', $year);
+      }
+  
+      $galleries = $galleries->get();
+  
+      return view('user.gallery', [
+          'galleries' => $galleries,
+          'year' => $year, // Untuk mengetahui tahun yang aktif di tombol filter
+      ]);
+  }  
 }
