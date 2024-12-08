@@ -32,4 +32,9 @@ class User extends Authenticatable implements MustVerifyEmail, CanResetPassword
     {
         return $this->hasMany(Donasi::class, 'user_id');
     }
+
+    public function role()
+    {
+        return $this->role; // Misalnya, kolom 'role' ada di tabel users
+    }
 }
