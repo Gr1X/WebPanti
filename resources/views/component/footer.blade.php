@@ -8,7 +8,7 @@
                             <span class="text-custom-500 text-3xl font-bold">Yayasan <span class="m-0 p-0 text-3xl font-bold text-custom-200">Nurul Jadid</span></span>
                         </div>
                         <div class="py-5">
-                            <p class="text-slate-100">lorem ipsum mamdnaidnao mandi mandi baka baka baka </p>
+                            <p class="text-slate-100">Jl. Irigasi Sipon No.152, RT.002/RW.002, Poris Plawad Utara, Kec. Cipondoh, Kota Tangerang, Banten </p>
                         </div>
                     </div>
                 </div>
