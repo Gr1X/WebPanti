@@ -245,10 +245,10 @@
             </a>
         </div>
     
-        <!-- Background Shape (Optional) -->
+        <!-- Background Shape (Optional) 
         <div class="absolute inset-0 opacity-20">
             <img src="https://via.placeholder.com/800x400" alt="Background" class="w-full h-full object-cover">
-        </div>
+        </div>-->
     </div>
     
 </main>
