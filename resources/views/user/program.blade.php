@@ -83,46 +83,60 @@
         
         <div class="">
             
-            <div class="bg-blue-50 py-10 px-6 rounded-lg shadow-lg">
-                <h2 class="text-3xl font-bold text-slate-800 mb-6 text-center">Bergabung Sebagai Relawan</h2>
-                <p class="text-gray-600 text-center max-w-2xl mx-auto mb-8">
-                    Jadilah bagian dari kami untuk membantu masyarakat yang membutuhkan. Bergabunglah sebagai relawan dan buat perubahan nyata bersama kami.
-                </p>
-                <div class="flex justify-center">
-                    <a href='{{ route('programDetails')}}' class="bg-blue-500 text-white font-bold py-3 px-6 rounded-lg shadow hover:bg-blue-600 transition">Daftar Sekarang</a>
+            <div class="bg-custom-400 py-12 px-8 rounded-lg shadow-lg relative overflow-hidden">
+                <!-- Background Decoration -->
+                <div class="absolute inset-0 bg-gradient-to-r from-custom-50 to-custom-100 opacity-10 z-0"></div>
+            
+                <!-- Content Section -->
+                <div class="relative z-10 text-center">
+                    <h2 class="text-4xl font-bold text-custom-50 mb-4">Bergabung Sebagai Relawan</h2>
+                    <p class="text-custom-200 text-lg max-w-2xl mx-auto mb-6">
+                        Jadilah bagian dari kami untuk membantu masyarakat yang membutuhkan. Bergabunglah sebagai relawan dan buat perubahan nyata bersama kami.
+                    </p>
+            
+                    <div class="flex justify-center">
+                        <a href="{{ route('relawan') }}" 
+                            class="bg-custom-200 hover:bg-custom-300 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105">
+                            Daftar Sekarang
+                        </a>
+                    </div>
                 </div>
+            
+                <!-- Decorative Elements -->
+                <div class="absolute -top-10 -right-10 bg-custom-100 rounded-full h-40 w-40 opacity-30"></div>
+                <div class="absolute -bottom-10 -left-10 bg-custom-300 rounded-full h-48 w-48 opacity-30"></div>
             </div>
 
-            <div class="bg-gray-100 py-10 px-6">
-                <!-- Bagian Berita Program Lengkap -->
+            <div class="py-10 px-6">
+                <!-- Bagian Berita Program -->
                 <div class="mb-16">
-                    <h2 class="text-3xl font-bold text-slate-800 mb-6 text-center">Berita Program</h2>
+                    <h2 class="text-3xl font-bold text-custom-50 mb-6 text-center">Berita Program</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         <!-- Card 1 -->
-                        <div class="bg-white shadow-md rounded-lg p-4 hover:shadow-lg transition">
+                        <div class="bg-custom-100 shadow-lg rounded-lg hover:scale-105 transform transition duration-300">
                             <img src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt="Berita 1" class="rounded-t-lg h-40 w-full object-cover">
-                            <div class="p-4">
-                                <h3 class="text-xl font-semibold text-slate-800 mb-2">Judul Berita 1</h3>
-                                <p class="text-gray-600 mb-4">Deskripsi singkat tentang berita program yang menarik...</p>
-                                <a href="#" class="text-blue-500 font-semibold hover:underline">Read More</a>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-custom-50 mb-2">Judul Berita 1</h3>
+                                <p class="text-custom-50 text-opacity-80 mb-4">Deskripsi singkat tentang berita program yang menarik...</p>
+                                <a href="{{route('programDetails')}}" class="text-custom-200 font-semibold hover:underline">Read More</a>
                             </div>
                         </div>
                         <!-- Card 2 -->
-                        <div class="bg-white shadow-md rounded-lg p-4 hover:shadow-lg transition">
+                        <div class="bg-custom-100 shadow-lg rounded-lg hover:scale-105 transform transition duration-300">
                             <img src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg" alt="Berita 2" class="rounded-t-lg h-40 w-full object-cover">
-                            <div class="p-4">
-                                <h3 class="text-xl font-semibold text-slate-800 mb-2">Judul Berita 2</h3>
-                                <p class="text-gray-600 mb-4">Deskripsi singkat tentang berita program yang menarik...</p>
-                                <a href="#" class="text-blue-500 font-semibold hover:underline">Read More</a>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-custom-50 mb-2">Judul Berita 2</h3>
+                                <p class="text-custom-50 text-opacity-80 mb-4">Deskripsi singkat tentang berita program yang menarik...</p>
+                                <a href="#" class="text-custom-200 font-semibold hover:underline">Read More</a>
                             </div>
                         </div>
                         <!-- Card 3 -->
-                        <div class="bg-white shadow-md rounded-lg p-4 hover:shadow-lg transition">
+                        <div class="bg-custom-100 shadow-lg rounded-lg hover:scale-105 transform transition duration-300">
                             <img src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" alt="Berita 3" class="rounded-t-lg h-40 w-full object-cover">
-                            <div class="p-4">
-                                <h3 class="text-xl font-semibold text-slate-800 mb-2">Judul Berita 3</h3>
-                                <p class="text-gray-600 mb-4">Deskripsi singkat tentang berita program yang menarik...</p>
-                                <a href="#" class="text-blue-500 font-semibold hover:underline">Read More</a>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-custom-50 mb-2">Judul Berita 3</h3>
+                                <p class="text-custom-50 text-opacity-80 mb-4">Deskripsi singkat tentang berita program yang menarik...</p>
+                                <a href="#" class="text-custom-200 font-semibold hover:underline">Read More</a>
                             </div>
                         </div>
                     </div>

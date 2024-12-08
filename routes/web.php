@@ -23,8 +23,9 @@ Route::view('/program', '/user.program')->name('program');
 // Route::view('/profile', '/auth.profile')->name('profile');
 Route::view('/aboutus', 'user.aboutUs')->name('aboutus');
 
+
 Route::middleware(['auth'])->group(function () {
-  Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
+    Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
 });
 
 Route::get('/gallery/{year?}', [GalleryController::class, 'index'])->name('gallery.index');
@@ -36,6 +37,10 @@ Route::post('/profile/edit', [ProfileController::class, 'update'])->name('profil
 Route::get('/program/details', function(){
     return view('user.programComponent.detailBerita');
 })->name('programDetails'); 
+
+Route::get('/program/volunteer', function(){
+    return view('user.programComponent.detailRelawan');
+})->name('relawan');
 
 Route::view('/donation/details', 'user.donateComponent.daftarRelawan')->name('donateDetails');
 
