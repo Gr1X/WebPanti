@@ -13,6 +13,7 @@ use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\EditGalleryController;
 use App\Http\Controllers\UserGalleryController;
 use App\Http\Controllers\VolunteerController;
+use App\Http\Controllers\LandingController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -20,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 // Landing Page and Static Pages (User Routes)
 // -----------------------------
 
-Route::view('/', 'user.landing')->name('landing');  // Halaman utama
+Route::get('/', [LandingController::class, 'index'])->name('landing');  // Halaman utama
 Route::get('/gallery', [UserGalleryController::class, 'index'])->name('gallery');
 Route::view('/program', '/user.program')->name('program');
 Route::view('/aboutus', 'user.aboutUs')->name('aboutus');

@@ -205,28 +205,28 @@
     <div class="">
         <div class="bg-custom-50 py-10">
             <div class="grid grid-cols-3 items-center text-white px-10 divide-x divide-custom-400">
-                <!-- Campaign -->
+                <!-- count tabel target -->
                 <div class="flex flex-col items-center text-center px-4">
                     <ion-icon name="hand-right-outline" class="text-custom-200 w-16 h-16 mb-4"></ion-icon>
-                    <h2 class="text-4xl font-bold text-custom-500">969</h2>
+                    <h2 class="text-4xl font-bold text-custom-500">{{ $totalTarget }}</h2>
                     <p class="text-lg font-semibold mt-2 text-custom-400">CAMPAIGN</p>
                 </div>
-        
-                <!-- Donasi Terkumpul -->
+
+                <!-- sum kolom jumlah pada tabel donasi -->
                 <div class="flex flex-col items-center text-center px-4">
                     <ion-icon name="cash-outline" class="text-custom-200 w-16 h-16 mb-4"></ion-icon>
-                    <h2 class="text-4xl font-bold text-custom-500">172.944.347.446</h2>
+                    <h2 class="text-4xl font-bold text-custom-500">Rp. {{ number_format($totalDonasiTerkumpul, 0, ',', '.') }}</h2>
                     <p class="text-lg font-semibold mt-2 text-custom-400">DONASI TERKUMPUL</p>
                 </div>
-        
-                <!-- Transaksi Campaign -->
+
+                <!-- count tabel donasi -->
                 <div class="flex flex-col items-center text-center px-4">
                     <ion-icon name="card-outline" class="text-custom-200 w-16 h-16 mb-4"></ion-icon>
-                    <h2 class="text-4xl font-bold text-custom-500">440.746</h2>
+                    <h2 class="text-4xl font-bold text-custom-500">{{ $totalTransaksi }}</h2>
                     <p class="text-lg font-semibold mt-2 text-custom-400">TRANSAKSI CAMPAIGN</p>
                 </div>
             </div>
-        </div>        
+        </div>      
 
         <div class="flex justify-center relative">
             <!-- Optional Heading -->
