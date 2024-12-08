@@ -29,7 +29,7 @@
                     <p class="mb-6 text-lg text-gray-300">
                         Bergabung sebagai tenaga kesehatan untuk membantu masyarakat mendapatkan layanan medis.
                     </p>
-                    <a href="{{route('daftarRelawan')}}" class="bg-custom-200 hover:bg-custom-300 text-white font-bold py-2 px-6 rounded-lg shadow-lg transition">
+                    <a href="{{ route('program.volunteer.registerForm', 'kesehatan') }}" class="bg-custom-200 hover:bg-custom-300 text-white font-bold py-2 px-6 rounded-lg shadow-lg transition">
                         Daftar Sekarang
                     </a>
                 </div>
@@ -52,8 +52,7 @@
                     <p class="mb-6 text-lg text-gray-300">
                         Jadilah tenaga pendidikan untuk membantu anak-anak mendapatkan hak pendidikan mereka.
                     </p>
-                    <a href=""
-                        class="bg-custom-200 hover:bg-custom-300 text-white font-bold py-2 px-6 rounded-lg shadow-lg transition">
+                    <a href="{{ route('program.volunteer.registerForm', 'pendidikan') }}" class="bg-custom-200 hover:bg-custom-300 text-white font-bold py-2 px-6 rounded-lg shadow-lg transition">
                         Daftar Sekarang
                     </a>
                 </div>
@@ -75,8 +74,7 @@
                     <p class="mb-6 text-lg text-gray-300">
                         Bantu kami sebagai tenaga sosial untuk membantu masyarakat yang membutuhkan.
                     </p>
-                    <a href=""
-                        class="bg-custom-200 hover:bg-custom-300 text-white font-bold py-2 px-6 rounded-lg shadow-lg transition">
+                    <a href="{{ route('program.volunteer.registerForm', 'sosial') }}" class="bg-custom-200 hover:bg-custom-300 text-white font-bold py-2 px-6 rounded-lg shadow-lg transition">
                         Daftar Sekarang
                     </a>
                 </div>

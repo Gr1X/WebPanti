@@ -18,5 +18,8 @@ class Volunteer extends Model
         'email',
         'no_telp',
         'alamat',
+        'gender',
+        'bidang',
+        'catatan',
     ];
 }

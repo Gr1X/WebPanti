@@ -11,8 +11,10 @@
         </div>
 
         <!-- Form -->
-        <form action="#" method="POST" class="space-y-6">
-            <!-- Input Nama -->
+        <form action="{{ route('program.volunteer.register', $bidang) }}" method="POST" class="space-y-6">
+            @csrf
+            <!-- Form fields -->
+            <!-- Nama -->
             <div>
                 <label for="name" class="block text-sm font-semibold mb-2 text-custom-400">Nama Lengkap</label>
                 <input 
@@ -23,8 +25,7 @@
                     class="w-full bg-custom-100 text-custom-400 border border-custom-200 rounded-lg p-4 focus:ring-2 focus:ring-custom-200 focus:outline-none"
                 />
             </div>
-
-            <!-- Input Tempat Tinggal -->
+            <!-- Alamat -->
             <div>
                 <label for="address" class="block text-sm font-semibold mb-2 text-custom-400">Tempat Tinggal</label>
                 <input 
@@ -35,8 +36,7 @@
                     class="w-full bg-custom-100 text-custom-400 border border-custom-200 rounded-lg p-4 focus:ring-2 focus:ring-custom-200 focus:outline-none"
                 />
             </div>
-
-            <!-- Input Nomor Telepon -->
+            <!-- Nomor Telepon -->
             <div>
                 <label for="phone" class="block text-sm font-semibold mb-2 text-custom-400">Nomor Telepon</label>
                 <input 
@@ -47,8 +47,7 @@
                     class="w-full bg-custom-100 text-custom-400 border border-custom-200 rounded-lg p-4 focus:ring-2 focus:ring-custom-200 focus:outline-none"
                 />
             </div>
-
-            <!-- Input Email -->
+            <!-- Email -->
             <div>
                 <label for="email" class="block text-sm font-semibold mb-2 text-custom-400">Email</label>
                 <input 
@@ -59,8 +58,7 @@
                     class="w-full bg-custom-100 text-custom-400 border border-custom-200 rounded-lg p-4 focus:ring-2 focus:ring-custom-200 focus:outline-none"
                 />
             </div>
-
-            <!-- Input Jenis Kelamin -->
+            <!-- Jenis Kelamin -->
             <div>
                 <label for="gender" class="block text-sm font-semibold mb-2 text-custom-400">Jenis Kelamin</label>
                 <select 
@@ -73,20 +71,7 @@
                     <option value="Perempuan">Perempuan</option>
                 </select>
             </div>
-
-            <!-- Input Bidang Keahlian -->
-            <div>
-                <label for="expertise" class="block text-sm font-semibold mb-2 text-custom-400">Bidang Keahlian</label>
-                <input 
-                    type="text" 
-                    id="expertise" 
-                    name="expertise" 
-                    placeholder="Contoh: Kesehatan, Pendidikan, Sosial" 
-                    class="w-full bg-custom-100 text-custom-400 border border-custom-200 rounded-lg p-4 focus:ring-2 focus:ring-custom-200 focus:outline-none"
-                />
-            </div>
-
-            <!-- Input Motivasi -->
+            <!-- Motivasi -->
             <div>
                 <label for="motivation" class="block text-sm font-semibold mb-2 text-custom-400">Motivasi</label>
                 <textarea 
@@ -97,7 +82,6 @@
                     class="w-full bg-custom-100 text-custom-400 border border-custom-200 rounded-lg p-4 focus:ring-2 focus:ring-custom-200 focus:outline-none"
                 ></textarea>
             </div>
-
             <!-- Tombol Submit -->
             <div class="text-center">
                 <button 

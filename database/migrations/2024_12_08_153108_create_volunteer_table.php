@@ -17,6 +17,9 @@ return new class extends Migration
             $table->string('email');
             $table->string('no_telp');
             $table->string('alamat');
+            $table->string('gender');
+            $table->string('bidang');
+            $table->string('catatan')->nullable();
             $table->timestamps();
         });
     }

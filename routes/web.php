@@ -12,6 +12,7 @@ use App\Http\Controllers\EditPasswordController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\EditGalleryController;
 use App\Http\Controllers\UserGalleryController;
+use App\Http\Controllers\VolunteerController;
 use Illuminate\Support\Facades\Route;
 
 // Landing Page and Static Pages (Pastikan route ini pertama)
@@ -75,6 +76,9 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
 Route::get('password/edit', [EditPasswordController::class, 'edit'])->name('password.edit');
 Route::post('password/update', [EditPasswordController::class, 'update'])->name('password.update');
 
+// Route untuk pendaftaran volunteer
+Route::get('/program/volunteer/daftar/{bidang}', [VolunteerController::class, 'showRegisterForm'])->name('program.volunteer.registerForm');
+Route::post('/program/volunteer/daftar/{bidang}', [VolunteerController::class, 'register'])->name('program.volunteer.register');
 
 // web.php
 Route::get('/donation', [UserProgramController::class, 'showDonations'])->name('donation');
