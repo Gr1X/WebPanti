@@ -11,70 +11,92 @@
                 <div class="flex justify-between">
                     <div class="grid p-2 self-center">
                         <div class="">
-                            <div>
-                                <h1 class="text-[3rem] text-white font-bold">Gregorius Frederico</h1>
-                            </div>
+                            <h1 class="text-[3rem] text-white font-bold">{{ $user->name }}</h1>
                         </div>
                         <div class="">
-                            <div>
-                                <h1 class="text-white italic">gregorius.frederico@student.umn.ac.id</h1>
-                            </div>
+                            <h1 class="text-white italic">{{ $user->email }}</h1>
+                        </div>
+                        <div class="">
+                            <h1 class="text-white italic">{{ $user->no_telp }}</h1>
                         </div>
                     </div>
-            
                     <div class="w-36 h-36">
-                        <img
-                            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1471&amp;q=80"
-                            alt="card-image"
-                            class="h-full w-full rounded-full object-cover"
-                        />
+                        @if ($user->gambar)
+                            <img
+                                src="{{ asset('storage/' . $user->gambar) }}"
+                                alt="Profile Picture"
+                                class="h-full w-full rounded-full object-cover"
+                            />
+                        @else
+                            <div 
+                                class="h-full w-full rounded-full bg-gray-500 flex items-center justify-center text-white text-3xl font-bold"
+                                style="font-family: Arial, sans-serif;"
+                            >
+                                {{ strtoupper(collect(explode(' ', $user->name))->map(fn($word) => $word[0])->join('')) }}
+                            </div>
+                        @endif
                     </div>
                 </div>
             </div>            
         </div>
 
-        <!-- Card Akun -->
+        <!-- Card Keamanan dan Privasi -->
         <div class="bg-slate-800 rounded-md p-4">
-            <span class="text-white text-3xl font-bold mb-6">Akun</span>
+            <span class="text-white text-3xl font-bold mb-6">Histori Donasi :)</span>
             <div class="mt-6">
-                <div class="flex justify-between items-center hover:bg-slate-900 hover:rounded p-2">
-                    <div class="flex gap-2 items-center">
-                        <ion-icon name="pencil-outline" class="bg-slate-400 p-2 size-5 rounded"></ion-icon>
-                        <span class="text-white text-lg">Edit Profil</span>
+                <!-- Histori Transaksi -->
+                <div class="bg-slate-700 p-4 rounded-lg">
+                    <div class="flex justify-between items-center">
+                        <span class="text-white text-lg">Lihat histori transaksi</span>
+                        <ion-icon name="chevron-down-outline" class="text-white size-8 cursor-pointer" onclick="toggleDropdown()"></ion-icon>
                     </div>
-                    <ion-icon name="chevron-forward-outline" class="text-white size-8"></ion-icon>
+                    <div id="dropdown-histori" class="hidden mt-4">
+                        @forelse ($donasi as $donasiItem)
+                        <div class="p-3 bg-slate-900 rounded mt-2">
+                            <span class="text-white text-sm">{{ $donasiItem->waktu_donasi->format('d M Y, H:i') }}</span>
+                            <div class="text-white">
+                                Jumlah: Rp {{ number_format($donasiItem->jumlah, 2, ',', '.') }}
+                            </div>
+                            <div class="text-gray-400 text-sm italic">{{ $donasiItem->notes }}</div>
+                        </div>
+                        @empty
+                        <div class="text-gray-400 text-sm mt-2">
+                            Belum ada transaksi.
+                        </div>
+                        @endforelse
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Card Keamanan dan Privasi -->
         <div class="bg-slate-800 rounded-md p-4">
             <span class="text-white text-3xl font-bold mb-6">Keamanan dan Privasi</span>
             <div class="mt-6">
+                <!-- Edit Profil -->
                 <div class="flex justify-between items-center hover:bg-slate-900 hover:rounded p-2">
-                    <div class="flex gap-2 items-center">
-                        <ion-icon name="newspaper-outline" class="bg-slate-400 p-2 size-5 rounded"></ion-icon>
-                        <span class="text-white text-lg">Lihat history transaksi</span>
-                    </div>
-                    <ion-icon name="chevron-forward-outline" class="text-white size-8"></ion-icon>
-                </div>
-                <div class="flex justify-between items-center hover:bg-slate-900 hover:rounded p-2">
-                    <div class="flex gap-2 items-center">
-                        <ion-icon name="lock-open-outline" class="bg-slate-400 p-2 size-5 rounded"></ion-icon>
-                        <span class="text-white text-lg">Ubah Kata Sandi</span>
-                    </div>
+                    <a href="{{ route('profile.edit') }}" class="flex gap-2 items-center">
+                        <ion-icon name="pencil-outline" class="bg-slate-400 p-2 size-5 rounded"></ion-icon>
+                        <span class="text-white text-lg">Edit Profil</span>
+                    </a>
                     <ion-icon name="chevron-forward-outline" class="text-white size-8"></ion-icon>
                 </div>
 
-                <div class="flex justify-between items-center hover:bg-slate-900 hover:rounded p-2">
-                    <div class="flex gap-2 items-center">
-                        <ion-icon name="key-outline" class="bg-slate-400 p-2 size-5 rounded"></ion-icon>
-                        <span class="text-white text-lg">Lupa Password</span>
-                    </div>
+                <!-- Ubah Kata Sandi -->
+                <!-- <div class="flex justify-between items-center hover:bg-slate-900 hover:rounded p-2">
+                    <a href="{{ route('password.edit') }}" class="flex gap-2 items-center">
+                        <ion-icon name="lock-open-outline" class="bg-slate-400 p-2 size-5 rounded"></ion-icon>
+                        <span class="text-white text-lg">Ubah Kata Sandi</span>
+                    </a>
                     <ion-icon name="chevron-forward-outline" class="text-white size-8"></ion-icon>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
 </div>
+<script>
+    function toggleDropdown() {
+        const dropdown = document.getElementById('dropdown-histori');
+        dropdown.classList.toggle('hidden');
+    }
+</script>
 @stop

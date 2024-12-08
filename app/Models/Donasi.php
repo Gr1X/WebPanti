@@ -20,6 +20,10 @@ class Donasi extends Model
         'program_id',
     ];
 
+    protected $casts = [
+      'waktu_donasi' => 'datetime',
+    ];
+
     // Relasi ke user yang memberikan donasi
     public function user()
     {

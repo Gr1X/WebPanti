@@ -2,59 +2,53 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\ProfileUpdateRequest;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Redirect;
-use Illuminate\View\View;
 
 class ProfileController extends Controller
 {
     /**
-     * Display the user's profile form.
+     * Show the user's profile.
      */
-    public function edit(Request $request): View
+    public function index()
     {
-        return view('profile.edit', [
-            'user' => $request->user(),
-        ]);
+        $user = Auth::user();
+    
+        // Ambil data donasi user dan urutkan dari yang terbaru
+        $donasi = $user->donasi()->orderBy('waktu_donasi', 'desc')->get();
+    
+        return view('auth.profile', compact('user', 'donasi'));
     }
 
-    /**
-     * Update the user's profile information.
-     */
-    public function update(ProfileUpdateRequest $request): RedirectResponse
+    public function edit()
     {
-        $request->user()->fill($request->validated());
+        $user = Auth::user();
+        return view('auth.editprofile', compact('user'));
+    }
 
-        if ($request->user()->isDirty('email')) {
-            $request->user()->email_verified_at = null;
+    public function update(Request $request)
+    {
+        $user = Auth::user();
+
+        // Validasi data
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|unique:users,email,' . $user->id,
+            'no_telp' => 'required|digits_between:10,13',
+            'gambar' => 'nullable|image|max:2048', // Maksimal 2MB
+        ]);
+
+        // Update data
+        $user->fill($validated);
+
+        // Simpan gambar jika diunggah
+        if ($request->hasFile('gambar')) {
+            $path = $request->file('gambar')->store('profile_pictures', 'public');
+            $user->gambar = $path;
         }
 
-        $request->user()->save();
+        $user->save();
 
-        return Redirect::route('profile.edit')->with('status', 'profile-updated');
-    }
-
-    /**
-     * Delete the user's account.
-     */
-    public function destroy(Request $request): RedirectResponse
-    {
-        $request->validateWithBag('userDeletion', [
-            'password' => ['required', 'current_password'],
-        ]);
-
-        $user = $request->user();
-
-        Auth::logout();
-
-        $user->delete();
-
-        $request->session()->invalidate();
-        $request->session()->regenerateToken();
-
-        return Redirect::to('/');
+        return redirect()->route('profile')->with('success', 'Profil berhasil diperbarui.');
     }
 }

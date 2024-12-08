@@ -1,4 +1,4 @@
-@extends('layout.auth')
+<!-- @extends('layout.auth')
 
 @section('formAuth')
 <div class="min-h-screen flex items-center shadow-lg">
@@ -42,4 +42,4 @@
         </div>
     </div>
 </div>
-@stop
+@stop -->
