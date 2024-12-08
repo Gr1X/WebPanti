@@ -2,7 +2,7 @@
 
 @section('content')
 <main class="">
-    <div class="bg-custom-300 py-32">
+    <div class="bg-custom-400 py-32">
         <div class="flex justify-between">
             <div class="self-center ms-10 w-full mt-20 z-10">
                 <div class="items-center mb-12 h-full w-full bg-gray-400 rounded-xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 border border-custom-50 p-4 shadow-lg">
@@ -79,9 +79,9 @@
             </div>
         
             <!-- Content -->
-            <div class="h-full w-full bg-custom-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-60 text-center z-10 text-slate-100">
+            <div class="h-full w-full bg-custom-50 bg-clip-padding backdrop-filter backdrop-blur-sm text-center z-10 text-slate-100 py-4">
                 <!-- Title Section -->
-                <h2 class="text-5xl font-bold text-custom-300">Berita Panti</h2>
+                <h2 class="text-5xl font-bold text-custom-500">Berita Panti</h2>
             </div>
         </div>
 
@@ -231,16 +231,16 @@
         
     </div>
     
-    <div class="flex justify-between items-center relative h-56 overflow-hidden rounded-lg md:h-64 my-8 mx-40 bg-gradient-to-r from-blue-500 to-sky-500 shadow-lg">
+    <div class="flex justify-between items-center relative h-56 overflow-hidden rounded-lg md:h-64 my-8 mx-40 bg-gradient-to-r from-custom-100 via-custom-100 to-custom-50 shadow-lg">
         <!-- Left Content -->
         <div class="ml-8">
-            <h1 class="text-4xl font-bold text-white">Mari Berdonasi</h1>
-            <p class="text-white text-lg mt-2 font-light">Bantu mereka mendapatkan kehidupan yang lebih baik.</p>
+            <h1 class="text-4xl font-bold text-custom-50">Mari Berdonasi</h1>
+            <p class="text-custom-50 text-lg mt-2 font-light">Bantu mereka mendapatkan kehidupan yang lebih baik.</p>
         </div>
     
         <!-- Right Button -->
         <div class="flex h-full items-end">
-            <a href="/donate" class="text-[1rem] font-bold bg-yellow-400 hover:bg-yellow-500 transition-all px-12 py-4 m-10 text-blue-800 rounded-lg shadow-md">
+            <a href="/donate" class="text-[1rem] font-bold bg-yellow-400 hover:bg-yellow-500 transition-all px-12 py-4 m-10 text-custom-50 rounded-lg shadow-md">
                 Donasi Sekarang
             </a>
         </div>

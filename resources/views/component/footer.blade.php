@@ -5,7 +5,7 @@
                 <div class="">
                     <div class=""> 
                         <div class="flex justify-between">
-                            <span class="text-custom-300 text-3xl font-bold">Yayasan <span class="m-0 p-0 text-3xl font-bold text-custom-200">Nurul Jadid</span></span>
+                            <span class="text-custom-500 text-3xl font-bold">Yayasan <span class="m-0 p-0 text-3xl font-bold text-custom-200">Nurul Jadid</span></span>
                         </div>
                         <div class="">
                             <p class="text-slate-100">lorem ipsum mamdnaidnao mandi mandi baka baka baka </p>
