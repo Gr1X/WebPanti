@@ -8,6 +8,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
+use Illuminate\Support\Facades\Log;
 
 class AuthenticatedSessionController extends Controller
 {
@@ -28,7 +29,11 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->intended(route('dashboard', absolute: false));
+        // Debugging: Catat user yang berhasil login
+        Log::info('User logged in: ' . $request->user()->email);
+
+        // Redirect ke dashboard dengan pesan sukses
+        return redirect()->intended(route('dashboard'))->with('success', 'Welcome back!');
     }
 
     /**
@@ -36,12 +41,15 @@ class AuthenticatedSessionController extends Controller
      */
     public function destroy(Request $request): RedirectResponse
     {
+        // Debugging: Catat user yang logout
+        Log::info('User logged out: ' . Auth::user()?->email);
+
         Auth::guard('web')->logout();
 
         $request->session()->invalidate();
 
         $request->session()->regenerateToken();
 
-        return redirect('/');
+        return redirect('/')->with('success', 'You have successfully logged out.');
     }
 }

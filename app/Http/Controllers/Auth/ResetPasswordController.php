@@ -7,45 +7,51 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
-use Illuminate\Validation\Rules;
 use Illuminate\Auth\Events\PasswordReset;
 use App\Models\User;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Validation\Rules;
 
 class ResetPasswordController extends Controller
 {
-    // Menampilkan form reset password
     public function showResetForm(Request $request, $token)
     {
-        return view('auth.reset-password', ['token' => $token, 'email' => $request->email]);
+        return view('auth.reset-password', [
+            'token' => $token,
+            'email' => $request->query('email'),
+        ]);
     }
 
-    // Menangani proses reset password
     public function passwordReset(Request $request)
     {
         // Validasi input
         $request->validate([
             'token' => 'required',
-            'email' => 'required|email',
-            'password' => ['required', 'confirmed'],
+            'email' => 'required|email|exists:users,email',
+            'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
-        // Melakukan reset password
+        // Reset password
         $status = Password::reset(
             $request->only('email', 'password', 'password_confirmation', 'token'),
             function (User $user, string $password) {
                 $user->forceFill([
-                    'password' => Hash::make($password), // Hash password baru
-                ])->setRememberToken(Str::random(60)); // Generate remember token baru
-                
-                $user->save(); // Simpan perubahan
-                
-                event(new PasswordReset($user)); // Trigger event PasswordReset
+                    'password' => Hash::make($password),
+                ])->setRememberToken(Str::random(60));
+
+                $user->save();
+
+                Log::info('Password reset successful for user: ' . $user->email);
+
+                event(new PasswordReset($user));
             }
         );
 
-        // Redirect berdasarkan status reset
+        Log::info('Password reset status: ' . $status);
+        Log::info('User affected: ' . $request->email);
+
         return $status === Password::PASSWORD_RESET
-            ? redirect()->route('login')->with('status', __($status)) // Redirect ke login jika sukses
-            : back()->withErrors(['email' => [__($status)]]); // Tampilkan error jika gagal
+            ? redirect()->route('login.form')->with('status', 'Password reset successfully! You can now log in with your new password.')
+            : back()->withErrors(['email' => __($status)]);
     }
 }

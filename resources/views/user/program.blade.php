@@ -82,7 +82,53 @@
         </div>  
         
         <div class="">
-            <h1>Berita</h1>
+            
+            <div class="bg-blue-50 py-10 px-6 rounded-lg shadow-lg">
+                <h2 class="text-3xl font-bold text-slate-800 mb-6 text-center">Bergabung Sebagai Relawan</h2>
+                <p class="text-gray-600 text-center max-w-2xl mx-auto mb-8">
+                    Jadilah bagian dari kami untuk membantu masyarakat yang membutuhkan. Bergabunglah sebagai relawan dan buat perubahan nyata bersama kami.
+                </p>
+                <div class="flex justify-center">
+                    <a href="/daftar-relawan" class="bg-blue-500 text-white font-bold py-3 px-6 rounded-lg shadow hover:bg-blue-600 transition">Daftar Sekarang</a>
+                </div>
+            </div>
+
+            <div class="bg-gray-100 py-10 px-6">
+                <!-- Bagian Berita Program Lengkap -->
+                <div class="mb-16">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-6 text-center">Berita Program</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Card 1 -->
+                        <div class="bg-white shadow-md rounded-lg p-4 hover:shadow-lg transition">
+                            <img src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt="Berita 1" class="rounded-t-lg h-40 w-full object-cover">
+                            <div class="p-4">
+                                <h3 class="text-xl font-semibold text-slate-800 mb-2">Judul Berita 1</h3>
+                                <p class="text-gray-600 mb-4">Deskripsi singkat tentang berita program yang menarik...</p>
+                                <a href="#" class="text-blue-500 font-semibold hover:underline">Read More</a>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="bg-white shadow-md rounded-lg p-4 hover:shadow-lg transition">
+                            <img src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg" alt="Berita 2" class="rounded-t-lg h-40 w-full object-cover">
+                            <div class="p-4">
+                                <h3 class="text-xl font-semibold text-slate-800 mb-2">Judul Berita 2</h3>
+                                <p class="text-gray-600 mb-4">Deskripsi singkat tentang berita program yang menarik...</p>
+                                <a href="#" class="text-blue-500 font-semibold hover:underline">Read More</a>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="bg-white shadow-md rounded-lg p-4 hover:shadow-lg transition">
+                            <img src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" alt="Berita 3" class="rounded-t-lg h-40 w-full object-cover">
+                            <div class="p-4">
+                                <h3 class="text-xl font-semibold text-slate-800 mb-2">Judul Berita 3</h3>
+                                <p class="text-gray-600 mb-4">Deskripsi singkat tentang berita program yang menarik...</p>
+                                <a href="#" class="text-blue-500 font-semibold hover:underline">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </div>
 @stop

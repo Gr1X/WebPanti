@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Log;
+
 
 class RegisterController extends Controller
 {
@@ -22,7 +25,7 @@ class RegisterController extends Controller
         // Validasi input
         $request->validate([
             'name' => 'required|string|max:255',
-            'email' => 'required|email|unique:users,email',
+            'email' => 'required|email|unique:users,email|lowercase', // Pastikan email dalam huruf kecil
             'password' => 'required|min:6|confirmed', // Pastikan ada kolom password_confirmation di form
             'no_telp' => 'required|digits_between:10,15', // Validasi hanya angka 10-15 digit
         ]);
@@ -30,14 +33,17 @@ class RegisterController extends Controller
         // Membuat pengguna baru dan meng-hash password
         $user = User::create([
             'name' => $request->name,
-            'email' => $request->email,
+            'email' => strtolower($request->email), // Simpan email dalam huruf kecil
             'role' => 'user', // Default role
             'no_telp' => $request->no_telp,
             'password' => Hash::make($request->password), // Hash password
+            'remember_token' => Str::random(60), // Generate remember token
         ]);
 
+        Log::info('User registered:', $user->toArray()); // Debugging
+
         // Login otomatis setelah pendaftaran
-        auth()->login($user);
+        Auth::login($user);
 
         return redirect()->route('landing')->with('success', 'Account created successfully!');
     }

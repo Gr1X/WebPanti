@@ -10,7 +10,7 @@
                 <a href="{{ route('login.form') }}" class="text-sky-500">Login</a>
             </div>
 
-            <form action="{{ route('password.update') }}" method="POST" class="mt-6">
+            <form action="{{ route('password.update ') }}" method="POST" class="mt-6">
                 @csrf
                 <input type="hidden" name="token" value="{{ $token }}">
 
