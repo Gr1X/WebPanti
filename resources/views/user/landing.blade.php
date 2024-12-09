@@ -22,27 +22,39 @@
 
             <div class="py-8 mx-56 gap-2 flex justify-center ">
                 <div class="absolute self-center w-56 h-56 bg-gray-50 p-3 flex flex-col gap-1 translate-x-[-400px] translate-y-[-250px] shadow-4xl rotate-[-10deg] drop-shadow-2xl">
-                    <div class="duration-500 contrast-50 h-36 bg-black hover:contrast-100"></div>
+                    <div class="duration-500 contrast-50 h-36 bg-black hover:contrast-100">
+                        <img src="./images/1.jpg" alt="gambar1" class="">
+                    </div>
                 </div>
 
                 <div class="absolute self-center w-56 h-56 bg-gray-50 p-3 flex flex-col gap-1 translate-x-[-225px] translate-y-12 z-20 shadow-4xl rotate-[4deg] shadow-2xl">
-                    <div class="duration-500 contrast-50 h-36 bg-black hover:contrast-100"></div>
+                    <div class="duration-500 contrast-50 h-36 bg-black hover:contrast-100">
+                        <img src="./images/5.jpg" alt="gambar2" class="">
+                    </div>
                 </div>
                 
                 <div class="self-end w-[26rem] h-[28rem] bg-gray-50 p-3 flex flex-col gap-1 shadow-2xl z-10 rotate-[-2deg]">
-                    <div class="duration-500 contrast-50 h-80 bg-black hover:contrast-100"></div>
+                    <div class="duration-500 contrast-50 h-80 bg-black hover:contrast-100">
+                        <img src="./images/1.jpg" alt="gambar3" class="">
+                    </div>
                 </div>
 
                 <div class="absolute self-end w-72 h-72 bg-gray-50 p-3 flex flex-col gap-1 shadow-2xl translate-x-[200px] translate-y-16 z-10 shadow-2xl rotate-[-5deg] z-20">
-                    <div class="duration-500 contrast-50 h-52 bg-black hover:contrast-100"></div>
+                    <div class="duration-500 contrast-50 h-52 bg-black hover:contrast-100">
+                        <img src="./images/2.jpg" alt="gambar4" class="">
+                    </div>
                 </div> 
 
                 <div class="absolute self-end w-72 h-72 bg-gray-50 p-3 flex flex-col gap-1 shadow-2xl translate-x-[-300px] translate-y-[-200px] shadow-2xl rotate-[5deg]">
-                    <div class="duration-500 contrast-50 h-52 bg-black hover:contrast-100"></div>
+                    <div class="duration-500 contrast-50 h-52 bg-black hover:contrast-100">
+                        <img src="./images/2.jpg" alt="gambar5" class="">
+                    </div>
                 </div> 
 
                 <div class="absolute self-center w-56 h-56 bg-gray-50 p-3 flex flex-col gap-1 shadow-2xl translate-x-[325px] translate-y-[225px] shadow-4xl rotate-[6deg] shadow-2xl z-10">
-                    <div class="duration-500 contrast-50 h-36 bg-black hover:contrast-100"></div>
+                    <div class="duration-500 contrast-50 h-36 bg-black hover:contrast-100">
+                        <img src="./images/6.jpg" alt="gambar6" class="">
+                    </div>
                 </div>
             </div>    
         </div> 
