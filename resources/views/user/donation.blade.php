@@ -39,14 +39,13 @@
             <div class="mb-8 flex justify-between">
                 <div class="">
                     <div class="">
-                        <span class="text-4xl font-semibold text-slate-600">Mari Bantu Mereka yang Membutuhkan</span>
+                        <span class="text-4xl font-semibold text-custom-50">Mari Bantu Mereka yang Membutuhkan</span>
                     </div>
                     {{-- <div class="">
                         <span class="text-lg">Menampilkan <b>12</b> campaign dari <b>142</b> campaign</span>
                     </div> --}}
                 </div>
             </div>
-    
             
             <div class="grid grid-cols-3 gap-8">
             @foreach ($targets as $target)
