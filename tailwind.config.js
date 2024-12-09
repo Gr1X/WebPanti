@@ -21,9 +21,12 @@ export default {
                 // Define your custom color palette
                 custom: {
                     50: '#335441', //hijau tua
+                    75: '#668C64', //hijau muda dikit
                    100: '#A9B782', //hijau muda
                    200: '#DEAE48', //oren
                    300: '#DFAE48', //kuning?
+                   350: '#FFE68B',  //kuning part 2
+                   375: '#FFEDA9', //kuning part 3
                    400: '#FFFDF1', //putih cuman lebih gelap dikit
                    500: '#FFFFFF'  //putih
                 },
