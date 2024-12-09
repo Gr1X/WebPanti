@@ -16,12 +16,15 @@ class Donasi extends Model
         'user_id',
         'jumlah',
         'notes',
-        'waktu_donasi',
+        'gambar',
         'program_id',
+        'tipe_pembayaran',
+        'status',
+        'waktu_donasi',
     ];
 
     protected $casts = [
-      'waktu_donasi' => 'datetime',
+        'waktu_donasi' => 'datetime',
     ];
 
     // Relasi ke user yang memberikan donasi

@@ -57,11 +57,13 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::post('/profile/edit', [ProfileController::class, 'update'])->name('profile.update');
 
-    // Donation Routes
+   // Donation Routes
     Route::get('/donation', [UserProgramController::class, 'showDonations'])->name('donation');
     Route::get('/donation/{id}', [UserProgramController::class, 'showDonationDetails'])->name('donateDetails');
     Route::get('/donation/{id}/payment', [DonasiController::class, 'showPaymentForm'])->name('donation.payment');
-    Route::post('/donation/{id}/payment', [DonasiController::class, 'submitDonation'])->name('donation.submit');
+    Route::post('/donation/{id}/payment/confirm', [DonasiController::class, 'submitPaymentConfirm'])->name('donation.confirm');
+    Route::post('/donation/{id}/submit', [DonasiController::class, 'submitDonation'])->name('donation.submit');
+
 
     // Volunteer Routes
     Route::get('/program/volunteer/daftar/{bidang}', [VolunteerController::class, 'showRegisterForm'])->name('program.volunteer.registerForm');

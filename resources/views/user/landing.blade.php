@@ -289,7 +289,7 @@
     
         <!-- Right Button -->
         <div class="flex h-full items-end">
-            <a href="/donate" class="text-[1rem] font-bold bg-yellow-400 hover:bg-yellow-500 transition-all px-12 py-4 m-10 text-custom-50 rounded-lg shadow-md">
+            <a href="/donation" class="text-[1rem] font-bold bg-yellow-400 hover:bg-yellow-500 transition-all px-12 py-4 m-10 text-custom-50 rounded-lg shadow-md">
                 Donasi Sekarang
             </a>
         </div>
