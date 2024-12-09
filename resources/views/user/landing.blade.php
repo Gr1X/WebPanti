@@ -9,14 +9,14 @@
                     <p class="text-custom-50 text-sm">Profil</p>
                     <h1 class="text-custom-50 text-3xl font-semibold mb-4">Yayasan Nurul Jadid</h1>
                     <hr class="my-2 border-custom-50"/>
-                    <p>Nama panti Lorem ipsum dolor sit amet, consectetur adipiscing elit. At et posuere est non vitae enim, sed consectetur. Nullam interdum feugiat nibh lectus viverra sollicitudin.</p>
+                    <p>Peduli dengan yatim piatu & dhuafa "menggapai keberkahan dengan memuliakan generasi "</p>
                 </div>
 
                 <div class="items-center mb-12 h-full w-full bg-gray-400 rounded-xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-custom-50 p-4 shadow-lg">
                     <p class="text-custom-50 text-sm">Visi & Misi</p>
                     <h1 class="text-custom-50 text-3xl font-semibold mb-4">Visi</h1>
                     <hr class="my-2 border-custom-50"/>
-                    <p>Nama panti Lorem ipsum dolor sit amet, consectetur adipiscing elit. At et posuere est non vitae enim, sed consectetur. Nullam interdum feugiat nibh lectus viverra sollicitudin.</p>
+                    <p>Menjadi lembaga sosisal terpercaya, amanah, dan peduli, dan berkontribusi dalam mewujudkan sumber daya manusia yang kreatif, inovatif, mandiri, dan berkarakter mulia.</p>
                 </div>
             </div>
 
@@ -53,7 +53,10 @@
                     <p class="text-custom-50 text-sm">Visi & Misi</p>
                     <h1 class="text-custom-50 text-3xl font-semibold mb-4">Misi</h1>
                     <hr class="my-2" />
-                    <p>Nama panti Lorem ipsum dolor sit amet, consectetur adipiscing elit. At et posuere est non vitae enim, sed consectetur. Nullam interdum feugiat nibh lectus viverra sollicitudin.</p>
+                    <p>1. Menididk generasi muda melalui pendidikan formal maupun non formal sehingga menjadi generasi yang kreatif, inovatif dan mandiri.<br/>
+                    2. Menyelenggarakan kegiatan sosial yang aktif  dan berdimensi rahmatan lil a'lamim.<br/>
+                    3. Mengembangkan potensi usaha masyarakat sekitar sehingga mampu menjadi masyarakat yang sejahtera dan mandiri.<br/>
+                    4. Mengelola sumber-sumber dana secara jujur dan amanah mendistribusikannya kepada anak yatim.</p>
                 </div>
 
                 <div class="items-center h-full w-full bg-gray-400 rounded-xl bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 border border-custom-50 p-4 shadow-lg">

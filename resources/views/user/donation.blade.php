@@ -4,7 +4,7 @@
 <div class="">
     <div class="bg-gray-100 min-h-screen px-14 gap-4">
         <div class="w-full lg:pt-44 pb-6">
-            <div class="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-8 md:pt-16 md:p-12">
+            <div class="bg-gray-50 dark:bg-custom-50 border border-gray-200 dark:border-gray-700 rounded-lg p-8 md:pt-16 md:p-12">
                 <h1 class="text-gray-900 dark:text-white text-4xl md:text-5xl font-semibold mb-2">Donation</h1>
                 <p class="text-lg font-normal text-gray-500 dark:text-gray-400 mb-6"></p>
             </div>
@@ -67,8 +67,8 @@
                             $terkumpul = $target->donasi_sum_jumlah ?? 0; // Total donasi yang terkumpul
                             $persentase = $target->jumlah_target > 0 ? round(($terkumpul / $target->jumlah_target) * 100, 2) : 0; // Hitung progress
                         @endphp
-                        <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700 my-1">
-                            <div class="bg-blue-400 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: {{ $persentase }}%">
+                        <div class="w-full bg-gray-200 rounded-full dark:bg-custom-400 my-1">
+                            <div class="bg-custom-300 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style="width: {{ $persentase }}%">
                                 {{ $persentase }}%
                             </div>
                         </div>

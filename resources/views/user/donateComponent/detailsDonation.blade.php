@@ -33,8 +33,8 @@
                     @php
                         $percentage = ($target->jumlah_target > 0) ? ($terkumpul / $target->jumlah_target) * 100 : 0;
                     @endphp
-                    <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700 my-1">
-                        <div class="bg-blue-400 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" 
+                    <div class="w-full bg-gray-200 rounded-full dark:bg-custom-375 my-2">
+                        <div class="bg-custom-200 shadow-lg text-xs font-medium text-custom-500 text-center p-1 leading-none rounded-full" 
                             style="width: {{ $percentage }}%">
                             {{ number_format($percentage, 2) }}%
                         </div>
@@ -56,7 +56,7 @@
                 <!-- Tombol Donasi -->
                 @if ($donasiTersedia)
                     <a href="{{ route('donation.payment', $target->id) }}" 
-                        class="bg-gradient-to-r from-cyan-500 to-blue-500 p-2 my-5 rounded text-center w-full uppercase font-bold hover:bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-xl">
+                        class="bg-gradient-to-r from-custom-300 to-custom-50 p-2 my-5 rounded text-center w-full uppercase font-bold hover:bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-xl">
                         Donasi Sekarang
                     </a>
                 @else
