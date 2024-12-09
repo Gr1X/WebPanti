@@ -56,19 +56,19 @@
                     alt="{{ Auth::user()->name }}">
 
                 <!-- Dropdown menu -->
-                <div id="userDropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-                    <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
+                <div id="userDropdown" class="z-10 hidden bg-custom-350 divide-y divide-gray-100 rounded-lg shadow w-44">
+                    <div class="px-4 py-3 text-sm text-custom-50">
                         <div>{{ Auth::user()->name }}</div>
                         <div class="font-medium truncate">{{ Auth::user()->email }}</div>
                     </div>
-                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="avatarButton">
+                    <ul class="py-2 text-sm text-custom-50" aria-labelledby="avatarButton">
                         <li>
-                            <a href="{{route('profile')}}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Profile</a>
+                            <a href="{{route('profile')}}" class="block px-4 py-2 hover:bg-custom-100">Profile</a>
                         </li>
                         @if(Auth::user()->role === 'admin')
                             <li>
                                 <a href="{{ route('admin.programs.index') }}" 
-                                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                  class="block px-4 py-2 hover:bg-custom-100">
                                     Admin Panel
                                 </a>
                             </li>
@@ -77,7 +77,7 @@
                     <div class="py-1">
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
-                            <button type="submit" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
+                            <button type="submit" class="block px-4 py-2 text-sm text-custom-50 hover:bg-custom-100">
                                 Sign out
                             </button>
                         </form>
