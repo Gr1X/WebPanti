@@ -85,7 +85,10 @@
             <!-- Overlay -->
             <div class="absolute inset-0 bg-green-900 bg-opacity-60"></div>
             <!-- Content -->
-            <div class="relative z-10 flex items-center justify-between px-10 h-full">
+            <div class="mt-36 gap-4">
+                <img src="./images/banner2.png" alt="banner2" class="w-full h-full object-cover">
+            </div>
+            <div class="relative z-10 flex items-center justify-center px-10 h-full">
                 <div class="text-white">
                     <h1 class="text-4xl font-bold">Berita Panti</h1>
                 </div>
