@@ -5,7 +5,7 @@
         <div class="pt-16 w-full lg:pt-44 mb-8">
             <div class="bg-white border border-lightGreen rounded-lg p-8 md:pt-16 md:p-12">
                 <h1 class="text-greenPrimary text-4xl md:text-5xl font-semibold mb-2">Program</h1>
-                <p class="text-yellowAccent text-lg font-normal mb-6">Static websites are now used to bootstrap lots of websites and are becoming the basis for a variety of tools...</p>
+                <p class="text-yellowAccent text-lg font-normal mb-6"></p>
             </div>
         </div>
 

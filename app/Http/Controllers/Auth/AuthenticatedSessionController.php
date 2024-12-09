@@ -33,7 +33,7 @@ class AuthenticatedSessionController extends Controller
         Log::info('User logged in: ' . $request->user()->email);
 
         // Redirect ke dashboard dengan pesan sukses
-        return redirect()->intended(route('dashboard'))->with('success', 'Welcome back!');
+        return redirect()->intended(route('landing'))->with('success', 'Welcome back!');
     }
 
     /**

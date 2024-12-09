@@ -2,14 +2,6 @@
 
 @section('content')
     <div class="mt-44">
-        <!-- Hero Section -->
-        <div class="bg-custom-400 py-12 px-6 text-center text-white rounded-lg shadow-lg mb-10">
-            <h1 class="text-4xl font-bold mb-4">Jadilah Relawan, Wujudkan Perubahan Nyata</h1>
-            <p class="text-lg mb-6">
-                Pilih peran yang sesuai dengan minat dan kemampuan Anda untuk membantu sesama. Bersama kita bisa membuat perubahan besar!
-            </p>
-        </div>
-
         <!-- Cards Section -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-6 py-4">
             <!-- Card: Tenaga Kesehatan -->
