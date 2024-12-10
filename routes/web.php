@@ -86,13 +86,16 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
       }
       return redirect('/')->with('error', 'Anda tidak memiliki akses ke halaman ini.');
   }], function () {
+
+
+    Route::get('dashboard', [AdminProgramController::class, 'dashboard'])->name('admin.dashboard');
       // Program Management
-      Route::get('programs', [AdminProgramController::class, 'index'])->name('admin.programs.index');
-      Route::get('/programs/create', [AdminProgramController::class, 'create'])->name('admin.programs.create');
-      Route::post('/programs', [AdminProgramController::class, 'store'])->name('admin.programs.store');
-      Route::get('/programs/{id}/edit', [AdminProgramController::class, 'edit'])->name('admin.programs.edit');
-      Route::put('/programs/{id}', [AdminProgramController::class, 'update'])->name('admin.programs.update');
-      Route::delete('/programs/{id}', [AdminProgramController::class, 'destroy'])->name('admin.programs.destroy');
+    Route::get('programs', [AdminProgramController::class, 'index'])->name('admin.programs.index');
+    Route::get('/programs/create', [AdminProgramController::class, 'create'])->name('admin.programs.create');
+    Route::post('/programs', [AdminProgramController::class, 'store'])->name('admin.programs.store');
+    Route::get('/programs/{id}/edit', [AdminProgramController::class, 'edit'])->name('admin.programs.edit');
+    Route::put('/programs/{id}', [AdminProgramController::class, 'update'])->name('admin.programs.update');
+    Route::delete('/programs/{id}', [AdminProgramController::class, 'destroy'])->name('admin.programs.destroy');
 
       // Gallery Management
       Route::get('/gallery', [EditGalleryController::class, 'index'])->name('admin.gallery.index');

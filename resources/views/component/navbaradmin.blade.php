@@ -2,11 +2,22 @@
     <div class="flex justify-between items-center bg-custom-50">
         <!-- Navigation Menu -->
         <ul class="flex mx-4">
+
+            {{-- Dashboard --}}
+            <li class="text-center group relative flex-shrink-0 px-2 py-2 my-2 hover:scale-105 duration-300">
+                <span class="absolute inset-x-0 top-0 h-0.5 group-hover:bg-custom-100 w-8 left-1/2 transform -translate-x-1/2"></span>
+                <a href="{{ route('admin.dashboard') }}" 
+                    class="inline-block flex flex-col items-center group-hover:bg-custom-100 px-6 py-0.5 rounded-xl group-hover:shadow-xl text-slate-100 active:scale-95 duration-300">
+                    <ion-icon name="briefcase" class="group-hover:scale-105 size-5 my-1 duration-300"></ion-icon>
+                    <p class="font-semibold text-sm">Dashboard</p>
+                </a>
+            </li>
+
             <!-- Programs -->
             <li class="text-center group relative flex-shrink-0 px-2 py-2 my-2 hover:scale-105 duration-300">
                 <span class="absolute inset-x-0 top-0 h-0.5 group-hover:bg-custom-100 w-8 left-1/2 transform -translate-x-1/2"></span>
                 <a href="{{ route('admin.programs.index') }}" 
-                   class="inline-block flex flex-col items-center group-hover:bg-custom-100 px-6 py-0.5 rounded-xl group-hover:shadow-xl text-slate-100 active:scale-95 duration-300">
+                    class="inline-block flex flex-col items-center group-hover:bg-custom-100 px-6 py-0.5 rounded-xl group-hover:shadow-xl text-slate-100 active:scale-95 duration-300">
                     <ion-icon name="briefcase" class="group-hover:scale-105 size-5 my-1 duration-300"></ion-icon>
                     <p class="font-semibold text-sm">Programs</p>
                 </a>
@@ -16,7 +27,7 @@
             <li class="text-center group relative flex-shrink-0 px-2 py-2 my-2 hover:scale-105 duration-300">
                 <span class="absolute inset-x-0 top-0 h-0.5 group-hover:bg-custom-100 w-8 left-1/2 transform -translate-x-1/2"></span>
                 <a href="{{ route('admin.gallery.index') }}" 
-                   class="inline-block flex flex-col items-center group-hover:bg-custom-100 px-6 py-0.5 rounded-xl group-hover:shadow-xl text-slate-100 active:scale-95 duration-300">
+                    class="inline-block flex flex-col items-center group-hover:bg-custom-100 px-6 py-0.5 rounded-xl group-hover:shadow-xl text-slate-100 active:scale-95 duration-300">
                     <ion-icon name="images" class="group-hover:scale-105 size-5 my-1 duration-300"></ion-icon>
                     <p class="font-semibold text-sm">Edit Gallery</p>
                 </a>

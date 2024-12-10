@@ -13,6 +13,10 @@ class AdminProgramController extends Controller
      * Display a listing of the programs.
      */
     
+    public function dashboard(){
+        return view('admin.programs.dashboard');
+    }
+
     public function index()
     {
         // Ambil semua program dengan total donasi terkumpul
