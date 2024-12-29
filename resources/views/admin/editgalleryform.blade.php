@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container mx-auto p-6">
-    <h1 class="text-2xl font-bold mb-6">Edit Foto</h1>
+    <h1 class="text-4xl font-bold mb-6">Edit Foto</h1>
 
     @if ($errors->any())
         <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-6">

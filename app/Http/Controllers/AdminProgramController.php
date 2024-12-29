@@ -14,7 +14,11 @@ class AdminProgramController extends Controller
      */
     
     public function dashboard(){
-        return view('admin.programs.dashboard');
+        // Ambil data yang diperlukan untuk dashboard
+        $programs = Target::withSum('donasi', 'jumlah')->get(); // Ambil data program dan jumlah donasi
+
+        // Kirimkan data ke view
+        return view('admin.programs.dashboard', compact('programs',));
     }
 
     public function index()

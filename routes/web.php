@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminPaymentController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
@@ -78,17 +79,18 @@ Route::middleware(['auth'])->group(function () {
 // Admin Routes
 // -----------------------------
 
-Route::middleware(['auth'])->prefix('admin')->group(function () {
-  // Periksa apakah user adalah admin sebelum grup routes diakses
-  Route::group(['middleware' => function ($request, $next) {
-      if (Auth::check() && Auth::user()->role === 'admin') {
-          return $next($request);
-      }
-      return redirect('/')->with('error', 'Anda tidak memiliki akses ke halaman ini.');
-  }], function () {
+    Route::middleware(['auth'])->prefix('admin')->group(function () {
+    // Periksa apakah user adalah admin sebelum grup routes diakses
+    Route::group(['middleware' => function ($request, $next) {
+        if (Auth::check() && Auth::user()->role === 'admin') {
+            return $next($request);
+        }
+        return redirect('/')->with('error', 'Anda tidak memiliki akses ke halaman ini.');
+    }], function () {
 
 
     Route::get('dashboard', [AdminProgramController::class, 'dashboard'])->name('admin.dashboard');
+    
       // Program Management
     Route::get('programs', [AdminProgramController::class, 'index'])->name('admin.programs.index');
     Route::get('/programs/create', [AdminProgramController::class, 'create'])->name('admin.programs.create');
@@ -98,17 +100,21 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::delete('/programs/{id}', [AdminProgramController::class, 'destroy'])->name('admin.programs.destroy');
 
       // Gallery Management
-      Route::get('/gallery', [EditGalleryController::class, 'index'])->name('admin.gallery.index');
-      Route::get('/gallery/create', [EditGalleryController::class, 'create'])->name('admin.gallery.create');
-      Route::post('/gallery', [EditGalleryController::class, 'store'])->name('admin.gallery.store');
-      Route::get('/gallery/{id}/edit', [EditGalleryController::class, 'edit'])->name('admin.gallery.edit');
-      Route::put('/gallery/{id}', [EditGalleryController::class, 'update'])->name('admin.gallery.update');
-      Route::delete('/gallery/{id}', [EditGalleryController::class, 'destroy'])->name('admin.gallery.destroy');
+    Route::get('/gallery', [EditGalleryController::class, 'index'])->name('admin.gallery.index');
+    Route::get('/gallery/create', [EditGalleryController::class, 'create'])->name('admin.gallery.create');
+    Route::post('/gallery', [EditGalleryController::class, 'store'])->name('admin.gallery.store');
+    Route::get('/gallery/{id}/edit', [EditGalleryController::class, 'edit'])->name('admin.gallery.edit');
+    Route::put('/gallery/{id}', [EditGalleryController::class, 'update'])->name('admin.gallery.update');
+    Route::delete('/gallery/{id}', [EditGalleryController::class, 'destroy'])->name('admin.gallery.destroy');
 
       // Tampilkan semua volunteer
-      Route::get('/volunteers', [VolunteerController::class, 'showAllVolunteers'])->name('admin.volunteers.index');
-      Route::delete('/volunteers/{id}', [VolunteerController::class, 'destroy'])->name('admin.volunteers.destroy');
-  });
+    Route::get('/volunteers', [VolunteerController::class, 'showAllVolunteers'])->name('admin.volunteers.index');
+    Route::delete('/volunteers/{id}', [VolunteerController::class, 'destroy'])->name('admin.volunteers.destroy');
+
+    //Tampilkan payments
+    Route::get('payments', [AdminPaymentController::class, 'index'])->name('admin.payment.index');
+
+    });
 });
 
 // -----------------------------

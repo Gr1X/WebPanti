@@ -12,7 +12,10 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                archivo: ['Archivo', 'sans-serif'],
+                inter: ['Inter', 'sans-serif'],
+                lato: ['Lato', 'sans-serif'],
+                poppins: ['Poppins', 'sans-serif'],
             },
             backgroundImage: {
                 'login-bg': "url('/images/bg.jpg')",

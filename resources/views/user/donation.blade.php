@@ -11,7 +11,7 @@
         </div>
 
         <div class="mb-8">
-            {{-- <div class="mb-8 flex justify-between">
+            <div class="mb-8 flex justify-between">
                 <div class="">
                     <div class="">
                         <span class="text-4xl font-bold text-slate-600">Donasi Barang yang Bermakna</span>
@@ -20,9 +20,9 @@
                         <span class="text-lg text-gray-600">Berikan barang-barang Anda untuk mendukung mereka yang membutuhkan, jadikan hari mereka lebih baik.</span>
                     </div>
                 </div>
-            </div> --}}
+            </div>
             
-            {{-- <div class="grid grid-cols-3 gap-4">
+            <div class="grid grid-cols-3 gap-4">
                 <a href="#" class="flex flex-col items-center bg-white rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                     <div class="w-full h-full">
                         <img class="object-cover w-full h-full rounded-t-lg md:rounded-none md:rounded-s-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="Image">
@@ -32,10 +32,10 @@
                         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
                     </div>
                 </a>
-            </div> --}}
+            </div>
         </div>
 
-        <div class="mb-8 pb-8">
+        <div class="pb-8">
             <div class="mb-8 flex justify-between">
                 <div class="">
                     <div class="">
