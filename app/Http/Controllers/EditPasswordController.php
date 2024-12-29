@@ -29,7 +29,6 @@ class EditPasswordController extends Controller
             'new_password.min' => 'Kata sandi baru harus minimal 6 karakter.',
             'new_password.confirmed' => 'Konfirmasi kata sandi tidak sesuai.',
         ]);
-      
 
         // Periksa apakah kata sandi lama cocok
         if (!Hash::check($validated['current_password'], $user->password)) {

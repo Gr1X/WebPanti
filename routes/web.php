@@ -112,7 +112,7 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('/volunteers/{id}', [VolunteerController::class, 'destroy'])->name('admin.volunteers.destroy');
 
     //Tampilkan payments
-    Route::get('payments', [AdminPaymentController::class, 'index'])->name('admin.payment.index');
+    Route::get('payments', [AdminPaymentController::class, 'index'])->name('admin.payments.index');
 
     });
 });

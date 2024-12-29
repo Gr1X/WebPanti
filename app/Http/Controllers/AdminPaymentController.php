@@ -11,7 +11,7 @@ class AdminPaymentController extends Controller
      */
     public function index()
     {
-        return view()
+        return view('admin.payments.index');
     }
 
     /**
