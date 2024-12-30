@@ -2,15 +2,15 @@
 
 @section('content')
 <div class="pt-56 pb-20 w-full">
-    <div class="flex justify-between px-8">
+    <div class="flex justify-between px-8 gap-8">
         <!-- Bagian Kiri -->
-        <div class="h-[35rem] w-[55rem] ">
+        <div class="h-[35rem] w-3/5">
             <!-- Gambar Program -->
-            <img src="{{ asset('storage/' . $target->gambar) }}" alt="{{ $target->namaprogram }}" class="h-full w-full object-cover rounded-lg">
+            <img src="{{ asset('storage/' . $target->gambar) }}" alt="{{ $target->namaprogram }}" class="h-full w-full object-cover rounded-xl">
         </div>
 
         <!-- Bagian Kanan -->
-        <div class="w-1/3 mx-auto">
+        <div class="w-2/5 mx-auto">
             <!-- Judul dan Deskripsi -->
             <div>
                 <h2 class="text-3xl font-bold uppercase">{{ $target->namaprogram }}</h2>
@@ -56,7 +56,7 @@
                 <!-- Tombol Donasi -->
                 @if ($donasiTersedia)
                     <a href="{{ route('donation.payment', $target->id) }}" 
-                        class="bg-gradient-to-r from-custom-300 to-custom-50 p-2 my-5 rounded text-center w-full uppercase font-bold hover:bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-xl">
+                        class="bg-gradient-to-r from-custom-50 to-custom-75 p-2 my-5 rounded-xl text-center w-full uppercase font-bold hover:bg-gradient-to-r hover:from-custom-50 hover:to-custom-100 text-white text-xl duration-200">
                         Donasi Sekarang
                     </a>
                 @else

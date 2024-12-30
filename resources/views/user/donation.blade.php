@@ -10,36 +10,12 @@
             </div>
         </div>
 
-        <div class="mb-8">
-            <div class="mb-8 flex justify-between">
-                <div class="">
-                    <div class="">
-                        <span class="text-4xl font-bold text-slate-600">Donasi Barang yang Bermakna</span>
-                    </div>
-                    <div class="">
-                        <span class="text-lg text-gray-600">Berikan barang-barang Anda untuk mendukung mereka yang membutuhkan, jadikan hari mereka lebih baik.</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="grid grid-cols-3 gap-4">
-                <a href="#" class="flex flex-col items-center bg-white rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                    <div class="w-full h-full">
-                        <img class="object-cover w-full h-full rounded-t-lg md:rounded-none md:rounded-s-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="Image">
-                    </div>
-                    <div class="flex flex-col justify-between p-4 leading-normal">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Peralatan Medis</h5>
-                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-
         <div class="pb-8">
             <div class="mb-8 flex justify-between">
                 <div class="">
-                    <div class="">
-                        <span class="text-4xl font-semibold text-custom-50">Mari Bantu Mereka yang Membutuhkan</span>
+                    <div class="grid">
+                        <span class="text-3xl font-semibold text-custom-50">Mari Bantu Mereka yang Membutuhkan</span>
+                        <span class="text-lg text-custom-200">Uluran tangan kecil berarti besar bagi mereka</span>
                     </div>
                     {{-- <div class="">
                         <span class="text-lg">Menampilkan <b>12</b> campaign dari <b>142</b> campaign</span>
