@@ -97,7 +97,7 @@
                 <!-- Timeline Item 1 -->
                 <li class="mb-10 ml-8">
                     <div class="absolute w-6 h-6 bg-custom-75 rounded-full -left-3 flex items-center justify-center ring-8 ring-custom-400">
-                        <svg class="w-3 h-3 text-custom-50" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <svg class="w-3 h-3 text-custom-50" xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 20 20">
                             <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
                         </svg>
                     </div>
@@ -105,7 +105,7 @@
                         <h3 class="flex items-center mb-2 text-3xl font-semibold text-custom-50 ">
                             Yayasan Nurul Jadid
                         </h3>
-                        <p class="mb-4 text-base font-normal text-custom-75">
+                        <p class="mb-4 text-base font-normal text-custom-50">
                             Panti Asuhan Nurul Jadid adalah sebuah yayasan yang berlokasi di Jl. Irigasi Sipon No.152, Poris Plawad Utara, Kecamatan Cipondoh, Kota Tangerang, Banten. 
                             Yayasan ini bergerak di bidang sosial, termasuk pengelolaan panti asuhan, majelis taklim, dan kegiatan dakwah. 
                             Saat ini, Panti Asuhan Nurul Jadid mengasuh 19 santri yang terdiri dari 10 santri putri dan 9 santri putra. Para santri ini berasal dari berbagai daerah seperti Jakarta, Bandung, dan sekitar Tangerang. Selain itu, yayasan ini juga membantu anak-anak dhuafa yang tinggal di sekitar panti. 
@@ -117,13 +117,13 @@
                 <!-- Timeline Item 2 -->
                 <li class="mb-10 ml-8">
                     <div class="absolute w-6 h-6 bg-custom-75 rounded-full -left-3 flex items-center justify-center ring-8 ring-custom-400">
-                        <svg class="w-3 h-3 text-custom-50" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <svg class="w-3 h-3 text-custom-50" xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 20 20">
                             <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
                         </svg>
                     </div>
                     <div class="h-full w-full p-4 bg-custom-50 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 relative z-20 shadow-xl">
                         <h3 class="mb-2 text-3xl font-semibold text-custom-50">Visi</h3>
-                        <p class="text-base font-normal text-custom-500">
+                        <p class="text-base font-normal text-custom-50  ">
                             Menjadi lembaga sosial terpercaya, amanah, dan peduli, serta berkontribusi dalam mewujudkan sumber daya manusia yang kreatif, inovatif, mandiri, dan berkarakter mulia.
                         </p>
                     </div>
@@ -131,13 +131,13 @@
 
                 <li class="mb-10 ml-8">
                     <div class="absolute w-6 h-6 bg-custom-75 rounded-full -left-3 flex items-center justify-center ring-8 ring-custom-400">
-                        <svg class="w-3 h-3 text-custom-50" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <svg class="w-3 h-3 text-custom-50" xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 20 20">
                             <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
                         </svg>
                     </div>
                     <div class="h-full w-full p-4 bg-custom-50 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 relative z-10 shadow-xl">
                         <h3 class="mb-2 text-3xl font-semibold text-custom-50">Misi</h3>
-                        <p class="text-base font-normal text-custom-500 gap-4">
+                        <p class="text-base font-normal text-custom-50 gap-4">
                             <span>1. Mendidik generasi muda melalui pendidikan formal maupun non-formal sehingga menjadi generasi yang kreatif, inovatif, dan mandiri.</span><br />
                             <span>2. Menyelenggarakan kegiatan sosial yang aktif dan berdimensi rahmatan lil a'lamin.</span><br />
                             <span>3. Mengembangkan potensi usaha masyarakat sekitar sehingga mampu menjadi masyarakat yang sejahtera dan mandiri.</span><br />
@@ -291,7 +291,7 @@
                         <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt="Card Image" class="object-cover h-full w-full">
                     </div>
                     <div class="p-6 flex flex-col justify-between">
-                        <h4 class="text-slate-800 text-xl font-bold">Kegiatan Sosial Desa Binaan</h4>
+                        <h4 class="text-custom-50 text-xl font-bold">Kegiatan Sosial Desa Binaan</h4>
                         <p class="text-gray-600 text-sm mt-2">Meningkatkan kesejahteraan masyarakat desa melalui pelatihan keterampilan.</p>
                         <a href="#" class="text-green-600 text-sm font-semibold hover:underline mt-4 flex items-center">
                             Baca Selengkapnya
@@ -308,7 +308,7 @@
                         <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt="Card Image" class="object-cover h-full w-full">
                     </div>
                     <div class="p-6 flex flex-col justify-between">
-                        <h4 class="text-slate-800 text-xl font-bold">Kegiatan Sosial Desa Binaan</h4>
+                        <h4 class="text-custom-50 text-xl font-bold">Kegiatan Sosial Desa Binaan</h4>
                         <p class="text-gray-600 text-sm mt-2">Meningkatkan kesejahteraan masyarakat desa melalui pelatihan keterampilan.</p>
                         <a href="#" class="text-green-600 text-sm font-semibold hover:underline mt-4 flex items-center">
                             Baca Selengkapnya
@@ -324,7 +324,7 @@
                         <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt="Card Image" class="object-cover h-full w-full">
                     </div>
                     <div class="p-6 flex flex-col justify-between">
-                        <h4 class="text-slate-800 text-xl font-bold">Kegiatan Sosial Desa Binaan</h4>
+                        <h4 class="text-custom-50 text-xl font-bold">Kegiatan Sosial Desa Binaan</h4>
                         <p class="text-gray-600 text-sm mt-2">Meningkatkan kesejahteraan masyarakat desa melalui pelatihan keterampilan.</p>
                         <a href="#" class="text-green-600 text-sm font-semibold hover:underline mt-4 flex items-center">
                             Baca Selengkapnya
@@ -348,62 +348,52 @@
         </div>
         
         <!-- Gallery Grid -->
-        <div class="relative bg-fixed bg-center bg-cover" style="background-image: url('https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg');">
+        <div class="relative bg-fixed bg-center bg-cover" style="background-image: url('images/bg.jpg');">
             <!-- Gradient Overlay -->
-            <div class="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-40"></div>
+            <div class="absolute inset-0 bg-black opacity-50"></div>
         
             <!-- Content -->
             <div class="relative z-10 py-20">
                 <!-- Title -->
-                <h2 class="text-white text-3xl md:text-5xl font-bold text-center mb-10">Gallery</h2>
+                <h2 class="text-white text-3xl md:text-5xl font-bold text-center mb-10 ">Gallery</h2>
         
                 <!-- Gallery Grid -->
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 my-10 mx-6 md:mx-20">
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-6 my-10 mx-6 md:mx-20">
                     <!-- Image 1 -->
                     <div class="group overflow-hidden rounded-lg shadow-lg">
-                        <img class="h-auto max-w-full transition-transform duration-300 ease-in-out group-hover:scale-110" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg" alt="Gallery Image 1">
+                        <img class="h-auto max-w-full transition-transform duration-300 ease-in-out group-hover:scale-110" src="images/1.jpg" alt="Gallery Image 1">
                     </div>
         
                     <!-- Image 2 -->
                     <div class="group overflow-hidden rounded-lg shadow-lg">
-                        <img class="h-auto max-w-full transition-transform duration-300 ease-in-out group-hover:scale-110" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg" alt="Gallery Image 2">
-                    </div>
-        
-                    <!-- Image 3 -->
-                    <div class="group overflow-hidden rounded-lg shadow-lg">
-                        <img class="h-auto max-w-full transition-transform duration-300 ease-in-out group-hover:scale-110" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg" alt="Gallery Image 3">
-                    </div>
-        
-                    <!-- Image 4 -->
-                    <div class="group overflow-hidden rounded-lg shadow-lg">
-                        <img class="h-auto max-w-full transition-transform duration-300 ease-in-out group-hover:scale-110" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg" alt="Gallery Image 4">
+                        <img class="h-auto max-w-full transition-transform duration-300 ease-in-out group-hover:scale-110" src="images/2.jpg" alt="Gallery Image 2">
                     </div>
         
                     <!-- Image 5 -->
                     <div class="group overflow-hidden rounded-lg shadow-lg">
-                        <img class="h-auto max-w-full transition-transform duration-300 ease-in-out group-hover:scale-110" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg" alt="Gallery Image 5">
+                        <img class="h-auto max-w-full transition-transform duration-300 ease-in-out group-hover:scale-110" src="images/5.jpg" alt="Gallery Image 5">
                     </div>
         
                     <!-- Image 6 -->
                     <div class="group overflow-hidden rounded-lg shadow-lg">
-                        <img class="h-auto max-w-full transition-transform duration-300 ease-in-out group-hover:scale-110" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg" alt="Gallery Image 6">
+                        <img class="h-auto max-w-full transition-transform duration-300 ease-in-out group-hover:scale-110" src="images/6.jpg" alt="Gallery Image 6">
                     </div>
         
                     <!-- Image 7 -->
                     <div class="group overflow-hidden rounded-lg shadow-lg">
-                        <img class="h-auto max-w-full transition-transform duration-300 ease-in-out group-hover:scale-110" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg" alt="Gallery Image 7">
+                        <img class="h-auto max-w-full transition-transform duration-300 ease-in-out group-hover:scale-110" src="images/5.jpg" alt="Gallery Image 7">
                     </div>
         
                     <!-- Image 8 -->
                     <div class="group overflow-hidden rounded-lg shadow-lg">
-                        <img class="h-auto max-w-full transition-transform duration-300 ease-in-out group-hover:scale-110" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg" alt="Gallery Image 8">
+                        <img class="h-auto max-w-full transition-transform duration-300 ease-in-out group-hover:scale-110" src="images/5.jpg" alt="Gallery Image 8">
                     </div>
                     
                 </div>
         
                 <!-- See More Button -->
                 <div class="flex justify-center my-4">
-                    <a href="/gallery" class="bg-slate-700 text-white font-semibold rounded-full px-10 py-4 transition duration-300 hover:bg-slate-600 hover:shadow-lg">
+                    <a href="/gallery" class="bg-custom-50 text-white font-semibold rounded-full px-10 py-4 transition duration-300 hover:bg-custom-100 hover:shadow-lg">
                         See More
                     </a>
                 </div>
@@ -469,11 +459,11 @@
     }
 }
 
-document.addEventListener('scroll', function () {
-            const parallax = document.querySelector('.bg-fixed');
-            const scrollPosition = window.pageYOffset;
-            parallax.style.backgroundPositionY = scrollPosition * 0.5 + 'px';
-        });
+// document.addEventListener('scroll', function () {
+//             const parallax = document.querySelector('.bg-fixed');
+//             const scrollPosition = window.pageYOffset;
+//             parallax.style.backgroundPositionY = scrollPosition * 0.5 + 'px';
+//         });
 
 </script>
 @stop
