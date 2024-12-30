@@ -104,9 +104,9 @@
     </div>    
 </nav>
 
-<header id="header" class="fixed top-20 w-full bg-custom-400 drop-shadow-xl transition-transform duration-500 ease-in-out z-40">
+<header id="header" class="fixed top-20 w-full bg-custom-75 drop-shadow-xl transition-transform duration-500 ease-in-out z-40 rounded-b-xl">
     <div class="mx-2 max-w-7xl px-2 py-4 sm:px-6 lg:px-4">
-        <h1 class="lg:text-2xl md:text-lg font-bold tracking-tight text-custom-50">Yayasan Nurul Jadid</h1>
+        <h1 class="lg:text-2xl md:text-lg font-bold tracking-tight text-custom-500">Yayasan Nurul Jadid</h1>
     </div>
 </header>
 

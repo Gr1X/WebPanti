@@ -94,47 +94,63 @@
                     </p>
             
                     <div class="flex justify-center">
-                        <a href="{{ route('relawan') }}" 
-                            class="bg-custom-200 hover:bg-custom-300 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105">
-                            Daftar Sekarang
-                        </a>
                         <!-- Modal toggle -->
-                        <button data-modal-target="volunteer-modal" data-modal-toggle="volunteer-modal" class="bg-custom-200 hover:bg-custom-300 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105" type="button">
-                            Toggle modal
+                        <button data-modal-target="volunteer-modal" data-modal-toggle="volunteer-modal" class="bg-custom-200 hover:bg-custom-300 text-white font-bold py-3 px-8 rounded-xl shadow-lg transition-transform transform hover:scale-105" type="button">
+                            Daftar sebagai Relawan
                         </button>
                     </div>
                 </div>
                 
                 <!-- Main modal -->
-                <div id="volunteer-modal" data-modal-backdrop="static" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-                    <div class="relative p-4 w-full max-w-2xl max-h-full">
+                <div id="volunteer-modal" data-modal-backdrop="static" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-end w-full md:inset-0 h-[calc(100%-1rem)] max-h-full mt-10">
+                    <div class="relative p-4 w-full max-w-6xl max-h-full">
+
                         <!-- Modal content -->
-                        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                        <div class="relative bg-transparent rounded-xl">
                             <!-- Modal header -->
-                            <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
-                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                                    Static modal
-                                </h3>
-                                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="volunteer-modal">
-                                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-                                    </svg>
-                                    <span class="sr-only">Close modal</span>
+                            <div class="flex justify-start items-center mb-4">
+                                <button class="text-lg font-semibold flex items-center my-4 ms-auto py-2 px-2 rounded-xl text-gray-700 bg-gray-200 shadow border-gray-100" data-modal-hide="volunteer-modal">
+                                    <ion-icon name="close" class=" text-xl size-8 text-red-400"></ion-icon>
                                 </button>
                             </div>
-                            <!-- Modal body -->
-                            <div class="p-4 md:p-5 space-y-4">
-                                <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                                    With less than a month to go before the European Union enacts new consumer privacy laws for its citizens, companies around the world are updating their terms of service agreements to comply.
-                                </p>
-                                <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                                    The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant to ensure a common set of data rights in the European Union. It requires organizations to notify users as soon as possible of high-risk data breaches that could personally affect them.
-                                </p>
-                            </div>
-                            <!-- Modal footer -->
-                            <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
-                                <button data-modal-hide="static-modal" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">I accept</button>
-                                <button data-modal-hide="static-modal" type="button" class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Decline</button>
+
+                            <!-- Modal Body -->
+                            <div class="space-y-4">
+                                <!-- Kartu di dalam modal -->
+                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-6 py-2">
+                                    <!-- Kartu 1 -->
+                                    <a href="{{ route('program.volunteer.registerForm', 'pendidikan') }}" class="relative grid h-[32rem] max-w-lg flex-col items-end justify-center overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-500 opacity-0 transform translate-y-6">
+                                        <div class="absolute inset-0 m-0 h-full w-full bg-[url('/public/images/guru.png')] bg-cover bg-center rounded-2xl">
+                                            <div class="absolute inset-0 h-full w-full bg-gradient-to-t from-custom-75/100 via-custom-50/30 hover:from-custom-75/100 hover:via-custom-50/50"></div>
+                                        </div>
+                                        <div class="relative text-center px-6 pt-14 pb-4">
+                                            <ion-icon name="school-outline" class="text-6xl text-white bg-custom-200 p-4 rounded-full mb-4 shadow"></ion-icon>
+                                            <h2 class="mb-6 text-2xl font-semibold text-white">Tenaga Pendidikan</h2>
+                                        </div>
+                                    </a>
+
+                                    <!-- Kartu 2 -->
+                                    <a href="{{ route('program.volunteer.registerForm', 'sosial') }}" class="relative grid h-[32rem] max-w-lg flex-col items-end justify-center overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-500 opacity-0 transform translate-y-6">
+                                        <div class="absolute inset-0 m-0 h-full w-full bg-[url('/public/images/sosial2.jpeg')] bg-cover bg-center rounded-2xl">
+                                            <div class="absolute inset-0 h-full w-full bg-gradient-to-t from-custom-75/100 via-custom-50/30 hover:from-custom-75/100 hover:via-custom-50/50"></div>
+                                        </div>
+                                        <div class="relative text-center px-6 pt-14 pb-4">
+                                            <ion-icon name="people-outline" class="text-6xl text-white bg-custom-200 p-4 rounded-full mb-4 shadow"></ion-icon>
+                                            <h2 class="mb-6 text-2xl font-semibold text-white">Tenaga Sosial</h2>
+                                        </div>
+                                    </a>
+
+                                    <!-- Kartu 3 -->
+                                    <a href="{{ route('program.volunteer.registerForm', 'kesehatan') }}" class="relative grid h-[32rem] max-w-lg flex-col items-end justify-center overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-500 opacity-0 transform translate-y-6">
+                                        <div class="absolute inset-0 m-0 h-full w-full bg-[url('/public/images/dokter.jpg')] bg-cover bg-center rounded-2xl">
+                                            <div class="absolute inset-0 h-full w-full bg-gradient-to-t from-custom-75/100 via-custom-50/30 hover:from-custom-75/100 hover:via-custom-50/50"></div>
+                                        </div>
+                                        <div class="relative text-center px-6 pt-14 pb-4">
+                                            <ion-icon name="medical-outline" class="text-6xl text-white bg-custom-200 p-4 rounded-full mb-4 shadow"></ion-icon>
+                                            <h2 class="mb-6 text-2xl font-semibold text-white">Tenaga Kesehatan</h2>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -180,7 +196,62 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const modal = document.getElementById('volunteer-modal');
+        const modalToggleButtons = document.querySelectorAll('[data-modal-toggle="volunteer-modal"]');
+        const closeModalButton = modal.querySelector('[data-modal-hide="volunteer-modal"]');
+        const cards = modal.querySelectorAll('.grid a');
+
+        // Fungsi animasi fade-in
+        function animateCardsFadeIn() {
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('opacity-100', 'translate-y-0');
+                    card.classList.remove('opacity-0', 'translate-y-6');
+                }, index * 200); // Delay tiap kartu
+            });
+        }
+
+        // Fungsi animasi fade-out
+        function animateCardsFadeOut() {
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('opacity-0', 'translate-y-6');
+                    card.classList.remove('opacity-100', 'translate-y-0');
+                }, index * 100); // Delay tiap kartu
+            });
+        }
+
+        // Buka modal
+        modalToggleButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                setTimeout(() => {
+                    modal.classList.remove('opacity-0');
+                    modal.classList.add('opacity-100');
+                    animateCardsFadeIn();
+                }, 50);
+            });
+        });
+
+        // Tutup modal
+        closeModalButton.addEventListener('click', () => {
+            animateCardsFadeOut();
+            setTimeout(() => {
+                modal.classList.add('opacity-0');
+                modal.classList.remove('opacity-100');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                    modal.classList.remove('flex');
+                }, 300);
+            }, 300);
+        });
+    });
+</script>
 @stop

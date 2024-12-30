@@ -1,7 +1,7 @@
 @extends('layout.app')
 
 @section('content')
-    <div class="mt-36 gap-4">
+    <div class="mt-28 gap-4">
         <img src="./images/banner1.png" alt="banner1" class="w-full h-full object-cover">
     </div>
     <div class="bg-custom-400 min-h-screen px-14 gap-4">

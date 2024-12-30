@@ -14,8 +14,8 @@
             <div class="mb-8 flex justify-between">
                 <div class="">
                     <div class="grid">
-                        <span class="text-3xl font-semibold text-custom-50">Mari Bantu Mereka yang Membutuhkan</span>
-                        <span class="text-lg text-custom-200">Uluran tangan kecil berarti besar bagi mereka</span>
+                        <span class="text-3xl font-bold text-custom-50">Mari Bantu Mereka yang Membutuhkan</span>
+                        <span class="text-lg text-custom-300 font-semibold">Uluran tangan kecil berarti besar bagi mereka</span>
                     </div>
                     {{-- <div class="">
                         <span class="text-lg">Menampilkan <b>12</b> campaign dari <b>142</b> campaign</span>
