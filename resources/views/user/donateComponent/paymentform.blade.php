@@ -14,7 +14,7 @@
     <div class="m-10">
         <div class="">
             <label class="flex items-center text-gray-600"><a href="" class="">Program</a><ion-icon name="chevron-forward-outline" class="size-4 "></ion-icon><span class="">Donate</span></label>
-            <span class="text-4xl font-semibold">Donate</span>
+            <span class="text-4xl text-custom-50 font-semibold">Donate</span>
         </div>
 
         <div class="w-full flex justify-between gap-6 mt-8">
@@ -44,7 +44,7 @@
                     @csrf
                     <!-- Input Nominal Donasi -->
                     <div class="my-4">
-                        <label for="jumlah" class="block text-gray-700 font-semibold mb-2 text-lg">Jumlah Donasi</label>
+                        <label for="jumlah" class="block text-custom-50 font-semibold mb-2 text-lg">Jumlah Donasi</label>
                         <div class="relative">
                             <span
                                 class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500 font-bold text-lg pointer-events-none">
@@ -77,7 +77,7 @@
         
                     <!-- Input Catatan -->
                     <div class="mb-4">
-                        <label for="notes" class="block text-gray-700 font-semibold mb-2 text-lg">Catatan (Opsional)</label>
+                        <label for="notes" class="block text-custom-75 font-semibold mb-2 text-lg">Catatan (Opsional)</label>
                         <textarea 
                             id="notes" 
                             name="notes" 
@@ -90,7 +90,7 @@
                         @enderror
                     </div>
         
-                    <label class="block text-gray-700 font-semibold mb-2 text-lg">Metode Pembayaran</label>
+                    <label class="block text-custom-50 font-semibold mb-2 text-lg">Metode Pembayaran</label>
                     <div class="border my-4 rounded-lg p-6">
                         <div class="mb-6">
                             <h3 class="text-md font-bold text-gray-800 mb-3">Bank Transfer</h3>
