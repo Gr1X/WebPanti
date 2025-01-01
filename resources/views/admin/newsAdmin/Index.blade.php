@@ -51,7 +51,10 @@
                 </div>
             </form>
             
-            <a href="{{ route('admin.news.create') }}" class="flex self-center bg-green-100 text-green-800 py-3 px-4 rounded-xl hover:bg-green-200 transition font-semibold gap-2"><ion-icon name="albums-outline" class="size-5 self-center"></ion-icon>Tambah Program</a>
+            <a href="{{ route('admin.news.create') }}" class="flex self-center bg-green-100 text-green-800 py-3 px-4 rounded-xl hover:bg-green-200 transition font-semibold gap-2">
+                <ion-icon name="add-outline" class="size-5 self-center"></ion-icon>
+                Tambah Berita
+            </a>
         </div>
 
         {{-- GARIS --}}
@@ -109,11 +112,12 @@
                         <td class="px-6 py-4 break-words whitespace-normal">{{ $data->deskripsi }}</td>
 
                         <td class="px-6 py-4 max-w-2xs truncate">
-                            {{ $data->update_at }}
+                            {{ \Carbon\Carbon::parse($data->tanggal_publikasi)->format('d F Y') }}
                         </td>
+                        
 
                         <td class="px-6 py-4 max-w-2xs truncate">
-                            {{ \Carbon\Carbon::parse($data->publish)->format('d F Y') }}
+                            {{ $data->tanggal_publikasi }}
                         </td>     
                 
                         <td class="px-6 py-4">
@@ -139,11 +143,6 @@
                                                     Delete
                                                 </button>
                                             </form>
-                                        </li>
-                                        <li>
-                                            <button class="block px-4 py-2 text-left w-full hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" onclick="alert('Close action executed!')">
-                                                Close
-                                            </button>
                                         </li>
                                     </ul>
                                 </div>

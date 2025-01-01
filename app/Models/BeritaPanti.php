@@ -15,7 +15,6 @@ class BeritaPanti extends Model
         'deskripsi',
         'gambar',
         'tanggal_publikasi',
-        'status',
     ];
 }
 

@@ -10,7 +10,7 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
 </head>
-<body class="overflow-x-hidden font-poppins">
+<body class="overflow-x-hidden font-poppins bg-custom-400">
     <!-- Include Navbar -->
     @include('component.navbaradmin')
 

@@ -1,24 +1,27 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\BeritaPanti;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
-class newsController extends Controller
+class NewsController extends Controller
 {
     /**
-     * Display a listing of the programs.
+     * Display a listing of the news.
      */
-    
-    public function index(){
-        // Ambil data yang diperlukan untuk dashboard// Ambil data program dan jumlah donasi
+    public function index()
+    {
+        // Ambil semua data berita dari tabel berita_panti
         $datas = BeritaPanti::all();
-        // Kirimkan data ke view
+        
+        // Kirim data ke view
         return view('admin.newsAdmin.index', compact('datas'));
     }
 
     /**
-     * Show the form for creating a new program.
+     * Show the form for creating a new news entry.
      */
     public function create()
     {
@@ -26,60 +29,62 @@ class newsController extends Controller
     }
 
     /**
-     * Store a newly created program in the database.
+     * Store a newly created news entry in the database.
      */
     public function store(Request $request)
     {
         // Validasi input
         $request->validate([
-            'namaprogram' => 'required|string|max:255',
-            'deskripsi' => 'nullable|string',
-            'jumlah_target' => 'nullable|numeric',
-            'gambar' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
-            'tgl_mulai' => 'required|date',
-            'tgl_selesai' => 'nullable|date|after_or_equal:tgl_mulai',
-        ]);
+            'judul' => 'required|string|max:255',
+            'deskripsi' => 'required|string',
+            'gambar' => 'required|image|mimes:jpeg,png,jpg,gif|max:10240',
+            'tanggal_publikasi' => 'nullable|date', // Diizinkan kosong untuk default ke waktu sekarang
+        ]); 
 
         // Ambil semua data input
-        $data = $request->all();
+        $data = $request->only(['judul', 'deskripsi']);
+
+        // Tambahkan tanggal publikasi jika tidak diisi
+        $data['tanggal_publikasi'] = $request->input('tanggal_publikasi', now());
 
         // Cek jika ada file gambar yang diupload
         if ($request->hasFile('gambar')) {
-            // Simpan gambar ke folder storage/app/public/program-images dan dapatkan path-nya
-            $data['gambar'] = $request->file('gambar')->store('program-images', 'public');
+            $data['gambar'] = $request->file('gambar')->store('news-images', 'public');
         }
 
-        // Simpan program baru ke database
-        Target::create($data);
+        // Simpan data ke database
+        BeritaPanti::create($data);
 
-        return redirect()->route('admin.programs.index')->with('success', 'Program berhasil ditambahkan.');
+        return redirect()->route('admin.news.index')->with('success', 'Berita berhasil ditambahkan.');
     }
 
+
+
     /**
-     * Show the form for editing the specified program.
+     * Show the form for editing the specified news entry.
      */
     public function edit($id)
     {
-        $program = Target::findOrFail($id);
-        return view('admin.programs.edit', compact('program'));
+        // Cari berita berdasarkan ID
+        $news = BeritaPanti::findOrFail($id);
+
+        return view('admin.newsAdmin.edit', compact('news'));
     }
 
     /**
-     * Update the specified program in the database.
+     * Update the specified news entry in the database.
      */
     public function update(Request $request, $id)
     {
-        // Cari program yang akan diupdate
-        $program = Target::findOrFail($id);
+        // Cari berita yang akan diupdate
+        $news = BeritaPanti::findOrFail($id);
 
         // Validasi input
         $request->validate([
-            'namaprogram' => 'required|string|max:255',
+            'judul' => 'required|string|max:255',
             'deskripsi' => 'nullable|string',
-            'jumlah_target' => 'nullable|numeric',
             'gambar' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
-            'tgl_mulai' => 'required|date',
-            'tgl_selesai' => 'nullable|date|after_or_equal:tgl_mulai',
+            'tanggal_publikasi' => 'required|date',
         ]);
 
         // Ambil semua data input
@@ -88,36 +93,36 @@ class newsController extends Controller
         // Cek jika ada file gambar yang diupload
         if ($request->hasFile('gambar')) {
             // Hapus gambar lama jika ada
-            if ($program->gambar) {
-                Storage::disk('public')->delete($program->gambar);
+            if ($news->gambar) {
+                Storage::disk('public')->delete($news->gambar);
             }
 
-            // Simpan gambar baru ke folder storage/app/public/program-images
-            $data['gambar'] = $request->file('gambar')->store('program-images', 'public');
+            // Simpan gambar baru ke folder storage/app/public/news-images
+            $data['gambar'] = $request->file('gambar')->store('news-images', 'public');
         }
 
-        // Update data program
-        $program->update($data);
+        // Update data berita
+        $news->update($data);
 
-        return redirect()->route('admin.programs.index')->with('success', 'Program berhasil diperbarui.');
+        return redirect()->route('admin.news.index')->with('success', 'Berita berhasil diperbarui.');
     }
 
     /**
-     * Remove the specified program from the database.
+     * Remove the specified news entry from the database.
      */
     public function destroy($id)
     {
-        // Cari program yang akan dihapus
-        $program = Target::findOrFail($id);
+        // Cari berita yang akan dihapus
+        $news = BeritaPanti::findOrFail($id);
 
         // Hapus gambar jika ada
-        if ($program->gambar) {
-            Storage::disk('public')->delete($program->gambar);
+        if ($news->gambar) {
+            Storage::disk('public')->delete($news->gambar);
         }
 
-        // Hapus program dari database
-        $program->delete();
+        // Hapus berita dari database
+        $news->delete();
 
-        return redirect()->route('admin.programs.index')->with('success', 'Program berhasil dihapus.');
+        return redirect()->route('admin.news.index')->with('success', 'Berita berhasil dihapus.');
     }
 }
