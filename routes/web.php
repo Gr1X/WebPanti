@@ -16,6 +16,7 @@ use App\Http\Controllers\UserGalleryController;
 use App\Http\Controllers\VolunteerController;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\newsController;
+use App\Http\Controllers\ProgramController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -26,7 +27,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [LandingController::class, 'index'])->name('landing');  // Halaman utama
 
 Route::get('/gallery', [UserGalleryController::class, 'index'])->name('gallery');
-Route::view('/program', '/user.program')->name('program');
+Route::get('/program', [ProgramController::class, 'index'])->name('program');
 Route::view('/aboutus', 'user.aboutUs')->name('aboutus');
 
 

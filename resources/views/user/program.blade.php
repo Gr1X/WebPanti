@@ -166,33 +166,15 @@
                 <div class="mb-8">
                     <h2 class="text-4xl font-bold text-custom-50 mb-6">Berita Program</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <!-- Card 1 -->
-                        <div class="bg-custom-100 shadow-lg rounded-lg">
-                            <img src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt="Berita 1" class="rounded-t-lg h-40 w-full object-cover">
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold text-custom-50 mb-2">Judul Berita 1</h3>
-                                <p class="text-custom-50 text-opacity-80 mb-4">Deskripsi singkat tentang berita program yang menarik...</p>
-                                <a href="{{route('programDetails')}}" class="text-custom-500 font-semibold hover:underline">Read More</a>
+                        @foreach($berita as $item)
+                            <div class="bg-custom-100 shadow-lg rounded-lg">
+                                <img src="{{ asset('storage/' . $item->gambar) }}" alt="{{ $item->judul }}" class="rounded-t-lg h-60 w-full object-cover">
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold text-custom-50 mb-2">{{ $item->judul }}</h3>
+                                    <p class="text-custom-50 text-opacity-80 mb-4">{{ Str::limit($item->deskripsi, 100) }}</p>
+                                </div>
                             </div>
-                        </div>
-                        <!-- Card 2 -->
-                        <div class="bg-custom-100 shadow-lg rounded-lg">
-                            <img src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg" alt="Berita 2" class="rounded-t-lg h-40 w-full object-cover">
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold text-custom-50 mb-2">Judul Berita 2</h3>
-                                <p class="text-custom-50 text-opacity-80 mb-4">Deskripsi singkat tentang berita program yang menarik...</p>
-                                <a href="#" class="text-custom-500 font-semibold hover:underline">Read More</a>
-                            </div>
-                        </div>
-                        <!-- Card 3 -->
-                        <div class="bg-custom-100 shadow-lg rounded-lg">
-                            <img src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" alt="Berita 3" class="rounded-t-lg h-40 w-full object-cover">
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold text-custom-50 mb-2">Judul Berita 3</h3>
-                                <p class="text-custom-50 text-opacity-80 mb-4">Deskripsi singkat tentang berita program yang menarik...</p>
-                                <a href="#" class="text-custom-500 font-semibold hover:underline">Read More</a>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

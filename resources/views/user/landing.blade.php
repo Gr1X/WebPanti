@@ -224,31 +224,31 @@
             <!-- Carousel wrapper -->
             <div class="">
                 <div class="relative h-56 overflow-hidden rounded-xl md:h-80 my-8 mt-10 mx-10">
-                    <!-- Item 1 -->
+
                     <div class="hidden duration-700 ease-in-out" data-carousel-item>
                         <img src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" 
                             alt="Gambar 1" 
                             class="absolute w-full h-full object-cover">
                     </div>
-                    <!-- Item 2 -->
+
                     <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
                         <img src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg" 
                             alt="Gambar 2" 
                             class="absolute w-full h-full object-cover">
                     </div>
-                    <!-- Item 3 -->
+
                     <div class="hidden duration-700 ease-in-out" data-carousel-item>
                         <img src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" 
                             alt="Gambar 3" 
                             class="absolute w-full h-full object-cover">
                     </div>
-                    <!-- Item 4 -->
+
                     <div class="hidden duration-700 ease-in-out" data-carousel-item>
                         <img src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" 
                             alt="Gambar 4" 
                             class="absolute w-full h-full object-cover">
                     </div>
-                    <!-- Item 5 -->
+
                     <div class="hidden duration-700 ease-in-out" data-carousel-item>
                         <img src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" 
                             alt="Gambar 5" 
@@ -286,7 +286,7 @@
         </div>        
     </div>
         
-    <div class="flex justify-between gap-4 pb-10 px-10">
+    <div class="flex justify-between gap-4 pb-10 px-10 py-10">
         <!-- Video Section -->
         <div class="w-3/5 rounded-xl bg-slate-100 overflow-hidden relative">
             <div class="aspect-w-16 aspect-h-7">
@@ -303,55 +303,23 @@
         <!-- Card Section -->
         <div class="w-2/5 border-s-2 border-gray-200">
             <div class="grid grid-cols-1 ps-4 space-y-2">
-                <!-- Card -->
-                <div class="relative flex flex-col md:flex-row bg-white shadow-md hover:shadow-lg transition-shadow rounded-xl overflow-hidden border border-gray-100">
-                    <div class="md:w-1/3">
-                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt="Card Image" class="object-cover h-full w-full">
+                @foreach($latestNews as $news)
+                    <div class="relative flex flex-col md:flex-row bg-white shadow-md hover:shadow-lg transition-shadow rounded-xl overflow-hidden border border-gray-100">
+                        <div class="md:w-1/3">
+                            <img src="{{ asset('storage/' . $news->gambar) }}" alt="{{ $news->judul }}" class="object-cover h-full w-full">
+                        </div>
+                        <div class="p-4 flex flex-col justify-between">
+                            <h4 class="text-custom-50 text-xl font-bold">{{ $news->judul }}</h4>
+                            <p class="text-gray-600 text-sm mt-2">{{ Str::limit($news->deskripsi, 100) }}</p>
+                            <a href="#" class="text-custom-75 text-sm font-semibold hover:underline mt-4 flex items-center">
+                                Baca Selengkapnya
+                                <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </a>
+                        </div>
                     </div>
-                    <div class="p-4 flex flex-col justify-between">
-                        <h4 class="text-custom-50 text-xl font-bold">Kegiatan Sosial Desa Binaan</h4>
-                        <p class="text-gray-600 text-sm mt-2">Meningkatkan kesejahteraan masyarakat desa melalui pelatihan keterampilan.</p>
-                        <a href="#" class="text-custom-75 text-sm font-semibold hover:underline mt-4 flex items-center">
-                            Baca Selengkapnya
-                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-    
-                <!-- Repeat Cards -->
-                <div class="relative flex flex-col md:flex-row bg-white shadow-md hover:shadow-lg transition-shadow rounded-xl overflow-hidden border border-gray-100">
-                    <div class="md:w-1/3">
-                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt="Card Image" class="object-cover h-full w-full">
-                    </div>
-                    <div class="p-4 flex flex-col justify-between">
-                        <h4 class="text-custom-50 text-xl font-bold">Kegiatan Sosial Desa Binaan</h4>
-                        <p class="text-gray-600 text-sm mt-2">Meningkatkan kesejahteraan masyarakat desa melalui pelatihan keterampilan.</p>
-                        <a href="#" class="text-custom-75 text-sm font-semibold hover:underline mt-4 flex items-center">
-                            Baca Selengkapnya
-                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="relative flex flex-col md:flex-row bg-white shadow-md hover:shadow-lg transition-shadow rounded-xl overflow-hidden border border-gray-100">
-                    <div class="md:w-1/3">
-                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt="Card Image" class="object-cover h-full w-full">
-                    </div>
-                    <div class="p-4 flex flex-col justify-between">
-                        <h4 class="text-custom-50 text-xl font-bold">Kegiatan Sosial Desa Binaan</h4>
-                        <p class="text-gray-600 text-sm mt-2">Meningkatkan kesejahteraan masyarakat desa melalui pelatihan keterampilan.</p>
-                        <a href="#" class="text-custom-75 text-sm font-semibold hover:underline mt-4 flex items-center">
-                            Baca Selengkapnya
-                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
@@ -391,22 +359,6 @@
                     <div class="group overflow-hidden rounded-lg shadow-lg">
                         <img class="h-auto max-w-full transition-transform duration-300 ease-in-out group-hover:scale-110" src="images/5.jpg" alt="Gallery Image 5">
                     </div>
-        
-                    <!-- Image 6 -->
-                    <div class="group overflow-hidden rounded-lg shadow-lg">
-                        <img class="h-auto max-w-full transition-transform duration-300 ease-in-out group-hover:scale-110" src="images/6.jpg" alt="Gallery Image 6">
-                    </div>
-        
-                    <!-- Image 7 -->
-                    <div class="group overflow-hidden rounded-lg shadow-lg">
-                        <img class="h-auto max-w-full transition-transform duration-300 ease-in-out group-hover:scale-110" src="images/5.jpg" alt="Gallery Image 7">
-                    </div>
-        
-                    <!-- Image 8 -->
-                    <div class="group overflow-hidden rounded-lg shadow-lg">
-                        <img class="h-auto max-w-full transition-transform duration-300 ease-in-out group-hover:scale-110" src="images/5.jpg" alt="Gallery Image 8">
-                    </div>
-                    
                 </div>
         
                 <!-- See More Button -->
