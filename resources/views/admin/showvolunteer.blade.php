@@ -6,30 +6,56 @@
         <h2 class="text-4xl font-bold">Volunteer</h2>
     </div>
 
-    {{-- CARD INFO  --}}
+    {{-- CARD INFO --}}
     <div class="grid grid-cols-3 gap-4 my-4">
         <div class="bg-gray-800 p-4 rounded-xl shadow">
-            <h3 class="text-sm font-medium text-gray-400">Total Program</h3>
+            <h3 class="text-sm font-medium text-gray-400">Total Volunteer</h3>
             <div class="flex gap-2">
                 <p class="text-3xl font-bold text-white mt-2">
-                    14
+                    {{ $jumlahVol }}
                 </p>
-                <span class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300 self-center">1<ion-icon name="arrow-up-outline"></ion-icon></span>
             </div>
         </div>
 
-        <div class="bg-gray-800 p-4 rounded-xl shadow">
-            <h3 class="text-sm font-medium text-gray-400">Program Selesai</h3>
-            <p class="text-3xl font-bold text-white mt-2">
-                3
-            </p>
+        {{-- Gender --}}
+        <div class="grid grid-cols-2 gap-2 text-center">
+            <div class="bg-gray-800 p-4 rounded-xl shadow">
+                <h3 class="text-sm font-medium text-gray-400">Laki-laki</h3>
+                <p class="text-3xl font-bold text-white mt-2 text-center">
+                    {{ $genderCounts['Laki-laki'] ?? 0 }}
+                </p>
+            </div>
+
+            <div class="bg-gray-800 p-4 rounded-xl shadow">
+                <h3 class="text-sm font-medium text-gray-400">Perempuan</h3>
+                <p class="text-3xl font-bold text-white mt-2">
+                    {{ $genderCounts['Perempuan'] ?? 0 }}
+                </p>
+            </div>
         </div>
 
-        <div class="bg-gray-800 p-4 rounded-xl shadow">
-            <h3 class="text-sm font-medium text-gray-400">Program On Going</h3>
-            <p class="text-3xl font-bold text-white mt-2">
-                14
-            </p>
+        {{-- Bidang --}}
+        <div class="grid grid-cols-3 gap-2 text-center">
+            <div class="bg-gray-800 p-4 rounded-xl shadow">
+                <h3 class="text-sm font-medium text-gray-400">Dokter</h3>
+                <p class="text-3xl font-bold text-white mt-2 text-center">
+                    {{ $bidangCounts['dokter'] ?? 0 }}
+                </p>
+            </div>
+
+            <div class="bg-gray-800 p-4 rounded-xl shadow">
+                <h3 class="text-sm font-medium text-gray-400">Sosial</h3>
+                <p class="text-3xl font-bold text-white mt-2">
+                    {{ $bidangCounts['sosial'] ?? 0 }}
+                </p>
+            </div>
+
+            <div class="bg-gray-800 p-4 rounded-xl shadow">
+                <h3 class="text-sm font-medium text-gray-400">Pendidikan</h3>
+                <p class="text-3xl font-bold text-white mt-2">
+                    {{ $bidangCounts['pendidikan'] ?? 0 }}
+                </p>
+            </div>
         </div>
     </div>
 

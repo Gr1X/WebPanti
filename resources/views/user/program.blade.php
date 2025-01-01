@@ -172,6 +172,9 @@
                                 <div class="p-6">
                                     <h3 class="text-xl font-bold text-custom-50 mb-2">{{ $item->judul }}</h3>
                                     <p class="text-custom-50 text-opacity-80 mb-4">{{ Str::limit($item->deskripsi, 100) }}</p>
+                                    <div class="w-full flex justify-end">
+                                        <a href="" class="m-2 hover:underline text-white">Baca Selengkapnya</a>
+                                    </div>
                                 </div>
                             </div>
                         @endforeach

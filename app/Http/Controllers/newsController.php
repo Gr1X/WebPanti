@@ -11,13 +11,23 @@ class NewsController extends Controller
     /**
      * Display a listing of the news.
      */
-    public function index()
+    public function index(request $request)
     {
-        // Ambil semua data berita dari tabel berita_panti
-        $datas = BeritaPanti::all();
+        $search = $request->input('search');
+
+        // Query pencarian
+        $datas = BeritaPanti::query()
+            ->when($search, function ($query, $search) {
+                $query->where('judul', 'like', "%{$search}%")
+                        ->orWhere('deskripsi', 'like', "%{$search}%")
+                        ->orWhereDate('tanggal_publikasi', 'like', "{$search}"); // Cari berdasarkan tanggal
+            })
+            ->orderBy('tanggal_publikasi', 'desc') // Urutkan berdasarkan tanggal publikasi
+            ->get();
+        $totalBerita = BeritaPanti::count();
         
         // Kirim data ke view
-        return view('admin.newsAdmin.index', compact('datas'));
+        return view('admin.newsAdmin.index', compact('datas', 'totalBerita'));
     }
 
     /**
