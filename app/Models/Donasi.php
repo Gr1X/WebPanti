@@ -37,4 +37,9 @@ class Donasi extends Model
     {
         return $this->hasMany(RelasiTarget::class, 'id_donasi');
     }
+
+    public function target()
+    {
+        return $this->belongsTo(Target::class, 'program_id');
+    }
 }

@@ -108,8 +108,6 @@
                     <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
                 </div>
             </form>
-            
-            <a href="{{ route('admin.programs.create') }}" class="flex self-center bg-green-100 text-green-800 py-3 px-4 rounded-xl hover:bg-green-200 transition font-semibold gap-2"><ion-icon name="card" class="size-6 self-center"></ion-icon>Metode Pembayaran</a>
         </div>
 
         <hr class="my-4"/>
@@ -132,7 +130,62 @@
             </div>
         </div>
 
+        @if (session('success'))
+            <div class="bg-green-100 text-green-800 px-4 py-3 rounded mb-4">
+                {{ session('success') }}
+            </div>
+        @endif
+
+        
         {{-- TABEL ACCEPTING PAYMENT --}}
+        <div class="relative overflow-x-hidden rounded-lg">
+            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                <thead class="text-sm text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400">
+                    <tr>
+                        <th class="px-4 py-2">No</th>
+                        <th class="px-4 py-2">User</th>
+                        <th class="px-4 py-2">Jumlah</th>
+                        <th class="px-4 py-2">Program</th>
+                        <th class="px-4 py-2">Status</th>
+                        <th class="px-4 py-2">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($payments as $payment)
+                        <tr>
+                            <td class="border px-4 py-2">{{ $loop->iteration }}</td>
+                            <td class="border px-4 py-2">{{ $payment->user->name }}</td>
+                            <td class="border px-4 py-2">Rp. {{ number_format($payment->jumlah, 2) }}</td>
+                            <td class="border px-4 py-2">{{ $payment->program_id }}</td>
+                            <td class="border px-4 py-2">
+                                <span class="px-2 py-1 text-xs rounded-full 
+                                    {{ $payment->status === 'confirmed' ? 'bg-green-200 text-green-800' : '' }}
+                                    {{ $payment->status === 'pending' ? 'bg-yellow-200 text-yellow-800' : '' }}
+                                    {{ $payment->status === 'rejected' ? 'bg-red-200 text-red-800' : '' }}">
+                                    {{ ucfirst($payment->status) }}
+                                </span>
+                            </td>
+                            <td class="border px-4 py-2 flex gap-2">
+                                @if ($payment->status === 'waiting_confirmation')
+                                    <form action="{{ route('admin.payments.confirm', $payment->id) }}" method="POST">
+                                        @csrf
+                                        @method('PUT')
+                                        <button type="submit" class="px-3 py-1 bg-green-500 text-white rounded hover:bg-green-600">Confirm</button>
+                                    </form>
+                                    <form action="{{ route('admin.payments.reject', $payment->id) }}" method="POST" onsubmit="return confirm('Are you sure you want to reject and delete this payment?');">
+                                        @csrf
+                                        @method('PUT')
+                                        <button type="submit" class="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600">Reject</button>
+                                    </form>
+                                @else
+                                    <span class="text-gray-500">No Actions</span>
+                                @endif
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
 
     </div>
 @stop

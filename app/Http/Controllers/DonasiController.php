@@ -21,7 +21,7 @@ class DonasiController extends Controller
         $target = Target::findOrFail($id);
 
         // Return view form pembayaran
-        return view('user.donateComponent.paymentForm', compact('target', 'isLoggedIn'));
+        return view('user.donateComponent.paymentForm', compact('target'));
     }
 
     /**

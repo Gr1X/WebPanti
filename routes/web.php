@@ -123,6 +123,8 @@ Route::group(['middleware' => function ($request, $next) {
 
     //Tampilkan payments
     Route::get('payments', [AdminPaymentController::class, 'index'])->name('admin.payments.index');
+    Route::put('/payments/{id}/confirm', [AdminPaymentController::class, 'confirm'])->name('admin.payments.confirm');
+    Route::put('/payments/{id}/reject', [AdminPaymentController::class, 'reject'])->name('admin.payments.reject');
 
     });
 });
