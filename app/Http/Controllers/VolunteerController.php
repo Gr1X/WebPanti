@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Volunteer;
+use Illuminate\Support\Facades\DB;
 
 class VolunteerController extends Controller
 {
@@ -62,16 +63,27 @@ class VolunteerController extends Controller
         ]);
 
         // Redirect dengan pesan sukses
-        return redirect()->route('relawan')->with('success', 'Pendaftaran berhasil! Terima kasih telah bergabung.');
+        return redirect()->route('program')->with('success', 'Pendaftaran berhasil! Terima kasih telah bergabung.');
     }
 
     public function showAllVolunteers()
     {
         // Ambil semua data volunteer
         $volunteers = Volunteer::all();
+        $jumlahVol = Volunteer::count();
 
-        // Kirim data volunteer ke view
-        return view('admin.showvolunteer', compact('volunteers'));
+        // Hitung jumlah volunteer berdasarkan gender
+        $genderCounts = Volunteer::select('gender', DB::raw('count(*) as total'))
+            ->groupBy('gender')
+            ->pluck('total', 'gender'); // Hasil: ['Laki-laki' => 3, 'Perempuan' => 5]
+
+        // Hitung jumlah volunteer berdasarkan bidang
+        $bidangCounts = Volunteer::select('bidang', DB::raw('count(*) as total'))
+            ->groupBy('bidang')
+            ->pluck('total', 'bidang'); // Hasil: ['dokter' => 2, 'sosial' => 4, 'pendidikan' => 6]
+
+        // Kirim data ke view
+        return view('admin.showvolunteer', compact('volunteers', 'jumlahVol', 'genderCounts', 'bidangCounts'));
     }
 
     public function destroy($id)
