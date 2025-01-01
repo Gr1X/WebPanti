@@ -10,17 +10,27 @@ class UserProgramController extends Controller
 {
     public function showDonations()
     {
-        // Ambil data dari model Target
-        $targets = Target::withSum('donasi', 'jumlah')->get(); // Sesuaikan query dengan struktur database
+        // Ambil data dari model Target dengan hanya donasi yang dikonfirmasi
+        $targets = Target::with(['donasi' => function ($query) {
+            $query->where('status', 'confirmed'); // Tambahkan filter status
+        }])->withSum(['donasi as donasi_sum_jumlah' => function ($query) {
+            $query->where('status', 'confirmed'); // Filter hanya donasi yang dikonfirmasi
+        }], 'jumlah')->get();
     
         // Kirim data $targets ke view
         return view('user.donation', compact('targets'));
-    }
+    }  
 
     public function showDonationDetails($id)
     {
-        // Ambil data target
-        $target = Target::withSum('donasi', 'jumlah')->findOrFail($id);
+        // Ambil data target dengan hanya donasi yang dikonfirmasi
+        $target = Target::with(['donasi' => function ($query) {
+            $query->where('status', 'confirmed'); // Hanya ambil donasi yang dikonfirmasi
+        }])->withSum(['donasi as donasi_sum_jumlah' => function ($query) {
+            $query->where('status', 'confirmed'); // Hitung hanya jumlah donasi yang dikonfirmasi
+        }], 'jumlah')->withCount(['donasi as jumlah_donatur' => function ($query) {
+            $query->where('status', 'confirmed'); // Hitung hanya donatur yang donasinya dikonfirmasi
+        }])->findOrFail($id);
 
         // Hitung jumlah terkumpul
         $terkumpul = $target->donasi_sum_jumlah ?? 0;
@@ -39,6 +49,7 @@ class UserProgramController extends Controller
             $donasiTersedia = false;
         }
 
+        // Kirim data ke view
         return view('user.donateComponent.detailsDonation', compact('target', 'terkumpul', 'persentase', 'donasiTersedia'));
     }
 }
