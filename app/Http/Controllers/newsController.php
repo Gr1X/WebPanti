@@ -65,45 +65,46 @@ class NewsController extends Controller
      */
     public function edit($id)
     {
-        // Cari berita berdasarkan ID
-        $news = BeritaPanti::findOrFail($id);
+        // Ambil data berdasarkan ID
+        $datas = BeritaPanti::findOrFail($id);
 
-        return view('admin.newsAdmin.edit', compact('news'));
+        // Kirim data ke view
+        return view('admin.newsAdmin.edit', compact('datas'));
     }
+
 
     /**
      * Update the specified news entry in the database.
      */
     public function update(Request $request, $id)
     {
-        // Cari berita yang akan diupdate
-        $news = BeritaPanti::findOrFail($id);
-
         // Validasi input
         $request->validate([
             'judul' => 'required|string|max:255',
             'deskripsi' => 'nullable|string',
-            'gambar' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
-            'tanggal_publikasi' => 'required|date',
+            'gambar' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:10240',
         ]);
-
-        // Ambil semua data input
-        $data = $request->all();
-
+    
+        // Cari data berdasarkan ID
+        $berita = BeritaPanti::findOrFail($id);
+    
+        // Update data
+        $data = $request->only(['judul', 'deskripsi']);
+    
         // Cek jika ada file gambar yang diupload
         if ($request->hasFile('gambar')) {
-            // Hapus gambar lama jika ada
-            if ($news->gambar) {
-                Storage::disk('public')->delete($news->gambar);
+            // Hapus gambar lama
+            if ($berita->gambar) {
+                Storage::disk('public')->delete($berita->gambar);
             }
-
-            // Simpan gambar baru ke folder storage/app/public/news-images
+    
+            // Simpan gambar baru
             $data['gambar'] = $request->file('gambar')->store('news-images', 'public');
         }
-
-        // Update data berita
-        $news->update($data);
-
+    
+        // Update data di database
+        $berita->update($data);
+    
         return redirect()->route('admin.news.index')->with('success', 'Berita berhasil diperbarui.');
     }
 
