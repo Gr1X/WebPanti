@@ -161,13 +161,13 @@
                 <div class="absolute -bottom-10 -left-10 bg-custom-300 rounded-full h-48 w-48 opacity-30"></div>
             </div>
 
-            <div class="py-10 px-6">
+            <div class="mt-10">
                 <!-- Bagian Berita Program -->
-                <div class="mb-16">
-                    <h2 class="text-3xl font-bold text-custom-50 mb-6 text-center">Berita Program</h2>
+                <div class="mb-8">
+                    <h2 class="text-4xl font-bold text-custom-50 mb-6">Berita Program</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         <!-- Card 1 -->
-                        <div class="bg-custom-100 shadow-lg rounded-lg hover:scale-105 transform transition duration-300">
+                        <div class="bg-custom-100 shadow-lg rounded-lg">
                             <img src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt="Berita 1" class="rounded-t-lg h-40 w-full object-cover">
                             <div class="p-6">
                                 <h3 class="text-xl font-bold text-custom-50 mb-2">Judul Berita 1</h3>
@@ -176,7 +176,7 @@
                             </div>
                         </div>
                         <!-- Card 2 -->
-                        <div class="bg-custom-100 shadow-lg rounded-lg hover:scale-105 transform transition duration-300">
+                        <div class="bg-custom-100 shadow-lg rounded-lg">
                             <img src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg" alt="Berita 2" class="rounded-t-lg h-40 w-full object-cover">
                             <div class="p-6">
                                 <h3 class="text-xl font-bold text-custom-50 mb-2">Judul Berita 2</h3>
@@ -185,7 +185,7 @@
                             </div>
                         </div>
                         <!-- Card 3 -->
-                        <div class="bg-custom-100 shadow-lg rounded-lg hover:scale-105 transform transition duration-300">
+                        <div class="bg-custom-100 shadow-lg rounded-lg">
                             <img src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" alt="Berita 3" class="rounded-t-lg h-40 w-full object-cover">
                             <div class="p-6">
                                 <h3 class="text-xl font-bold text-custom-50 mb-2">Judul Berita 3</h3>

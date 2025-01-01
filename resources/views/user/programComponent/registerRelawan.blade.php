@@ -113,13 +113,13 @@
             </div>
             <!-- Motivasi -->
             <div>
-                <label for="motivation" class="block text-sm font-semibold mb-2 text-custom-400">Motivasi</label>
+                <label for="motivation" class="block text-sm font-semibold mb-2 text-custom-400 ">Motivasi</label>
                 <textarea 
                     id="motivation" 
                     name="motivation" 
                     placeholder="Ceritakan motivasi Anda untuk bergabung..." 
                     rows="5"
-                    class="w-full bg-custom-500 shadow rounded-xl p-4 focus:ring-0 focus:outline-none border-0"
+                    class="w-full focus:ring-2 focus:ring-custom-300  focus:outline-custom-300 focus:border-0 bg-custom-500 shadow rounded-xl p-4 focus:ring-0 focus:outline-none border-0"
                     required
                 ></textarea>
             </div>

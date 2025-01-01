@@ -1,7 +1,7 @@
 @extends('layout.app')
 
 @section('content')
-    <div class="bg-custom-400 min-h-screen px-14 gap-2">
+    <div class="bg-custom-400 min-h-screen px-10 gap-2">
         <div class="pt-16 w-full lg:pt-44 mb-8">
             <div class="bg-custom-50 dark:bg-custom-50 border border-custom-50 dark:border-custom-50 rounded-lg p-8 md:pt-16 md:p-12">
                 <h1 class="text-custom-500 dark:text-custom-500 text-4xl md:text-5xl font-semibold mb-2">Story & Gallery</h1>

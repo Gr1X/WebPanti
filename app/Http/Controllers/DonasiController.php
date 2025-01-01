@@ -13,14 +13,24 @@ class DonasiController extends Controller
      * Menampilkan form pembayaran donasi.
      *
      * @param  int  $id
-     * @return \Illuminate\View\View
+     * @return \Illuminate\View\View|\Illuminate\Http\RedirectResponse
      */
     public function showPaymentForm($id)
     {
+        // Ambil data target donasi berdasarkan ID
         $target = Target::findOrFail($id);
-        return view('user.donateComponent.paymentForm', compact('target'));
+
+        // Return view form pembayaran
+        return view('user.donateComponent.paymentForm', compact('target', 'isLoggedIn'));
     }
 
+    /**
+     * Menampilkan konfirmasi pembayaran donasi.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\View\View
+     */
     public function submitPaymentConfirm(Request $request, $id)
     {
         // Validasi input dari form pembayaran
@@ -71,8 +81,8 @@ class DonasiController extends Controller
             'waktu_donasi' => now(),
         ]);
 
+        // Redirect ke halaman detail donasi dengan pesan sukses
         return redirect()->route('donateDetails', $id)
             ->with('success', 'Donasi berhasil dikirim. Menunggu konfirmasi admin.');
     }
-
 }

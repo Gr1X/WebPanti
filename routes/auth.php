@@ -60,6 +60,6 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::middleware('auth')->group(function () {
-  Route::get('/donation/{id}/payment', [DonasiController::class, 'showPaymentForm'])->name('donation.payment');
-  Route::post('/donation/{id}/payment', [DonasiController::class, 'submitDonation'])->name('donation.submit');
+    Route::get('/donation/{id}/payment', [DonasiController::class, 'showPaymentForm'])->name('donation.payment');
+    Route::post('/donation/{id}/payment', [DonasiController::class, 'submitDonation'])->name('donation.submit');
 });

@@ -18,8 +18,9 @@ class LandingController extends Controller
 
         // Menghitung jumlah transaksi (total donasi)
         $totalTransaksi = Donasi::count();
+        $latestPrograms = Target::orderBy('created_at', 'desc')->take(4)->get();
 
         // Mengirim data ke view
-        return view('user.landing', compact('totalTarget', 'totalDonasiTerkumpul', 'totalTransaksi'));
+        return view('user.landing', compact('totalTarget', 'totalDonasiTerkumpul', 'totalTransaksi', 'latestPrograms'));
     }
 }

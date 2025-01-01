@@ -22,20 +22,14 @@
                 <!-- Button -->
                 <div class="mt-6">
                     <div class="relative group">
-                        <button class="relative inline-block p-px font-semibold leading-6 text-white bg-neutral-900 shadow-lg cursor-pointer rounded-full shadow-emerald-900 transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95">
-                            <span class="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-500 via-cyan-500 to-sky-600 p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
-                            <span class="relative z-10 block px-8 py-4 rounded-full bg-neutral-950">
+                        <button class="relative inline-block p-px font-semibold leading-6 text-white bg-neutral-900 shadow-lg cursor-pointer rounded-2xl transition-transform duration-300 ease-in-out active:scale-95">
+                            <span class="absolute inset-0 rounded-2xl bg-gradient-to-r from-custom-200 via-custom-300 to-custom-400 p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
+                            <span class="relative z-10 block px-8 py-4 rounded-2xl bg-custom-100">
                                 <div class="relative z-10 flex items-center space-x-3">
-                                    <span class="transition-all duration-500 group-hover:translate-x-1.5 group-hover:text-emerald-300">
-                                        Begin Journey
+                                    <span class="transition-all duration-500 group-hover:translate-x-1.5 group-hover:text-custom-500">
+                                        Get Started 
                                     </span>
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24"
-                                        fill="currentColor"
-                                        class="w-6 h-6 transition-transform duration-500 group-hover:translate-x-1.5 group-hover:text-emerald-300"
-                                    >
-                                        <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path>
+                                    <ion-icon name="arrow-forward-outline" class="w-6 h-6 transition-transform duration-500 group-hover:translate-x-1.5 group-hover:text-emerald-300"></ion-icon>
                                     </svg>
                                 </div>
                             </span>
@@ -91,61 +85,71 @@
         </div> 
 
 
-        <div class="px-20 py-20 bg-custom-350">
+        <div class="px-20 py-20 bg-custom-50 space-y-4">
+
+            <span class="pb-2 text-5xl font-bold text-custom-500">Tentang kami...</span>
             <!-- Timeline -->
-            <ol class="relative border-l border-custom-100">
+            <ol class="relative border-l border-custom-100 border-l-2">
                 <!-- Timeline Item 1 -->
-                <li class="mb-10 ml-8">
-                    <div class="absolute w-6 h-6 bg-custom-75 rounded-full -left-3 flex items-center justify-center ring-8 ring-custom-400">
-                        <svg class="w-3 h-3 text-custom-50" xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 20 20">
-                            <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
-                        </svg>
+                <li class="mb-10 ml-10">
+                    <div class="absolute w-10 h-10 bg-custom-75 rounded-full -left-5 flex items-center justify-center ring-8 ring-custom-400 shadow">
+                        <ion-icon name="calendar" class="w-6 h-6 text-custom-500"></ion-icon>
                     </div>
-                    <div class="h-full w-full p-4 bg-custom-50 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 shadow-xl">
-                        <h3 class="flex items-center mb-2 text-3xl font-semibold text-custom-50 ">
-                            Yayasan Nurul Jadid
-                        </h3>
-                        <p class="mb-4 text-base font-normal text-custom-50">
-                            Panti Asuhan Nurul Jadid adalah sebuah yayasan yang berlokasi di Jl. Irigasi Sipon No.152, Poris Plawad Utara, Kecamatan Cipondoh, Kota Tangerang, Banten. 
-                            Yayasan ini bergerak di bidang sosial, termasuk pengelolaan panti asuhan, majelis taklim, dan kegiatan dakwah. 
-                            Saat ini, Panti Asuhan Nurul Jadid mengasuh 19 santri yang terdiri dari 10 santri putri dan 9 santri putra. Para santri ini berasal dari berbagai daerah seperti Jakarta, Bandung, dan sekitar Tangerang. Selain itu, yayasan ini juga membantu anak-anak dhuafa yang tinggal di sekitar panti. 
-                            Panti Asuhan Nurul Jadid terdaftar sebagai Lembaga Kesejahteraan Sosial resmi di Kota Tangerang.
-                        </p>
+
+                    <div class="h-full w-full rounded-xl border border-dashed p-2 border-4 border-custom-200">
+                        <div class="h-full w-full p-6 bg-yellow-500 rounded-lg bg-clip-padding backdrop-filter shadow-2xl">
+                            <h3 class="flex items-center mb-2 text-4xl font-bold text-custom-50">
+                                Yayasan Nurul Jadid
+                            </h3>
+                            <p class="mb-4 text-md text-custom-500 font-semibold">
+                                Panti Asuhan Nurul Jadid adalah sebuah yayasan yang berlokasi di Jl. Irigasi Sipon No.152, Poris Plawad Utara, Kecamatan Cipondoh, Kota Tangerang, Banten. 
+                                Yayasan ini bergerak di bidang sosial, termasuk pengelolaan panti asuhan, majelis taklim, dan kegiatan dakwah. 
+                                Saat ini, Panti Asuhan Nurul Jadid mengasuh 19 santri yang terdiri dari 10 santri putri dan 9 santri putra. Para santri ini berasal dari berbagai daerah seperti Jakarta, Bandung, dan sekitar Tangerang. Selain itu, yayasan ini juga membantu anak-anak dhuafa yang tinggal di sekitar panti. 
+                                Panti Asuhan Nurul Jadid terdaftar sebagai Lembaga Kesejahteraan Sosial resmi di Kota Tangerang.
+                            </p>
+                        </div>
                     </div>
                 </li>
         
                 <!-- Timeline Item 2 -->
-                <li class="mb-10 ml-8">
-                    <div class="absolute w-6 h-6 bg-custom-75 rounded-full -left-3 flex items-center justify-center ring-8 ring-custom-400">
-                        <svg class="w-3 h-3 text-custom-50" xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 20 20">
-                            <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
-                        </svg>
+                <li class="mb-10 ml-10">
+                    <div class="absolute w-10 h-10 bg-custom-75 rounded-full -left-5 flex items-center justify-center ring-8 ring-custom-400">
+                        <ion-icon name="calendar" class="w-6 h-6 text-custom-500"></ion-icon>
                     </div>
-                    <div class="h-full w-full p-4 bg-custom-50 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 relative z-20 shadow-xl">
-                        <h3 class="mb-2 text-3xl font-semibold text-custom-50">Visi</h3>
-                        <p class="text-base font-normal text-custom-50  ">
-                            Menjadi lembaga sosial terpercaya, amanah, dan peduli, serta berkontribusi dalam mewujudkan sumber daya manusia yang kreatif, inovatif, mandiri, dan berkarakter mulia.
-                        </p>
+                    <div class="h-full w-full rounded-2xl border border-dashed p-2 border-4 border-custom-200">
+                        <div class="h-full w-full p-6 bg-yellow-500 rounded-lg bg-clip-padding backdrop-filter relative z-20 shadow-xl">
+                            <h3 class="flex items-center mb-2 text-4xl font-bold text-custom-50 ">
+                                Visi
+                            </h3>
+                            <p class="mb-4 text-md font-normal text-custom-500 font-semibold">
+                                Menjadi lembaga sosial terpercaya, amanah, dan peduli, serta berkontribusi dalam mewujudkan sumber daya manusia yang kreatif, inovatif, mandiri, dan berkarakter mulia.
+                            </p>
+                        </div>
                     </div>
                 </li>
 
-                <li class="mb-10 ml-8">
-                    <div class="absolute w-6 h-6 bg-custom-75 rounded-full -left-3 flex items-center justify-center ring-8 ring-custom-400">
-                        <svg class="w-3 h-3 text-custom-50" xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 20 20">
-                            <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
-                        </svg>
+                <!-- Timeline Item 3 -->
+                <li class="mb-10 ml-10">
+                    <div class="absolute w-10 h-10 bg-custom-75 rounded-full -left-5 flex items-center justify-center ring-8 ring-custom-400">
+                        <ion-icon name="calendar" class="w-6 h-6 text-custom-500"></ion-icon>
                     </div>
-                    <div class="h-full w-full p-4 bg-custom-50 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 relative z-10 shadow-xl">
-                        <h3 class="mb-2 text-3xl font-semibold text-custom-50">Misi</h3>
-                        <p class="text-base font-normal text-custom-50 gap-4">
-                            <span>1. Mendidik generasi muda melalui pendidikan formal maupun non-formal sehingga menjadi generasi yang kreatif, inovatif, dan mandiri.</span><br />
-                            <span>2. Menyelenggarakan kegiatan sosial yang aktif dan berdimensi rahmatan lil a'lamin.</span><br />
-                            <span>3. Mengembangkan potensi usaha masyarakat sekitar sehingga mampu menjadi masyarakat yang sejahtera dan mandiri.</span><br />
-                            <span>4. Mengelola sumber-sumber dana secara jujur dan amanah mendistribusikannya kepada anak yatim.</span>
-                        </p>
+                    <div class="h-full w-full rounded-2xl border border-dashed p-2 border-4 border-custom-200">
+                        <div class="h-full w-full p-6 bg-yellow-500 rounded-xl bg-clip-padding relative z-10 shadow-xl">
+                            <h3 class="flex items-center mb-2 text-4xl font-semibold text-custom-50 ">
+                                Misi
+                            </h3>
+                            <p class="mb-4 text-lg font-semibold text-custom-400">
+                                <span>1. Mendidik generasi muda melalui pendidikan formal maupun non-formal sehingga menjadi generasi yang kreatif, inovatif, dan mandiri.</span><br />
+                                <span>2. Menyelenggarakan kegiatan sosial yang aktif dan berdimensi rahmatan lil a'lamin.</span><br />
+                                <span>3. Mengembangkan potensi usaha masyarakat sekitar sehingga mampu menjadi masyarakat yang sejahtera dan mandiri.</span><br />
+                                <span>4. Mengelola sumber-sumber dana secara jujur dan amanah mendistribusikannya kepada anak yatim.</span>
+                            </p>
+                        </div>
                     </div>
                 </li>
             </ol>
+
+            {{--  --}}
             <div class="mt-5">
                 <div class="absolute translate-x-[75rem] translate-y-[-1rem] w-56 h-56 bg-gray-50 p-3 flex flex-col shadow-4xl rotate-[10deg] drop-shadow-2xl">
                     <div class="duration-500 contrast-50 h-36 bg-black hover:contrast-100">
@@ -205,7 +209,7 @@
         </div>        
     </div>        
 
-    <div class="text-white pt-60 bg-custom-50">
+    <div class="text-white pt-60 bg-custom-75">
         <div class="relative h-50 bg-cover bg-center py-10">
             <div class="flex justify-center h-full">
                 <div class="text-white">
@@ -218,24 +222,38 @@
     <div class="">
         <div id="gallery" class="relative w-full" data-carousel="slide">
             <!-- Carousel wrapper -->
-            <div class="relative h-56 overflow-hidden rounded-xl md:h-80 my-8 mt-10 mx-10">
-                <!-- Item 1 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" 
-                        alt="Gambar 1" 
-                        class="absolute w-full h-full object-cover">
-                </div>
-                <!-- Item 2 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-                    <img src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg" 
-                        alt="Gambar 2" 
-                        class="absolute w-full h-full object-cover">
-                </div>
-                <!-- Item 3 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" 
-                        alt="Gambar 3" 
-                        class="absolute w-full h-full object-cover">
+            <div class="">
+                <div class="relative h-56 overflow-hidden rounded-xl md:h-80 my-8 mt-10 mx-10">
+                    <!-- Item 1 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" 
+                            alt="Gambar 1" 
+                            class="absolute w-full h-full object-cover">
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                        <img src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg" 
+                            alt="Gambar 2" 
+                            class="absolute w-full h-full object-cover">
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" 
+                            alt="Gambar 3" 
+                            class="absolute w-full h-full object-cover">
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" 
+                            alt="Gambar 4" 
+                            class="absolute w-full h-full object-cover">
+                    </div>
+                    <!-- Item 5 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" 
+                            alt="Gambar 5" 
+                            class="absolute w-full h-full object-cover">
+                    </div>
                 </div>
             </div>
 
@@ -271,7 +289,7 @@
     <div class="flex justify-between gap-4 pb-10 px-10">
         <!-- Video Section -->
         <div class="w-3/5 rounded-xl bg-slate-100 overflow-hidden relative">
-            <div class="aspect-w-16 aspect-h-9">
+            <div class="aspect-w-16 aspect-h-7">
                 <iframe
                     class="absolute top-0 left-0 w-full h-full"
                     src="https://www.youtube.com/embed/XYpFpex8A-s"
@@ -284,16 +302,16 @@
     
         <!-- Card Section -->
         <div class="w-2/5 border-s-2 border-gray-200">
-            <div class="ps-4 space-y-4">
+            <div class="grid grid-cols-1 ps-4 space-y-2">
                 <!-- Card -->
-                <div class="relative flex flex-col md:flex-row bg-white shadow-md hover:shadow-lg transition-shadow rounded-lg overflow-hidden border border-gray-200">
+                <div class="relative flex flex-col md:flex-row bg-white shadow-md hover:shadow-lg transition-shadow rounded-xl overflow-hidden border border-gray-100">
                     <div class="md:w-1/3">
                         <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt="Card Image" class="object-cover h-full w-full">
                     </div>
-                    <div class="p-6 flex flex-col justify-between">
+                    <div class="p-4 flex flex-col justify-between">
                         <h4 class="text-custom-50 text-xl font-bold">Kegiatan Sosial Desa Binaan</h4>
                         <p class="text-gray-600 text-sm mt-2">Meningkatkan kesejahteraan masyarakat desa melalui pelatihan keterampilan.</p>
-                        <a href="#" class="text-green-600 text-sm font-semibold hover:underline mt-4 flex items-center">
+                        <a href="#" class="text-custom-75 text-sm font-semibold hover:underline mt-4 flex items-center">
                             Baca Selengkapnya
                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -303,14 +321,14 @@
                 </div>
     
                 <!-- Repeat Cards -->
-                <div class="relative flex flex-col md:flex-row bg-white shadow-md hover:shadow-lg transition-shadow rounded-lg overflow-hidden border border-gray-200">
+                <div class="relative flex flex-col md:flex-row bg-white shadow-md hover:shadow-lg transition-shadow rounded-xl overflow-hidden border border-gray-100">
                     <div class="md:w-1/3">
                         <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt="Card Image" class="object-cover h-full w-full">
                     </div>
-                    <div class="p-6 flex flex-col justify-between">
+                    <div class="p-4 flex flex-col justify-between">
                         <h4 class="text-custom-50 text-xl font-bold">Kegiatan Sosial Desa Binaan</h4>
                         <p class="text-gray-600 text-sm mt-2">Meningkatkan kesejahteraan masyarakat desa melalui pelatihan keterampilan.</p>
-                        <a href="#" class="text-green-600 text-sm font-semibold hover:underline mt-4 flex items-center">
+                        <a href="#" class="text-custom-75 text-sm font-semibold hover:underline mt-4 flex items-center">
                             Baca Selengkapnya
                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -319,14 +337,14 @@
                     </div>
                 </div>
 
-                <div class="relative flex flex-col md:flex-row bg-white shadow-md hover:shadow-lg transition-shadow rounded-lg overflow-hidden border border-gray-200">
+                <div class="relative flex flex-col md:flex-row bg-white shadow-md hover:shadow-lg transition-shadow rounded-xl overflow-hidden border border-gray-100">
                     <div class="md:w-1/3">
                         <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt="Card Image" class="object-cover h-full w-full">
                     </div>
-                    <div class="p-6 flex flex-col justify-between">
+                    <div class="p-4 flex flex-col justify-between">
                         <h4 class="text-custom-50 text-xl font-bold">Kegiatan Sosial Desa Binaan</h4>
                         <p class="text-gray-600 text-sm mt-2">Meningkatkan kesejahteraan masyarakat desa melalui pelatihan keterampilan.</p>
-                        <a href="#" class="text-green-600 text-sm font-semibold hover:underline mt-4 flex items-center">
+                        <a href="#" class="text-custom-75 text-sm font-semibold hover:underline mt-4 flex items-center">
                             Baca Selengkapnya
                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -425,20 +443,68 @@
         </div>
     </div>      
 
-    <div class="flex justify-between items-center relative h-56 overflow-hidden rounded-lg md:h-64 my-8 mx-40 bg-gradient-to-r from-custom-100 via-custom-100 to-custom-50 shadow-lg">
+    <div class="pt-10 space-y-6">
+        <span class="text-5xl font-bold mx-10">Donasi</span>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 px-10">
+            @foreach ($latestPrograms as $program)
+                <a href="{{ route('donateDetails', $program->id) }}" class="bg-custom-500 rounded-xl shadow-lg overflow-hidden max-w-md border border-gray-100">
+                    <!-- Gambar Program -->
+                    <img class="w-full h-52 object-cover" 
+                        src="{{ $program->gambar ? asset('storage/' . $program->gambar) : 'https://via.placeholder.com/300' }}" 
+                        alt="{{ $program->namaprogram }}">
+        
+                    <!-- Informasi Program -->
+                    <div class="p-6">
+                        <h2 class="text-2xl font-bold mb-1">{{ $program->namaprogram }}</h2>
+                        <p class="text-sm text-gray-700 mb-2">{{ Str::limit($program->deskripsi, 100) }}</p>
+                        <hr class="my-4" />
+        
+                        <!-- Progress Bar -->
+                        @php
+                            $terkumpul = $program->donasi_sum_jumlah ?? 0;
+                            $persentase = $program->jumlah_target > 0 ? round(($terkumpul / $program->jumlah_target) * 100, 2) : 0;
+                        @endphp
+                        <div class="w-full bg-gray-200 rounded-full dark:bg-custom-375 my-1">
+                            <div class="bg-custom-300 text-xs font-semibold text-center p-0.5 leading-none rounded-full shadow shadow-custom-400/70" style="width: {{ $persentase }}%">
+                                {{ $persentase }}%
+                            </div>
+                        </div>
+        
+                        <!-- Info Terkumpul dan Tanggal Selesai -->
+                        <div class="flex flex-wrap justify-between mt-1">
+                            <div class="grid">
+                                <span class="text-sm">Terkumpul</span>
+                                <span class="text-lg font-bold">Rp. {{ number_format($terkumpul, 0, ',', '.') }}</span>
+                            </div>
+                            <div class="grid items-end">
+                                @php
+                                    $tglSelesai = $program->tgl_selesai ? \Carbon\Carbon::parse($program->tgl_selesai)->format('d M Y') : 'Tidak Ditentukan';
+                                @endphp
+                                <span class="text-sm">Tanggal Selesai</span>
+                                <span class="text-center text-lg font-bold">{{ $tglSelesai }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            @endforeach
+            </div>
+        </div>
+    </div>
+
+
+    <div class="flex justify-between items-center relative h-56 overflow-hidden rounded-xl md:h-64 my-10 mx-32 bg-gradient-to-r from-custom-100 via-custom-100 to-custom-50 shadow-2xl border border-custom-100">
         <!-- Left Content -->   
-        <div class="ml-8">
+        <div class="ml-12">
             <h1 class="text-4xl font-bold text-custom-50">Mari Berdonasi</h1>
             <p class="text-custom-50 text-lg mt-2 font-light">Bantu mereka mendapatkan kehidupan yang lebih baik.</p>
         </div>
     
         <!-- Right Button -->
         <div class="flex h-full items-end">
-            <a href="/donation" class="text-[1rem] font-bold bg-yellow-400 hover:bg-yellow-500 transition-all px-12 py-4 m-10 text-custom-50 rounded-lg shadow-md">
+            <a href="/donation" class="text-[1rem] font-bold bg-custom-200 hover:bg-yellow-600 transition-all px-12 py-4 m-10 text-custom-500 rounded-lg shadow-md">
                 Donasi Sekarang
             </a>
         </div>
-    
     </div>
     
 </main>

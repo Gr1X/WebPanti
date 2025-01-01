@@ -14,7 +14,7 @@
     <main class="bg-custom-375 h-screen">
         {{-- Call Register atau Login --}}
         <div class="fixed">
-            <a href="" class="flex items-center p-10 pt-16 pb-2 text-sm gap-2 text-gray-600 hover:text-gray-700"><ion-icon name="chevron-back-outline" class="self-center size-5"></ion-icon> Back to dashboard</a>
+            <a href="{{ route('landing') }}" class="flex items-center p-10 pt-16 pb-2 text-sm gap-2 text-gray-600 hover:text-gray-700"><ion-icon name="chevron-back-outline" class="self-center size-5"></ion-icon> Back to dashboard</a>
         </div>
         <div class="flex justify-between">
             @yield('formAuth')

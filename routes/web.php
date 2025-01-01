@@ -15,6 +15,7 @@ use App\Http\Controllers\EditGalleryController;
 use App\Http\Controllers\UserGalleryController;
 use App\Http\Controllers\VolunteerController;
 use App\Http\Controllers\LandingController;
+use App\Http\Controllers\newsController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -23,6 +24,7 @@ use Illuminate\Support\Facades\Route;
 // -----------------------------
 
 Route::get('/', [LandingController::class, 'index'])->name('landing');  // Halaman utama
+
 Route::get('/gallery', [UserGalleryController::class, 'index'])->name('gallery');
 Route::view('/program', '/user.program')->name('program');
 Route::view('/aboutus', 'user.aboutUs')->name('aboutus');
@@ -79,14 +81,14 @@ Route::middleware(['auth'])->group(function () {
 // Admin Routes
 // -----------------------------
 
-    Route::middleware(['auth'])->prefix('admin')->group(function () {
-    // Periksa apakah user adalah admin sebelum grup routes diakses
-    Route::group(['middleware' => function ($request, $next) {
+Route::middleware(['auth'])->prefix('admin')->group(function () {
+// Periksa apakah user adalah admin sebelum grup routes diakses
+Route::group(['middleware' => function ($request, $next) {
         if (Auth::check() && Auth::user()->role === 'admin') {
             return $next($request);
         }
         return redirect('/')->with('error', 'Anda tidak memiliki akses ke halaman ini.');
-    }], function () {
+}], function () {
 
 
     Route::get('dashboard', [AdminProgramController::class, 'dashboard'])->name('admin.dashboard');
@@ -106,6 +108,14 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/gallery/{id}/edit', [EditGalleryController::class, 'edit'])->name('admin.gallery.edit');
     Route::put('/gallery/{id}', [EditGalleryController::class, 'update'])->name('admin.gallery.update');
     Route::delete('/gallery/{id}', [EditGalleryController::class, 'destroy'])->name('admin.gallery.destroy');
+
+        // News Management
+    Route::get('/news', [newsController::class, 'index'])->name('admin.news.index');
+    Route::get('/news/create', [newsController::class, 'create'])->name('admin.news.create');
+    Route::post('/news', [newsController::class, 'store'])->name('admin.news.store');
+    Route::get('/news/{id}/edit', [newsController::class, 'edit'])->name('admin.news.edit');
+    Route::put('/news/{id}', [newsController::class, 'update'])->name('admin.news.update');
+    Route::delete('/news/{id}', [newsController::class, 'destroy'])->name('admin.news.destroy');
 
       // Tampilkan semua volunteer
     Route::get('/volunteers', [VolunteerController::class, 'showAllVolunteers'])->name('admin.volunteers.index');
