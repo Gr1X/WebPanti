@@ -345,20 +345,14 @@
         
                 <!-- Gallery Grid -->
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-6 my-10 mx-6 md:mx-20">
-                    <!-- Image 1 -->
+                    @foreach($latestGallery as $galleryItem)
                     <div class="group overflow-hidden rounded-lg shadow-lg">
-                        <img class="h-auto max-w-full transition-transform duration-300 ease-in-out group-hover:scale-110" src="images/1.jpg" alt="Gallery Image 1">
+                        <!-- Gambar dari galeri dengan ukuran 400px x 300px -->
+                        <img class="h-72 object-cover transition-transform duration-300 ease-in-out group-hover:scale-110" 
+                            src="{{ asset('storage/' . $galleryItem->gambar) }}" 
+                            alt="Gallery Image {{ $loop->iteration }}">
                     </div>
-        
-                    <!-- Image 2 -->
-                    <div class="group overflow-hidden rounded-lg shadow-lg">
-                        <img class="h-auto max-w-full transition-transform duration-300 ease-in-out group-hover:scale-110" src="images/2.jpg" alt="Gallery Image 2">
-                    </div>
-        
-                    <!-- Image 5 -->
-                    <div class="group overflow-hidden rounded-lg shadow-lg">
-                        <img class="h-auto max-w-full transition-transform duration-300 ease-in-out group-hover:scale-110" src="images/5.jpg" alt="Gallery Image 5">
-                    </div>
+                    @endforeach
                 </div>
         
                 <!-- See More Button -->
