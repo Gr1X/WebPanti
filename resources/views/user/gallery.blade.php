@@ -53,7 +53,7 @@
                     </div>
                 @else
                     <!-- Jika ada gambar -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 py-4 gap-4 overflow-y-auto px-4">
+                    <div class="grid grid-cols-2 md:grid-rows-2 lg:grid-rows-2 py-4 gap-4 overflow-x-auto px-4">
                         @foreach ($galleries as $gallery)
                             <div class="bg-white rounded-md shadow-lg overflow-hidden w-full">
                                 <img 

@@ -4,7 +4,7 @@
 <div class="m-5">
     <div class="">
         <div class="flex justify-start items-center mb-4">
-            <a href="{{url()->previous()}}" class="text-lg font-semibold flex items-center my-4 py-3 px-2">
+            <a href="{{ route('donation') }}" class="text-lg font-semibold flex items-center my-4 py-3 px-2">
                 <ion-icon name="chevron-back-outline" class="mr-1 text-xl"></ion-icon>
                 Back to previous
             </a>

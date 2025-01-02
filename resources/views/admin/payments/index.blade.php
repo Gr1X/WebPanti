@@ -4,91 +4,37 @@
     <div class="m-10">
         {{-- HEADINGS --}}
         <div class="mb-4 flex justify-between">
-            <span class="text-4xl font-bold">Payments</span>
-            <button id="dropdownMenuIconHorizontalButton" data-dropdown-toggle="dropdownDotsHorizontal" class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600" type="button"> 
-                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
-                    <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
-                </svg>
-            </button>
-        
-            <!-- Dropdown menu -->
-            <div id="dropdownDotsHorizontal" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconHorizontalButton">
-                    <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-                    </li>
-                    <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
-                    </li>
-                    <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
-                    </li>
-                </ul>
-                <div class="py-2">
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Separated link</a>
-                </div>
-            </div>
+            <span class="text-5xl font-bold">Payments</span>
         </div>
 
         {{-- CARD INFO  --}}
         <div class="grid grid-cols-3 gap-4 mb-4">
-            <div class="bg-gray-800 p-4 rounded-2xl shadow">
+            <div class="bg-custom-50 p-4 rounded-2xl shadow">
                 <div class="flex justify-between">
-                    <h3 class="text-sm font-medium text-gray-400">Pendapatan Donasi</h3>
-                    <ion-icon name="ellipsis-horizontal" class="text-white size-5 self-center cursor-pointer" 
-                    data-dropdown-toggle="donasiDropdown" 
-                    data-dropdown-placement="bottom-start">
-                    </ion-icon>
-    
-                    <div id="donasiDropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-                        <div class="py-1">
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">View Details</a>
-                        </div>
-                    </div>
+                    <h3 class="text-md font-semibold text-custom-200">Pendapatan Donasi</h3>
                 </div>
                 <div class="flex gap-2">
                     <p class="text-3xl font-bold text-white mt-2">
-                        Rp. 20.000.000
+                        {{ 'Rp ' . number_format($jumlahDonasi, 0, ',', '.') }}
                     </p>
-                    <span class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300 self-center">+12,5%</span>
                 </div>
             </div>
     
-            <div class="bg-gray-800 p-4 rounded-2xl shadow">
+            <div class="bg-custom-50 p-4 rounded-2xl shadow">
                 <div class="flex justify-between">
-                    <h3 class="text-sm font-medium text-gray-400">Donasi rata-rata per hari</h3>
-                    <ion-icon name="ellipsis-horizontal" class="text-white size-5 self-center cursor-pointer" 
-                    data-dropdown-toggle="programDropdown" 
-                    data-dropdown-placement="bottom-start">
-                    </ion-icon>
-    
-                    <div id="programDropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-                        <div class="py-1">
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">View Details</a>
-                        </div>
-                    </div>
+                    <h3 class="text-md font-semibold text-custom-200">Donasi rata-rata per hari</h3>
                 </div>
                 <p class="text-3xl font-bold text-white mt-2">
-                    Rp. 14.000
+                    Rp. {{ number_format($donasiRataHari, 0, ',', '.') }}
                 </p>
             </div>
 
-            <div class="bg-gray-800 p-4 rounded-2xl shadow">
+            <div class="bg-custom-50 p-4 rounded-2xl shadow">
                 <div class="flex justify-between">
-                    <h3 class="text-sm font-medium text-gray-400">Jumlah Transaksi</h3>
-                    <ion-icon name="ellipsis-horizontal" class="text-white size-5 self-center cursor-pointer" 
-                    data-dropdown-toggle="accountDropdown" 
-                    data-dropdown-placement="bottom-start">
-                    </ion-icon>
-    
-                    <div id="accountDropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-                        <div class="py-1">
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">View Details</a>
-                        </div>
-                    </div>
+                    <h3 class="text-md font-semibold text-custom-200">Jumlah Transaksi</h3>
                 </div>
                 <p class="text-3xl font-bold text-white mt-2">
-                    302
+                    {{$jumlahTransaksi}}
                 </p>
             </div>
         </div>
@@ -115,41 +61,45 @@
         {{-- FILTER --}}
         <div class="flex my-4 space-x-4 w-full items-center">
             <div class="grid grid-cols-4 gap-4 w-1/2">
-                <div class="flex items-center border border-gray-200 rounded px-4 py-2 dark:border-gray-700">
+                <!-- Semua -->
+                <div class="flex items-center border border-gray-200 rounded px-4 py-2 dark:border-gray-700 bg-pink-100 text-pink-800">
                     <input 
                         id="radio-semua" 
                         type="radio" 
                         value="" 
                         name="status" 
-                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" 
+                        class="w-4 h-4 text-pink-800 bg-pink-100 border-gray-300 focus:ring-pink-500 dark:focus:ring-pink-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-pink-900 dark:border-gray-600" 
                         {{ request('status') == '' ? 'checked' : '' }}
                         onclick="filterByStatus('')">
-                    <label for="radio-semua" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Semua</label>
+                    <label for="radio-semua" class="ml-2 text-sm font-medium text-pink-800 dark:text-pink-300">Semua</label>
                 </div>
-                <div class="flex items-center border border-gray-200 rounded px-4 py-2 dark:border-gray-700">
+                <!-- Confirmed -->
+                <div class="flex items-center border border-gray-200 rounded px-4 py-2 dark:border-gray-700 bg-green-100 text-green-800">
                     <input 
                         id="radio-confirmed" 
                         type="radio" 
                         value="confirmed" 
                         name="status" 
-                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                        class="w-4 h-4 text-green-800 bg-green-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-green-900 dark:border-gray-600"
                         {{ request('status') == 'confirmed' ? 'checked' : '' }}
                         onclick="filterByStatus('confirmed')">
-                    <label for="radio-confirmed" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Confirmed</label>
+                    <label for="radio-confirmed" class="ml-2 text-sm font-medium text-green-800 dark:text-green-300">Confirmed</label>
                 </div>
-                <div class="flex items-center border border-gray-200 rounded px-4 py-2 dark:border-gray-700">
+                <!-- Pending -->
+                <div class="flex items-center border border-gray-200 rounded px-4 py-2 dark:border-gray-700 bg-yellow-100 text-yellow-800">
                     <input 
                         id="radio-pending" 
                         type="radio" 
                         value="pending" 
                         name="status" 
-                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                        class="w-4 h-4 text-yellow-800 bg-yellow-100 border-gray-300 focus:ring-yellow-500 dark:focus:ring-yellow-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-yellow-900 dark:border-gray-600"
                         {{ request('status') == 'waiting_confirmation' ? 'checked' : '' }}
                         onclick="filterByStatus('waiting_confirmation')">
-                    <label for="radio-pending" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Pending</label>
+                    <label for="radio-pending" class="ml-2 text-sm font-medium text-yellow-800 dark:text-yellow-300">Pending</label>
                 </div>
             </div>
         </div>
+        
 
         @if (session('success'))
             <div class="bg-green-100 text-green-800 px-4 py-3 rounded mb-4">
@@ -161,7 +111,7 @@
         {{-- TABEL ACCEPTING PAYMENT --}}
         <div class="relative overflow-x-hidden rounded-lg">
             <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                <thead class="text-sm text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400">
+                <thead class="text-sm text-custom-500 uppercase bg-custom-300">
                     <tr>
                         <th class="px-4 py-4">User</th>
                         <th class="px-4 py-4">Jumlah</th>
@@ -173,15 +123,15 @@
                 </thead>
                 <tbody>
                     @forelse ($payments as $payment)
-                        <tr class="bg-white border-b border-gray-300 dark:bg-gray-800 dark:border-gray-700 last:border-b-0">
+                        <tr class="bg-custom-400 border-b border-custom-300 last:border-b-0">
                             <td class="px-4 py-2">{{ $payment->user->name ?? 'Anonim' }}</td>
                             <td class="px-4 py-2">Rp. {{ number_format($payment->jumlah, 2) }}</td>
                             <td class="px-4 py-2">{{ $payment->target->namaprogram ?? 'N/A' }}</td>
                             <td class="px-4 py-2">
                                 <span class="px-2 py-1 text-xs rounded-full 
-                                {{ $payment->status === 'confirmed' ? 'bg-green-200 text-green-800' : '' }}
-                                {{ $payment->status === 'pending' ? 'bg-yellow-200 text-yellow-800' : '' }}
-                                {{ $payment->status === 'rejected' ? 'bg-red-200 text-red-800' : '' }}">
+                                {{ $payment->status === 'confirmed' ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300' : '' }}
+                                {{ $payment->status === 'pending' ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300' : '' }}
+                                {{ $payment->status === 'rejected' ? 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300' : '' }}">
                                 {{ ucfirst($payment->status) }}
                                 </span>
                             </td>
@@ -216,12 +166,13 @@
                         </tr>
                     @empty
                         <tr>
-                            <td colspan="6" class="px-4 py-4 text-center text-gray-500">No payments found.</td>
+                            <td colspan="6" class="px-4 py-4 text-center text-gray-500 border border-custom-300 bg-custom-400 dark:bg-custom-900">No payments found.</td>
                         </tr>
                     @endforelse
                 </tbody>
             </table>
         </div>
+        
     </div>
 
     <!-- Modal untuk menampilkan gambar -->

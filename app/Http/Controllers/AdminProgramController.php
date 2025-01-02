@@ -62,7 +62,7 @@ class AdminProgramController extends Controller
         // Ambil data untuk statistik, hanya donasi yang sudah terkonfirmasi
         $historyDonasi = Donasi::where('status', 'confirmed') // Filter donasi yang terkonfirmasi
             ->orderBy('waktu_donasi', 'desc')
-            ->take(3)
+            ->take(5)
             ->get();
     
         // Total user yang terdaftar

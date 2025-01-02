@@ -3,24 +3,30 @@
 @section('content')
 <div class="m-10">
     <div class="">
-        <h1 class="text-4xl font-bold mb-4">Gallery</h1>
+        <h1 class="text-5xl font-bold mb-4">Gallery</h1>
     </div>
 
     <div class="flex justify-between mb-4 gap-2">
         <form method="GET" action="{{ route('admin.gallery.index') }}" class="flex gap-2">
-            <select name="year" class="bg-gray-100 p-3 rounded-lg text-sm font-semibold">
-                <option value="">All Years</option>
+            <select name="year" 
+                class="bg-custom-50 text-white px-9 rounded-lg text-md font-semibold border-0 focus:ring-2 focus:ring-custom-100 hover:bg-custom-100"
+            >
+                <option value="" class="bg-custom-75 text-sm hover:bg-custom-100">All Years</option>
                 @foreach($years as $year)
-                    <option value="{{ $year }}" {{ isset($tahun) && $tahun == $year ? 'selected' : '' }}>
+                    <option 
+                        class="bg-custom-75 text-sm text-semibold hover:bg-custom-100 hover:text-white" 
+                        value="{{ $year }}" 
+                        {{ isset($tahun) && $tahun == $year ? 'selected' : '' }}
+                    >
                         {{ $year }}
                     </option>
                 @endforeach
             </select>
-            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
-                Filter
+            <button type="submit" class="bg-yellow-500 text-white px-3 py-3 rounded-xl">
+                <ion-icon name="filter-outline" class="flex items-center size-5 font-bold"></ion-icon>
             </button>
         </form>
-        <a href="{{ route('admin.gallery.create') }}" class="flex self-center bg-green-100 text-green-800 py-3 px-4 rounded-xl hover:bg-green-200 transition font-semibold gap-2">
+        <a href="{{ route('admin.gallery.create') }}" class="flex self-center bg-custom-50 text-custom-500 py-3 px-4 rounded-xl hover:bg-custom-75 transition font-semibold gap-2">
             <ion-icon name="albums-outline" class="size-5 self-center"></ion-icon>Tambah Foto
         </a>
     </div>
@@ -31,8 +37,6 @@
         </div>
     @endif
     
-    
-
     <div class="relative overflow-x-auto rounded-xl">
         <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
             <thead class="text-sm text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400">
