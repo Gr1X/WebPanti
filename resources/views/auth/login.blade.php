@@ -3,7 +3,7 @@
 @section('formAuth')
 <div class="flex items-center pt-20">
     <div class="">
-        <div class="w-[42rem] ms-10 p-10 rounded-2xl grid">
+        <div class="w-[26rem] lg:w-[42rem] md:ms-10 p-5 md:p-10 rounded-2xl grid">
             <span class="text-custom-50 text-sm mb-2">Please login to continue to your account.</span>
             <h1 class="text-5xl font-bold mt-1 text-custom-50">Log In<span>.</span></h1>
             <div class="text-custom-50 my-2 mb-4 text-sm font-semibold">

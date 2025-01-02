@@ -18,9 +18,9 @@
         </div>
         <div class="flex justify-between">
             @yield('formAuth')
-            <div class="bg-emerald-900 h-screen w-[35rem] rounded-bl-[15rem]">
-                <div class="flex justify-center items-center h-full">
-                    <div class="flex justify-between">
+            <div class="hidden md:block bg-emerald-900 h-screen w-[15rem] lg:w-[35rem] rounded-bl-[15rem]">
+                <div class="flex justify-center items-center h-full mx-3">
+                    <div class="flex justify-between text-center">
                         <div class="grid">
                             <span class="text-custom-500 text-2xl font-bold">Panti Asuhan <span class="m-0 p-0 text-2xl font-bold text-custom-200">Nurul Jadid</span></span>
                             <span class="text-custom-50 text-md text-center font-semibold font-italic text-white">Tangerang</span>

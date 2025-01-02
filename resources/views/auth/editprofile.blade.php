@@ -1,7 +1,7 @@
 @extends('layout.app')
 
 @section('content')
-<div class="flex justify-center py-44 px-60">
+<div class="flex justify-center py-44 px-20 md:px-60">
     <div class="bg-slate-800 rounded-lg p-6 w-full">
         <h1 class="text-white text-3xl font-bold mb-6">Edit Profil</h1>
         @if (session('success'))
