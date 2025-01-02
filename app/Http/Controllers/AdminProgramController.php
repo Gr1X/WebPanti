@@ -6,8 +6,9 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Target; // Model untuk tabel target
 use App\Models\Donasi; // Model untuk tabel donasi
-use App\Models\Payment;
+use App\Models\Volunteer;
 use Illuminate\Support\Facades\Storage;
+use Carbon\Carbon;
 
 class AdminProgramController extends Controller
 {
@@ -17,13 +18,31 @@ class AdminProgramController extends Controller
 
     public function dashboard(){
         // Ambil data yang diperlukan untuk dashboard
+        $users =  User::all();
+        $volunteers = Volunteer::all();
+        $payments = Donasi::all();
+
+        $donasiPerBulan = Donasi::selectRaw('YEAR(waktu_donasi) as tahun, MONTH(waktu_donasi) as bulan, AVG(jumlah) as rata_rata')
+        ->groupBy('tahun', 'bulan')
+        ->orderBy('tahun', 'desc')
+        ->orderBy('bulan', 'asc')
+        ->get()
+        ->map(function ($item) {
+            $item->bulan = \Carbon\Carbon::createFromDate(null, $item->bulan, 1)->translatedFormat('F'); // Nama bulan
+            return $item;
+        });
+
         $historyDonasi = Donasi::orderBy('waktu_donasi', 'desc')->take(3)->get();
         $totalUser = User::where('role', 'user')->count();
-        $totalDonasi = Donasi::sum('jumlah'); 
+        $totalDonasi = Donasi::sum('jumlah');
+        $totalDonasiBulanan = Donasi::whereMonth('waktu_donasi', Carbon::now()->month)
+        ->whereYear('waktu_donasi', Carbon::now()->year)
+        ->sum('jumlah'); 
+
         $programs = Target::withSum('donasi', 'jumlah')->get(); // Ambil data program dan jumlah donasi
         $programCount = Target::count(); 
         // Kirimkan data ke view
-        return view('admin.programs.dashboard', compact('programs', 'programCount', 'totalDonasi', 'totalUser', 'historyDonasi'));
+        return view('admin.programs.dashboard', compact('payments' ,'volunteers','users', 'programs', 'programCount', 'totalDonasi', 'totalUser', 'historyDonasi', 'donasiPerBulan', 'totalDonasiBulanan', 'totalDonasi'));
     }
 
     public function index(Request $request)
