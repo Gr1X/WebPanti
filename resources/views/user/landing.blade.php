@@ -335,7 +335,7 @@
         </div>
         
         <!-- Gallery Grid -->
-        <div class="relative bg-fixed bg-center bg-cover" style="background-image: url('images/bg.jpg');">
+        <div class="relative lg:bg-fixed bg-center bg-cover" style="background-image: url('images/bg.jpg');">
             <!-- Gradient Overlay -->
             <div class="absolute inset-0 bg-black opacity-50"></div>
         
@@ -366,26 +366,26 @@
         </div>
         
     <div class="bg-custom-50 py-10">
-        <div class="grid grid-cols-3 items-center text-white px-10 divide-x divide-custom-400">
+        <div class="grid grid-cols-3 items-center text-white px-4 md:px-10 divide-x divide-custom-400">
             <!-- count tabel target -->
             <div class="flex flex-col items-center text-center px-4">
                 <ion-icon name="hand-right-outline" class="text-custom-200 w-16 h-16 mb-4"></ion-icon>
-                <h2 class="text-4xl font-bold text-custom-500">{{ $totalTarget }}</h2>
-                <p class="text-lg font-semibold mt-2 text-custom-400">CAMPAIGN</p>
+                <h2 class="text-2xl md:text-4xl font-bold text-custom-500">{{ $totalTarget }}</h2>
+                <p class="text-md md:text-lg font-semibold mt-2 text-custom-400">CAMPAIGN</p>
             </div>
 
                 <!-- sum kolom jumlah pada tabel donasi -->
             <div class="flex flex-col items-center text-center px-4">
                 <ion-icon name="cash-outline" class="text-custom-200 w-16 h-16 mb-4"></ion-icon>
-                <h2 class="text-4xl font-bold text-custom-500">Rp. {{ number_format($totalDonasiTerkumpul, 0, ',', '.') }}</h2>
-                <p class="text-lg font-semibold mt-2 text-custom-400">DONASI TERKUMPUL</p>
+                <h2 class="text-2xl md:text-4xl font-bold text-custom-500">Rp. {{ number_format($totalDonasiTerkumpul, 0, ',', '.') }}</h2>
+                <p class="text-md md:text-lg font-semibold mt-2 text-custom-400">DONASI TERKUMPUL</p>
             </div>
 
                 <!-- count tabel donasi -->
             <div class="flex flex-col items-center text-center px-4">
                 <ion-icon name="card-outline" class="text-custom-200 w-16 h-16 mb-4"></ion-icon>
-                <h2 class="text-4xl font-bold text-custom-500">{{ $totalTransaksi }}</h2>
-                <p class="text-lg font-semibold mt-2 text-custom-400">TRANSAKSI CAMPAIGN</p>
+                <h2 class="text-2xl md:text-4xl font-bold text-custom-500">{{ $totalTransaksi }}</h2>
+                <p class="text-md md:text-lg font-semibold mt-2 text-custom-400">TRANSAKSI CAMPAIGN</p>
             </div>
         </div>
     </div>      
@@ -439,16 +439,16 @@
     </div>
 
 
-    <div class="flex justify-between items-center relative h-56 overflow-hidden rounded-xl md:h-64 my-10 mx-32 bg-gradient-to-r from-custom-100 via-custom-100 to-custom-50 shadow-2xl border border-custom-100">
+    <div class="flex justify-between items-center relative h-56 overflow-hidden rounded-xl md:h-64 my-10 mx-10 lg:mx-32 bg-gradient-to-r from-custom-100 via-custom-100 to-custom-50 shadow-2xl border border-custom-100">
         <!-- Left Content -->   
-        <div class="ml-12">
-            <h1 class="text-4xl font-bold text-custom-50">Mari Berdonasi</h1>
-            <p class="text-custom-50 text-lg mt-2 font-light">Bantu mereka mendapatkan kehidupan yang lebih baik.</p>
+        <div class="ml-4 md:ml-12">
+            <h1 class="text-2xl md:text-4xl font-bold text-custom-50">Mari Berdonasi</h1>
+            <p class="text-custom-50 text-md md:text-lg mt-2 font-light">Bantu mereka mendapatkan kehidupan yang lebih baik.</p>
         </div>
     
         <!-- Right Button -->
         <div class="flex h-full items-end">
-            <a href="/donation" class="text-[1rem] font-bold bg-custom-200 hover:bg-yellow-600 transition-all px-12 py-4 m-10 text-custom-500 rounded-lg shadow-md">
+            <a href="/donation" class="text-[1rem] font-bold bg-custom-200 hover:bg-yellow-600 transition-all px-6 md:px-12 py-4 m-10 text-custom-500 rounded-lg shadow-md">
                 Donasi Sekarang
             </a>
         </div>
