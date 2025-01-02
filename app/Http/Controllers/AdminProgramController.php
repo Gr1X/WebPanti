@@ -29,7 +29,7 @@ class AdminProgramController extends Controller
         ->orderBy('bulan', 'asc')
         ->get()
         ->map(function ($item) {
-            $item->bulan = \Carbon\Carbon::createFromDate(null, $item->bulan, 1)->translatedFormat('F'); // Nama bulan
+            $item->bulan = Carbon::createFromDate(null, $item->bulan, 1)->translatedFormat('F'); // Nama bulan
             return $item;
         });
 
