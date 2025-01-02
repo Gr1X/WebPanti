@@ -61,23 +61,23 @@
                         <div>{{ Auth::user()->name }}</div>
                         <div class="font-medium truncate">{{ Auth::user()->email }}</div>
                     </div>
-                    <ul class="py-2 text-sm text-custom-50" aria-labelledby="avatarButton">
+                    <ul class="text-sm text-custom-50" aria-labelledby="avatarButton">
                         <li>
                             <a href="{{route('profile')}}" class="block px-4 py-2 hover:bg-custom-100">Profile</a>
                         </li>
                         @if(Auth::user()->role === 'admin')
-                            <li>
+                            <li class="block px-4 py-2 hover:bg-custom-100">
                                 <a href="{{ route('admin.programs.index') }}" 
-                                class="block px-4 py-2 hover:bg-custom-100">
+                                class="">
                                     Admin Panel
                                 </a>
                             </li>
                         @endif
                     </ul>
-                    <div class="py-1">
-                        <form method="POST" action="{{ route('logout') }}">
+                    <div class="block px-4 py-2 text-sm text-custom-50 hover:bg-custom-100 rounded-b-lg">
+                        <form method="POST" action="{{ route('logout') }}" class="w-full">
                             @csrf
-                            <button type="submit" class="block px-4 py-2 text-sm text-custom-50 hover:bg-custom-100">
+                            <button type="submit" class="block text-sm text-custom-50 hover:bg-custom-100">
                                 Sign out
                             </button>
                         </form>

@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 use App\Models\Target; // Model untuk tabel target
 use App\Models\Donasi; // Model untuk tabel donasi
+use App\Models\Payment;
 use Illuminate\Support\Facades\Storage;
 
 class AdminProgramController extends Controller
@@ -15,10 +17,13 @@ class AdminProgramController extends Controller
     
     public function dashboard(){
         // Ambil data yang diperlukan untuk dashboard
+        $historyDonasi = Donasi::orderBy('waktu_donasi', 'desc')->take(3)->get();
+        $totalUser = User::where('role', 'user')->count();
+        $totalDonasi = Donasi::sum('jumlah'); 
         $programs = Target::withSum('donasi', 'jumlah')->get(); // Ambil data program dan jumlah donasi
         $programCount = Target::count(); 
         // Kirimkan data ke view
-        return view('admin.programs.dashboard', compact('programs', 'programCount'));
+        return view('admin.programs.dashboard', compact('programs', 'programCount', 'totalDonasi', 'totalUser', 'historyDonasi'));
     }
 
         public function index(Request $request)

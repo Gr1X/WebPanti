@@ -2,7 +2,6 @@
 
 @section('content')
     <div class="m-10">
-
         {{-- HEADINGS --}}
         <div class="mb-4 flex justify-between">
             <span class="text-4xl font-bold">Payments</span>

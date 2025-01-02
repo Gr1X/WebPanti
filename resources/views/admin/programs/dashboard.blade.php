@@ -12,6 +12,7 @@
     {{-- CARD INFO 1 --}}
     <div class="grid grid-cols-3 gap-4 mb-4">
         <div class="bg-gray-800 p-4 rounded-2xl shadow">
+
             <div class="flex justify-between">
                 <h3 class="text-sm font-medium text-gray-400">Pendapatan Donasi</h3>
                 <ion-icon name="ellipsis-horizontal" class="text-white size-5 self-center cursor-pointer" 
@@ -21,13 +22,14 @@
 
                 <div id="donasiDropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
                     <div class="py-1">
-                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">View Details</a>
+                        <a href="{{ route("admin.payments.index") }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">View Details</a>
                     </div>
                 </div>
             </div>
+
             <div class="flex gap-2">
                 <p class="text-3xl font-bold text-white mt-2">
-                    Rp. 20.000.000
+                    Rp. {{ number_format($totalDonasi, 0, ',', '.') }}
                 </p>
                 <span class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300 self-center">+12,5%</span>
             </div>
@@ -48,7 +50,7 @@
                 </div>
             </div>
             <p class="text-3xl font-bold text-white mt-2">
-                3
+                {{$totalUser}}
             </p>
         </div>
 
@@ -62,12 +64,12 @@
 
                 <div id="programDropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
                     <div class="py-1">
-                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">View Details</a>
+                        <a href="{{ route("admin.programs.index")}}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">View Details</a>
                     </div>
                 </div>
             </div>
             <p class="text-3xl font-bold text-white mt-2">
-                14
+                {{$programCount}}
             </p>
         </div>
     </div>
@@ -93,43 +95,35 @@
         
         {{-- HISTORY TRANSAKSI TERAKHIR --}}
         <div class="bg-gray-800 p-6 rounded-2xl shadow w-2/5">
-            <div class="flex items-center justify-between">
-                <h1 class="text-lg font-bold text-white">Transaksi Terbaru</h1>
+            <div class="">
+                <div class="flex justify-between w-full">
+                    <div class="">
+                        <h1 class="text-lg font-bold text-white self-center">Transaksi Terbaru</h1>
+                    </div>
+                    <a
+                        href="{{ route("admin.payments.index") }}"
+                        class="uppercase text-sm font-semibold inline-flex items-center rounded-2xl text-blue-400 hover:text-blue-500  hover:bg-gray-700 focus:ring-gray-700 border-gray-700 px-3 py-2">
+                        See All
+                        <svg class="w-2.5 h-2.5 ms-1.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                        </svg>
+                    </a>
+                </div>
             </div>
             
-            <div class="mt-4">
-                <div class="flex mb-2">
-                    <div class="flex justify-between w-full items-center gap-4">
-                        <img src="https://via.placeholder.com/50" alt="Program" class="w-10 h-10 rounded border border-custom-75">
-                        <div class="grid">
-                            <span class="flex text-lg font-bold text-white justify-end">Rp. 1.000.000</span>
-                            <span class="text-sm text-white">08 Desember 2024, 08.00</span>
-                        </div>
-                    </div>
+            @forelse ($historyDonasi as $donasiItem)
+            <div class="p-2 mt-2 border-b last:border-b-0">
+                <span class="text-white text-xs">{{ $donasiItem->waktu_donasi->format('d M Y, H:i') }}</span>
+                <div class="text-white text-2xl font-bold">
+                    Rp {{ number_format($donasiItem->jumlah, 2, ',', '.') }}
                 </div>
-                <hr class="my-2"/>
-
-                <div class="flex mb-2">
-                    <div class="flex justify-between w-full items-center gap-4">
-                        <img src="https://via.placeholder.com/50" alt="Program" class="w-10 h-10 rounded border border-custom-75">
-                        <div class="grid">
-                            <span class="flex text-lg font-bold text-white justify-end">Rp. 1.000.000</span>
-                            <span class="text-sm text-white">08 Desember 2024, 08.00</span>
-                        </div>
-                    </div>
-                </div>
-                <hr class="my-2"/>
-
-                <div class="flex mb-2">
-                    <div class="flex justify-between w-full items-center gap-4">
-                        <img src="https://via.placeholder.com/50" alt="Program" class="w-10 h-10 rounded border border-custom-75">
-                        <div class="grid">
-                            <span class="flex text-lg font-bold text-white justify-end">Rp. 1.000.000</span>
-                            <span class="text-sm text-white">08 Desember 2024, 08.00</span>
-                        </div>
-                    </div>
-                </div>
-                <hr class="my-2"/>
+                <div class="text-gray-400 text-sm italic truncate">{{ $donasiItem->notes }}</div>
+            </div>
+            @empty
+            <div class="text-custom-50 text-sm mt-2">
+                Belum ada transaksi.
+            </div>
+            @endforelse
             </div>
         </div>
     </div>

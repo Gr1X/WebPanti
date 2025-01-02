@@ -33,6 +33,7 @@ Route::view('/aboutus', 'user.aboutUs')->name('aboutus');
 
 Route::get('/donation', [UserProgramController::class, 'showDonations'])->name('donation');
 Route::get('/donation/{id}', [UserProgramController::class, 'showDonationDetails'])->name('donateDetails');
+
 // -----------------------------
 // Auth Routes (Login, Register, Forgot/Reset Password)
 // -----------------------------
