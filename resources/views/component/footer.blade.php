@@ -14,7 +14,7 @@
                 </div>
 
                 <div class="flex justify-end">
-                    <div class="">
+                    <div class="ml-6 md:ml-0">
                         <div class="mb-4">
                             <span class="m-0 p-0 text-3xl font-bold text-slate-100 dark:text-white"><span class="text-custom-200 font-bold">Our </span>Sponsor.</span>
                         </div>
