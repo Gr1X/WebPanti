@@ -7,30 +7,22 @@
     </div>
 
     <div class="flex justify-between mb-4 gap-2">
-        <span class="self-center bg-gray-100 p-3 rounded-lg">
-            <div class="flex self-center space-x-2" data-dropdown-toggle="dropdownBottom">
-                <ion-icon name="calendar-clear-outline" class="size-5 self-center"></ion-icon>
-                <span class="self-center text-sm font-semibold">Filter by Year</span>
-                <ion-icon name="chevron-down-outline" class="size-5 self-center"></ion-icon>
-            </div>
-            <div id="dropdownBottom" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
-                    <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">2024</a>
-                    </li>
-                    <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">2023</a>
-                    </li>
-                    <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">2022</a>
-                    </li>
-                    <li>
-                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">2021</a>
-                    </li>
-                </ul>
-            </div>
-        </span>
-        <a href="{{ route('admin.gallery.create') }}"" class="flex self-center bg-green-100 text-green-800 py-3 px-4 rounded-xl hover:bg-green-200 transition font-semibold gap-2"><ion-icon name="albums-outline" class="size-5 self-center"></ion-icon>Tambah Foto</a>
+        <form method="GET" action="{{ route('admin.gallery.index') }}" class="flex gap-2">
+            <select name="year" class="bg-gray-100 p-3 rounded-lg text-sm font-semibold">
+                <option value="">All Years</option>
+                @foreach($years as $year)
+                    <option value="{{ $year }}" {{ isset($tahun) && $tahun == $year ? 'selected' : '' }}>
+                        {{ $year }}
+                    </option>
+                @endforeach
+            </select>
+            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
+                Filter
+            </button>
+        </form>
+        <a href="{{ route('admin.gallery.create') }}" class="flex self-center bg-green-100 text-green-800 py-3 px-4 rounded-xl hover:bg-green-200 transition font-semibold gap-2">
+            <ion-icon name="albums-outline" class="size-5 self-center"></ion-icon>Tambah Foto
+        </a>
     </div>
 
     @if (session('success'))
@@ -54,9 +46,6 @@
             <tbody>
                 @forelse ($galleries as $index => $gallery)
                 <tr class="bg-white border-b border-gray-200 last:border-b-0 dark:bg-gray-800 dark:border-gray-700">
-                    {{-- <td class="px-6 py-4">
-                        {{ $index + 1 }}
-                    </td> --}}
                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                         <img src="{{ asset('storage/' . $gallery->gambar) }}" 
                         alt="Gallery Image" 

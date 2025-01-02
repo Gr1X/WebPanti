@@ -60,7 +60,6 @@
                 </div>
             </form>
             
-            
             <a href="{{ route('admin.programs.create') }}" class="flex self-center bg-green-100 text-green-800 py-3 px-4 rounded-xl hover:bg-green-200 transition font-semibold gap-2"><ion-icon name="albums-outline" class="size-5 self-center"></ion-icon>Tambah Program</a>
         </div>
 
@@ -69,24 +68,37 @@
 
         {{-- FILTER  --}}
         <div class="flex my-4 space-x-4 w-full items-center">
-            <div class="grid grid-cols-4 gap-4 w-1/2">
+            <form action="{{ route('admin.programs.index') }}" method="GET" class="grid grid-cols-4 gap-4 w-1/2">
+                <input type="hidden" name="search" value="{{ request('search') }}">
                 <div class="flex items-center border border-gray-200 rounded px-4 py-2 dark:border-gray-700">
-                    <input id="bordered-radio-1" type="radio" value="" name="bordered-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" checked>
+                    <input id="bordered-radio-1" type="radio" value="" name="status" 
+                          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                          {{ request('status') == '' ? 'checked' : '' }}
+                          onclick="filterByStatus('')">
                     <label for="bordered-radio-1" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Semua</label>
                 </div>
                 <div class="flex items-center border border-gray-200 rounded px-4 py-2 dark:border-gray-700">
-                    <input id="bordered-radio-2" type="radio" value="" name="bordered-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <input id="bordered-radio-2" type="radio" value="complete" name="status" 
+                          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                          {{ request('status') == 'complete' ? 'checked' : '' }}
+                          onclick="filterByStatus('complete')">
                     <label for="bordered-radio-2" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Complete</label>
                 </div>
                 <div class="flex items-center border border-gray-200 rounded px-4 py-2 dark:border-gray-700">
-                    <input id="bordered-radio-3" type="radio" value="" name="bordered-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <input id="bordered-radio-3" type="radio" value="ongoing" name="status" 
+                          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                          {{ request('status') == 'ongoing' ? 'checked' : '' }}
+                          onclick="filterByStatus('ongoing')">
                     <label for="bordered-radio-3" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">On Going</label>
                 </div>
                 <div class="flex items-center border border-gray-200 rounded px-4 py-2 dark:border-gray-700">
-                    <input id="bordered-radio-4" type="radio" value="" name="bordered-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <input id="bordered-radio-4" type="radio" value="closed" name="status" 
+                          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                          {{ request('status') == 'closed' ? 'checked' : '' }}
+                          onclick="filterByStatus('closed')">
                     <label for="bordered-radio-4" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Closed</label>
                 </div>
-            </div>
+            </form>
         </div>
         
         {{-- TABLES --}}
@@ -116,10 +128,14 @@
                         </td>
 
                         <td class="px-6 py-4 max-w-2xs truncate">{{ $program->namaprogram }}</td>
-                        <td class="grid grid-cols-1 px-6 py-4">
-                            <span class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">Complete</span>
-                            <span class="bg-yellow-100 text-yellow-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300">On Going</span>
-                            <span class="bg-indigo-100 text-indigo-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300">Closed</span>
+                        <td class="px-6 py-4">
+                            @if($program->status === 'complete')
+                                <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">Complete</span>
+                            @elseif($program->status === 'ongoing')
+                                <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300">On Going</span>
+                            @else
+                                <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300">Closed</span>
+                            @endif
                         </td>
                         <td class="px-6 py-4 max-w-2xs break-words whitespace-normal">{{ Str::limit($program->deskripsi, 50) }}</td>
                         <td class="px-6 py-4">
@@ -185,3 +201,11 @@
 
     </div>
 @endsection
+
+<script>
+    function filterByStatus(status) {
+        const url = new URL(window.location.href);
+        url.searchParams.set('status', status); // Set parameter status di URL
+        window.location.href = url.toString(); // Redirect ke URL baru
+    }
+</script>

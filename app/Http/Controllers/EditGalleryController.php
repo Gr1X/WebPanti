@@ -11,10 +11,19 @@ class EditGalleryController extends Controller
     /**
      * Menampilkan halaman edit gallery.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $galleries = Gallery::all();
-        return view('admin.editgallery', compact('galleries'));
+        $tahun = $request->input('year'); // Ambil parameter tahun dari request
+        $query = Gallery::query();
+
+        if ($tahun) {
+            $query->whereYear('tgl_gallery', $tahun);
+        }
+
+        $galleries = $query->get();
+        $years = [2019, 2020, 2021, 2022, 2023, 2024];
+
+        return view('admin.editgallery', compact('galleries', 'years', 'tahun'));
     }
 
     public function create()

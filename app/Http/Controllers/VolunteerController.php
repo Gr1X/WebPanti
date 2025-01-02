@@ -66,24 +66,30 @@ class VolunteerController extends Controller
         return redirect()->route('program')->with('success', 'Pendaftaran berhasil! Terima kasih telah bergabung.');
     }
 
-    public function showAllVolunteers()
+    public function showAllVolunteers(Request $request)
     {
-        // Ambil semua data volunteer
-        $volunteers = Volunteer::all();
+        // Ambil parameter pencarian dari query string
+        $search = $request->input('search');
+
+        // Query untuk mencari volunteer
+        $volunteers = Volunteer::when($search, function ($query, $search) {
+            return $query->where('nama', 'like', '%' . $search . '%');
+        })->get();
+
         $jumlahVol = Volunteer::count();
 
         // Hitung jumlah volunteer berdasarkan gender
         $genderCounts = Volunteer::select('gender', DB::raw('count(*) as total'))
             ->groupBy('gender')
-            ->pluck('total', 'gender'); // Hasil: ['Laki-laki' => 3, 'Perempuan' => 5]
+            ->pluck('total', 'gender');
 
         // Hitung jumlah volunteer berdasarkan bidang
         $bidangCounts = Volunteer::select('bidang', DB::raw('count(*) as total'))
             ->groupBy('bidang')
-            ->pluck('total', 'bidang'); // Hasil: ['dokter' => 2, 'sosial' => 4, 'pendidikan' => 6]
+            ->pluck('total', 'bidang');
 
         // Kirim data ke view
-        return view('admin.showvolunteer', compact('volunteers', 'jumlahVol', 'genderCounts', 'bidangCounts'));
+        return view('admin.showvolunteer', compact('volunteers', 'jumlahVol', 'genderCounts', 'bidangCounts', 'search'));
     }
 
     public function destroy($id)

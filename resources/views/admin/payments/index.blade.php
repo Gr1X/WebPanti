@@ -93,17 +93,18 @@
             </div>
         </div>
 
-        {{-- SEARCH & CREATE PROGRAM --}}
-        <div class="flex justify-between my-2 gap-4 ">
+        {{-- SEARCH --}}
+        <div class="flex justify-between my-2 gap-4">
             <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
-            <form class="mb-2 w-2/5 self-center rounded-xl">   
+            <form method="GET" action="{{ route('admin.payments.index') }}" class="mb-2 w-2/5 self-center rounded-xl">
                 <div class="relative flex gap-2">
                     <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                         <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
                         </svg>
                     </div>
-                    <input type="search" id="default-search" class="block w-full p-4 py-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-xl bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search..." required />
+                    <input type="search" name="search" id="default-search" class="block w-full p-4 py-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-xl bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          placeholder="Search by donor name..." value="{{ $search ?? '' }}" />
                     <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
                 </div>
             </form>
@@ -115,16 +116,37 @@
         <div class="flex my-4 space-x-4 w-full items-center">
             <div class="grid grid-cols-4 gap-4 w-1/2">
                 <div class="flex items-center border border-gray-200 rounded px-4 py-2 dark:border-gray-700">
-                    <input id="bordered-radio-1" type="radio" value="" name="bordered-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" checked>
-                    <label for="bordered-radio-1" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Semua</label>
+                    <input 
+                        id="radio-semua" 
+                        type="radio" 
+                        value="" 
+                        name="status" 
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" 
+                        {{ request('status') == '' ? 'checked' : '' }}
+                        onclick="filterByStatus('')">
+                    <label for="radio-semua" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Semua</label>
                 </div>
                 <div class="flex items-center border border-gray-200 rounded px-4 py-2 dark:border-gray-700">
-                    <input id="bordered-radio-2" type="radio" value="" name="bordered-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                    <label for="bordered-radio-2" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Confirmed</label>
+                    <input 
+                        id="radio-confirmed" 
+                        type="radio" 
+                        value="confirmed" 
+                        name="status" 
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                        {{ request('status') == 'confirmed' ? 'checked' : '' }}
+                        onclick="filterByStatus('confirmed')">
+                    <label for="radio-confirmed" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Confirmed</label>
                 </div>
                 <div class="flex items-center border border-gray-200 rounded px-4 py-2 dark:border-gray-700">
-                    <input id="bordered-radio-3" type="radio" value="" name="bordered-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                    <label for="bordered-radio-3" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Pending</label>
+                    <input 
+                        id="radio-pending" 
+                        type="radio" 
+                        value="pending" 
+                        name="status" 
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                        {{ request('status') == 'pending' ? 'checked' : '' }}
+                        onclick="filterByStatus('pending')">
+                    <label for="radio-pending" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Pending</label>
                 </div>
             </div>
         </div>
@@ -150,11 +172,11 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($payments as $payment)
+                    @forelse ($payments as $payment)
                         <tr class="bg-white border-b border-gray-300 dark:bg-gray-800 dark:border-gray-700 last:border-b-0">
                             <td class="px-4 py-2">{{ $payment->user->name }}</td>
                             <td class="px-4 py-2">Rp. {{ number_format($payment->jumlah, 2) }}</td>
-                            <td class="px-4 py-2">{{ $payment->program_id }}</td>
+                            <td class="px-4 py-2">{{ $payment->target->namaprogram ?? 'N/A' }}</td>
                             <td class="px-4 py-2">
                                 <span class="px-2 py-1 text-xs rounded-full 
                                 {{ $payment->status === 'confirmed' ? 'bg-green-200 text-green-800' : '' }}
@@ -167,23 +189,13 @@
                                 @if($payment->gambar)
                                     <img 
                                         src="{{ asset('storage/' . $payment->gambar) }}" 
-                                        alt="{{ $payment->namaprogram }}" 
+                                        alt="Bukti Bayar" 
                                         class="w-16 h-16 object-cover rounded cursor-pointer"
                                         onclick="openModal(this.src)"
                                     >
                                 @else
                                     <span class="text-gray-500">No Image</span>
                                 @endif
-
-                                <!-- Modal Image Besar -->
-                                <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden">
-                                    <div class="bg-white rounded-lg overflow-hidden relative">
-                                        <button id="closeModal" class="absolute top-2 right-2 text-gray-700 bg-gray-200 rounded-full p-2 hover:bg-gray-300">
-                                            <ion-icon name="close-outline" class="size-5 flex self-center"></ion-icon>
-                                        </button>
-                                        <img id="modalImage" src="" alt="Bukti Bayar" class="w-auto h-auto max-w-screen-md max-h-screen">
-                                    </div>
-                                </div>
                             </td>
                             <td class="px-4 py-2 flex gap-2">
                                 @if ($payment->status === 'waiting_confirmation')
@@ -202,7 +214,11 @@
                                 @endif
                             </td>
                         </tr>
-                    @endforeach
+                    @empty
+                        <tr>
+                            <td colspan="6" class="px-4 py-4 text-center text-gray-500">No payments found.</td>
+                        </tr>
+                    @endforelse
                 </tbody>
             </table>
         </div>
@@ -230,3 +246,11 @@
         });
     </script>    
 @stop
+
+<script>
+    function filterByStatus(status) {
+        const url = new URL(window.location.href);
+        url.searchParams.set('status', status); // Set parameter status di URL
+        window.location.href = url.toString(); // Redirect ke URL baru
+    }
+</script>

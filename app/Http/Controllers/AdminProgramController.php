@@ -14,7 +14,7 @@ class AdminProgramController extends Controller
     /**
      * Display a listing of the programs.
      */
-    
+
     public function dashboard(){
         // Ambil data yang diperlukan untuk dashboard
         $historyDonasi = Donasi::orderBy('waktu_donasi', 'desc')->take(3)->get();
@@ -26,37 +26,48 @@ class AdminProgramController extends Controller
         return view('admin.programs.dashboard', compact('programs', 'programCount', 'totalDonasi', 'totalUser', 'historyDonasi'));
     }
 
-        public function index(Request $request)
+    public function index(Request $request)
     {
-        // Ambil input pencarian
+        // Ambil input pencarian dan filter
         $search = $request->query('search');
+        $statusFilter = $request->query('status');
 
         // Hitung total program
         $programCount = Target::count();
 
-        // Query program dengan filter pencarian
+        // Query program dengan pencarian dan filter status
         $programsQuery = Target::withSum('donasi', 'jumlah');
 
         if ($search) {
-            $programsQuery = $programsQuery->where(function ($query) use ($search) {
-                $query->where('namaprogram', 'LIKE', "%{$search}%")
-                    ->orWhere('deskripsi', 'LIKE', "%{$search}%");
-            });
+            $programsQuery->where('namaprogram', 'LIKE', "%{$search}%");
         }
 
         $programs = $programsQuery->get();
 
         // Hitung status untuk setiap program
-        $programs = $programs->map(function ($program) {
-            $program->status = $program->donasi_sum_jumlah >= $program->jumlah_target ? 'complete' : 'ongoing';
+        $today = now();
+        $programs = $programs->map(function ($program) use ($today) {
+            if ($program->donasi_sum_jumlah >= $program->jumlah_target) {
+                $program->status = 'complete';
+            } elseif ($today->lt($program->tgl_mulai) || ($program->tgl_selesai && $today->gt($program->tgl_selesai))) {
+                $program->status = 'closed';
+            } else {
+                $program->status = 'ongoing';
+            }
             return $program;
         });
+
+        // Terapkan filter status jika ada
+        if ($statusFilter) {
+            $programs = $programs->where('status', $statusFilter);
+        }
 
         // Hitung jumlah program berdasarkan status
         $completedCount = $programs->where('status', 'complete')->count();
         $ongoingCount = $programs->where('status', 'ongoing')->count();
+        $closedCount = $programs->where('status', 'closed')->count();
 
-        return view('admin.programs.index', compact('programs', 'programCount', 'completedCount', 'ongoingCount'));
+        return view('admin.programs.index', compact('programs', 'programCount', 'completedCount', 'ongoingCount', 'closedCount'));
     }
 
 
