@@ -37,6 +37,22 @@
                 </ul>
             </div>
 
+            <!-- list kegiatan dan Program -->
+            <div class="bg-custom-400 dark:bg-custom-400 border border-custom-50 dark:border-custom-50 rounded-lg p-8 md:pt-16 md:p-12 mt-10 mb-16"> 
+                <h3 class="text-custom-50 dark:text-custom-50 text-3xl md:text-3xl font-semibold mb-2">Kegiatan Dan Program</h3>
+                <hr class="border-custom-50">
+                <br />  
+                <ul>
+                    <li><p>1. Satunan Pekanan</p></li>
+                    <li><p>2. Les Bahasa Inggris</p></li>
+                    <li><p>3. Lescalistung</p></li>
+                    <li><p>4. Doa Bersama</p></li>
+                    <li><p>5. Pemberdayaan Ekonomi Wali Yatim</P></li>
+                    <li><p>6. Program Peningkatan Gizi</P></li>
+                    <li><p>7. Program Bantuan Kesehatan</P></li>
+                </ul>
+            </div>
+
             <div class="px-12">
 
             </div>
