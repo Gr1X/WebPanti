@@ -3,7 +3,7 @@
 @section('content')
 <div class="bg-custom-400 min-h-screen px-10">
     <div class="">
-        <div class="w-full lg:pt-44 pb-6">
+        <div class="w-full pt-44 lg:pt-44 pb-6">
             <div class="bg-gray-50 dark:bg-custom-50 border border-gray-200 dark:border-gray-700 rounded-lg p-8 md:pt-16 md:p-12">
                 <h1 class="text-gray-900 dark:text-white text-4xl md:text-5xl font-semibold mb-2">Donation</h1>
                 <p class="text-lg font-normal text-gray-500 dark:text-gray-400 mb-6"></p>
@@ -23,7 +23,7 @@
                 </div>
             </div>
             
-            <div class="grid grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             @foreach ($targets as $target)
                 <a href="{{ route('donateDetails', $target->id) }}" class="bg-custom-500 rounded-xl shadow-lg overflow-hidden max-w-md border border-gray-100">
                     <!-- Gambar Program -->
