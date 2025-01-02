@@ -34,6 +34,10 @@ Route::view('/aboutus', 'user.aboutUs')->name('aboutus');
 Route::get('/donation', [UserProgramController::class, 'showDonations'])->name('donation');
 Route::get('/donation/{id}', [UserProgramController::class, 'showDonationDetails'])->name('donateDetails');
 
+Route::get('/donation/{id}/payment', [DonasiController::class, 'showPaymentForm'])->name('donation.payment');
+Route::post('/donation/{id}/payment/confirm', [DonasiController::class, 'submitPaymentConfirm'])->name('donation.confirm');
+Route::post('/donation/{id}/submit', [DonasiController::class, 'submitDonation'])->name('donation.submit');
+
 // -----------------------------
 // Auth Routes (Login, Register, Forgot/Reset Password)
 // -----------------------------
@@ -66,9 +70,9 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/profile/edit', [ProfileController::class, 'update'])->name('profile.update');
 
    // Donation Routes
-    Route::get('/donation/{id}/payment', [DonasiController::class, 'showPaymentForm'])->name('donation.payment');
-    Route::post('/donation/{id}/payment/confirm', [DonasiController::class, 'submitPaymentConfirm'])->name('donation.confirm');
-    Route::post('/donation/{id}/submit', [DonasiController::class, 'submitDonation'])->name('donation.submit');
+    // Route::get('/donation/{id}/payment', [DonasiController::class, 'showPaymentForm'])->name('donation.payment');
+    // Route::post('/donation/{id}/payment/confirm', [DonasiController::class, 'submitPaymentConfirm'])->name('donation.confirm');
+    // Route::post('/donation/{id}/submit', [DonasiController::class, 'submitDonation'])->name('donation.submit');
 
 
     // Volunteer Routes

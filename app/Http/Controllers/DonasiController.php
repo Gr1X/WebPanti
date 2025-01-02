@@ -59,30 +59,31 @@ class DonasiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function submitDonation(Request $request, $id)
+    public function submitDonation(Request $request, $programId)
     {
-        // Validasi input
-        $request->validate([
-            'jumlah' => 'required|numeric|min:1',
-            'payment_method' => 'required|string', // Tipe pembayaran (misalnya 'mandiri', 'bri', dll.)
-            'notes' => 'nullable|string|max:255',
-            'gambar' => 'required|image|mimes:jpeg,png,jpg|max:2048', // Bukti transfer
+        $validatedData = $request->validate([
+            'jumlah' => 'required|numeric|min:1000',
+            'payment_method' => 'required|string',
+            'gambar' => 'required|image|max:10240',
+            'notes' => 'nullable|string',
+        ]);
+        // dd($request->all()); // Tambahkan ini untuk melihat apakah 'jumlah' dikirimkan
+
+        // Cek apakah user login atau donasi anonim
+        $userId = auth()->check() ? auth()->id() : null;
+
+        // Simpan data donasi ke database
+        Donasi::create([
+            'program_id' => $programId,
+            'user_id' => $userId ?: null,
+            'jumlah' => $validatedData['jumlah'],
+            'tipe_pembayaran' => $validatedData['payment_method'],
+            'notes' => $validatedData['notes'] ?? null,
+            'gambar' => $request->file('gambar')->store('proofs', 'public'),
+            'waktu_donasi' => now()
         ]);
 
-        // Simpan donasi ke database
-        $donasi = Donasi::create([
-            'user_id' => Auth::id(), // ID pengguna yang login
-            'jumlah' => $request->input('jumlah'),
-            'notes' => $request->input('notes'),
-            'gambar' => $request->file('gambar')->store('proofs', 'public'), // Simpan gambar ke folder 'proofs'
-            'program_id' => $id,
-            'tipe_pembayaran' => $request->input('payment_method'),
-            'status' => 'waiting_confirmation', // Status default adalah waiting_confirmation
-            'waktu_donasi' => now(),
-        ]);
-
-        // Redirect ke halaman detail donasi dengan pesan sukses
-        return redirect()->route('donateDetails', $id)
+        return redirect()->route('donateDetails', $programId)
             ->with('success', 'Donasi berhasil dikirim. Menunggu konfirmasi admin.');
     }
 }

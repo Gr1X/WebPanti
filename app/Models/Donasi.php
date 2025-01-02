@@ -42,4 +42,14 @@ class Donasi extends Model
     {
         return $this->belongsTo(Target::class, 'program_id');
     }
+
+    public function getDonorNameAttribute()
+    {
+        if (is_null($this->user_id) || $this->user_id === 'anonim') {
+            return 'Anonim';
+        }
+
+        return $this->user->name; // Jika user login
+    }
+
 }

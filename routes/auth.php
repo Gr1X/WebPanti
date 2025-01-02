@@ -59,6 +59,11 @@ Route::middleware('auth')->group(function () {
         ->name('logout');
 });
 
+Route::middleware('guest')->group(function () {
+  Route::get('/donation/{id}/payment', [DonasiController::class, 'showPaymentForm'])->name('donation.payment');
+  Route::post('/donation/{id}/payment', [DonasiController::class, 'submitDonation'])->name('donation.submit');
+});
+
 Route::middleware('auth')->group(function () {
     Route::get('/donation/{id}/payment', [DonasiController::class, 'showPaymentForm'])->name('donation.payment');
     Route::post('/donation/{id}/payment', [DonasiController::class, 'submitDonation'])->name('donation.submit');

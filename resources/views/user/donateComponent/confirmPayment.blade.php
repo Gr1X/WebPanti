@@ -13,7 +13,13 @@
 
     <div class="m-10">
         <div class="mb-8">
-            <label class="flex items-center text-gray-600"><a href="" class="">Program</a><ion-icon name="chevron-forward-outline" class="size-4 "></ion-icon><a href="" class="">Donate</a><ion-icon name="chevron-forward-outline" class="size-4 "></ion-icon><span class="">Confirm Payments</span></label>
+            <label class="flex items-center text-gray-600">
+                <a href="" class="">Program</a>
+                <ion-icon name="chevron-forward-outline" class="size-4 "></ion-icon>
+                <a href="" class="">Donate</a>
+                <ion-icon name="chevron-forward-outline" class="size-4 "></ion-icon>
+                <span class="">Confirm Payments</span>
+            </label>
             <span class="text-4xl font-semibold">Confirm Payments</span>
         </div>
 
@@ -52,6 +58,7 @@
                         <input type="hidden" name="jumlah" value="{{ $jumlah }}">
                         <input type="hidden" name="payment_method" value="{{ $payment_method }}">
                         <input type="hidden" name="notes" value="{{ $notes }}">
+
                         <button
                             type="submit"
                             class="w-full bg-gradient-to-r from-custom-50 to-custom-75 text-white font-bold py-3 px-4 rounded-xl hover:from-custom-50 hover:to-custom-100 mt-4">

@@ -144,8 +144,8 @@
                         value="pending" 
                         name="status" 
                         class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                        {{ request('status') == 'pending' ? 'checked' : '' }}
-                        onclick="filterByStatus('pending')">
+                        {{ request('status') == 'waiting_confirmation' ? 'checked' : '' }}
+                        onclick="filterByStatus('waiting_confirmation')">
                     <label for="radio-pending" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Pending</label>
                 </div>
             </div>
@@ -174,7 +174,7 @@
                 <tbody>
                     @forelse ($payments as $payment)
                         <tr class="bg-white border-b border-gray-300 dark:bg-gray-800 dark:border-gray-700 last:border-b-0">
-                            <td class="px-4 py-2">{{ $payment->user->name }}</td>
+                            <td class="px-4 py-2">{{ $payment->user->name ?? 'Anonim' }}</td>
                             <td class="px-4 py-2">Rp. {{ number_format($payment->jumlah, 2) }}</td>
                             <td class="px-4 py-2">{{ $payment->target->namaprogram ?? 'N/A' }}</td>
                             <td class="px-4 py-2">
