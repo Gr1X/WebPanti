@@ -168,7 +168,13 @@
                             </td>
                             <td class="px-6 py-4 max-w-2xs truncate">{{ $program->namaprogram }}</td>
                             <td class="px-6 py-4">
+                                @if($program->status === 'complete')
                                 <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">Complete</span>
+                                @elseif($program->status === 'ongoing')
+                                    <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300">On Going</span>
+                                @else
+                                    <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300">Closed</span>
+                                @endif
                             </td>
                             <td class="px-6 py-4">
                                 <div class="w-full bg-gray-200 rounded-full h-1.5 dark:bg-gray-700">
@@ -247,7 +253,9 @@
                             <td class="px-6 py-4">{{ $payment->program_id }}</td>
                             <td class="px-6 py-4">Rp. {{ number_format($payment->jumlah, 2) }}</td>
                             <td class="px-6 py-4">
-                                <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300">{{ ucfirst($payment->status) }}</span>
+                                <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300">
+                                    {{ ucfirst($payment->status) }}
+                                </span>
                             </td>
                         </tr>
                         @endforeach

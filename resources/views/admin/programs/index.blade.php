@@ -72,30 +72,30 @@
                 <input type="hidden" name="search" value="{{ request('search') }}">
                 <div class="flex items-center border border-gray-200 rounded px-4 py-2 dark:border-gray-700">
                     <input id="bordered-radio-1" type="radio" value="" name="status" 
-                          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                          {{ request('status') == '' ? 'checked' : '' }}
-                          onclick="filterByStatus('')">
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                        {{ request('status') == '' ? 'checked' : '' }}
+                        onclick="filterByStatus('')">
                     <label for="bordered-radio-1" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Semua</label>
                 </div>
                 <div class="flex items-center border border-gray-200 rounded px-4 py-2 dark:border-gray-700">
                     <input id="bordered-radio-2" type="radio" value="complete" name="status" 
-                          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                          {{ request('status') == 'complete' ? 'checked' : '' }}
-                          onclick="filterByStatus('complete')">
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                        {{ request('status') == 'complete' ? 'checked' : '' }}
+                        onclick="filterByStatus('complete')">
                     <label for="bordered-radio-2" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Complete</label>
                 </div>
                 <div class="flex items-center border border-gray-200 rounded px-4 py-2 dark:border-gray-700">
                     <input id="bordered-radio-3" type="radio" value="ongoing" name="status" 
-                          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                          {{ request('status') == 'ongoing' ? 'checked' : '' }}
-                          onclick="filterByStatus('ongoing')">
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                        {{ request('status') == 'ongoing' ? 'checked' : '' }}
+                        onclick="filterByStatus('ongoing')">
                     <label for="bordered-radio-3" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">On Going</label>
                 </div>
                 <div class="flex items-center border border-gray-200 rounded px-4 py-2 dark:border-gray-700">
                     <input id="bordered-radio-4" type="radio" value="closed" name="status" 
-                          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                          {{ request('status') == 'closed' ? 'checked' : '' }}
-                          onclick="filterByStatus('closed')">
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                        {{ request('status') == 'closed' ? 'checked' : '' }}
+                        onclick="filterByStatus('closed')">
                     <label for="bordered-radio-4" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Closed</label>
                 </div>
             </form>
