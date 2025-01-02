@@ -4,10 +4,10 @@
 <div class="m-5">
     <div class="">
         <div class="flex justify-start items-center mb-4">
-            <a href="" class="text-lg font-semibold flex items-center py-3 px-2 rounded-xl text-gray-700 bg-gray-200 shadow border-gray-100">
+            <a href="{{ url()->previous() }}" onclick="window.history.back();" class="text-lg font-semibold flex items-center py-3 px-2 rounded-xl text-gray-700 bg-gray-200 shadow border-gray-100">
                 <ion-icon name="chevron-back-outline" class="mr-1 text-xl"></ion-icon>
                 Back to previous
-            </a>
+            </a>            
         </div>
     </div>
 

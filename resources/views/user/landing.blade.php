@@ -2,211 +2,212 @@
 
 @section('content')
 <main class="">
-    <div class="bg-custom-400 pt-24">
-        
-        <div class="flex justify-between py-32 px-10">
+    <div class="bg-custom-400 pt-32">
+        <div class="flex justify-between py-36 pb-50 px-10">
 
-            <div class="relative z-10 space-y-6 self-center text-center lg:text-left">
+            <div class="self-start relative z-10 space-y-6 ms-6 mt-16 py-4 px-8 bg-gray-400 rounded-xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100 shadow-lg">
                 <!-- Heading -->
-                <div class="pt-12">
-                    <h1 class="text-custom-50 text-2xl md:text-3xl lg:text-5xl font-bold leading-tight">
+                <div class="mt-4">
+                    <h1 class="text-custom-300 leading-2 text-1xl md:text-2xl lg:text-5xl font-extrabold leading-tight">
                         Menggapai Keberkahan dengan Memuliakan Generasi.
                     </h1>
                 </div>
             
                 <!-- Subheading -->
-                <p class="text-gray-700 text-sm md:text-base leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                    Yayasan Nurul Jadid Tangerang hadir sebagai wujud kepedulian kepada yatim piatu dan dhuafa, dengan semangat untuk membangun generasi yang mandiri, berakhlak mulia, dan penuh keberkahan. Melalui berbagai program pendidikan, santunan, dan kegiatan sosial, kami berkomitmen untuk memberikan harapan baru dan menciptakan perubahan positif bagi masyarakat yang membutuhkan. Bergabunglah bersama kami untuk mewujudkan masa depan yang lebih cerah dan penuh kasih sayang.
+                <p class="text-gray-700 text-xs md:text-base leading-relaxed max-w-2xl mx-auto lg:mx-0 font-semibold">
+                    Panti Asuhan Nurul Jadid Tangerang hadir sebagai wujud kepedulian 
+                    kepada yatim piatu dan dhuafa, dengan semangat untuk membangun 
+                    generasi yang mandiri, berakhlak mulia, dan penuh keberkahan. 
                 </p>
-            
-                <!-- Button -->
-                <div class="mt-6">
-                    <div class="relative group">
-                        <button class="relative inline-block p-px font-semibold leading-6 text-white bg-neutral-900 shadow-lg cursor-pointer rounded-2xl transition-transform duration-300 ease-in-out active:scale-95">
-                            <span class="absolute inset-0 rounded-2xl bg-gradient-to-r from-custom-200 via-custom-300 to-custom-400 p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
-                            <span class="relative z-10 block px-8 py-4 rounded-2xl bg-custom-100">
-                                <div class="relative z-10 flex items-center space-x-3">
-                                    <span class="transition-all duration-500 group-hover:translate-x-1.5 group-hover:text-custom-500">
-                                        Get Started 
-                                    </span>
-                                    <ion-icon name="arrow-forward-outline" class="w-6 h-6 transition-transform duration-500 group-hover:translate-x-1.5 group-hover:text-emerald-300"></ion-icon>
-                                    </svg>
-                                </div>
-                            </span>
-                        </button>
-                    </div>
-                </div>
             </div>
             
-
-            <div class="py-10 mx-56 gap-2 flex justify-center ">
-                <div class="absolute top-10 translate-x-[10rem] w-56 h-56 bg-gray-50 p-3 flex flex-col shadow-4xl rotate-[-10deg] drop-shadow-2xl">
-                    <div class="duration-500 contrast-50 h-36 bg-black hover:contrast-100">
+            
+            <div class="py-12 mx-56 gap-2 flex justify-center">
+                <div class="absolute top-10 translate-x-[10rem] w-40 h-40 bg-gray-50 p-3 flex flex-col shadow-lg  rotate-[-10deg] drop-shadow-xl">
+                    <div class="duration-500 contrast-50 h-24 bg-black hover:contrast-100">
                         <img src="./images/1.jpg" alt="gambar1" class="">
                     </div>
                 </div>
                 
-                <div class="absolute translate-x-[1rem] translate-y-[-12rem] self-end w-72 h-72 bg-gray-50 p-3 flex flex-col gap-1 shadow-2xl z-10 shadow-2xl rotate-[-5deg]">
-                    <div class="duration-500 contrast-50 h-52 bg-black hover:contrast-100 object-fit">
+                <div class="absolute translate-x-[2rem] translate-y-[-10rem] self-end w-52 h-52 bg-gray-50 p-3 flex flex-col gap-1 shadow-2xl z-10 shadow-xl rotate-[-5deg]">
+                    <div class="duration-500 contrast-50 h-32 bg-black hover:contrast-100 object-fit">
                         <img src="./images/2.jpg" alt="gambar4" class="">
                     </div>
                 </div> 
 
-                <div class="absolute translate-x-[-10rem] translate-y-[-3rem] w-56 h-56 bg-gray-50 p-3 flex flex-col z-20 shadow-4xl rotate-[4deg] shadow-2xl z-10">
+                <div class="absolute translate-x-[12rem] translate-y-[-12rem] self-end w-52 h-52 bg-gray-50 p-3 flex flex-col gap-1 shadow-2xl z-10 shadow-xl rotate-[7deg]">
+                    <div class="duration-500 contrast-50 h-32 bg-black hover:contrast-100 object-fit">
+                        <img src="./images/2.jpg" alt="gambar4" class="">
+                    </div>
+                </div> 
+                
+                <div class="absolute translate-x-[8rem] translate-y-[-3rem] w-56 h-56 bg-gray-50 p-3 flex flex-col shadow-4xl rotate-[5deg] shadow-xl z-10">
                     <div class="duration-500 contrast-50 h-36 bg-black hover:contrast-100">
                         <img src="./images/5.jpg" alt="gambar2" class="">
                     </div>
                 </div>
 
-                <div class="absolute translate-x-[-15rem] translate-y-[3rem] self-end w-72 h-72 bg-gray-50 p-3 flex flex-col gap-1 shadow-2xl shadow-2xl rotate-[2deg]">
-                    <div class="duration-500 contrast-50 h-52 bg-black hover:contrast-100">
+                <div class="absolute translate-x-[-1rem] translate-y-[3rem] self-end w-64 h-64 bg-gray-50 p-3 flex flex-col gap-1 shadow-xl rotate-[5deg] z-20">
+                    <div class="duration-500 contrast-50 h-42 bg-black hover:contrast-100">
                         <img src="./images/2.jpg" alt="gambar5" class="object-fit">
                     </div>
                 </div> 
-
-                <div class="absolute translate-x-[-5rem] translate-y-[12rem] self-center w-56 h-56 bg-gray-50 p-3 flex flex-col gap-1 shadow-2xl shadow-4xl rotate-[-10deg] shadow-2xl z-10">
+                
+                <div class="absolute translate-x-[-8rem] translate-y-[12rem] self-center w-56 h-56 bg-gray-50 p-3 flex flex-col gap-1 shadow-xl rotate-[-10deg] shadow-2xl z-20">
                     <div class="duration-500 contrast-50 h-36 bg-black hover:contrast-100">
                         <img src="./images/6.jpg" alt="gambar6" class="">
                     </div>
                 </div>
                 
-                <div class="absolute translate-x-[7rem] translate-y-[18rem] self-end w-72 h-72 bg-gray-50 p-3 flex flex-col gap-1 shadow-2xl z-10 shadow-2xl rotate-[10deg]">
+                <div class="absolute translate-x-[7rem] translate-y-[10rem] self-end w-72 h-72 bg-gray-50 p-3 flex flex-col gap-1 shadow-xl rotate-[10deg] z-10">
                     <div class="duration-500 contrast-50 h-52 bg-black hover:contrast-100 object-fit">
                         <img src="./images/2.jpg" alt="gambar4" class="">
                     </div>
                 </div> 
 
-                <div class="absolute translate-x-[18rem] translate-y-[25rem] self-center w-56 h-56 bg-gray-50 p-3 flex flex-col gap-1 shadow-2xl shadow-4xl rotate-[-10deg] shadow-2xl z-10">
+                <div class="absolute translate-x-[4rem] translate-y-[17rem] self-end w-56 h-56 bg-gray-50 p-3 flex flex-col gap-1 shadow-xl rotate-[10deg] z-20">
+                    <div class="duration-500 contrast-50 h-36 bg-black hover:contrast-100 object-fit">
+                        <img src="./images/2.jpg" alt="gambar4" class="">
+                    </div>
+                </div> 
+                
+                <div class="absolute translate-x-[18rem] translate-y-[18rem] self-center w-72 h-72 bg-gray-50 p-3 flex flex-col gap-1 shadow-xl rotate-[-15deg] shadow-2xl z-20">
                     <div class="duration-500 contrast-50 h-36 bg-black hover:contrast-100">
                         <img src="./images/6.jpg" alt="gambar6" class="">
                     </div>
                 </div>
             </div> 
         </div> 
-
-
-        <div class="px-20 py-20 bg-custom-50 space-y-4">
-
-            <span class="pb-2 text-5xl font-bold text-custom-500">Tentang kami...</span>
-            <!-- Timeline -->
-            <ol class="relative border-l border-custom-100 border-l-2">
-                <!-- Timeline Item 1 -->
-                <li class="mb-10 ml-10">
-                    <div class="absolute w-10 h-10 bg-custom-75 rounded-full -left-5 flex items-center justify-center ring-8 ring-custom-400 shadow">
-                        <ion-icon name="calendar" class="w-6 h-6 text-custom-500"></ion-icon>
-                    </div>
-
-                    <div class="h-full w-full rounded-xl border border-dashed p-2 border-4 border-custom-200">
-                        <div class="h-full w-full p-6 bg-yellow-500 rounded-lg bg-clip-padding backdrop-filter shadow-2xl">
-                            <h3 class="flex items-center mb-2 text-4xl font-bold text-custom-50">
-                                Yayasan Nurul Jadid
-                            </h3>
-                            <p class="mb-4 text-md text-custom-500 font-semibold">
-                                Panti Asuhan Nurul Jadid adalah sebuah yayasan yang berlokasi di Jl. Irigasi Sipon No.152, Poris Plawad Utara, Kecamatan Cipondoh, Kota Tangerang, Banten. 
-                                Yayasan ini bergerak di bidang sosial, termasuk pengelolaan panti asuhan, majelis taklim, dan kegiatan dakwah. 
-                                Saat ini, Panti Asuhan Nurul Jadid mengasuh 19 santri yang terdiri dari 10 santri putri dan 9 santri putra. Para santri ini berasal dari berbagai daerah seperti Jakarta, Bandung, dan sekitar Tangerang. Selain itu, yayasan ini juga membantu anak-anak dhuafa yang tinggal di sekitar panti. 
-                                Panti Asuhan Nurul Jadid terdaftar sebagai Lembaga Kesejahteraan Sosial resmi di Kota Tangerang.
-                            </p>
-                        </div>
-                    </div>
-                </li>
         
-                <!-- Timeline Item 2 -->
-                <li class="mb-10 ml-10">
-                    <div class="absolute w-10 h-10 bg-custom-75 rounded-full -left-5 flex items-center justify-center ring-8 ring-custom-400">
-                        <ion-icon name="calendar" class="w-6 h-6 text-custom-500"></ion-icon>
-                    </div>
-                    <div class="h-full w-full rounded-2xl border border-dashed p-2 border-4 border-custom-200">
-                        <div class="h-full w-full p-6 bg-yellow-500 rounded-lg bg-clip-padding backdrop-filter relative z-20 shadow-xl">
-                            <h3 class="flex items-center mb-2 text-4xl font-bold text-custom-50 ">
-                                Visi
-                            </h3>
-                            <p class="mb-4 text-md font-normal text-custom-500 font-semibold">
-                                Menjadi lembaga sosial terpercaya, amanah, dan peduli, serta berkontribusi dalam mewujudkan sumber daya manusia yang kreatif, inovatif, mandiri, dan berkarakter mulia.
-                            </p>
+        <div class="bg-custom-50 h-full">
+            {{-- Animate background--}}
+            <span class="absolute w-screen translate-y-[-10rem] outline-none box-shadow-none">
+                <dotlottie-player src="https://lottie.host/8e5adb9c-0e01-48d2-8b0c-0db392fd9fb1/bouLG7TzPG.json" background="transparent" speed="1" style="all:unset;" loop autoplay class="w-full h-[300px] outline-none border-2"></dotlottie-player>
+            </span>
+            
+            <div class="px-20 py-28 bg-custom-50 space-y-4">
+    
+                <span class="pb-8 text-5xl font-bold text-custom-500 z-10">Tentang kami...</span>
+                <!-- Timeline -->
+                <ol class="relative border-l border-custom-100 border-l-2 mt-8">
+                    <!-- Timeline Item 1 -->
+                    <li class="mb-10 ml-10">
+                        <div class="absolute w-10 h-10 bg-custom-75 rounded-full -left-5 flex items-center justify-center ring-8 ring-custom-400 shadow">
+                            <ion-icon name="calendar" class="w-6 h-6 text-custom-500"></ion-icon>
+                        </div>
+    
+                        <div class="h-full w-full rounded-xl border border-dashed p-2 border-4 border-custom-200">
+                            <div class="h-full w-full p-6 bg-yellow-500 rounded-lg bg-clip-padding backdrop-filter shadow-2xl">
+                                <h3 class="flex items-center mb-2 text-4xl font-bold text-custom-50">
+                                    Yayasan Nurul Jadid
+                                </h3>
+                                <p class="mb-4 text-md text-custom-500 font-semibold">
+                                    Panti Asuhan Nurul Jadid adalah sebuah yayasan yang berlokasi di Jl. Irigasi Sipon No.152, Poris Plawad Utara, Kecamatan Cipondoh, Kota Tangerang, Banten. 
+                                    Yayasan ini bergerak di bidang sosial, termasuk pengelolaan panti asuhan, majelis taklim, dan kegiatan dakwah. 
+                                    Saat ini, Panti Asuhan Nurul Jadid mengasuh 19 santri yang terdiri dari 10 santri putri dan 9 santri putra. Para santri ini berasal dari berbagai daerah seperti Jakarta, Bandung, dan sekitar Tangerang. Selain itu, yayasan ini juga membantu anak-anak dhuafa yang tinggal di sekitar panti. 
+                                    Panti Asuhan Nurul Jadid terdaftar sebagai Lembaga Kesejahteraan Sosial resmi di Kota Tangerang.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+            
+                    <!-- Timeline Item 2 -->
+                    <li class="mb-10 ml-10">
+                        <div class="absolute w-10 h-10 bg-custom-75 rounded-full -left-5 flex items-center justify-center ring-8 ring-custom-400">
+                            <ion-icon name="calendar" class="w-6 h-6 text-custom-500"></ion-icon>
+                        </div>
+                        <div class="h-full w-full rounded-2xl border border-dashed p-2 border-4 border-custom-200">
+                            <div class="h-full w-full p-6 bg-yellow-500 rounded-lg bg-clip-padding backdrop-filter relative z-20 shadow-xl">
+                                <h3 class="flex items-center mb-2 text-4xl font-bold text-custom-50 ">
+                                    Visi
+                                </h3>
+                                <p class="mb-4 text-md font-normal text-custom-500 font-semibold">
+                                    Menjadi lembaga sosial terpercaya, amanah, dan peduli, serta berkontribusi dalam mewujudkan sumber daya manusia yang kreatif, inovatif, mandiri, dan berkarakter mulia.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+    
+                    <!-- Timeline Item 3 -->
+                    <li class="mb-10 ml-10">
+                        <div class="absolute w-10 h-10 bg-custom-75 rounded-full -left-5 flex items-center justify-center ring-8 ring-custom-400">
+                            <ion-icon name="calendar" class="w-6 h-6 text-custom-500"></ion-icon>
+                        </div>
+                        <div class="h-full w-full rounded-2xl border border-dashed p-2 border-4 border-custom-200">
+                            <div class="h-full w-full p-6 bg-yellow-500 rounded-xl bg-clip-padding relative z-10 shadow-xl">
+                                <h3 class="flex items-center mb-2 text-4xl font-semibold text-custom-50 ">
+                                    Misi
+                                </h3>
+                                <p class="mb-4 text-lg font-semibold text-custom-400">
+                                    <span>1. Mendidik generasi muda melalui pendidikan formal maupun non-formal sehingga menjadi generasi yang kreatif, inovatif, dan mandiri.</span><br />
+                                    <span>2. Menyelenggarakan kegiatan sosial yang aktif dan berdimensi rahmatan lil a'lamin.</span><br />
+                                    <span>3. Mengembangkan potensi usaha masyarakat sekitar sehingga mampu menjadi masyarakat yang sejahtera dan mandiri.</span><br />
+                                    <span>4. Mengelola sumber-sumber dana secara jujur dan amanah mendistribusikannya kepada anak yatim.</span>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ol>
+    
+                {{--  --}}
+                <div class="mt-5">
+                    <div class="absolute translate-x-[75rem] translate-y-[-1rem] w-56 h-56 bg-gray-50 p-3 flex flex-col shadow-xl rotate-[10deg] drop-shadow-2xl">
+                        <div class="duration-500 contrast-50 h-36 bg-black hover:contrast-100">
+                            <img src="./images/1.jpg" alt="gambar1" class="">
+                        </div>
+                    </div> 
+    
+                    <div class="absolute translate-x-[67rem] translate-y-[3rem] w-56 h-56 bg-gray-50 p-3 flex flex-col shadow-xl rotate-[-10deg] drop-shadow-2xl z-1">
+                        <div class="duration-500 contrast-50 h-36 bg-black hover:contrast-100">
+                            <img src="./images/1.jpg" alt="gambar1" class="">
+                        </div>
+                    </div>   
+                    
+                    
+                    <div class="absolute translate-x-[55rem] translate-y-[4rem] self-end w-64 h-64 bg-gray-50 p-3 flex flex-col gap-1 shadow-xl rotate-[5deg]">
+                        <div class="duration-500 contrast-50 h-46 bg-black hover:contrast-100">
+                            <img src="./images/2.jpg" alt="gambar5" class="object-fit">
+                        </div>
+                    </div> 
+                    
+                    <div class="absolute translate-x-[42rem] translate-y-[2rem] self-end w-72 h-72 bg-gray-50 p-3 flex flex-col gap-1 shadow-2xl shadow-2xl rotate-[-5deg]">
+                        <div class="duration-500 contrast-50 h-52 bg-black hover:contrast-100 object-fit">
+                            <img src="./images/2.jpg" alt="gambar4" class="">
+                        </div>
+                    </div> 
+                    
+                    <div class="absolute translate-x-[32rem] translate-y-[1rem] self-end w-64 h-64 bg-gray-50 p-3 flex flex-col gap-1 shadow-2xl shadow-2xl rotate-[5deg]">
+                        <div class="duration-500 contrast-50 h-46 bg-black hover:contrast-100">
+                            <img src="./images/2.jpg" alt="gambar5" class="object-fit">
+                        </div>
+                    </div> 
+                    
+                    <div class="absolute translate-x-[22rem] translate-y-[2rem] w-56 h-56 bg-gray-50 p-3 flex flex-col shadow-2xl rotate-[-8deg] shadow-2xl">
+                        <div class="duration-500 contrast-50 h-36 bg-black hover:contrast-100">
+                            <img src="./images/5.jpg" alt="gambar2" class="">
                         </div>
                     </div>
-                </li>
-
-                <!-- Timeline Item 3 -->
-                <li class="mb-10 ml-10">
-                    <div class="absolute w-10 h-10 bg-custom-75 rounded-full -left-5 flex items-center justify-center ring-8 ring-custom-400">
-                        <ion-icon name="calendar" class="w-6 h-6 text-custom-500"></ion-icon>
-                    </div>
-                    <div class="h-full w-full rounded-2xl border border-dashed p-2 border-4 border-custom-200">
-                        <div class="h-full w-full p-6 bg-yellow-500 rounded-xl bg-clip-padding relative z-10 shadow-xl">
-                            <h3 class="flex items-center mb-2 text-4xl font-semibold text-custom-50 ">
-                                Misi
-                            </h3>
-                            <p class="mb-4 text-lg font-semibold text-custom-400">
-                                <span>1. Mendidik generasi muda melalui pendidikan formal maupun non-formal sehingga menjadi generasi yang kreatif, inovatif, dan mandiri.</span><br />
-                                <span>2. Menyelenggarakan kegiatan sosial yang aktif dan berdimensi rahmatan lil a'lamin.</span><br />
-                                <span>3. Mengembangkan potensi usaha masyarakat sekitar sehingga mampu menjadi masyarakat yang sejahtera dan mandiri.</span><br />
-                                <span>4. Mengelola sumber-sumber dana secara jujur dan amanah mendistribusikannya kepada anak yatim.</span>
-                            </p>
+    
+                    <div class="absolute translate-x-[10rem] translate-y-[4rem] w-56 h-56 bg-gray-50 p-3 flex flex-col shadow-2xl rotate-[10deg] shadow-2xl">
+                        <div class="duration-500 contrast-50 h-36 bg-black hover:contrast-100">
+                            <img src="./images/5.jpg" alt="gambar2" class="">
                         </div>
                     </div>
-                </li>
-            </ol>
-
-            {{--  --}}
-            <div class="mt-5">
-                <div class="absolute translate-x-[75rem] translate-y-[-1rem] w-56 h-56 bg-gray-50 p-3 flex flex-col shadow-4xl rotate-[10deg] drop-shadow-2xl">
-                    <div class="duration-500 contrast-50 h-36 bg-black hover:contrast-100">
-                        <img src="./images/1.jpg" alt="gambar1" class="">
-                    </div>
-                </div> 
-
-                <div class="absolute translate-x-[67rem] translate-y-[3rem] w-56 h-56 bg-gray-50 p-3 flex flex-col shadow-4xl rotate-[-10deg] drop-shadow-2xl z-1">
-                    <div class="duration-500 contrast-50 h-36 bg-black hover:contrast-100">
-                        <img src="./images/1.jpg" alt="gambar1" class="">
-                    </div>
-                </div>   
-                
-                
-                <div class="absolute translate-x-[55rem] translate-y-[4rem] self-end w-64 h-64 bg-gray-50 p-3 flex flex-col gap-1 shadow-2xl shadow-2xl rotate-[5deg]">
-                    <div class="duration-500 contrast-50 h-46 bg-black hover:contrast-100">
-                        <img src="./images/2.jpg" alt="gambar5" class="object-fit">
-                    </div>
-                </div> 
-                
-                <div class="absolute translate-x-[42rem] translate-y-[2rem] self-end w-72 h-72 bg-gray-50 p-3 flex flex-col gap-1 shadow-2xl shadow-2xl rotate-[-5deg]">
-                    <div class="duration-500 contrast-50 h-52 bg-black hover:contrast-100 object-fit">
-                        <img src="./images/2.jpg" alt="gambar4" class="">
-                    </div>
-                </div> 
-                
-                <div class="absolute translate-x-[32rem] translate-y-[1rem] self-end w-64 h-64 bg-gray-50 p-3 flex flex-col gap-1 shadow-2xl shadow-2xl rotate-[5deg]">
-                    <div class="duration-500 contrast-50 h-46 bg-black hover:contrast-100">
-                        <img src="./images/2.jpg" alt="gambar5" class="object-fit">
-                    </div>
-                </div> 
-                
-                <div class="absolute translate-x-[22rem] translate-y-[2rem] w-56 h-56 bg-gray-50 p-3 flex flex-col shadow-4xl rotate-[-8deg] shadow-2xl">
-                    <div class="duration-500 contrast-50 h-36 bg-black hover:contrast-100">
-                        <img src="./images/5.jpg" alt="gambar2" class="">
+    
+                    <div class="absolute translate-x-[-5rem] translate-y-[2rem] self-end w-72 h-72 bg-gray-50 p-3 flex flex-col gap-1 shadow-xl shadow-2xl rotate-[-5deg]">
+                        <div class="duration-500 contrast-50 h-52 bg-black hover:contrast-100 object-fit">
+                            <img src="./images/2.jpg" alt="gambar4" class="">
+                        </div>
+                    </div> 
+    
+                    <div class="absolute translate-x-[-10rem] translate-y-[8rem] w-56 h-56 bg-gray-50 p-3 flex flex-col shadow-2xl rotate-[10deg] shadow-2xl">
+                        <div class="duration-500 contrast-50 h-36 bg-black hover:contrast-100">
+                            <img src="./images/5.jpg" alt="gambar2" class="">
+                        </div>
                     </div>
                 </div>
-
-                <div class="absolute translate-x-[10rem] translate-y-[4rem] w-56 h-56 bg-gray-50 p-3 flex flex-col shadow-4xl rotate-[10deg] shadow-2xl">
-                    <div class="duration-500 contrast-50 h-36 bg-black hover:contrast-100">
-                        <img src="./images/5.jpg" alt="gambar2" class="">
-                    </div>
-                </div>
-
-                <div class="absolute translate-x-[-5rem] translate-y-[2rem] self-end w-72 h-72 bg-gray-50 p-3 flex flex-col gap-1 shadow-2xl shadow-2xl rotate-[-5deg]">
-                    <div class="duration-500 contrast-50 h-52 bg-black hover:contrast-100 object-fit">
-                        <img src="./images/2.jpg" alt="gambar4" class="">
-                    </div>
-                </div> 
-
-                <div class="absolute translate-x-[-10rem] translate-y-[8rem] w-56 h-56 bg-gray-50 p-3 flex flex-col shadow-4xl rotate-[10deg] shadow-2xl">
-                    <div class="duration-500 contrast-50 h-36 bg-black hover:contrast-100">
-                        <img src="./images/5.jpg" alt="gambar2" class="">
-                    </div>
-                </div>
-            </div>
-        </div>        
+            </div>        
+        </div>
     </div>        
 
     <div class="text-white pt-60 bg-custom-75">
@@ -223,7 +224,7 @@
         <div id="gallery" class="relative w-full" data-carousel="slide">
             <!-- Carousel wrapper -->
             <div class="">
-                <div class="relative h-56 overflow-hidden rounded-xl md:h-80 my-8 mt-10 mx-10">
+                <div class="relative h-56 overflow-hidden rounded-xl md:h-80 my-8 mt-10 mx-10 ">
 
                     <div class="hidden duration-700 ease-in-out" data-carousel-item>
                         <img src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" 
@@ -454,6 +455,8 @@
     </div>
     
 </main>
+
+<script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 
 <script>
     function toggleAccordion(contentId, chevronId) {

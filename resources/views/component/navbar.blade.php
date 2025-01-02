@@ -85,13 +85,10 @@
                 </div>
             @else
                 <a href="{{ route('login.form') }}" class="mx-4 relative group"> 
-                    <button class="relative inline-block p-px font-semibold leading-6 text-white bg-gray-800 shadow-2xl cursor-pointer rounded-2xl shadow-zinc-900 transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95">
-                        <span class="absolute inset-0 rounded-2xl bg-gradient-to-r from-slate-100 via-slate-500 to-slate-900 p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                        </span>
-        
-                        <span class="relative z-10 block px-6 py-3 rounded-2xl bg-custom-100">
+                    <button class="relative inline-block p-px font-semibold leading-6 text-white bg-custom-300 shadow-lg cursor-pointer rounded-xl transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95 border-gray-100">
+                        <span class="relative z-10 block px-6 py-3 rounded-xl">
                             <div class="relative z-10 flex items-center space-x-2">
-                                <span class="transition-all duration-500 group-hover:translate-x-5 text-slate-100">Get started</span>
+                                <span class="transition-all duration-500 group-hover:translate-x-5 text-slate-100">Login</span>
                                 <svg class="w-6 h-6 transition-transform duration-500 group-hover:translate-x-3 group-hover" data-slot="icon" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                     <path clip-rule="evenodd" d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z" fill-rule="evenodd"></path>
                                 </svg>
@@ -104,7 +101,7 @@
     </div>    
 </nav>
 
-<header id="header" class="fixed top-20 w-full bg-custom-75 drop-shadow-xl transition-transform duration-500 ease-in-out z-40 rounded-b-xl">
+<header id="header" class="fixed top-20 w-full bg-custom-75 drop-shadow-xl transition-transform duration-500 ease-in-out z-40 rounded-b-2xl">
     <div class="mx-2 max-w-7xl px-2 py-4 sm:px-6 lg:px-4">
         <h1 class="lg:text-2xl md:text-lg font-bold tracking-tight text-custom-500">Yayasan Nurul Jadid</h1>
     </div>

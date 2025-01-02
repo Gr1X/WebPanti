@@ -121,7 +121,7 @@
                 </div>
                 <div class="flex items-center border border-gray-200 rounded px-4 py-2 dark:border-gray-700">
                     <input id="bordered-radio-2" type="radio" value="" name="bordered-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                    <label for="bordered-radio-2" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Complete</label>
+                    <label for="bordered-radio-2" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Confirmed</label>
                 </div>
                 <div class="flex items-center border border-gray-200 rounded px-4 py-2 dark:border-gray-700">
                     <input id="bordered-radio-3" type="radio" value="" name="bordered-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
@@ -142,30 +142,51 @@
             <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                 <thead class="text-sm text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400">
                     <tr>
-                        <th class="px-4 py-2">No</th>
                         <th class="px-4 py-2">User</th>
                         <th class="px-4 py-2">Jumlah</th>
                         <th class="px-4 py-2">Program</th>
                         <th class="px-4 py-2">Status</th>
+                        <th class="px-2 py-2">Bukti Bayar</th>
                         <th class="px-4 py-2">Action</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($payments as $payment)
-                        <tr>
-                            <td class="border px-4 py-2">{{ $loop->iteration }}</td>
-                            <td class="border px-4 py-2">{{ $payment->user->name }}</td>
-                            <td class="border px-4 py-2">Rp. {{ number_format($payment->jumlah, 2) }}</td>
-                            <td class="border px-4 py-2">{{ $payment->program_id }}</td>
-                            <td class="border px-4 py-2">
+                        <tr class="bg-white border-b border-gray-300 dark:bg-gray-800 dark:border-gray-700 last:border-b-0">
+                            <td class="px-4 py-2">{{ $payment->user->name }}</td>
+                            <td class="px-4 py-2">Rp. {{ number_format($payment->jumlah, 2) }}</td>
+                            <td class="px-4 py-2">{{ $payment->program_id }}</td>
+                            <td class="px-4 py-2">
                                 <span class="px-2 py-1 text-xs rounded-full 
-                                    {{ $payment->status === 'confirmed' ? 'bg-green-200 text-green-800' : '' }}
-                                    {{ $payment->status === 'pending' ? 'bg-yellow-200 text-yellow-800' : '' }}
-                                    {{ $payment->status === 'rejected' ? 'bg-red-200 text-red-800' : '' }}">
-                                    {{ ucfirst($payment->status) }}
+                                {{ $payment->status === 'confirmed' ? 'bg-green-200 text-green-800' : '' }}
+                                {{ $payment->status === 'pending' ? 'bg-yellow-200 text-yellow-800' : '' }}
+                                {{ $payment->status === 'rejected' ? 'bg-red-200 text-red-800' : '' }}">
+                                {{ ucfirst($payment->status) }}
                                 </span>
                             </td>
-                            <td class="border px-4 py-2 flex gap-2">
+                            <td class="px-6 py-4">
+                                @if($payment->gambar)
+                                    <img 
+                                        src="{{ asset('storage/' . $payment->gambar) }}" 
+                                        alt="{{ $payment->namaprogram }}" 
+                                        class="w-16 h-16 object-cover rounded cursor-pointer"
+                                        onclick="openModal(this.src)"
+                                    >
+                                @else
+                                    <span class="text-gray-500">No Image</span>
+                                @endif
+
+                                <!-- Modal Image Besar -->
+                                <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden">
+                                    <div class="bg-white rounded-lg overflow-hidden relative">
+                                        <button id="closeModal" class="absolute top-2 right-2 text-gray-700 bg-gray-200 rounded-full p-2 hover:bg-gray-300">
+                                            <ion-icon name="close-outline" class="size-5 flex self-center"></ion-icon>
+                                        </button>
+                                        <img id="modalImage" src="" alt="Bukti Bayar" class="w-auto h-auto max-w-screen-md max-h-screen">
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="px-4 py-2 flex gap-2">
                                 @if ($payment->status === 'waiting_confirmation')
                                     <form action="{{ route('admin.payments.confirm', $payment->id) }}" method="POST">
                                         @csrf
@@ -186,6 +207,27 @@
                 </tbody>
             </table>
         </div>
-
     </div>
+
+    <script>
+        const imageModal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        const closeModal = document.getElementById('closeModal');
+    
+        function openModal(imageSrc) {
+            modalImage.src = imageSrc;
+            imageModal.classList.remove('hidden');
+        }
+    
+        closeModal.addEventListener('click', () => {
+            imageModal.classList.add('hidden');
+        });
+    
+        // Close modal when clicking outside the image
+        imageModal.addEventListener('click', (e) => {
+            if (e.target === imageModal) {
+                imageModal.classList.add('hidden');
+            }
+        });
+    </script>    
 @stop

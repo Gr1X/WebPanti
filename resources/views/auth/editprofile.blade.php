@@ -25,21 +25,21 @@
                 <div>
                     <label for="name" class="block text-white text-lg mb-2">Nama Lengkap</label>
                     <input type="text" name="name" id="name" value="{{ old('name', $user->name) }}" 
-                           class="w-full p-3 rounded bg-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-sky-500">
+                        class="w-full p-3 rounded bg-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-sky-500">
                 </div>
 
                 <!-- Email -->
                 <div>
                     <label for="email" class="block text-white text-lg mb-2">Email</label>
                     <input type="email" name="email" id="email" value="{{ old('email', $user->email) }}" 
-                           class="w-full p-3 rounded bg-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-sky-500">
+                        class="w-full p-3 rounded bg-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-sky-500">
                 </div>
 
                 <!-- Nomor Telepon -->
                 <div>
                     <label for="no_telp" class="block text-white text-lg mb-2">Nomor Telepon</label>
                     <input type="text" name="no_telp" id="no_telp" value="{{ old('no_telp', $user->no_telp) }}" 
-                           class="w-full p-3 rounded bg-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-sky-500">
+                        class="w-full p-3 rounded bg-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-sky-500">
                 </div>
 
                 <!-- Gambar Profil -->
@@ -48,11 +48,11 @@
                     @if ($user->gambar)
                         <div class="mb-3">
                             <img src="{{ asset('storage/' . $user->gambar) }}" alt="Current Profile Picture" 
-                                 class="h-24 w-24 rounded-full object-cover">
+                                class="h-24 w-24 rounded-full object-cover">
                         </div>
                     @endif
                     <input type="file" name="gambar" id="gambar" 
-                           class="w-full p-3 rounded bg-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-sky-500">
+                        class="w-full p-3 rounded bg-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-sky-500">
                     <p class="text-gray-400 text-sm mt-1">Format yang diizinkan: JPG, PNG, maksimal 2MB.</p>
                 </div>
 

@@ -16,22 +16,49 @@ class AdminProgramController extends Controller
     public function dashboard(){
         // Ambil data yang diperlukan untuk dashboard
         $programs = Target::withSum('donasi', 'jumlah')->get(); // Ambil data program dan jumlah donasi
-
+        $programCount = Target::count(); 
         // Kirimkan data ke view
-        return view('admin.programs.dashboard', compact('programs',));
+        return view('admin.programs.dashboard', compact('programs', 'programCount'));
     }
 
-    public function index()
+        public function index(Request $request)
     {
-        // Ambil semua program dengan total donasi terkumpul
-        $programs = Target::withSum('donasi', 'jumlah')->get();
-        return view('admin.programs.index', compact('programs'));
+        // Ambil input pencarian
+        $search = $request->query('search');
+
+        // Hitung total program
+        $programCount = Target::count();
+
+        // Query program dengan filter pencarian
+        $programsQuery = Target::withSum('donasi', 'jumlah');
+
+        if ($search) {
+            $programsQuery = $programsQuery->where(function ($query) use ($search) {
+                $query->where('namaprogram', 'LIKE', "%{$search}%")
+                    ->orWhere('deskripsi', 'LIKE', "%{$search}%");
+            });
+        }
+
+        $programs = $programsQuery->get();
+
+        // Hitung status untuk setiap program
+        $programs = $programs->map(function ($program) {
+            $program->status = $program->donasi_sum_jumlah >= $program->jumlah_target ? 'complete' : 'ongoing';
+            return $program;
+        });
+
+        // Hitung jumlah program berdasarkan status
+        $completedCount = $programs->where('status', 'complete')->count();
+        $ongoingCount = $programs->where('status', 'ongoing')->count();
+
+        return view('admin.programs.index', compact('programs', 'programCount', 'completedCount', 'ongoingCount'));
     }
+
 
     /**
      * Show the form for creating a new program.
      */
-    public function create()
+    public function create()    
     {
         return view('admin.programs.create');
     }
