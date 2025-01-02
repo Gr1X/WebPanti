@@ -13,39 +13,61 @@
 
             <form action="{{ route('login.submit') }}" method="POST" class="mt-6">
                 @csrf
-
-                @if ($errors->any())
-                    <div class="mb-4 text-red-500">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                @endif
-
+                
+                {{-- Email Field --}}
                 <div class="grid gap-2 mb-4">
                     <label for="email" class="block text-sm font-medium text-custom-50 dark:text-custom-50">Email</label>
-                    <div class="flex items-center bg-custom-400 border border-gray-300 text-custom-50 rounded-xl block w-full p-0.5">
-                        <input type="email" id="email" name="email" class="w-full text-sm bg-transparent border-transparent focus:outline-none focus:ring-0 focus:border-none" placeholder="Input your email">
+                    <div class="flex items-center 
+                        bg-custom-400 
+                        border 
+                        rounded-xl 
+                        block w-full p-0.5 
+                        @error('email') border-red-500 @else border-gray-300 @enderror">
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            class="w-full text-sm bg-transparent border-transparent focus:outline-none focus:ring-0 focus:border-none" 
+                            placeholder="Input your email"
+                            value="{{ old('email') }}">
                     </div>
+                    @error('email')
+                        <span class="text-red-500 text-xs">{{ $message }}</span>
+                    @enderror
                 </div>
 
+                {{-- Password Field --}}
                 <div class="grid gap-2 mb-4">
                     <label for="password" class="block text-sm font-medium text-custom-50 dark:text-custom-50">Password</label>
-                    <div class="flex items-center bg-custom-400 border border-gray-300 text-custom-50 rounded-xl block w-full p-0.5">
-                        <input type="password" id="password" name="password" class="w-full text-sm bg-transparent border-transparent focus:outline-none focus:ring-0 focus:border-none" placeholder="Input your password">
+                    <div class="flex items-center 
+                        bg-custom-400 
+                        border 
+                        rounded-xl 
+                        block w-full p-0.5 
+                        @error('password') border-red-500 @else border-gray-300 @enderror">
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            class="w-full text-sm bg-transparent border-transparent focus:outline-none focus:ring-0 focus:border-none" 
+                            placeholder="Input your password">
                     </div>
+                    @error('password')
+                        <span class="text-red-500 text-xs">{{ $message }}</span>
+                    @enderror
                 </div>
 
+                {{-- Remember Me and Forgot Password --}}
                 <div class="flex items-center justify-between mb-4">
-                    <label class="text-sm text-gray-600">
-                        <input type="checkbox" name="remember" class="mr-1 rounded"> Remember Me
+                    <label class="flex items-center text-sm text-gray-600">
+                        <input type="checkbox" 
+                               name="remember" 
+                               class="mr-2 h-4 w-4 text-custom-300 focus:ring-custom-300 border-gray-300 rounded">
+                        <span class="text-custom-50">Remember Me</span>
                     </label>
-                    <!-- Update: Hubungkan tombol "Forgot Password" ke route "password.request" -->
-                    <a href="{{ route('password.request') }}" class="text-sm text-custom-300">Forgot Password?</a>
                 </div>
 
+                {{-- Submit Button --}}
                 <button type="submit" class="bg-custom-50 rounded-xl w-full py-3 my-8 text-white font-semibold shadow">Login</button>
             </form>
         </div>
