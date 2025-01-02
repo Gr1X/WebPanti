@@ -14,7 +14,7 @@ class ProfileController extends Controller
     public function index()
     {
         $user = Auth::user();
-        
+        $status =  
         // Ambil data donasi user dan urutkan dari yang terbaru
         $donasi = $user->donasi()->orderBy('waktu_donasi', 'desc')->get();
         

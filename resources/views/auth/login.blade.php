@@ -61,8 +61,8 @@
                 <div class="flex items-center justify-between mb-4">
                     <label class="flex items-center text-sm text-gray-600">
                         <input type="checkbox" 
-                               name="remember" 
-                               class="mr-2 h-4 w-4 text-custom-300 focus:ring-custom-300 border-gray-300 rounded">
+                                name="remember" 
+                                class="mr-2 h-4 w-4 text-custom-300 focus:ring-custom-300 border-gray-300 rounded">
                         <span class="text-custom-50">Remember Me</span>
                     </label>
                 </div>

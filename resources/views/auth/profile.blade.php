@@ -71,13 +71,13 @@
                     </div>
     
                     <!-- Ubah Kata Sandi -->
-                    <!-- <div class="flex justify-between items-center hover:bg-slate-900 hover:rounded p-2">
+                    {{-- <div class="flex justify-between items-center hover:bg-slate-900 hover:rounded p-2">
                         <a href="{{ route('password.edit') }}" class="flex gap-2 items-center">
                             <ion-icon name="lock-open-outline" class="bg-slate-400 p-2 size-5 rounded"></ion-icon>
                             <span class="text-white text-lg">Ubah Kata Sandi</span>
                         </a>
                         <ion-icon name="chevron-forward-outline" class="text-white size-8"></ion-icon>
-                    </div> -->
+                    </div> --}}
                 </div>
             </div>
     

@@ -10,7 +10,7 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 
-<body class="bg-black font-poppins">
+<body class="bg-black font-poppins bg-custom-375">
     <main class="bg-custom-375 h-screen">
         {{-- Call Register atau Login --}}
         <div class="fixed">
