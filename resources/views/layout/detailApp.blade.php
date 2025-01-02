@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 </head>
 
-<body class="overflow-x-hidden font-poppins bg-gray-100">
+<body class="overflow-x-hidden font-poppins bg-custom-375">
     <!-- Main Content -->
     <main>
         @yield('content')

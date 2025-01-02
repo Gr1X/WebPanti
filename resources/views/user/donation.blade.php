@@ -37,13 +37,15 @@
                         <p class="text-sm text-gray-700 mb-2">{{ Str::limit($target->deskripsi, 100) }}</p>
                         <hr class="my-4" />
 
-                        <!-- Progress Bar -->
                         @php
                             $terkumpul = $target->donasi_sum_jumlah ?? 0; // Total donasi yang terkumpul
                             $persentase = $target->jumlah_target > 0 ? round(($terkumpul / $target->jumlah_target) * 100, 2) : 0; // Hitung progress
+                            $displayPersentase = $persentase > 100 ? 100 : $persentase; // Batas maksimal persentase untuk tampilan progress bar
                         @endphp
                         <div class="w-full bg-gray-200 rounded-full dark:bg-custom-375 my-1">
-                            <div class="bg-custom-300 text-xs font-semibold text-center p-0.5 leading-none rounded-full shadow shadow-custom-400/70" style="width: {{ $persentase }}%">
+                            <div 
+                                class="bg-custom-300 text-xs font-semibold text-center p-0.5 leading-none rounded-full shadow shadow-custom-400/70" 
+                                style="width: {{ $displayPersentase }}%;">
                                 {{ $persentase }}%
                             </div>
                         </div>
