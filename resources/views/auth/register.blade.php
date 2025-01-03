@@ -8,7 +8,7 @@
             <h1 class="text-5xl font-bold mt-1 text-custom-50">Create New Account<span>.</span></h1>
             <div class="text-custom-50 my-2 mb-2 text-sm font-semibold">
                 Already have an account? 
-                <a href="{{ route('login.form') }}" class="text-custom-300">Login</a>
+                <a href="{{ route('login') }}" class="text-custom-300">Login</a>
             </div>
 
             <form action="{{ route('register.submit') }}" method="POST" class="mt-6">

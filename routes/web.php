@@ -18,6 +18,9 @@ use App\Http\Controllers\LandingController;
 use App\Http\Controllers\newsController;
 use App\Http\Controllers\ProgramController;
 use App\Http\Controllers\BeritaPantiController;
+use App\Http\Middleware\EnsureUserIsAdmin;
+use App\Http\Middleware\EnsureUserIsRegularUser;
+use App\Http\Middleware\Authenticate;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -45,7 +48,7 @@ Route::post('/donation/{id}/submit', [DonasiController::class, 'submitDonation']
 
 Route::middleware('guest')->group(function () {
     // Login
-    Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login.form');
+    Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
     Route::post('/login', [LoginController::class, 'login'])->name('login.submit');
 
     // Register

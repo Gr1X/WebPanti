@@ -7,7 +7,7 @@
             <h1 class="text-5xl font-semibold mt-1 text-white">Reset Password</h1>
             <div class="text-white mt-2 text-sm">
                 Remember your password? 
-                <a href="{{ route('login.form') }}" class="text-sky-500">Login</a>
+                <a href="{{ route('login') }}" class="text-sky-500">Login</a>
             </div>
 
             <form action="{{ route('password.update ') }}" method="POST" class="mt-6">

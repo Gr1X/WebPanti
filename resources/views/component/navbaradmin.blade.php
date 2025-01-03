@@ -150,7 +150,7 @@
                     </ul>
                 </div>
             @else
-                <a href="{{ route('login.form') }}" class="mx-4 relative group"> 
+                <a href="{{ route('login') }}" class="mx-4 relative group"> 
                     <button class="relative inline-block p-px font-semibold leading-6 text-white bg-custom-300 shadow-lg cursor-pointer rounded-xl transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95 border-gray-100">
                         <span class="relative z-10 block px-6 py-3 rounded-xl">
                             <div class="relative z-10 flex items-center space-x-2">

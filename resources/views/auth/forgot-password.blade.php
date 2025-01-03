@@ -8,7 +8,7 @@
             <h1 class="text-4xl font-bold mt-1 text-custom-50">Reset Password<span>.</span></h1>
             <div class="text-custom-50 my-2 mb-4 text-sm font-semibold">
                 Remembered your password? 
-                <a href="{{ route('login.form') }}" class="text-custom-300">Log in</a>
+                <a href="{{ route('login') }}" class="text-custom-300">Log in</a>
             </div>
 
             <form action="{{ route('password.request') }}" method="POST" class="mt-6">
