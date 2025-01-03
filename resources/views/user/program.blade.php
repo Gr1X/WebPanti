@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="bg-custom-400 min-h-screen px-14">
-        <div class="pt-16 w-full lg:pt-44 mb-8">
+        <div class="pt-16 w-full pt-44 lg:pt-44 mb-8">
             <div class="bg-custom-50 border border-custom-50 rounded-lg p-8 md:pt-16 md:p-12">
                 <h1 class="text-custom-500 text-4xl md:text-5xl font-semibold mb-2">Program</h1>
                 <p class="text-yellowAccent text-lg font-normal mb-6"></p>
@@ -10,73 +10,65 @@
         </div>
 
         <div class="my-8">
-            <div class="grid grid-cols-3 gap-2">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-2 text-center">
                 <!-- Card 1 -->
                 <div class="relative min-h-60 w-full flex flex-col justify-center items-center bg-white/40 backdrop-blur-lg shadow-lg border border-custom-50 rounded-lg p-6">
                     <div class="absolute inset-0 bg-gradient-to-b from-transparent via-white/50 to-transparent rounded-lg pointer-events-none"></div>
                     <ion-icon name="heart-outline" class="text-greenDark w-10 h-10 mb-4 z-10"></ion-icon>
-                    <h5 class="text-custom-50 text-2xl font-semibold z-10">Santunan Pekanan</h5>
-                    <p class="text-custom-50 text-sm mt-2 text-center z-10">No APIs created yet. Contact us for more details.</p>
+                    <h5 class="text-custom-50 text-lg lg:text-2xl font-semibold z-10">Santunan Pekanan</h5>
                 </div>
 
                 <!-- Card 2 -->
                 <div class="relative min-h-60 w-full flex flex-col justify-center items-center bg-white/40 backdrop-blur-lg shadow-lg border border-custom-50 rounded-lg p-6">
                     <div class="absolute inset-0 bg-gradient-to-b from-transparent via-white/50 to-transparent rounded-lg pointer-events-none"></div>
                     <ion-icon name="book-outline" class="text-greenDark w-10 h-10 mb-4 z-10"></ion-icon>
-                    <h5 class="text-custom-50 text-2xl font-semibold z-10">Lescalistung</h5>
-                    <p class="text-custom-50 text-sm mt-2 text-center z-10">No APIs created yet. Contact us for more details.</p>
+                    <h5 class="text-custom-50 text-lg lg:text-2xl font-semibold z-10">Lescalistung</h5>
                 </div>
 
                 <!-- Card 3 -->
                 <div class="relative min-h-60 w-full flex flex-col justify-center items-center bg-white/40 backdrop-blur-lg shadow-lg border border-custom-50 rounded-lg p-6">
                     <div class="absolute inset-0 bg-gradient-to-b from-transparent via-white/50 to-transparent rounded-lg pointer-events-none"></div>
                     <ion-icon name="language-outline" class="text-greenDark w-10 h-10 mb-4 z-10"></ion-icon>
-                    <h5 class="text-custom-50 text-2xl font-semibold z-10">Les Bahasa Inggris</h5>
-                    <p class="text-custom-50 text-sm mt-2 text-center z-10">No APIs created yet. Contact us for more details.</p>
+                    <h5 class="text-custom-50 text-lg lg:text-2xl font-semibold z-10">Les Bahasa Inggris</h5>
                 </div>
 
                         <!-- Card 4 -->
                 <div class="relative min-h-60 w-full flex flex-col justify-center items-center bg-white/40 backdrop-blur-lg shadow-lg border border-custom-50 rounded-lg p-6">
                     <div class="absolute inset-0 bg-gradient-to-b from-transparent via-white/50 to-transparent rounded-lg pointer-events-none"></div>
                     <ion-icon name="people-outline" class="text-greenDark w-10 h-10 mb-4 z-10"></ion-icon>
-                    <h5 class="text-custom-50 text-2xl font-semibold z-10">Doa Bersama</h5>
-                    <p class="text-custom-50 text-sm mt-2 text-center z-10">No APIs created yet. Contact us for more details.</p>
+                    <h5 class="text-custom-50 text-lg lg:text-2xl font-semibold z-10">Doa Bersama</h5>
                 </div>
 
                 <!-- Center Card (Logo / Highlight) -->
                 <div class="relative min-h-80 w-full flex flex-col justify-center items-center bg-gradient-to-r from-custom-50 to-greenDark text-white shadow-lg border border-lightGreen rounded-lg p-6">
                     <ion-icon name="home-outline" class="text-white w-16 h-16 mb-4 z-10"></ion-icon>
-                    <h2 class="text-3xl font-bold z-10">Yayasan Nurul Jadid</h2>
-                    <p class="text-white/80 text-base mt-2 text-center z-10">Membangun generasi Islami dengan pendidikan, kesehatan, dan sosial ekonomi.</p>
+                    <h2 class="text-md lg:text-3xl font-bold z-10">Yayasan Nurul Jadid</h2>
+                    <p class="text-white/80 text-base text-sm lg:text-md mt-2 text-center z-10">Membangun generasi Islami dengan pendidikan, kesehatan, dan sosial ekonomi.</p>
                 </div>
 
                     <!-- Card 5 -->
                 <div class="relative min-h-60 w-full flex flex-col justify-center items-center bg-white/40 backdrop-blur-lg shadow-lg border border-custom-50 rounded-lg p-6">
                     <div class="absolute inset-0 bg-gradient-to-b from-transparent via-white/50 to-transparent rounded-lg pointer-events-none"></div>
                     <ion-icon name="school-outline" class="text-greenDark w-10 h-10 mb-4 z-10"></ion-icon>
-                    <h5 class="text-custom-50 text-2xl font-semibold z-10">Beasiswa Pendidikan & Dhuafa</h5>
-                    <p class="text-custom-50 text-sm mt-2 text-center z-10">No APIs created yet. Contact us for more details.</p>
+                    <h5 class="text-custom-50 text-md lg:text-2xl font-semibold z-10">Beasiswa Pendidikan & Dhuafa</h5>
                 </div>
 
                 <div class="relative min-h-60 w-full flex flex-col justify-center items-center bg-white/40 backdrop-blur-lg shadow-lg border border-custom-50 rounded-lg p-6">
                     <div class="absolute inset-0 bg-gradient-to-b from-transparent via-white/50 to-transparent rounded-lg pointer-events-none"></div>
                     <ion-icon name="cash-outline" class="text-greenDark w-10 h-10 mb-4 z-10"></ion-icon>
-                    <h5 class="text-custom-50 text-2xl font-semibold z-10">Pemberdayaan Ekonomi Wali Yatim</h5>
-                    <p class="text-custom-50 text-sm mt-2 text-center z-10">No APIs created yet. Contact us for more details.</p>
+                    <h5 class="text-custom-50 text-md lg:text-2xl font-semibold z-10">Pemberdayaan Ekonomi Wali Yatim</h5>
                 </div>
 
                 <div class="relative min-h-60 w-full flex flex-col justify-center items-center bg-white/40 backdrop-blur-lg shadow-lg border border-custom-50 rounded-lg p-6">
                     <div class="absolute inset-0 bg-gradient-to-b from-transparent via-white/50 to-transparent rounded-lg pointer-events-none"></div>
                     <ion-icon name="nutrition-outline" class="text-greenDark w-10 h-10 mb-4 z-10"></ion-icon>
-                    <h5 class="text-custom-50 text-2xl font-semibold z-10">Program Peningkatan Gizi</h5>
-                    <p class="text-custom-50 text-sm mt-2 text-center z-10">No APIs created yet. Contact us for more details.</p>
+                    <h5 class="text-custom-50 text-md lg:text-2xl font-semibold z-10">Program Peningkatan Gizi</h5>
                 </div>
 
                 <div class="relative min-h-60 w-full flex flex-col justify-center items-center bg-white/40 backdrop-blur-lg shadow-lg border border-custom-50 rounded-lg p-6">
                     <div class="absolute inset-0 bg-gradient-to-b from-transparent via-white/50 to-transparent rounded-lg pointer-events-none"></div>
                     <ion-icon name="medical-outline" class="text-greenDark w-10 h-10 mb-4 z-10"></ion-icon>
-                    <h5 class="text-custom-50 text-2xl font-semibold z-10">Program Bantuan Kesehatan</h5>
-                    <p class="text-custom-50 text-sm mt-2 text-center z-10">No APIs created yet. Contact us for more details.</p>
+                    <h5 class="text-custom-50 text-md lg:text-2xl font-semibold z-10">Program Bantuan Kesehatan</h5>
                 </div>
             </div>
         </div>  
@@ -119,7 +111,7 @@
                                 <!-- Kartu di dalam modal -->
                                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-6 py-2">
                                     <!-- Kartu 1 -->
-                                    <a href="{{ route('program.volunteer.registerForm', 'pendidikan') }}" class="relative grid h-[32rem] max-w-lg flex-col items-end justify-center overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-500 opacity-0 transform translate-y-6">
+                                    <a href="{{ route('program.volunteer.registerForm', 'pendidikan') }}" class="relative grid h-[28rem] md:h-[32rem] max-w-lg flex-col items-end justify-center overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-500 opacity-0 transform translate-y-6">
                                         <div class="absolute inset-0 m-0 h-full w-full bg-[url('/public/images/guru.png')] bg-cover bg-center rounded-2xl">
                                             <div class="absolute inset-0 h-full w-full bg-gradient-to-t from-custom-75/100 via-custom-50/30 hover:from-custom-75/100 hover:via-custom-50/50"></div>
                                         </div>
@@ -130,7 +122,7 @@
                                     </a>
 
                                     <!-- Kartu 2 -->
-                                    <a href="{{ route('program.volunteer.registerForm', 'sosial') }}" class="relative grid h-[32rem] max-w-lg flex-col items-end justify-center overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-500 opacity-0 transform translate-y-6">
+                                    <a href="{{ route('program.volunteer.registerForm', 'sosial') }}" class="relative grid h-[28rem] md:h-[32rem] max-w-lg flex-col items-end justify-center overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-500 opacity-0 transform translate-y-6">
                                         <div class="absolute inset-0 m-0 h-full w-full bg-[url('/public/images/sosial2.jpeg')] bg-cover bg-center rounded-2xl">
                                             <div class="absolute inset-0 h-full w-full bg-gradient-to-t from-custom-75/100 via-custom-50/30 hover:from-custom-75/100 hover:via-custom-50/50"></div>
                                         </div>
@@ -141,7 +133,7 @@
                                     </a>
 
                                     <!-- Kartu 3 -->
-                                    <a href="{{ route('program.volunteer.registerForm', 'kesehatan') }}" class="relative grid h-[32rem] max-w-lg flex-col items-end justify-center overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-500 opacity-0 transform translate-y-6">
+                                    <a href="{{ route('program.volunteer.registerForm', 'kesehatan') }}" class="relative grid h-[28rem] md:h-[32rem] max-w-lg flex-col mb-6 items-end justify-center overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-500 opacity-0 transform translate-y-6">
                                         <div class="absolute inset-0 m-0 h-full w-full bg-[url('/public/images/dokter.jpg')] bg-cover bg-center rounded-2xl">
                                             <div class="absolute inset-0 h-full w-full bg-gradient-to-t from-custom-75/100 via-custom-50/30 hover:from-custom-75/100 hover:via-custom-50/50"></div>
                                         </div>
@@ -164,16 +156,16 @@
             <div class="mt-10">
                 <!-- Bagian Berita Program -->
                 <div class="mb-8">
-                    <h2 class="text-4xl font-bold text-custom-50 mb-6">Berita Program</h2>
+                    <h2 class="text-4xl font-bold text-custom-200 mb-6">Berita Program</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         @foreach($berita as $item)
-                            <div class="bg-custom-100 shadow-lg rounded-lg">
+                            <div class="bg-custom-50 shadow-lg rounded-lg">
                                 <img src="{{ asset('storage/' . $item->gambar) }}" alt="{{ $item->judul }}" class="rounded-t-lg h-60 w-full object-cover">
                                 <div class="p-6">
-                                    <h3 class="text-xl font-bold text-custom-50 mb-2">{{ $item->judul }}</h3>
-                                    <p class="text-custom-50 text-opacity-80 mb-4">{{ Str::limit($item->deskripsi, 100) }}</p>
+                                    <h3 class="text-2xl font-bold text-custom-200 mb-1">{{ $item->judul }}</h3>
+                                    <p class="text-custom-400 text-opacity-80 mb-4 text-sm font-medium">{{ Str::limit($item->deskripsi, 100) }}</p>
                                     <div class="w-full flex justify-end">
-                                        <a href="" class="m-2 hover:underline text-white">Baca Selengkapnya</a>
+                                        <a href="{{route('berita.details', $item->id)}}" class="m-2 hover:underline text-white">Baca Selengkapnya</a>
                                     </div>
                                 </div>
                             </div>

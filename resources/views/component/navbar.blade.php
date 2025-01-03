@@ -1,54 +1,102 @@
 <nav class="fixed top-0 z-50 w-full bg-slate-800 shadow-lg">
     <div class="flex justify-between items-center bg-custom-50">
+        <div>
+            <button class="text-center relative flex-shrink-0 px-2 py-2 my-2 md:hidden" type="button" data-drawer-target="drawer-nav" data-drawer-show="drawer-nav" aria-controls="drawer-nav">
+                <div class="inline-block flex flex-col items-center px-6 py-0.5 rounded-xl text-slate-100">    
+                    <ion-icon name="menu" class="size-5 my-1"></ion-icon>
+                    <p class="font-semibold text-sm">Menu</p>
+                </div>
+            </button>
+        </div>
         <!-- Navigation Menu -->
-        <ul class="flex">
-            <!-- Home -->
-            <li class="text-center group relative flex-shrink-0 px-2 py-2 my-2 hover:scale-105 duration-300">
-                <span class="absolute inset-x-0 top-0 h-0.5 group-hover:bg-custom-100 w-8 left-1/2 transform -translate-x-1/2"></span>
-                <a href="{{route('landing')}}" class="inline-block flex flex-col items-center group-hover:bg-custom-100 px-6 py-0.5 rounded-xl group-hover:shadow-xl text-slate-100 active:scale-95 duration-300">
-                    <ion-icon name="home" class="group-hover:scale-105 group-hover:size-5 size-5 my-1 duration-300"></ion-icon>
-                    <p class="font-semibold text-sm">Home</p>
-                </a>
-            </li>
+            <ul class="hidden md:flex">
+                <!-- Home -->
+                <li class="text-center group relative flex-shrink-0 px-2 py-2 my-2 hover:scale-105 duration-300">
+                    <span class="absolute inset-x-0 top-0 h-0.5 group-hover:bg-custom-100 w-8 left-1/2 transform -translate-x-1/2"></span>
+                    <a href="{{route('landing')}}" class="inline-block flex flex-col items-center group-hover:bg-custom-100 px-6 py-0.5 rounded-xl group-hover:shadow-xl text-slate-100 active:scale-95 duration-300">
+                        <ion-icon name="home" class="group-hover:scale-105 group-hover:size-5 size-5 my-1 duration-300"></ion-icon>
+                        <p class="font-semibold text-sm">Home</p>
+                    </a>
+                </li>
+            
+                <!-- Donation -->
+                <li class="text-center group relative flex-shrink-0 px-2 py-2 my-2 hover:scale-105 duration-300">
+                    <span class="absolute inset-x-0 top-0 h-0.5 group-hover:bg-custom-100 w-8 left-1/2 transform -translate-x-1/2"></span>
+                    <a href="{{route('donation')}}" class="inline-block flex flex-col items-center group-hover:bg-custom-100 px-6 py-0.5 rounded-xl group-hover:shadow-xl text-slate-100 active:scale-95 duration-300">
+                        <ion-icon name="heart" class="group-hover:scale-105 size-5 my-1 duration-300"></ion-icon>
+                        <p class="font-semibold text-sm">Donation</p>
+                    </a>
+                </li>
+            
+                <!-- Story -->
+                <li class="text-center group relative flex-shrink-0 px-2 py-2 my-2 hover:scale-105 duration-300">
+                    <span class="absolute inset-x-0 top-0 h-0.5 group-hover:bg-custom-100 w-8 left-1/2 transform -translate-x-1/2"></span>
+                    <a href="{{route('gallery')}}" class="inline-block flex flex-col items-center group-hover:bg-custom-100 px-6 py-0.5 rounded-xl group-hover:shadow-xl text-slate-100 active:scale-95 duration-300">
+                        <ion-icon name="film" class="group-hover:scale-105 size-5 my-1 duration-300"></ion-icon>                    
+                        <p class="font-semibold text-sm">Story</p>
+                    </a>
+                </li>
+            
+                <!-- Program -->
+                <li class="text-center group relative flex-shrink-0 px-2 py-2 my-2 hover:scale-105 duration-300">
+                    <span class="absolute inset-x-0 top-0 h-0.5 group-hover:bg-custom-100 w-8 left-1/2 transform -translate-x-1/2"></span>
+                    <a href="{{route('program')}}" class="inline-block flex flex-col items-center group-hover:bg-custom-100 px-6 py-0.5 rounded-xl group-hover:shadow-xl text-slate-100 active:scale-95 duration-300">
+                        <ion-icon name="flag" class="group-hover:scale-105 size-5 my-1 duration-500"></ion-icon>                        
+                        <p class="font-semibold text-sm">Program</p>
+                    </a>
+                </li>
+            
+                <!-- About Us -->
+                <li class="text-center group relative flex-shrink-0 px-2 py-2 my-2 hover:scale-105 duration-300">
+                    <span class="absolute inset-x-0 top-0 h-0.5 group-hover:bg-custom-100 w-8 left-1/2 transform -translate-x-1/2"></span>
+                    <a href="{{route('aboutus')}}" class="inline-block flex flex-col items-center group-hover:bg-custom-100 px-4 py-0.5 rounded-xl group-hover:shadow-xl text-slate-100 active:scale-95 duration-300">
+                        <ion-icon name="people" class="group-hover:scale-105 size-5 my-1 duration-500"></ion-icon>                  
+                        <p class="font-semibold text-sm">About Us</p>
+                    </a>
+                </li>
+            </ul>
+        <div id="drawer-nav" class="md:hidden fixed top-0 left-0 z-40 w-64 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-custom-75 shadow-xl" tabindex="-1" aria-labelledby="drawer-navigation-label">
+            <h5 id="drawer-navigation-label" class="text-base font-semibold text-custom-400 uppercase">Menu</h5>
+            <button type="button" data-drawer-hide="drawer-nav" aria-controls="drawer-nav" class="text-custom-400 bg-transparent rounded-lg text-sm p-1.5 absolute top-2.5 end-2.5 inline-flex items-center" >
+                <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                <span class="sr-only">Close menu</span>
+            </button>
+            <ul class="flex-col space-y-2">
+                <li class="border-t border-gray-300 my-3"></li>
+                <li>
+                    <a href="{{route('landing')}}" class="block text-white font-semibold pt-2">
+                        <ion-icon name="home" class="size-5 mr-2"></ion-icon> 
+                        <span class="font-semibold text-xl">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('donation')}}" class="block text-white font-semibold pt-2">
+                        <ion-icon name="heart" class="size-5 mr-2"></ion-icon> 
+                        <span class="font-semibold text-xl">Donation</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('gallery')}}" class="block text-white font-semibold pt-2">
+                        <ion-icon name="film" class="size-5 mr-2"></ion-icon> 
+                        <span class="font-semibold text-xl">Story</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('program')}}" class="block text-white font-semibold pt-2">
+                        <ion-icon name="flag" class="size-5 mr-2"></ion-icon> 
+                        <span class="font-semibold text-xl">Program</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('aboutus')}}" class="block text-white font-semibold pt-2">
+                        <ion-icon name="people" class="size-5 mr-2"></ion-icon> 
+                        <span class="font-semibold text-xl">About Us</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
         
-            <!-- Donation -->
-            <li class="text-center group relative flex-shrink-0 px-2 py-2 my-2 hover:scale-105 duration-300">
-                <span class="absolute inset-x-0 top-0 h-0.5 group-hover:bg-custom-100 w-8 left-1/2 transform -translate-x-1/2"></span>
-                <a href="{{route('donation')}}" class="inline-block flex flex-col items-center group-hover:bg-custom-100 px-6 py-0.5 rounded-xl group-hover:shadow-xl text-slate-100 active:scale-95 duration-300">
-                    <ion-icon name="heart" class="group-hover:scale-105 size-5 my-1 duration-300"></ion-icon>
-                    <p class="font-semibold text-sm">Donation</p>
-                </a>
-            </li>
-        
-            <!-- Story -->
-            <li class="text-center group relative flex-shrink-0 px-2 py-2 my-2 hover:scale-105 duration-300">
-                <span class="absolute inset-x-0 top-0 h-0.5 group-hover:bg-custom-100 w-8 left-1/2 transform -translate-x-1/2"></span>
-                <a href="{{route('gallery')}}" class="inline-block flex flex-col items-center group-hover:bg-custom-100 px-6 py-0.5 rounded-xl group-hover:shadow-xl text-slate-100 active:scale-95 duration-300">
-                    <ion-icon name="film" class="group-hover:scale-105 size-5 my-1 duration-300"></ion-icon>                    
-                    <p class="font-semibold text-sm">Story</p>
-                </a>
-            </li>
-        
-            <!-- Program -->
-            <li class="text-center group relative flex-shrink-0 px-2 py-2 my-2 hover:scale-105 duration-300">
-                <span class="absolute inset-x-0 top-0 h-0.5 group-hover:bg-custom-100 w-8 left-1/2 transform -translate-x-1/2"></span>
-                <a href="{{route('program')}}" class="inline-block flex flex-col items-center group-hover:bg-custom-100 px-6 py-0.5 rounded-xl group-hover:shadow-xl text-slate-100 active:scale-95 duration-300">
-                    <ion-icon name="flag" class="group-hover:scale-105 size-5 my-1 duration-500"></ion-icon>                        
-                    <p class="font-semibold text-sm">Program</p>
-                </a>
-            </li>
-        
-            <!-- About Us -->
-            <li class="text-center group relative flex-shrink-0 px-2 py-2 my-2 hover:scale-105 duration-300">
-                <span class="absolute inset-x-0 top-0 h-0.5 group-hover:bg-custom-100 w-8 left-1/2 transform -translate-x-1/2"></span>
-                <a href="{{route('aboutus')}}" class="inline-block flex flex-col items-center group-hover:bg-custom-100 px-4 py-0.5 rounded-xl group-hover:shadow-xl text-slate-100 active:scale-95 duration-300">
-                    <ion-icon name="people" class="group-hover:scale-105 size-5 my-1 duration-500"></ion-icon>                  
-                    <p class="font-semibold text-sm">About Us</p>
-                </a>
-            </li>
-        </ul>
-        
-        <div class="mx-5">
+        <div class="mx-5 ml-auto">
             @if(Auth::check())
                 <img id="avatarButton" type="button" data-dropdown-toggle="userDropdown" data-dropdown-placement="bottom-start" 
                     class="w-10 h-10 rounded-full cursor-pointer object-cover" 

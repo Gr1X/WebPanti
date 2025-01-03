@@ -5,7 +5,7 @@
 
         {{-- HEADING --}}
         <div class="flex justify-between items-center mb-4">
-            <h1 class="text-4xl font-bold">Berita</h1>
+            <h1 class="text-5xl font-bold">Berita</h1>
         </div>
 
 
@@ -41,14 +41,13 @@
             </a>
         </div>
 
-
         {{-- GARIS --}}
         <hr/>
         
         {{-- TABLES --}}
         <div class="relative overflow-x-hidden rounded-lg mt-4">
             <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                <thead class="text-sm text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400">
+                <thead class="text-sm text-custom-500 uppercase bg-custom-300">
                     <tr>
                         <th class="px-6 py-5">Gambar</th>
                         <th class="px-6 py-5">Judul</th>
@@ -60,7 +59,7 @@
                 </thead>
                 <tbody>
                     @forelse ($datas as $data)
-                    <tr class="bg-white border-b border-gray-300 dark:bg-gray-800 dark:border-gray-700 last:border-b-0">                      
+                    <tr class="bg-custom-400 border-b border-custom-300 last:border-b-0">
                         <!-- Display Image -->
                         <td class="px-6 py-4">
                             @if($data->gambar)
@@ -69,20 +68,19 @@
                                 <span class="text-gray-500">No Image</span>
                             @endif
                         </td>
-
+        
                         <td class="px-6 py-4 truncate">{{ $data->judul }}</td>
-
+        
                         <td class="px-6 py-4 break-words whitespace-normal">{{ $data->deskripsi }}</td>
-
+        
                         <td class="px-6 py-4 max-w-2xs truncate">
                             {{ \Carbon\Carbon::parse($data->tanggal_publikasi)->format('d F Y') }}
                         </td>
-                        
-
+        
                         <td class="px-6 py-4 max-w-2xs truncate">
                             {{ $data->tanggal_publikasi }}
                         </td>     
-                
+        
                         <td class="px-6 py-4">
                             <div class="relative inline-block text-left">
                                 <button id="dropdownDefaultButton" data-dropdown-toggle="dropdownAction{{ $data->id }}" class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-4 py-2 text-center inline-flex items-center" type="button">
@@ -93,7 +91,7 @@
                                 </button>
         
                                 <!-- Dropdown menu -->
-                                <div id="dropdownAction{{ $data->id }}" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                                <div id="dropdownAction{{ $data->id }}" class="z-10 hidden bg-custom-500 divide-y divide-gray-100 rounded-lg shadow w-44">
                                     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
                                         <li>
                                             <a href="{{ route('admin.news.edit', $data->id) }}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
@@ -111,15 +109,15 @@
                                 </div>
                             </div>
                         </td>
-                        @empty
-                        <tr>
-                            <td colspan="8" class="py-2 px-4 text-center border border-gray-300">Belum ada program.</td>
-                        </tr>
-                        @endforelse
                     </tr>
+                    @empty
+                    <tr>
+                        <td colspan="8" class="py-2 px-4 text-center border border-custom-300">Belum ada program.</td>
+                    </tr>
+                    @endforelse
                 </tbody>
             </table>
         </div>
-
+        
     </div>
 @endsection

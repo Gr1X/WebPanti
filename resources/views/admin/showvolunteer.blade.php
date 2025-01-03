@@ -3,13 +3,14 @@
 @section('content')
 <div class="m-10">
     <div class="mb-4">
-        <h2 class="text-4xl font-bold">Volunteer</h2>
+        <h2 class="text-5xl font-bold">Volunteer</h2>
     </div>
 
     {{-- CARD INFO --}}
     <div class="grid grid-cols-3 gap-4 my-4">
-        <div class="bg-gray-800 p-4 rounded-xl shadow">
-            <h3 class="text-sm font-medium text-gray-400">Total Volunteer</h3>
+        {{-- Total Volunteer --}}
+        <div class="bg-custom-50 p-4 rounded-2xl shadow">
+            <h3 class="text-md font-semibold text-custom-200">Total Volunteer</h3>
             <div class="flex gap-2">
                 <p class="text-3xl font-bold text-white mt-2">
                     {{ $jumlahVol }}
@@ -19,15 +20,17 @@
 
         {{-- Gender --}}
         <div class="grid grid-cols-2 gap-2 text-center">
-            <div class="bg-gray-800 p-4 rounded-xl shadow">
-                <h3 class="text-sm font-medium text-gray-400">Laki-laki</h3>
+            {{-- Laki-laki --}}
+            <div class="bg-custom-50 p-4 rounded-2xl shadow">
+                <h3 class="text-md font-semibold text-custom-200">Laki-laki</h3>
                 <p class="text-3xl font-bold text-white mt-2 text-center">
                     {{ $genderCounts['Laki-laki'] ?? 0 }}
                 </p>
             </div>
 
-            <div class="bg-gray-800 p-4 rounded-xl shadow">
-                <h3 class="text-sm font-medium text-gray-400">Perempuan</h3>
+            {{-- Perempuan --}}
+            <div class="bg-custom-50 p-4 rounded-2xl shadow">
+                <h3 class="text-md font-semibold text-custom-200">Perempuan</h3>
                 <p class="text-3xl font-bold text-white mt-2">
                     {{ $genderCounts['Perempuan'] ?? 0 }}
                 </p>
@@ -36,22 +39,25 @@
 
         {{-- Bidang --}}
         <div class="grid grid-cols-3 gap-2 text-center">
-            <div class="bg-gray-800 p-4 rounded-xl shadow">
-                <h3 class="text-sm font-medium text-gray-400">Dokter</h3>
+            {{-- Dokter --}}
+            <div class="bg-custom-50 p-4 rounded-2xl shadow">
+                <h3 class="text-md font-semibold text-custom-200">Dokter</h3>
                 <p class="text-3xl font-bold text-white mt-2 text-center">
                     {{ $bidangCounts['dokter'] ?? 0 }}
                 </p>
             </div>
 
-            <div class="bg-gray-800 p-4 rounded-xl shadow">
-                <h3 class="text-sm font-medium text-gray-400">Sosial</h3>
+            {{-- Sosial --}}
+            <div class="bg-custom-50 p-4 rounded-2xl shadow">
+                <h3 class="text-md font-semibold text-custom-200">Sosial</h3>
                 <p class="text-3xl font-bold text-white mt-2">
                     {{ $bidangCounts['sosial'] ?? 0 }}
                 </p>
             </div>
 
-            <div class="bg-gray-800 p-4 rounded-xl shadow">
-                <h3 class="text-sm font-medium text-gray-400">Pendidikan</h3>
+            {{-- Pendidikan --}}
+            <div class="bg-custom-50 p-4 rounded-2xl shadow">
+                <h3 class="text-md font-semibold text-custom-200">Pendidikan</h3>
                 <p class="text-3xl font-bold text-white mt-2">
                     {{ $bidangCounts['pendidikan'] ?? 0 }}
                 </p>
@@ -59,7 +65,7 @@
         </div>
     </div>
 
-    {{-- SEARCH --}}
+
     {{-- SEARCH --}}
     <div class="flex justify-between my-2 gap-4">
         <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
@@ -95,8 +101,8 @@
     @endif
 
     <div class="relative overflow-x-auto rounded-xl">
-        <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 ">
-            <thead class="text-sm text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400">
+        <table class="w-full text-sm text-left rtl:text-right text-gray-800">
+            <thead class="text-sm text-custom-500 uppercase bg-custom-300">
                 <tr>
                     <th scope="col" class="px-6 py-5">Nama</th>
                     <th scope="col" class="px-6 py-5">Email</th>
@@ -110,22 +116,22 @@
             </thead>
             <tbody>
                 @foreach($volunteers as $volunteer)
-                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200 last:border-b-0">
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                <tr class="bg-custom-400 border-b border-custom-300 last:border-b-0">
+                    <th scope="row" class="px-6 py-4 font-medium text-custom-50 whitespace-nowrap">
                         {{ $volunteer->nama }}
                     </th>
-                    <td class="px-6 py-4">{{ $volunteer->email }}</td>
-                    <td class="px-6 py-4">{{ $volunteer->no_telp }}</td>
-                    <td class="px-6 py-4">{{ $volunteer->alamat }}</td>
-                    <td class="px-6 py-4">{{ $volunteer->gender }}</td>
-                    <td class="px-6 py-4">{{ ucfirst($volunteer->bidang) }}</td>
-                    <td class="px-6 py-4">{{ $volunteer->catatan ?? '-' }}</td>
+                    <td class="px-6 py-4 text-custom-50">{{ $volunteer->email }}</td>
+                    <td class="px-6 py-4 text-custom-50">{{ $volunteer->no_telp }}</td>
+                    <td class="px-6 py-4 text-custom-50">{{ $volunteer->alamat }}</td>
+                    <td class="px-6 py-4 text-custom-50">{{ $volunteer->gender }}</td>
+                    <td class="px-6 py-4 text-custom-50">{{ ucfirst($volunteer->bidang) }}</td>
+                    <td class="px-6 py-4 text-custom-50">{{ $volunteer->catatan ?? '-' }}</td>
                     <td class="px-6 py-4">
                         <!-- Tombol Delete -->
                         <form action="{{ route('admin.volunteers.destroy', $volunteer->id) }}" method="POST" class="inline-block">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="text-red-600 hover:text-red-800">
+                            <button type="submit" class="text-red-500 hover:text-red-700">
                                 Hapus
                             </button>
                         </form>
@@ -135,5 +141,6 @@
             </tbody>
         </table>
     </div>
+    
 </div>
 @endsection

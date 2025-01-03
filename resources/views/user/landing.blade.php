@@ -220,71 +220,7 @@
         </div>        
     </div>
 
-    <div class="">
-        <div id="gallery" class="relative w-full" data-carousel="slide">
-            <!-- Carousel wrapper -->
-            <div class="">
-                <div class="relative h-56 overflow-hidden rounded-xl md:h-80 my-8 mt-10 mx-10 ">
-
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                        <img src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" 
-                            alt="Gambar 1" 
-                            class="absolute w-full h-full object-cover">
-                    </div>
-
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-                        <img src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg" 
-                            alt="Gambar 2" 
-                            class="absolute w-full h-full object-cover">
-                    </div>
-
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                        <img src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" 
-                            alt="Gambar 3" 
-                            class="absolute w-full h-full object-cover">
-                    </div>
-
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                        <img src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" 
-                            alt="Gambar 4" 
-                            class="absolute w-full h-full object-cover">
-                    </div>
-
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                        <img src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" 
-                            alt="Gambar 5" 
-                            class="absolute w-full h-full object-cover">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slider indicators -->
-            <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
-                <button type="button" class="w-2.5 h-2.5 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-                <button type="button" class="w-2.5 h-2.5 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-                <button type="button" class="w-2.5 h-2.5 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-                <button type="button" class="w-2.5 h-2.5 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
-                <button type="button" class="w-2.5 h-2.5 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
-            </div>
-        
-            <!-- Slider controls -->
-            {{-- <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-700/30 group-hover:bg-gray-700/50">
-                    <svg class="w-5 h-5 text-gray" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
-                    </svg>
-                    <span class="sr-only">Previous</span>
-                </span>
-            </button>
-            <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-700/30 group-hover:bg-gray-700/50">
-                    <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 9l4-4-4-4"/>
-                    </svg>
-                    <span class="sr-only">Next</span>
-                </span>
-            </button> --}}
-        </div>        
+    <div class="">    
     </div>
         
     <div class="flex justify-between gap-4 pb-10 px-10 py-10">

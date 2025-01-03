@@ -37,9 +37,27 @@
                     </div>
                 </div>
 
-                <button type="submit" class="bg-custom-50 rounded-xl w-full py-3 my-8 text-white font-semibold shadow">Send Password Reset Link</button>
+                <button id="reset-button" type="submit" class="bg-custom-50 rounded-xl w-full py-3 my-8 text-white font-semibold shadow">
+                    <span id="reset-text">Send Password Reset Link</span>
+                    <span id="reset-spinner" class="hidden">
+                        <svg class="animate-spin h-5 w-5 text-white mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 000 8H4z"></path>
+                        </svg>
+                    </span>
+                </button>                
             </form>
         </div>
     </div>
 </div>
+
+<script>
+    document.getElementById('reset-button').addEventListener('click', function() {
+    const text = document.getElementById('reset-text');
+    const spinner = document.getElementById('reset-spinner');
+
+    text.classList.add('hidden');
+    spinner.classList.remove('hidden');
+});
+</script>
 @stop

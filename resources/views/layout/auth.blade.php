@@ -10,7 +10,7 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 
-<body class="bg-black font-poppins">
+<body class="bg-black font-poppins bg-custom-375">
     <main class="bg-custom-375 h-screen">
         {{-- Call Register atau Login --}}
         <div class="fixed">
@@ -18,9 +18,9 @@
         </div>
         <div class="flex justify-between">
             @yield('formAuth')
-            <div class="bg-emerald-900 h-screen w-[35rem] rounded-bl-[15rem]">
-                <div class="flex justify-center items-center h-full">
-                    <div class="flex justify-between">
+            <div class="hidden md:block bg-emerald-900 h-screen w-[15rem] lg:w-[35rem] rounded-bl-[15rem]">
+                <div class="flex justify-center items-center h-full mx-3">
+                    <div class="flex justify-between text-center">
                         <div class="grid">
                             <span class="text-custom-500 text-2xl font-bold">Panti Asuhan <span class="m-0 p-0 text-2xl font-bold text-custom-200">Nurul Jadid</span></span>
                             <span class="text-custom-50 text-md text-center font-semibold font-italic text-white">Tangerang</span>

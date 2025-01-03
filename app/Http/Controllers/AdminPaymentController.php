@@ -10,7 +10,15 @@ class AdminPaymentController extends Controller
     public function index(Request $request)
     {
         $query = Donasi::with('user', 'target');
-    
+        $jumlahTransaksi = Donasi::count();
+        $jumlahDonasi = Donasi::sum('jumlah');
+        $totalHari = Donasi::selectRaw('DATE(waktu_donasi) as tanggal')
+            ->distinct()
+            ->count('waktu_donasi');
+
+        // Hitung rata-rata donasi per hari
+        $donasiRataHari = $totalHari > 0 ? $jumlahDonasi / $totalHari : 0;  
+
         // Filter berdasarkan nama donatur
         if ($request->has('search') && $request->search != '') {
             $query->whereHas('user', function ($q) use ($request) {
@@ -25,7 +33,7 @@ class AdminPaymentController extends Controller
     
         $payments = $query->get();
     
-        return view('admin.payments.index', compact('payments'));
+        return view('admin.payments.index', compact('payments', 'jumlahDonasi', 'donasiRataHari', 'jumlahTransaksi' ));
     }  
 
     public function confirm($id)

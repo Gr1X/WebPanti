@@ -44,7 +44,7 @@ class EditGalleryController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'gambar' => 'required|image|max:2048',
+            'gambar' => 'required|image|max:10240',
             'tgl_gallery' => 'required|date',
         ]);
 
