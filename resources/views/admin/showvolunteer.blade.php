@@ -1,13 +1,13 @@
 @extends('layout.admin')
 
 @section('content')
-<div class="m-10">
+<div class="my-10 mx-4 md:m-10">
     <div class="mb-4">
         <h2 class="text-5xl font-bold">Volunteer</h2>
     </div>
 
     {{-- CARD INFO --}}
-    <div class="grid grid-cols-3 gap-4 my-4">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 my-4">
         {{-- Total Volunteer --}}
         <div class="bg-custom-50 p-4 rounded-2xl shadow">
             <h3 class="text-md font-semibold text-custom-200">Total Volunteer</h3>
@@ -69,7 +69,7 @@
     {{-- SEARCH --}}
     <div class="flex justify-between my-2 gap-4">
         <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
-        <form action="{{ route('admin.volunteers.index') }}" method="GET" class="mb-2 w-2/5 self-center rounded-xl">   
+        <form action="{{ route('admin.volunteers.index') }}" method="GET" class="mb-2 md:w-2/5 self-center rounded-xl">   
             <div class="relative flex gap-2">
                 <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                     <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">

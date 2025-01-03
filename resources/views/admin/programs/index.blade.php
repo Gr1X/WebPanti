@@ -9,7 +9,7 @@
         </div>
         
         {{-- CARD INFO  --}}
-        <div class="grid grid-cols-3 gap-4 my-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-4">
             <div class="bg-custom-50 p-4 rounded-xl shadow">
                 <h3 class="text-md font-semibold text-custom-200">Total Program</h3>
                 <div class="flex gap-2">
@@ -37,9 +37,9 @@
 
 
         {{-- SEARCH & CREATE PROGRAM --}}
-        <div class="flex justify-between my-2 gap-4 ">
+        <div class="grid grid-cols-1 md:flex justify-between my-2 md:gap-4">
             <label for="default-search" class="mb-2 text-sm font-medium text-custom-50 sr-only">Search</label>
-            <form action="{{ route('admin.programs.index') }}" method="GET" class="mb-2 w-2/5 self-center rounded-xl">   
+            <form action="{{ route('admin.programs.index') }}" method="GET" class="mb-4 md:mb-2 md:w-2/5 self-center rounded-xl">   
                 <div class="relative flex gap-2">
                     <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                         <svg class="w-4 h-4 text-custom-50" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
@@ -68,7 +68,7 @@
 
         {{-- FILTER  --}}
         <div class="flex my-4 space-x-4 w-full items-center">
-            <form action="{{ route('admin.programs.index') }}" method="GET" class="grid grid-cols-4 gap-4 w-1/2">
+            <form action="{{ route('admin.programs.index') }}" method="GET" class="grid grid-cols-2 md:grid-cols-4 gap-4 lg:w-1/2">
                 <input type="hidden" name="search" value="{{ request('search') }}">
         
                 <!-- Semua -->

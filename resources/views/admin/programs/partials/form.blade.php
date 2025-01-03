@@ -4,7 +4,7 @@
         @method('PUT')
     @endif
 
-    <div class="grid grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 md:gap-6">
         <!-- Kolom Upload Gambar -->
         <div>
             <label for="gambar" class="block text-sm font-medium text-gray-700">Upload Gambar</label>

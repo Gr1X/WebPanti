@@ -4,7 +4,7 @@
         @method('PUT')
     @endif
 
-    <div class="grid grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 md:gap-6">
         <!-- Kolom Upload Gambar -->
         <div>
             <label class="block text-sm font-medium text-gray-700">Upload Gambar</label>
@@ -29,7 +29,7 @@
         </div>
 
         <!-- Kolom Input -->
-        <div class="col-span-2 space-y-4">
+        <div class="col-span-2 space-y-4 mt-4 md:mt-0">
             <!-- Judul Berita -->
             <div>
                 <label for="judul" class="block text-sm font-medium text-gray-700">Judul Berita</label>

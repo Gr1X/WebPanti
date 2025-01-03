@@ -8,7 +8,7 @@
         </div>
 
         {{-- CARD INFO  --}}
-        <div class="grid grid-cols-3 gap-4 mb-4">
+        <div class="grid md:grid-cols-3 gap-4 mb-4">
             <div class="bg-custom-50 p-4 rounded-2xl shadow">
                 <div class="flex justify-between">
                     <h3 class="text-md font-semibold text-custom-200">Pendapatan Donasi</h3>
@@ -42,7 +42,7 @@
         {{-- SEARCH --}}
         <div class="flex justify-between my-2 gap-4">
             <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
-            <form method="GET" action="{{ route('admin.payments.index') }}" class="mb-2 w-2/5 self-center rounded-xl">
+            <form method="GET" action="{{ route('admin.payments.index') }}" class="mb-2 md:w-2/5 self-center rounded-xl">
                 <div class="relative flex gap-2">
                     <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                         <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
@@ -60,7 +60,7 @@
 
         {{-- FILTER --}}
         <div class="flex my-4 space-x-4 w-full items-center">
-            <div class="grid grid-cols-4 gap-4 w-1/2">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:w-2/3">
                 <!-- Semua -->
                 <div class="flex items-center border border-gray-200 rounded px-4 py-2 dark:border-gray-700 bg-pink-100 text-pink-800">
                     <input 
@@ -109,7 +109,7 @@
 
         
         {{-- TABEL ACCEPTING PAYMENT --}}
-        <div class="relative overflow-x-hidden rounded-lg">
+        <div class="relative overflow-x-auto rounded-lg">
             <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                 <thead class="text-sm text-custom-500 uppercase bg-custom-300">
                     <tr>

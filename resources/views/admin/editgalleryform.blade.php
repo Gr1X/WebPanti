@@ -1,7 +1,7 @@
 @extends('layout.admin')
 
 @section('content')
-<div class="m-10">
+<div class="my-10 mx-4">
     <div class="">
         <h1 class="text-4xl font-bold mb-4">Edit Foto</h1>
     </div>
@@ -22,9 +22,9 @@
             @method('PUT')
             <div class="border-dashed border-custom-200 p-2 border-4 rounded-xl">
                 <div class="bg-custom-50 p-6 rounded-xl">
-                    <div class="flex justify-between gap-6">
+                    <div class="grid grid-cols-1 md:flex justify-between md:gap-6">
                         <!-- Kolom Upload Gambar -->
-                        <div class="w-1/2">
+                        <div class="md:w-1/2">
                             <div id="dropzone" class="mt-1 flex justify-center items-center px-6 pt-5 pb-6 border-4 border-dashed rounded-xl relative min-h-[360px] cursor-pointer" onclick="triggerFileInput()">
                                 <div id="upload-prompt" class="space-y-1 text-center">
                                     <ion-icon name="cloud-upload-outline" class="mx-auto h-16 w-16 text-gray-400"></ion-icon>
@@ -44,7 +44,7 @@
                         </div>
                 
                         <!-- Kolom Kalender -->
-                    <div class="w-1/2">
+                    <div class="md:w-1/2 mt-6 md:mt-0">
                         <div id="datepicker-container" class="h-full">
                             <div id="datepicker-inline" class="w-full"></div>
                             <input type="hidden" id="tgl_gallery" name="tgl_gallery" value="{{ $gallery->tgl_gallery }}" required>

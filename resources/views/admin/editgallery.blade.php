@@ -1,7 +1,7 @@
 @extends('layout.admin')
 
 @section('content')
-<div class="m-10">
+<div class="my-10 mx-4 md:m-10">
     <div class="">
         <h1 class="text-5xl font-bold mb-4">Gallery</h1>
     </div>
