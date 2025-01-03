@@ -12,17 +12,19 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex text-white justify-end gap-6 me-2">
-                    <a href="">
-                        <ion-icon name="logo-whatsapp" class="size-7"></ion-icon>
-                    </a>
+                            <div class="flex text-white justify-end gap-6 me-2">
+                <a href="https://wa.me/6281213688074" target="_blank">
+                    <ion-icon name="logo-whatsapp" class="size-7"></ion-icon>
+                </a>
+                <a href="https://www.instagram.com/yayasan_nurul_jadid?igsh=MXFhMm1idTlneHU2bw==" target="_blank">
                     <ion-icon name="logo-instagram" class="size-7"></ion-icon>
+                </a>
+                <a href="https://www.facebook.com/yayasan.nuruljadid" target="_blank">
                     <ion-icon name="logo-facebook" class="size-7"></ion-icon>
-                </div>
+                </a>
             </div>
-
+            </div>
         </div>
-        
         <hr class="my-4 mx-2">
 
         <div class="my-2 text-center">
