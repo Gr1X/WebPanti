@@ -184,7 +184,7 @@
                         <td class="px-6 py-4">
                             <div class="relative inline-block text-left">
                                 <button id="dropdownDefaultButton" data-dropdown-toggle="dropdownAction{{ $program->id }}" 
-                                    class=" hover:bg-custom-100 font-medium rounded-lg text-sm px-4 py-2 text-center inline-flex items-center" 
+                                    class=" hover:bg-custom-100 font-medium rounded-lg text-sm px-4 py-2 text-center inline-flex items-center bg-custom-50 hover:text-white" 
                                     type="button">
                                     Action
                                     <svg class="w-2.5 h-2.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
@@ -193,24 +193,19 @@
                                 </button>
 
                                 <!-- Dropdown menu -->
-                                <div id="dropdownAction{{ $program->id }}" class="z-10 hidden bg-custom-500 divide-y divide-gray-100 rounded-lg shadow w-22">
+                                <div id="dropdownAction{{ $program->id }}" class="z-10 hidden bg-custom-75 divide-y divide-gray-100 rounded-lg shadow w-22">
                                     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
                                         <li>
-                                            <a href="{{ route('admin.programs.edit', $program->id) }}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
+                                            <a href="{{ route('admin.programs.edit', $program->id) }}" class="block px-4 py-2 hover:bg-gray-100">Edit</a>
                                         </li>
                                         <li>
                                             <form action="{{ route('admin.programs.destroy', $program->id) }}" method="POST" class="inline-block">
                                                 @csrf
                                                 @method('DELETE')
-                                                <button type="submit" class="block px-4 py-2 text-left w-full hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" onclick="return confirm('Yakin ingin menghapus program ini?')">
+                                                <button type="submit" class="block px-4 py-2 text-left w-full hover:bg-gray-100" onclick="return confirm('Yakin ingin menghapus program ini?')">
                                                     Delete
                                                 </button>
                                             </form>
-                                        </li>
-                                        <li>
-                                            <button class="block px-4 py-2 text-left w-full hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" onclick="alert('Close action executed!')">
-                                                Close
-                                            </button>
                                         </li>
                                     </ul>
                                 </div>
