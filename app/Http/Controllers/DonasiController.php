@@ -65,7 +65,7 @@ class DonasiController extends Controller
             'jumlah' => 'required|numeric|min:1',
             'payment_method' => 'required|string', // Tipe pembayaran (misalnya 'mandiri', 'bri', dll.)
             'notes' => 'nullable|string|max:255',
-            'gambar' => 'required|image|mimes:jpeg,png,jpg|max:2048', // Bukti transfer
+            'gambar' => 'required|image|mimes:jpeg,png,jpg|max:10240', // Bukti transfer
         ]);
         
         try {

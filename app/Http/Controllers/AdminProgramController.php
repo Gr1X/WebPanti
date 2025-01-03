@@ -149,7 +149,7 @@ class AdminProgramController extends Controller
             'namaprogram' => 'required|string|max:255',
             'deskripsi' => 'nullable|string',
             'jumlah_target' => 'nullable|numeric',
-            'gambar' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
+            'gambar' => 'nullable|image|mimes:jpeg,png,jpg|max:10240',
             'tgl_mulai' => 'required|date',
             'tgl_selesai' => 'nullable|date|after_or_equal:tgl_mulai',
         ]);
@@ -191,7 +191,7 @@ class AdminProgramController extends Controller
             'namaprogram' => 'required|string|max:255',
             'deskripsi' => 'nullable|string',
             'jumlah_target' => 'nullable|numeric',
-            'gambar' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
+            'gambar' => 'nullable|image|mimes:jpeg,png,jpg|max:10240',
             'tgl_mulai' => 'required|date',
             'tgl_selesai' => 'nullable|date|after_or_equal:tgl_mulai',
         ]);
