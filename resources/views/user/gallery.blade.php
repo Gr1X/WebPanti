@@ -40,6 +40,10 @@
                     class="bg-custom-100 text-white m-2 rounded-lg p-2 text-center {{ request('year') == '2024' ? 'bg-custom-50' : '' }}">
                         2024
                     </a>
+                    <a href="{{ url()->current() }}?year=2025" 
+                    class="bg-custom-100 text-white m-2 rounded-lg p-2 text-center {{ request('year') == '2025' ? 'bg-custom-50' : '' }}">
+                        2025
+                    </a>
                 </div>
 
                 <!-- Gallery Gambar -->

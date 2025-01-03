@@ -100,7 +100,7 @@
                                     type="file"
                                     form="donationForm"
                                     class="sr-only"
-                                    accept="image/jpeg, image/jpg, image/gif"
+                                    accept="image/jpeg, image/jpg"
                                     onchange="handleFileUpload(event)"
                                 />
                                 </label>

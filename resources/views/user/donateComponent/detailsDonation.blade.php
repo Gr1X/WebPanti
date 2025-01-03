@@ -33,9 +33,11 @@
                     @php
                         $percentage = ($target->jumlah_target > 0) ? ($terkumpul / $target->jumlah_target) * 100 : 0;
                     @endphp
-                    <div class="bg-custom-200 shadow-lg text-xs font-medium text-custom-500 text-center p-1 leading-none rounded-full" 
-                        style="width: {{ $percentage > 100 ? 100 : $percentage }}%">
-                        {{ number_format($percentage, 2) }}%
+                    <div class="w-full bg-gray-200 rounded-full my-1">
+                        <div class="bg-custom-200 shadow-lg text-xs font-medium text-white-500 text-center p-1 leading-none rounded-full" 
+                            style="width: {{ $percentage > 100 ? 100 : $percentage }}%">
+                            {{ number_format($percentage, 2) }}%
+                        </div>
                     </div>
 
                     <div class="flex justify-between">

@@ -40,7 +40,7 @@
                                     <img src="{{ asset('storage/' . $user->gambar) }}" alt="Preview" class="w-full h-full object-cover">
                                 @endif
                             </div>
-                            <input id="gambar" name="gambar" type="file" class="hidden" accept="image/jpeg, image/png" onchange="handleFileUpload(event)" />
+                            <input id="gambar" name="gambar" type="file" class="hidden" accept="image/jpeg, image/jpg, image/gif" onchange="handleFileUpload(event)" />
                         </div>
                     </div>
     

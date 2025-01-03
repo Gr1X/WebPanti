@@ -14,7 +14,7 @@
                     <div class="flex text-sm text-gray-600 justify-center">
                         <label for="gambar" class="relative cursor-pointer bg-white rounded-md font-medium text-blue-600 hover:text-blue-500">
                             <span>Upload a file</span>
-                            <input id="gambar" name="gambar" type="file" class="sr-only" onchange="handleFileUpload(event)" />
+                            <input id="gambar" name="gambar" type="file" accept="image/jpeg, image/jpg, image/gif" class="sr-only" onchange="handleFileUpload(event)" />
                         </label>
                         <p class="pl-1">or drag and drop</p>
                     </div>
