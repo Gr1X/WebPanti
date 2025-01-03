@@ -71,7 +71,7 @@ class EditGalleryController extends Controller
 
         if ($request->hasFile('gambar')) {
             $request->validate([
-                'gambar' => 'image|max:2048',
+                'gambar' => 'image|max:10240',
             ]);
 
             // Hapus gambar lama
