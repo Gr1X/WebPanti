@@ -328,7 +328,7 @@
 
     <div class="pt-10 space-y-6">
         <span class="text-5xl font-bold mx-10">Donasi</span>
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 px-10">
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 px-10">
             @foreach ($latestPrograms as $program)
                 <a href="{{ route('donateDetails', $program->id) }}" class="bg-custom-500 rounded-xl shadow-lg overflow-hidden max-w-md border border-gray-100">
                     <!-- Gambar Program -->

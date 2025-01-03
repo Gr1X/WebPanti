@@ -2,15 +2,15 @@
 
 @section('content')
 <div class="pt-56 pb-20 w-full">
-    <div class="flex justify-between px-8 gap-8">
+    <div class="grid grid-cols-1 md:flex md:justify-between px-8 md:gap-8">
         <!-- Bagian Kiri -->
-        <div class="h-[35rem] w-3/5">
+        <div class="h-[35rem] md:w-3/5">
             <!-- Gambar Program -->
             <img src="{{ asset('storage/' . $target->gambar) }}" alt="{{ $target->namaprogram }}" class="h-full w-full object-cover rounded-xl">
         </div>
 
         <!-- Bagian Kanan -->
-        <div class="w-2/5 mx-auto">
+        <div class="md:w-2/5 mx-auto mt-6 md:mt-0">
             <!-- Judul dan Deskripsi -->
             <div>
                 <h2 class="text-3xl font-bold uppercase">{{ $target->namaprogram }}</h2>

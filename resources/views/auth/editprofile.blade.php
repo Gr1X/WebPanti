@@ -27,9 +27,9 @@
             <!-- Form -->
             <form action="{{ route('profile.update') }}" method="POST" enctype="multipart/form-data" class="space-y-6">
                 @csrf
-                <div class="flex gap-8">
+                <div class="grid grid-cols-1 md:flex md:gap-8">
                     <!-- Dropzone for Profile Picture -->
-                    <div class="flex items-center">
+                    <div class="flex justify-center items-center mb-4 md:mb-0">
                         <div id="dropzone" class="relative flex justify-center items-center w-44 h-44 rounded-full border-4 border-dashed cursor-pointer" onclick="triggerFileInput()">
                             <div id="upload-prompt" class="text-center {{ $user->gambar ? 'hidden' : '' }}">
                                 <ion-icon name="cloud-upload-outline" class="text-custom-400 text-4xl"></ion-icon>
@@ -59,7 +59,7 @@
                             />
                         </div>
         
-                        <div class="grid grid-cols-2 gap-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <!-- Email -->
                             <div>
                                 <label for="email" class="block text-sm font-semibold mb-2 text-white">Email</label>

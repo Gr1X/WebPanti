@@ -11,7 +11,7 @@
         </div>
     </div>
 
-    <div class="m-10">
+    <div class="my-10 md:m-10 md:my-0">
         <div class="mb-5">
             <label class="flex items-center text-gray-600">
                 <a href="" class="">Program</a>
@@ -24,8 +24,8 @@
         </div>
 
         <div class="border border-dashed p-4 border-4 border-custom-300 rounded-xl">
-            <div class="flex gap-8 bg-white px-8 py-10 rounded-xl ">
-                <div class="w-1/2">
+            <div class="grid grid-cols-1 md:flex md:gap-8 bg-white px-8 py-10 rounded-xl ">
+                <div class="md:w-1/2">
                     <div class="">
                         <h1 class="text-center text-3xl font-bold text-custom-50 mb-2">Instruksi Pembayaran</h1>
                         <p class="text-center text-gray-600">Transfer sesuai nominal di bawah ini</p>
@@ -85,7 +85,7 @@
                         </form>
                     </div>
                 </div>
-                <div class="w-1/2">
+                <div class="md:w-1/2 mt-4 md:mt-0">
                     <!-- Dropzone untuk Unggah Bukti -->
                     <div id="dropzone" class="flex justify-center items-center px-6 pt-5 pb-6 border-2 border-gray-300 border rounded-2xl relative h-full cursor-pointer" onclick="triggerFileInput()">
                         <div id="upload-prompt" class="space-y-1 text-center">

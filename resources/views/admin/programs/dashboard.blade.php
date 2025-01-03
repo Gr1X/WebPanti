@@ -9,7 +9,7 @@
     </div>
     
     {{-- CARD INFO 1 --}}
-    <div class="grid grid-cols-3 gap-4 mb-4">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
         <div class="bg-custom-50 p-4 rounded-2xl shadow">
 
             <div class="flex justify-between">
@@ -74,9 +74,9 @@
     </div>
     
     {{-- CHART & HISTORY  --}}
-    <div class="flex gap-4 mb-2">
+    <div class="grid grid-cols-1 md:flex md:gap-4 mb-2">
         {{-- CHART --}}
-        <div class="bg-custom-50 p-6 rounded-2xl shadow w-3/5">
+        <div class="bg-custom-50 p-6 rounded-2xl shadow md:w-3/5">
             <div class="flex items-center justify-between">
                 <div>
                     <p class="text-md text-custom-200 font-semibold">Total Donasi</p>
@@ -93,7 +93,7 @@
         </div>
         
         {{-- HISTORY TRANSAKSI TERAKHIR --}}
-        <div class="bg-custom-50 p-6 rounded-2xl shadow w-2/5">
+        <div class="bg-custom-50 mt-6 md:mt-0 p-6 rounded-2xl shadow md:w-2/5">
             <div class="mb-4">
                 <div class="flex justify-between w-full">
                     <div class="">
