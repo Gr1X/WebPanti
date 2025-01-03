@@ -16,7 +16,7 @@ class AdminProgramController extends Controller
      * Display a listing of the programs.
      */
 
-     public function dashboard(){
+        public function dashboard(){
         // Ambil data yang diperlukan untuk dashboard
         $users = User::all();
         $volunteers = Volunteer::all();
