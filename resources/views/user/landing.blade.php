@@ -2,10 +2,10 @@
 
 @section('content')
 <main class="">
-    <div class="bg-custom-400 pt-32">
-        <div class="flex justify-between py-36 pb-50 px-10">
+    <div class="bg-custom-400 pt-24">
+        <div class="md:flex justify-between py-36 pb-50 px-10">
 
-            <div class="self-start relative z-10 space-y-6 ms-6 mt-16 py-4 px-8 bg-gray-400 rounded-xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100 shadow-lg">
+            <div class="self-start relative z-10 space-y-6 ms-6 mt-16 py-4 px-8 bg-custom-400 md:bg-gray-400 rounded-xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-100 md:bg-opacity-10 border border-gray-100 shadow-lg">
                 <!-- Heading -->
                 <div class="mt-4">
                     <h1 class="text-custom-300 leading-2 text-1xl md:text-2xl lg:text-5xl font-extrabold leading-tight">
@@ -14,7 +14,7 @@
                 </div>
             
                 <!-- Subheading -->
-                <p class="text-gray-700 text-xs md:text-base leading-relaxed max-w-2xl mx-auto lg:mx-0 font-semibold">
+                <p class="text-gray-700 text-xs text-base leading-relaxed max-w-2xl mx-auto lg:mx-0 font-semibold">
                     Panti Asuhan Nurul Jadid Tangerang hadir sebagai wujud kepedulian 
                     kepada yatim piatu dan dhuafa, dengan semangat untuk membangun 
                     generasi yang mandiri, berakhlak mulia, dan penuh keberkahan. 
@@ -23,55 +23,55 @@
             
             
             <div class="py-12 mx-56 gap-2 flex justify-center">
-                <div class="absolute top-10 translate-x-[10rem] w-40 h-40 bg-gray-50 p-3 flex flex-col shadow-lg  rotate-[-10deg] drop-shadow-xl">
+                <div class="lg:block absolute lg:top-10 translate-x-[-10rem] translate-y-[-2rem] lg:translate-x-[10rem] w-40 h-40 bg-gray-50 p-3 flex flex-col shadow-lg  rotate-[-10deg] drop-shadow-xl">
                     <div class="duration-500 contrast-50 h-24 bg-black hover:contrast-100">
                         <img src="./images/1.jpg" alt="gambar1" class="">
                     </div>
                 </div>
                 
-                <div class="absolute translate-x-[2rem] translate-y-[-10rem] self-end w-52 h-52 bg-gray-50 p-3 flex flex-col gap-1 shadow-2xl z-10 shadow-xl rotate-[-5deg]">
+                <div class="hidden lg:block absolute translate-x-[2rem] translate-y-[-10rem] self-end w-52 h-52 bg-gray-50 p-3 flex flex-col gap-1 shadow-2xl z-10 shadow-xl rotate-[-5deg]">
                     <div class="duration-500 contrast-50 h-32 bg-black hover:contrast-100 object-fit">
                         <img src="./images/2.jpg" alt="gambar4" class="">
                     </div>
                 </div> 
 
-                <div class="absolute translate-x-[12rem] translate-y-[-12rem] self-end w-52 h-52 bg-gray-50 p-3 flex flex-col gap-1 shadow-2xl z-10 shadow-xl rotate-[7deg]">
+                <div class="hidden md:block absolute translate-x-[12rem] md:translate-x-[9rem] translate-y-[-12rem] self-end w-52 h-52 bg-gray-50 p-3 flex flex-col gap-1 shadow-2xl z-10 shadow-xl rotate-[7deg]">
                     <div class="duration-500 contrast-50 h-32 bg-black hover:contrast-100 object-fit">
                         <img src="./images/2.jpg" alt="gambar4" class="">
                     </div>
                 </div> 
                 
-                <div class="absolute translate-x-[8rem] translate-y-[-3rem] w-56 h-56 bg-gray-50 p-3 flex flex-col shadow-4xl rotate-[5deg] shadow-xl z-10">
+                <div class="absolute lg:block translate-x-[-1rem] lg:translate-x-[8rem] translate-y-[-3rem] w-56 h-56 bg-gray-50 p-3 flex flex-col shadow-4xl rotate-[5deg] shadow-xl z-5 lg:z-10">
                     <div class="duration-500 contrast-50 h-36 bg-black hover:contrast-100">
                         <img src="./images/5.jpg" alt="gambar2" class="">
                     </div>
                 </div>
 
-                <div class="absolute translate-x-[-1rem] translate-y-[3rem] self-end w-64 h-64 bg-gray-50 p-3 flex flex-col gap-1 shadow-xl rotate-[5deg] z-20">
+                <div class="hidden md:block absolute translate-x-[-1rem] translate-y-[3rem] self-end w-64 h-64 bg-gray-50 p-3 flex flex-col gap-1 shadow-xl rotate-[5deg] z-20">
                     <div class="duration-500 contrast-50 h-42 bg-black hover:contrast-100">
                         <img src="./images/2.jpg" alt="gambar5" class="object-fit">
                     </div>
                 </div> 
                 
-                <div class="absolute translate-x-[-8rem] translate-y-[12rem] self-center w-56 h-56 bg-gray-50 p-3 flex flex-col gap-1 shadow-xl rotate-[-10deg] shadow-2xl z-20">
+                <div class="hidden md:block absolute translate-x-[-8rem] translate-y-[12rem] self-center w-56 h-56 bg-gray-50 p-3 flex flex-col gap-1 shadow-xl rotate-[-10deg] shadow-2xl z-20">
                     <div class="duration-500 contrast-50 h-36 bg-black hover:contrast-100">
                         <img src="./images/6.jpg" alt="gambar6" class="">
                     </div>
                 </div>
                 
-                <div class="absolute translate-x-[7rem] translate-y-[10rem] self-end w-72 h-72 bg-gray-50 p-3 flex flex-col gap-1 shadow-xl rotate-[10deg] z-10">
+                <div class="absolute translate-x-[-4rem] lg:translate-x-[7rem] translate-y-[0rem] lg:translate-y-[10rem] self-end w-72 h-72 bg-gray-50 p-3 flex flex-col gap-1 shadow-xl rotate-[10deg] z-5 lg:z-10">
                     <div class="duration-500 contrast-50 h-52 bg-black hover:contrast-100 object-fit">
                         <img src="./images/2.jpg" alt="gambar4" class="">
                     </div>
                 </div> 
 
-                <div class="absolute translate-x-[4rem] translate-y-[17rem] self-end w-56 h-56 bg-gray-50 p-3 flex flex-col gap-1 shadow-xl rotate-[10deg] z-20">
+                <div class="hidden md:block absolute translate-x-[4rem] translate-y-[17rem] self-end w-56 h-56 bg-gray-50 p-3 flex flex-col gap-1 shadow-xl rotate-[10deg] z-20">
                     <div class="duration-500 contrast-50 h-36 bg-black hover:contrast-100 object-fit">
                         <img src="./images/2.jpg" alt="gambar4" class="">
                     </div>
                 </div> 
                 
-                <div class="absolute translate-x-[18rem] translate-y-[18rem] self-center w-72 h-72 bg-gray-50 p-3 flex flex-col gap-1 shadow-xl rotate-[-15deg] shadow-2xl z-20">
+                <div class="absolute translate-x-[-5rem] translate-y-[-25rem] md:translate-x-[6rem] lg:translate-x-[18rem] md:translate-y-[7rem] lg:translate-y-[18rem] self-center w-72 h-72 bg-gray-50 p-3 flex flex-col gap-1 shadow-xl md:rotate-[-5deg] rotate-[-15deg] shadow-2xl z-5 lg:z-20">
                     <div class="duration-500 contrast-50 h-36 bg-black hover:contrast-100">
                         <img src="./images/6.jpg" alt="gambar6" class="">
                     </div>
@@ -81,11 +81,11 @@
         
         <div class="bg-custom-50 h-full">
             {{-- Animate background--}}
-            <span class="absolute w-screen translate-y-[-10rem] outline-none box-shadow-none">
+            <span class="relative w-screen translate-y-[-10rem] outline-none box-shadow-none">
                 <dotlottie-player src="https://lottie.host/8e5adb9c-0e01-48d2-8b0c-0db392fd9fb1/bouLG7TzPG.json" background="transparent" speed="1" style="all:unset;" loop autoplay class="w-full h-[300px] outline-none border-2"></dotlottie-player>
             </span>
             
-            <div class="px-20 py-28 bg-custom-50 space-y-4">
+            <div class="px-10 md:px-20 py-28 bg-custom-50 space-y-4">
     
                 <span class="pb-8 text-5xl font-bold text-custom-500 z-10">Tentang kami...</span>
                 <!-- Timeline -->
@@ -151,44 +151,44 @@
     
                 {{--  --}}
                 <div class="mt-5">
-                    <div class="absolute translate-x-[75rem] translate-y-[-1rem] w-56 h-56 bg-gray-50 p-3 flex flex-col shadow-xl rotate-[10deg] drop-shadow-2xl">
+                    <div class="hidden lg:block absolute translate-x-[75rem] translate-y-[-1rem] w-56 h-56 bg-gray-50 p-3 flex flex-col shadow-xl rotate-[10deg] drop-shadow-2xl">
                         <div class="duration-500 contrast-50 h-36 bg-black hover:contrast-100">
                             <img src="./images/1.jpg" alt="gambar1" class="">
                         </div>
                     </div> 
     
-                    <div class="absolute translate-x-[67rem] translate-y-[3rem] w-56 h-56 bg-gray-50 p-3 flex flex-col shadow-xl rotate-[-10deg] drop-shadow-2xl z-1">
+                    <div class="hidden lg:block absolute translate-x-[67rem] translate-y-[3rem] w-56 h-56 bg-gray-50 p-3 flex flex-col shadow-xl rotate-[-10deg] drop-shadow-2xl z-1">
                         <div class="duration-500 contrast-50 h-36 bg-black hover:contrast-100">
                             <img src="./images/1.jpg" alt="gambar1" class="">
                         </div>
                     </div>   
                     
                     
-                    <div class="absolute translate-x-[55rem] translate-y-[4rem] self-end w-64 h-64 bg-gray-50 p-3 flex flex-col gap-1 shadow-xl rotate-[5deg]">
+                    <div class="hidden lg:block absolute translate-x-[55rem] translate-y-[4rem] self-end w-64 h-64 bg-gray-50 p-3 flex flex-col gap-1 shadow-xl rotate-[5deg]">
                         <div class="duration-500 contrast-50 h-46 bg-black hover:contrast-100">
                             <img src="./images/2.jpg" alt="gambar5" class="object-fit">
                         </div>
                     </div> 
                     
-                    <div class="absolute translate-x-[42rem] translate-y-[2rem] self-end w-72 h-72 bg-gray-50 p-3 flex flex-col gap-1 shadow-2xl shadow-2xl rotate-[-5deg]">
+                    <div class="hidden lg:block absolute translate-x-[42rem] translate-y-[2rem] self-end w-72 h-72 bg-gray-50 p-3 flex flex-col gap-1 shadow-2xl shadow-2xl rotate-[-5deg]">
                         <div class="duration-500 contrast-50 h-52 bg-black hover:contrast-100 object-fit">
                             <img src="./images/2.jpg" alt="gambar4" class="">
                         </div>
                     </div> 
                     
-                    <div class="absolute translate-x-[32rem] translate-y-[1rem] self-end w-64 h-64 bg-gray-50 p-3 flex flex-col gap-1 shadow-2xl shadow-2xl rotate-[5deg]">
+                    <div class="hidden md:block lg:block absolute md:translate-x-[29rem] translate-x-[32rem] translate-y-[1rem] self-end w-64 h-64 bg-gray-50 p-3 flex flex-col gap-1 shadow-2xl shadow-2xl rotate-[5deg]">
                         <div class="duration-500 contrast-50 h-46 bg-black hover:contrast-100">
                             <img src="./images/2.jpg" alt="gambar5" class="object-fit">
                         </div>
                     </div> 
                     
-                    <div class="absolute translate-x-[22rem] translate-y-[2rem] w-56 h-56 bg-gray-50 p-3 flex flex-col shadow-2xl rotate-[-8deg] shadow-2xl">
+                    <div class="hidden md:block lg:block absolute translate-x-[22rem] translate-y-[2rem] w-56 h-56 bg-gray-50 p-3 flex flex-col shadow-2xl rotate-[-8deg] shadow-2xl">
                         <div class="duration-500 contrast-50 h-36 bg-black hover:contrast-100">
                             <img src="./images/5.jpg" alt="gambar2" class="">
                         </div>
                     </div>
     
-                    <div class="absolute translate-x-[10rem] translate-y-[4rem] w-56 h-56 bg-gray-50 p-3 flex flex-col shadow-2xl rotate-[10deg] shadow-2xl">
+                    <div class="absolute translate-x-[6rem] md:translate-x-[10rem] translate-y-[4rem] w-56 h-56 bg-gray-50 p-3 flex flex-col shadow-2xl rotate-[5deg] lg:rotate-[10deg] shadow-2xl">
                         <div class="duration-500 contrast-50 h-36 bg-black hover:contrast-100">
                             <img src="./images/5.jpg" alt="gambar2" class="">
                         </div>
@@ -384,7 +384,7 @@
     
         <!-- Right Button -->
         <div class="flex h-full items-end">
-            <a href="/donation" class="text-[1rem] font-bold bg-custom-200 hover:bg-yellow-600 transition-all px-6 md:px-12 py-4 m-10 text-custom-500 rounded-lg shadow-md">
+            <a href="/donation" class="text-sm md:text-[1rem] font-bold bg-custom-200 hover:bg-yellow-600 transition-all px-6 md:px-12 py-4 m-10 text-custom-500 rounded-lg shadow-md">
                 Donasi Sekarang
             </a>
         </div>
