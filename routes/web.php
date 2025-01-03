@@ -17,6 +17,7 @@ use App\Http\Controllers\VolunteerController;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\newsController;
 use App\Http\Controllers\ProgramController;
+use App\Http\Controllers\BeritaPantiController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -30,10 +31,10 @@ Route::get('/gallery', [UserGalleryController::class, 'index'])->name('gallery')
 Route::get('/program', [ProgramController::class, 'index'])->name('program');
 Route::view('/aboutus', 'user.aboutUs')->name('aboutus');
 
+Route::get('/berita/{id}', [BeritaPantiController::class, 'details'])->name('berita.details');
 
 Route::get('/donation', [UserProgramController::class, 'showDonations'])->name('donation');
 Route::get('/donation/{id}', [UserProgramController::class, 'showDonationDetails'])->name('donateDetails');
-
 Route::get('/donation/{id}/payment', [DonasiController::class, 'showPaymentForm'])->name('donation.payment');
 Route::post('/donation/{id}/payment/confirm', [DonasiController::class, 'submitPaymentConfirm'])->name('donation.confirm');
 Route::post('/donation/{id}/submit', [DonasiController::class, 'submitDonation'])->name('donation.submit');
@@ -153,6 +154,7 @@ Route::get('/program/volunteer/daftar', function() {
 Route::get('/program/details', function() {
     return view('user.programComponent.detailBerita');
 })->name('programDetails'); 
+
 
 Route::get('/program/volunteer', function() {
     return view('user.programComponent.daftarRelawan');

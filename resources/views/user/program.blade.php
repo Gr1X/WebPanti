@@ -156,16 +156,16 @@
             <div class="mt-10">
                 <!-- Bagian Berita Program -->
                 <div class="mb-8">
-                    <h2 class="text-4xl font-bold text-custom-50 mb-6">Berita Program</h2>
+                    <h2 class="text-4xl font-bold text-custom-200 mb-6">Berita Program</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         @foreach($berita as $item)
-                            <div class="bg-custom-100 shadow-lg rounded-lg">
+                            <div class="bg-custom-50 shadow-lg rounded-lg">
                                 <img src="{{ asset('storage/' . $item->gambar) }}" alt="{{ $item->judul }}" class="rounded-t-lg h-60 w-full object-cover">
                                 <div class="p-6">
-                                    <h3 class="text-xl font-bold text-custom-50 mb-2">{{ $item->judul }}</h3>
-                                    <p class="text-custom-50 text-opacity-80 mb-4">{{ Str::limit($item->deskripsi, 100) }}</p>
+                                    <h3 class="text-2xl font-bold text-custom-200 mb-1">{{ $item->judul }}</h3>
+                                    <p class="text-custom-400 text-opacity-80 mb-4 text-sm font-medium">{{ Str::limit($item->deskripsi, 100) }}</p>
                                     <div class="w-full flex justify-end">
-                                        <a href="" class="m-2 hover:underline text-white">Baca Selengkapnya</a>
+                                        <a href="{{route('berita.details', $item->id)}}" class="m-2 hover:underline text-white">Baca Selengkapnya</a>
                                     </div>
                                 </div>
                             </div>
