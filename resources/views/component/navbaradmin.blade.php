@@ -64,50 +64,51 @@
         </ul>
 
         <!-- User Dropdown -->
-        <div class="mx-5">
+        <div class="mx-5 ml-auto">
             @if(Auth::check())
                 <img id="avatarButton" type="button" data-dropdown-toggle="userDropdown" data-dropdown-placement="bottom-start" 
                     class="w-10 h-10 rounded-full cursor-pointer object-cover" 
                     src="https://ui-avatars.com/api/?name={{ urlencode(Auth::user()->name) }}" 
                     alt="{{ Auth::user()->name }}">
-
+        
                 <!-- Dropdown menu -->
-                <div id="userDropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-                    <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
+                <div id="userDropdown" class="z-10 hidden bg-custom-350 divide-y divide-gray-100 rounded-lg shadow w-44">
+                    <div class="px-4 py-3 text-sm text-custom-50">
                         <div>{{ Auth::user()->name }}</div>
                         <div class="font-medium truncate">{{ Auth::user()->email }}</div>
                     </div>
-                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="avatarButton">
+                    <ul class="pt-2 text-sm text-custom-50" aria-labelledby="avatarButton">
                         <li>
-                            <!-- Link to Landing Page -->
-                            <a href="{{ route('landing') }}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                                Back to Landing Page
-                            </a>
+                            <a href="{{ route('landing') }}" class="block px-4 py-2 hover:bg-custom-100">Back to Landing Page</a>
                         </li>
                         <li>
-                            <a href="{{ route('profile') }}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Profile</a>
+                            <a href="{{ route('profile') }}" class="block px-4 py-2 hover:bg-custom-100">Profile</a>
                         </li>
-                        <li>
+                        <div class="block px-4 py-2 text-sm text-custom-50 hover:bg-custom-100 rounded-b-lg">
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf
-                                <button type="submit" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
+                                <button type="submit" class="block text-sm text-custom-50 hover:bg-custom-100">
                                     Sign out
                                 </button>
                             </form>
-                        </li>
+                        </div>
                     </ul>
                 </div>
             @else
                 <a href="{{ route('login.form') }}" class="mx-4 relative group"> 
-                    <button class="relative inline-block p-px font-semibold leading-6 text-white bg-gray-800 shadow-2xl cursor-pointer rounded-xl shadow-zinc-900 transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95">
-                        <span class="absolute inset-0 rounded-xl bg-gradient-to-r from-slate-100 via-slate-500 to-slate-900 p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                        </span>
-                        <span class="relative z-10 block px-6 py-3 rounded-xl bg-custom-100">
-                            <span class="transition-all duration-500 group-hover:translate-x-5 text-slate-100">Get started</span>
+                    <button class="relative inline-block p-px font-semibold leading-6 text-white bg-custom-300 shadow-lg cursor-pointer rounded-xl transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95 border-gray-100">
+                        <span class="relative z-10 block px-6 py-3 rounded-xl">
+                            <div class="relative z-10 flex items-center space-x-2">
+                                <span class="transition-all duration-500 group-hover:translate-x-5 text-slate-100">Get started</span>
+                                <svg class="w-6 h-6 transition-transform duration-500 group-hover:translate-x-3 group-hover" data-slot="icon" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path clip-rule="evenodd" d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z" fill-rule="evenodd"></path>
+                                </svg>
+                            </div>
                         </span>
                     </button>
                 </a>   
             @endif
+        </div>        
 
         </div>
     </div>
