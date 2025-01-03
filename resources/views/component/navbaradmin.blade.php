@@ -1,7 +1,15 @@
 <nav class="fixed top-0 z-50 w-full bg-slate-800 shadow-lg">
     <div class="flex justify-between items-center bg-custom-50">
+        <div>
+            <button class="text-center relative flex-shrink-0 px-2 py-2 my-2 md:hidden" type="button" data-drawer-target="drawer-admin" data-drawer-show="drawer-admin" aria-controls="drawer-admin">
+                <div class="inline-block flex flex-col items-center px-6 py-0.5 rounded-xl text-slate-100">    
+                    <ion-icon name="menu" class="size-5 my-1"></ion-icon>
+                    <p class="font-semibold text-sm">Menu</p>
+                </div>
+            </button>
+        </div>
         <!-- Navigation Menu -->
-        <ul class="flex mx-4">
+        <ul class="hidden md:flex md:mx-4">
             {{-- Dashboard --}}
             <li class="text-center group relative flex-shrink-0 px-2 py-2 my-2 hover:scale-105 duration-300">
                 <span class="absolute inset-x-0 top-0 h-0.5 group-hover:bg-custom-100 w-8 left-1/2 transform -translate-x-1/2"></span>
@@ -62,6 +70,53 @@
                 </a>
             </li>
         </ul>
+
+        <div id="drawer-admin" class="md:hidden fixed top-0 left-0 z-40 w-64 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-custom-75 shadow-xl" tabindex="-1" aria-labelledby="drawer-admin-label">
+            <h5 id="drawer-admin-label" class="text-base font-semibold text-custom-400 uppercase">Menu</h5>
+            <button type="button" data-drawer-hide="drawer-admin" aria-controls="drawer-admin" class="text-custom-400 bg-transparent rounded-lg text-sm p-1.5 absolute top-2.5 end-2.5 inline-flex items-center" >
+                <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                <span class="sr-only">Close menu</span>
+            </button>
+            <ul class="flex-col space-y-2">
+                <li class="border-t border-gray-300 my-3"></li>
+                <li>
+                    <a href="{{ route('admin.dashboard') }}" class="block text-white font-semibold pt-2">
+                        <ion-icon name="grid-outline" class="size-5 mr-2"></ion-icon> 
+                        <span class="font-semibold text-xl">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('admin.programs.index') }}" class="block text-white font-semibold pt-2">
+                        <ion-icon name="briefcase-outline" class="size-5 mr-2"></ion-icon> 
+                        <span class="font-semibold text-xl">Programs</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('admin.gallery.index') }}" class="block text-white font-semibold pt-2">
+                        <ion-icon name="images-outline" class="size-5 mr-2"></ion-icon> 
+                        <span class="font-semibold text-xl">Gallery</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('admin.volunteers.index') }}" class="block text-white font-semibold pt-2">
+                        <ion-icon name="people-outline" class="size-5 mr-2"></ion-icon> 
+                        <span class="font-semibold text-xl">Volunteers</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('admin.payments.index') }}" class="block text-white font-semibold pt-2">
+                        <ion-icon name="wallet-outline" class="size-5 mr-2"></ion-icon> 
+                        <span class="font-semibold text-xl">Payment</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('admin.news.index') }}" class="block text-white font-semibold pt-2">
+                        <ion-icon name="newspaper-outline" class="size-5 mr-2"></ion-icon> 
+                        <span class="font-semibold text-xl">Berita</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
 
         <!-- User Dropdown -->
         <div class="mx-5 ml-auto">

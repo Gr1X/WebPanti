@@ -11,16 +11,16 @@
         </div>
     </div>
 
-    <div class="m-10">
+    <div class="my-10">
         <div class="">
             <label class="flex items-center text-gray-600"><a href="" class="">Program</a><ion-icon name="chevron-forward-outline" class="size-4 "></ion-icon><span class="">Donate</span></label>
             <span class="text-4xl text-custom-50 font-bold">Donate</span>
         </div>
 
         
-        <div class="w-full flex justify-between gap-6 mt-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 w-full lg:flex lg:justify-between lg:gap-6 mt-8">
             <!-- Informasi Campaign -->
-            <div class="w-2/3 items-center">
+            <div class="lg:w-2/3 items-center">
                 <div class="">
                     <div class="h-30">
                         <img src="{{ asset('storage/' . $target->gambar) }}" alt="{{ $target->namaprogram }}" class="w-full h-full object-cover rounded-lg shadow-lg">
@@ -38,7 +38,7 @@
                 </div>
             </div>
             
-            <div class="border border-dashed border-4 border-custom-200 rounded-xl w-1/2 p-4">
+            <div class="border border-dashed border-4 border-custom-200 rounded-xl lg:w-1/2 p-2 lg:p-4 mt-8 md:mt-0 md:ml-4">
                 <div class="bg-white shadow-md border border-gray-200 rounded-xl p-6 space-y-2">
                     <form action="{{ route('donation.confirm', $target->id) }}" method="POST" enctype="multipart/form-data">
                         @csrf
